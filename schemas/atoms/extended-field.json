@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Extended Field (DRAFT)",
+  "description": "Object that tracks enriched content.",
+  "required": [],
+  "properties": {
+    "type": "string",
+    "category": "string",
+    "content": "string",
+    "summary": "string",
+    "label": "string",
+    "viaf": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "wikipedia": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "geo_names": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "lcsh": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

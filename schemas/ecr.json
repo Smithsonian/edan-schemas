@@ -1,0 +1,6 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "ECR Record (DRAFT)",
+  "description": "ECRs are used to describe electronic content.",
+  "properties": {}
+}

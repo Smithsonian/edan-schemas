@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Online Media Element Object (DRAFT)",
+  "description": "",
+  "type": "object",
+  "required": [
+    "content",
+    "type",
+    "thumbnail"
+  ],
+  "properties": {
+    "content": "string",
+    "summary": "string",
+    "type": "string",
+    "thumbnail": "string",
+    "idsid": "string",
+    "caption": "string",
+    "alt": "string",
+    "credit": "string",
+    "rights": "string",
+    "mime_type": "string"
+  }
+}

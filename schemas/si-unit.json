@@ -1,0 +1,100 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "SI Unit Record (DRAFT)",
+  "description": "Units are used to describe Smithsonian units",
+  "required": [
+    "title"
+  ],
+  "properties": {
+    "record_link": {
+      "type": "string",
+      "description": "Link to the unit's primary website."
+    },
+    "parent_unit_ID": {
+      "type": "string",
+      "description": "The ID of the parent unit, if applicable."
+    },
+    "objectgroup_ID": {
+      "type": "string",
+      "description": "The ID of the related object group, if applicable."
+    },
+    "online_media": {
+      "type": "object",
+      "description": "EDAN online media object"
+    },
+    "title": {
+      "type": "object",
+      "description": "EDAN field object"
+    },
+    "address": {
+      "type": "object",
+      "description": "EDAN field object"
+    },
+    "telephone": {
+      "type": "object",
+      "description": "EDAN field array object"
+    },
+    "fax": {
+      "type": "object",
+      "description": "EDAN field object"
+    },
+    "name": {
+      "type": "array",
+      "items": "object",
+      "description": "EDAN field object"
+    },
+    "topic": {
+      "type": "array",
+      "items": "object",
+      "description": "EDAN field object"
+    },
+    "culture": {
+      "type": "array",
+      "items": "object",
+      "description": "EDAN field object"
+    },
+    "language": {
+      "type": "array",
+      "items": "object",
+      "description": "EDAN field object"
+    },
+    "place": {
+      "type": "array",
+      "items": "object",
+      "description": "EDAN field object"
+    },
+    "category": {
+      "type": "array",
+      "items": "object",
+      "description": "EDAN field object"
+    },
+    "description": {
+      "type": "string",
+      "items": "Description of the event."
+    },
+    "summary": {
+      "type": "string",
+      "items": "Short description of the event."
+    },
+    "email": {
+      "type": "string",
+      "description": ""
+    },
+    "notes": {
+      "type": "object",
+      "items": "EDAN field object"
+    },
+    "data_source": {
+      "type": "object",
+      "items": "EDAN field object"
+    },
+    "usage_flag": {
+      "type": "object",
+      "description": "EDAN field object"
+    },
+    "set_name": {
+      "type": "object",
+      "items": "EDAN field object"
+    }
+  }
+}

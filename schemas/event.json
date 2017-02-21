@@ -1,0 +1,91 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Event Record (DRAFT)",
+  "description": "Events are used to describe exhibitions and other events.",
+  "required": [
+    "event_type",
+    "title",
+    "open"
+  ],
+  "properties": {
+    "objectgroup_ID": {
+      "type": "string",
+      "description": "Related EDAN Object Group record, if applicable."
+    },
+    "event_type": {
+      "type": "string",
+      "description": "Exhibition, IMAX, or whatever type this is."
+    },
+    "event_type_detail": {
+      "type": "string",
+      "description": "Exhibition, IMAX, or whatever type this is."
+    },
+    "event_detail": {
+      "type": "object",
+      "description": "EDAN field object describing any specifics for this event."
+    },
+    "showtimes": {
+      "type": "array",
+      "description": "An array of strings representing showtime dates, each containing its own array of strings representing start times."
+    },
+    "location": {
+      "type": "object",
+      "description": "EDAN field object including values for edan_facility_id, floor, building (text)."
+    },
+    "keywords": {
+      "type": "array",
+      "items": "string"
+    },
+    "online_media": {
+      "type": "object",
+      "description": "EDAN online media object"
+    },
+    "event_status": {
+      "type": "string"
+    },
+    "sponsor": {
+      "type": "object",
+      "description": "EDAN field object"
+    },
+    "original_db_record_updatedate": "string",
+    "title": {
+      "type": "object",
+      "description": "EDAN field object"
+    },
+    "open": {
+      "type": "object",
+      "description": "EDAN field object"
+    },
+    "close": {
+      "type": "object",
+      "description": "EDAN field object"
+    },
+    "on_sale": {
+      "type": "object",
+      "description": "EDAN field object"
+    },
+    "online_exhibit": {
+      "type": "string",
+      "description": "This is the link to the online exhibition."
+    },
+    "description": {
+      "type": "object",
+      "items": "EDAN field object"
+    },
+    "teaser": {
+      "type": "object",
+      "items": "EDAN field object"
+    },
+    "record_link": {
+      "type": "string",
+      "description": "This is the link to the web page containing info about a physical exhibition."
+    },
+    "categories": {
+      "type": "array",
+      "items": "string"
+    },
+    "comments": {
+      "type": "string"
+    }
+  }
+}

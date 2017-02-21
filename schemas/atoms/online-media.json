@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Online Media (DRAFT)",
+  "description": "Object that stores all media within a record.",
+  "type": "object",
+  "required": [],
+  "properties": {
+    "media": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "oneOf": [
+          {
+            "$ref": "#/definitions/edanMediaElement"
+          }
+        ]
+      }
+    },
+    "preferred": "string"
+  },
+  "definitions": {
+    "edanMediaElement": {}
+  }
+}

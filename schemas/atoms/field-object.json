@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Field Object (DRAFT)",
+  "description": "Object that defines a field with extended enrichment data.",
+  "required": [],
+  "properties": {
+    "content": "string",
+    "extended": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/definitions/edanExtended"
+          }
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "edanExtended": {}
+  }
+}

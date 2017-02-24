@@ -1,0 +1,86 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"type": "object",
+	"additionalProperties":false,
+	"properties": {
+		"id": {
+			"type": "string",
+			"id": "http://edan.si.edu/schema/core/id"
+		},
+		"title": {
+			"type": "string",
+			"id": "http://edan.si.edu/schema/core/title"
+		},
+		"unitCode": {
+			"type": "string",
+			"id": "http://edan.si.edu/schema/core/unitCode"
+		},
+		"linkedId": {
+			"type": "string",
+			"id": "http://edan.si.edu/schema/core/linkedId"
+		},
+		"type": {
+			"type": "string",
+			"id": "http://edan.si.edu/schema/core/type"
+		},
+		"url": {
+			"type": "string",
+			"id": "http://edan.si.edu/schema/core/url"
+		},
+		"content": {
+			"type": "object",
+			"properties": {},
+			"id": "http://edan.si.edu/schema/core/content"
+		},
+		"hash": {
+			"type": "string",
+			"id": "http://edan.si.edu/schema/core/hash",
+			"pattern": "^[a-f0-9]{40}$"
+		},
+		"docSignature": {
+			"type": "string",
+			"id": "http://edan.si.edu/schema/core/docSignature"
+		},
+		"timestamp": {
+			"type": "string",
+			"id": "http://edan.si.edu/schema/core/timestamp"
+		},
+		"lastTimeUpdated": {
+			"type": "string",
+			"id": "http://edan.si.edu/schema/core/lastTimeUpdated"
+		},
+		"status": {
+			"type": "integer",
+			"id": "http://edan.si.edu/schema/core/status"
+		},
+		"version": {
+			"type": "string",
+			"id": "http://edan.si.edu/schema/core/version"
+		},
+		"publicSearch": {
+			"type": "boolean",
+			"id": "http://edan.si.edu/schema/core/publicSearch"
+		},
+		"linkedContent": {
+			"type": "array",
+			"items": {},
+			"id": "http://edan.si.edu/schema/core/linkedContent"
+		}
+	},
+	"id": "http://edan.si.edu/schema/core",
+	"required": [
+		"id",
+		"title",
+		"unitCode",
+		"type",
+		"url",
+		"content",
+		"hash",
+		"docSignature",
+		"timestamp",
+		"lastTimeUpdated",
+		"status",
+		"version",
+		"publicSearch"
+	]
+}

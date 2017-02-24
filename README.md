@@ -22,4 +22,4 @@ http://jsonschema.net/#/
 options:
 url:http://edan.si.edu/schema/[type]
 IDs:Absolute IDs
-Arrays: Single schema (list validation)
+Arrays: Single empty schema

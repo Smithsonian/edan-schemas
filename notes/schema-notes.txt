@@ -1,0 +1,5 @@
+edanmdm schema notes..
+
+geolocation is empty..
+edanmdm id:edanmdm-siris_arc_259343 might be a complex object in name
+sortdate? when was that added?

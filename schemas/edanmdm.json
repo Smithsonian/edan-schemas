@@ -1,0 +1,321 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"type": "object",
+	"properties": {
+		"descriptiveNonRepeating": {
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"title_sort": {
+					"type": "string",
+					"id": "http://edan.si.edu/schema/edanmdm/descriptiveNonRepeating/title_sort"
+				},
+				"title": {
+					"type": "object",
+					"properties": {
+						"content": {
+							"type": "string",
+							"id": "http://edan.si.edu/schema/edanmdm/descriptiveNonRepeating/title/content"
+						},
+						"label": {
+							"type": "string",
+							"id": "http://edan.si.edu/schema/edanmdm/descriptiveNonRepeating/title/label"
+						}
+					},
+					"id": "http://edan.si.edu/schema/edanmdm/descriptiveNonRepeating/title",
+					"required": [
+						"content",
+						"label"
+					]
+				},
+				"online_media": {
+					"type": ["object"],
+					"properties": {
+						"mediaCount": {
+							"type": "string",
+							"id": "http://edan.si.edu/schema/edan/online_media/mediaCount"
+						},
+						"media": {
+							"type": ["object", "array"],
+							"properties": {
+								"content": {
+									"type": "string",
+									"id": "http://edan.si.edu/schema/edan/online_media/media/content"
+								},
+								"thumbnail": {
+									"type": "string",
+									"id": "http://edan.si.edu/schema/edanmdm/descriptiveNonRepeating/online_media/media/thumbnail"
+								},
+								"type": {
+									"type": "string",
+									"id": "http://edan.si.edu/schema/edanmdm/descriptiveNonRepeating/online_media/media/type"
+								}
+							},
+							"id": "http://edan.si.edu/schema/edanmdm/descriptiveNonRepeating/online_media/media",
+							"required": [
+								"content",
+								"thumbnail",
+								"type"
+							]
+						}
+					},
+					"id": "http://edan.si.edu/schema/edanmdm/descriptiveNonRepeating/online_media",
+					"required": [
+						"mediaCount",
+						"media"
+					]
+				},
+				"data_source": {
+					"type": "string",
+					"id": "http://edan.si.edu/schema/edanmdm/descriptiveNonRepeating/data_source"
+				},
+				"record_ID": {
+					"type": "string",
+					"id": "http://edan.si.edu/schema/edanmdm/descriptiveNonRepeating/record_ID"
+				},
+				"record_link": {
+					"type": "string",
+					"id": "http://edan.si.edu/schema/edanmdm/descriptiveNonRepeating/record_link"
+				},
+				"unit_code": {
+					"type": "string",
+					"id": "http://edan.si.edu/schema/edanmdm/descriptiveNonRepeating/unit_code"
+				}
+			},
+			"id": "http://edan.si.edu/schema/edanmdm/descriptiveNonRepeating",
+			"required": [
+				"title_sort",
+				"title",
+				"data_source",
+				"record_ID",
+				"unit_code"
+			]
+		},
+		"indexedStructured": {
+			"additionalProperties": false,
+			"properties": {
+				"sortdate": {
+					"type": ["string"],
+					"id": "http://edan.si.edu/schema/edanmdm/indexedStructured/sortdate"
+				},
+				"topic": {
+					"type": ["array", "string"],
+					"id": "http://edan.si.edu/schema/edanmdm/indexedStructured/topic"
+				},
+				"occupation": {
+					"type": ["array", "string"],
+					"id": "http://edan.si.edu/schema/edanmdm/indexedStructured/occupation"
+				},
+				"object_type": {
+					"type": ["array", "string"],
+					"id": "http://edan.si.edu/schema/edanmdm/indexedStructured/object_type"
+				},
+				"name": {
+					"type": ["array", "string", "object"],
+					"id": "http://edan.si.edu/schema/edanmdm/indexedStructured/name"
+				},
+				"usage_flag": {
+					"type": ["array", "string"],
+					"id": "http://edan.si.edu/schema/edanmdm/indexedStructured/usage_flag"
+				},
+				"online_media_type": {
+					"type": ["array", "string"],
+					"id": "http://edan.si.edu/schema/edanmdm/indexedStructured/online_media_type"
+				},
+				"language": {
+					"type": ["array", "string"],
+					"id": "http://edan.si.edu/schema/edanmdm/indexedStructured/language"
+				},
+				"date": {
+					"type": ["array", "string"],
+					"id": "http://edan.si.edu/schema/edanmdm/indexedStructured/date"
+				},
+				"tax_kingdom": {
+					"type": ["array", "string"],
+					"id": "http://edan.si.edu/schema/edanmdm/indexedStructured/tax_kingdom"
+				},
+				"geo_age-era": {
+					"type": ["array", "string"],
+					"id": "http://edan.si.edu/schema/edanmdm/indexedStructured/geo_age-era"
+				},
+				"strat_formation": {
+					"type": ["array", "string"],
+					"id": "http://edan.si.edu/schema/edanmdm/indexedStructured/strat_formation"
+				},
+				"tax_phylum": {
+					"type": ["array", "string"],
+					"id": "http://edan.si.edu/schema/edanmdm/indexedStructured/tax_phylum"
+				},
+				"tax_class": {
+					"type": ["array", "string"],
+					"id": "http://edan.si.edu/schema/edanmdm/indexedStructured/tax_class"
+				},
+				"tax_family": {
+					"type": ["array", "string"],
+					"id": "http://edan.si.edu/schema/edanmdm/indexedStructured/tax_family"
+				},
+				"tax_order": {
+					"type": ["array", "string"],
+					"id": "http://edan.si.edu/schema/edanmdm/indexedStructured/tax_order"
+				},
+				"geo_age-system": {
+					"type": ["array", "string"],
+					"id": "http://edan.si.edu/schema/edanmdm/indexedStructured/geo_age-system"
+				},
+				"geo_age-stage": {
+					"type": ["array", "string"],
+					"id": "http://edan.si.edu/schema/edanmdm/indexedStructured/geo_age-stage"
+				},
+				"geo_age-series": {
+					"type": ["array", "string"],
+					"id": "http://edan.si.edu/schema/edanmdm/indexedStructured/geo_age-series"
+				},
+				"common_name": {
+					"type": ["string", "array"],
+					"id": "http://edan.si.edu/schema/edanmdm/indexedStructured/common_name"
+				},
+				"tax_sub-family": {
+					"type": ["string", "array"],
+					"id": "http://edan.si.edu/schema/edanmdm/indexedStructured/tax_sub-family"
+				},
+				"culture": {
+					"type": ["string", "array"],
+					"id": "http://edan.si.edu/schema/edanmdm/indexedStructured/culture"
+				},
+				"online_media_rights": {
+					"type": ["string", "array"],
+					"id": "http://edan.si.edu/schema/edanmdm/indexedStructured/online_media_rights"
+				},
+				"geoLocation": {
+					"type": ["object", "string", "array"],
+					"properties": {
+						"L1": {
+							"type": "object",
+							"properties": {
+								"content": {
+									"type": "string",
+									"id": "http://edan.si.edu/schema/edanmdm/indexedStructured/geoLocation/L1/content"
+								},
+								"type": {
+									"type": "string",
+									"id": "http://edan.si.edu/schema/edanmdm/indexedStructured/geoLocation/L1/type"
+								}
+							},
+							"id": "http://edan.si.edu/schema/edanmdm/indexedStructured/geoLocation/L1",
+							"required": [
+								"content",
+								"type"
+							]
+						},
+						"L2": {
+							"type": "object",
+							"properties": {
+								"content": {
+									"type": "string",
+									"id": "http://edan.si.edu/schema/edanmdm/indexedStructured/geoLocation/L2/content"
+								},
+								"type": {
+									"type": "string",
+									"id": "http://edan.si.edu/schema/edanmdm/indexedStructured/geoLocation/L2/type"
+								}
+							},
+							"id": "http://edan.si.edu/schema/edanmdm/indexedStructured/geoLocation/L2",
+							"required": [
+								"content",
+								"type"
+							]
+						},
+						"L3": {
+							"type": "object",
+							"properties": {
+								"content": {
+									"type": "string",
+									"id": "http://edan.si.edu/schema/edanmdm/indexedStructured/geoLocation/L3/content"
+								},
+								"type": {
+									"type": "string",
+									"id": "http://edan.si.edu/schema/edanmdm/indexedStructured/geoLocation/L3/type"
+								}
+							},
+							"id": "http://edan.si.edu/schema/edanmdm/indexedStructured/geoLocation/L3",
+							"required": [
+								"content",
+								"type"
+							]
+						},
+						"Other": {
+							"type": "object",
+							"properties": {
+								"content": {
+									"type": "string",
+									"id": "http://edan.si.edu/schema/edanmdm/indexedStructured/geoLocation/Other/content"
+								},
+								"type": {
+									"type": "string",
+									"id": "http://edan.si.edu/schema/edanmdm/indexedStructured/geoLocation/Other/type"
+								}
+							},
+							"id": "http://edan.si.edu/schema/edanmdm/indexedStructured/geoLocation/Other",
+							"required": [
+								"content",
+								"type"
+							]
+						}
+					},
+					"id": "http://edan.si.edu/schema/edanmdm/indexedStructured/geoLocation"
+				},
+				"onPhysicalExhibit": {
+					"type": "string",
+					"id": "http://edan.si.edu/schema/edanmdm/indexedStructured/onPhysicalExhibit"
+				},
+				"exhibition": {
+					"type": "object",
+					"properties": {
+						"building": {
+							"type": "string",
+							"id": "http://edan.si.edu/schema/edanmdm/indexedStructured/exhibition/building"
+						},
+						"exhibitionTitle": {
+							"type": "string",
+							"id": "http://edan.si.edu/schema/edanmdm/indexedStructured/exhibition/exhibitionTitle"
+						},
+						"externalLink": {
+							"type": "string",
+							"id": "http://edan.si.edu/schema/edanmdm/indexedStructured/exhibition/externalLink"
+						},
+						"room": {
+							"type": "string",
+							"id": "http://edan.si.edu/schema/edanmdm/indexedStructured/exhibition/room"
+						}
+					}
+				},
+				"scientific_name": {
+					"type": ["array", "string"],
+					"id": "http://edan.si.edu/schema/edanmdm/indexedStructured/scientific_name"
+				},
+				"place": {
+					"type": ["array", "string"],
+					"items": {
+						"type": "string"
+					},
+					"id": "http://edan.si.edu/schema/edanmdm/indexedStructured/place"
+				}
+			},
+			"id": "http://edan.si.edu/schema/edanmdm/indexedStructured"
+		},
+		"descriptiveOptional": {
+			"type": "object",
+			"properties": {
+				"freetext": {
+					"type": "array",
+					"id": "http://edan.si.edu/schema/edanmdm/descriptiveOptional/freetext"
+				}
+			},
+			"id": "http://edan.si.edu/schema/edanmdm/descriptiveOptional"
+		}
+	},
+	"id": "http://edan.si.edu/schema/edanmdm",
+	"required": [
+		"descriptiveNonRepeating"
+	]
+}

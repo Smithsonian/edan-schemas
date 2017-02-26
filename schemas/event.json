@@ -22,7 +22,8 @@
     },
     "event_detail": {
       "type": "object",
-      "description": "EDAN field object describing any specifics for this event."
+      "description": "EDAN field object describing any specifics for this event.",
+      "$ref": "field-object.json#/fieldObject"
     },
     "showtimes": {
       "type": "array",
@@ -30,7 +31,8 @@
     },
     "location": {
       "type": "object",
-      "description": "EDAN field object including values for edan_facility_id, floor, building (text)."
+      "description": "EDAN field object including values for edan_facility_id, floor, building (text).",
+      "$ref": "field-object.json#/fieldObject"
     },
     "keywords": {
       "type": "array",
@@ -38,31 +40,37 @@
     },
     "online_media": {
       "type": "object",
-      "description": "EDAN online media object"
+      "description": "EDAN online media object",
+      "$ref": "online-media.json#/onlineMedia"
     },
     "event_status": {
       "type": "string"
     },
     "sponsor": {
       "type": "object",
-      "description": "EDAN field object"
+      "description": "EDAN field object",
+      "$ref": "field-object.json#/fieldObject"
     },
     "original_db_record_updatedate": "string",
     "title": {
       "type": "object",
-      "description": "EDAN field object"
+      "description": "EDAN field object",
+      "$ref": "field-object.json#/fieldObject"
     },
     "open": {
       "type": "object",
-      "description": "EDAN field object"
+      "description": "EDAN field object",
+      "$ref": "field-object.json#/fieldObject"
     },
     "close": {
       "type": "object",
-      "description": "EDAN field object"
+      "description": "EDAN field object",
+      "$ref": "field-object.json#/fieldObject"
     },
     "on_sale": {
       "type": "object",
-      "description": "EDAN field object"
+      "description": "EDAN field object",
+      "$ref": "field-object.json#/fieldObject"
     },
     "online_exhibit": {
       "type": "string",
@@ -70,11 +78,13 @@
     },
     "description": {
       "type": "object",
-      "items": "EDAN field object"
+      "items": "EDAN field object",
+      "$ref": "field-object.json#/fieldObject"
     },
     "teaser": {
       "type": "object",
-      "items": "EDAN field object"
+      "items": "EDAN field object",
+      "$ref": "field-object.json#/fieldObject"
     },
     "record_link": {
       "type": "string",

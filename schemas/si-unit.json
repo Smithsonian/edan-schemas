@@ -20,53 +20,64 @@
     },
     "online_media": {
       "type": "object",
-      "description": "EDAN online media object"
+      "description": "EDAN online media object",
+      "$ref": "online-media.json#/onlineMedia"
     },
     "title": {
       "type": "object",
-      "description": "EDAN field object"
+      "description": "EDAN field object",
+      "$ref": "field-object.json#/fieldObject"
     },
     "address": {
       "type": "object",
-      "description": "EDAN field object"
+      "description": "EDAN field object",
+      "$ref": "field-object.json#/fieldObject"
     },
     "telephone": {
       "type": "object",
-      "description": "EDAN field array object"
+      "description": "EDAN field array object",
+      "$ref": "field-object.json#/fieldObject"
     },
     "fax": {
       "type": "object",
-      "description": "EDAN field object"
+      "description": "EDAN field object",
+      "$ref": "field-object.json#/fieldObject"
     },
     "name": {
       "type": "array",
       "items": "object",
-      "description": "EDAN field object"
+      "description": "EDAN field object",
+      "$ref": "field-object.json#/fieldObject"
     },
     "topic": {
       "type": "array",
       "items": "object",
-      "description": "EDAN field object"
+      "description": "EDAN field object",
+      "$ref": "field-object.json#/fieldObject"
     },
     "culture": {
       "type": "array",
       "items": "object",
-      "description": "EDAN field object"
+      "description": "EDAN field object",
+      "$ref": "field-object.json#/fieldObject"
     },
     "language": {
       "type": "array",
       "items": "object",
-      "description": "EDAN field object"
+      "description": "EDAN field object",
+      "$ref": "field-object.json#/fieldObject"
     },
     "place": {
       "type": "array",
       "items": "object",
-      "description": "EDAN field object"
+      "description": "EDAN field object",
+      "$ref": "field-object.json#/fieldObject"
     },
     "category": {
       "type": "array",
       "items": "object",
-      "description": "EDAN field object"
+      "description": "EDAN field object",
+      "$ref": "field-object.json#/fieldObject"
     },
     "description": {
       "type": "string",
@@ -82,19 +93,23 @@
     },
     "notes": {
       "type": "object",
-      "items": "EDAN field object"
+      "items": "EDAN field object",
+      "$ref": "field-object.json#/fieldObject"
     },
     "data_source": {
       "type": "object",
-      "items": "EDAN field object"
+      "items": "EDAN field object",
+      "$ref": "field-object.json#/fieldObject"
     },
     "usage_flag": {
       "type": "object",
-      "description": "EDAN field object"
+      "description": "EDAN field object",
+      "$ref": "field-object.json#/fieldObject"
     },
     "set_name": {
       "type": "object",
-      "items": "EDAN field object"
+      "items": "EDAN field object",
+      "$ref": "field-object.json#/fieldObject"
     }
   }
 }

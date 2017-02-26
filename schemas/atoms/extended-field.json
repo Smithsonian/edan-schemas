@@ -1,5 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {
+    "extendedField": {
   "title": "Extended Field (DRAFT)",
   "description": "Object that tracks enriched content.",
   "required": [],
@@ -33,5 +35,7 @@
         "type": "string"
       }
     }
+  }
+}
   }
 }

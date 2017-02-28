@@ -1,25 +1,23 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "definitions": {
-    "onlineMedia": {
-  "title": "Online Media (DRAFT)",
-  "description": "Object that stores all media within a record.",
-  "type": "object",
-  "required": [],
-  "properties": {
-    "media": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "oneOf": [
-          {
-                "$ref": "media-element.json#/edanMediaElement"
-          }
-            ],
-    "preferred": "string"
-  }
-}
-      }
-    }
-  }
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"definitions": {
+		"onlineMedia": {
+			"title": "Online Media (DRAFT)",
+			"description": "Object that stores all media within a record.",
+			"type": "object",
+			"required": [],
+			"properties": {
+				"media": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"oneOf": [{
+							"$ref": "media-element.json#/edanMediaElement"
+						}],
+						"preferred": "string"
+					}
+				}
+			}
+		}
+	}
 }

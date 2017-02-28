@@ -1,0 +1,103 @@
+{
+  "id": "p1b-1474716020541-1475755699216-0",
+  "title": "National Portrait Gallery",
+  "unitCode": "SIEDU",
+  "type": "location",
+  "url": "location:national-portrait-gallery",
+  "content": {
+    "acronym": "NPG",
+    "title_shortname": "Portrait Gallery",
+    "parent_unit_ID": "p1b-1474716020541-1475702966421-0",
+    "objectgroup_ID": "p1a-1474716020871-1475600239987-0",
+    "ofeo_ID": "",
+    "trumba_venue_ID": "80811",
+    "facility_type": "Museum",
+    "description": "<p>With the visual arts, performing arts and new media, the Portrait Gallery introduces you to the people who have shaped the country\u2014poets, presidents, actors, activists, visionaries, villains...and everyone in between. Its collection weaves together story and biography from precolonial times to the present to tell the American story.<\/p>\r\n",
+    "summary": "",
+    "highlights": "<p><em>America\u2019s Presidents<\/em>, the nation\u2019s only complete collection of presidential portraits outside the White House; workshops and programs for young people, including Saturday art activities and tours; Portrait Discovery Kits for kids and families.&nbsp;For a break between galleries, reflect in the Kogod Courtyard, a signature element of the building.<\/p>\r\n",
+    "hours": "<p>11:30 a.m. to 7:00 p.m. daily<br \/>\r\nClosed December 25<\/p>\r\n",
+    "location_status": "open",
+    "admission": "<p>Admission is free<\/p>\r\n",
+    "record_link": "https:\/\/npg.si.edu\/",
+    "url": "",
+    "accessibility_services": "",
+    "parking": "<p>There is no parking at the museum. Parking is limited to street parking and commercial lots and garages. For their location, <a href=\"http:\/\/maps.google.com\/maps?f=q&amp;hl=en&amp;geocode=&amp;q=20001+parking&amp;ie=UTF8&amp;z=14\">please view this map<\/a>.<\/p>\r\n",
+    "record_ID": "",
+    "title": {
+      "content": "National Portrait Gallery",
+      "extended": {
+        "title_sort": "NATIONAL PORTRAIT GALLERY",
+        "category": "title",
+        "label": "Location Title",
+        "short_name": "Portrait Gallery"
+      }
+    },
+    "geolocation": {
+      "content": "38.897787 -77.022835",
+      "extended": {
+        "latitude": "38.897787",
+        "longitude": "-77.022835",
+        "url": "http:\/\/maps.apple.com\/?lsp=9902&auid=16271561479793326957&sll=38.897805,-77.023022&q=National%20Portrait%20Gallery&hnear=8th%20S",
+        "url_text": "See on Map"
+      }
+    },
+    "public_transportation": {
+      "content": "1",
+      "extended": {
+        "metro": "<p>Metro Station: Gallery Place-Chinatown (9th St. exit)<\/p>\r\n",
+        "bus": ""
+      }
+    },
+    "address": {
+      "content": "8th and F Streets, NW  Washington, DC",
+      "extended": {
+        "street_address": "8th and F Streets, NW",
+        "street_address2": "",
+        "city": "Washington",
+        "state": "DC",
+        "postalcode": ""
+      }
+    },
+    "online_media": [{
+      "content": "https:\/\/www.si.edu\/content\/img\/museums\/icons\/npg.png",
+      "extended": {
+        "rights": "",
+        "caption": "",
+        "alt": "",
+        "credit": "",
+        "description": "icon",
+        "type": "Images",
+        "mime_type": "image\/png"
+      }
+    }, {
+      "content": "https:\/\/www.si.edu\/content\/img\/museums\/banner\/npg.jpg",
+      "extended": {
+        "rights": "",
+        "caption": "",
+        "alt": "Portrait Gallery",
+        "credit": "",
+        "description": "image",
+        "type": "Images",
+        "mime_type": "image\/jpg"
+      }
+    }, {
+      "content": "https:\/\/npg.si.edu\/sites\/default\/files\/visit_floorplan_1.pdf",
+      "extended": {
+        "rights": "",
+        "caption": "",
+        "alt": "",
+        "credit": "",
+        "description": "floor plan",
+        "type": "Images",
+        "mime_type": ""
+      }
+    }]
+  },
+  "hash": "b2893f69d211ef4ccbc9e618cd49ca0194f7cf36",
+  "docSignature": "national-portrait-gallery_8ba2b1598c031e69fcd8e10258cdb66a",
+  "timestamp": "Thu Oct 06 08:08:19 EDT 2016",
+  "lastTimeUpdated": "",
+  "status": "0",
+  "version": "p1b-1474716020541-1475755699216-0",
+  "publicSearch": "true"
+}

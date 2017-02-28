@@ -1,0 +1,37 @@
+{
+  "id": "bld-1472224782684-1472224782941-0",
+  "title": "Louis Armstrong: A Cultural Legacy",
+  "unitCode": "SIEDU",
+  "type": "ecr",
+  "url": "ecr:ecr-exhibits-1846",
+  "content": {
+    "created_by": "",
+    "challenges": ["Understanding the American Experience"],
+    "keywords": "jazz music black photography music film african american",
+    "online_media": [],
+    "ec_asset_type": "Online Exhibition",
+    "record_ID": "ecr_exhibits_1846",
+    "status_id": "4",
+    "ecr_type": "exhibits",
+    "url": "http:\/\/npg.si.edu\/exh\/armstrong\/index.htm",
+    "title": {
+      "content": "Louis Armstrong: A Cultural Legacy",
+      "extended": {
+        "title_sort": "LOUIS ARMSTRONG: A CULTURAL LEGACY",
+        "category": "title",
+        "label": "ECR Title"
+      }
+    },
+    "permanent_link": "Louis-Armstrong-A-Cultural-Legacy-1846",
+    "topics": ["Art and Design", "History and Culture"],
+    "description": "<p>Some 150 paintings, prints, musical instruments, photographs, clips, and memorabilia create a portrait of the 50-year career of this musician.<\/p>",
+    "_drm_record_version": "2016-10-18-1414"
+  },
+  "hash": "122dbb905b8cff0e8f3cf4ebd999c98edbdd245d",
+  "docSignature": "ecr-exhibits-1846_3aeeae52993d2d34f1d7befb1c1c9cf0",
+  "timestamp": "Fri Aug 26 11:19:44 EDT 2016",
+  "lastTimeUpdated": "",
+  "status": "0",
+  "version": "",
+  "publicSearch": "true"
+}

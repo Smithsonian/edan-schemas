@@ -1,0 +1,77 @@
+{
+  "id": "bld-1471986141531-1471986142199-7",
+  "title": "Featured Object: Teapot",
+  "unitCode": "SIEDU",
+  "type": "event",
+  "url": "event:event-exhib-3132",
+  "content": {
+    "summary": "<p>Enjoy a distinctive, ceramic teapot by Ralph Bacerra. <\/p>",
+    "keywords": "bacerra crafts utilitarian domestic ceramics pottery",
+    "online_media": [],
+    "location": {
+      "content": "1st Floor",
+      "extended": {
+        "building": "Renwick Gallery",
+        "category": "notes",
+        "floor": "",
+        "edan_facility_id": "p1b-1460377989508-1460391558894-0",
+        "label": "Location",
+        "location_id": "p1b-1474716020541-1475756550988-0"
+      }
+    },
+    "record_ID": "event_exhib_3132",
+    "event_type": "exhibition",
+    "sponsor": {
+      "content": "Renwick Gallery",
+      "extended": {
+        "category": "notes",
+        "label": "Sponsor"
+      }
+    },
+    "close": {
+      "content": "September  30, 1990",
+      "extended": {
+        "closing_sort": "1990-09-30 00:00:00.0",
+        "close_text": "",
+        "closing_date": "1990-09-30 00:00:00.0"
+      }
+    },
+    "original_db_record_updatedate": "2014-02-25 15:51:10.0",
+    "event_status": {
+      "content": "PAST",
+      "extended": {
+        "event_status_original": "Closed"
+      }
+    },
+    "open": {
+      "content": "July  1, 1990",
+      "extended": {
+        "opening_sort": "1990-07-01 00:00:00.0",
+        "open_text": "",
+        "opening_date": "1990-07-01 00:00:00.0"
+      }
+    },
+    "title": {
+      "content": "Featured Object: Teapot",
+      "extended": {
+        "title_sort": "FEATURED OBJECT: TEAPOT",
+        "category": "title",
+        "label": "Exhibition name"
+      }
+    },
+    "online_exhibit": "",
+    "description": "<p>On view is a distinctive, ceramic teapot by Ralph Bacerra.<\/p>",
+    "_drm_record_version": "2016-10-21-0958",
+    "record_link": "",
+    "categories": ["Art and Design"],
+    "grand_challenges": [],
+    "comments": ""
+  },
+  "hash": "4a6adce1ce279cbc4b8ac37cd8d2595a70aacdf6",
+  "docSignature": "event-exhib-3132_d71746b77a23f297f8facc75e1ef597d",
+  "timestamp": "Tue Aug 23 17:02:24 EDT 2016",
+  "lastTimeUpdated": "",
+  "status": "0",
+  "version": "",
+  "publicSearch": "true"
+}

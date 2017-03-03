@@ -1,0 +1,182 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "coll_mainagencycode": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/coll_mainagencycode"
+    },
+    "coll_abstract": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/coll_abstract"
+    },
+    "coll_unittitle": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/coll_unittitle"
+    },
+    "Corporate_Name": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "id": "http://edan.si.edu/schema/Corporate_Name"
+    },
+    "Archival_Repository": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/Archival_Repository"
+    },
+    "coll_fulltitle": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/coll_fulltitle"
+    },
+    "Child_Notes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "content": {
+            "type": "string",
+            "id": "http://edan.si.edu/schema/Child_Notes/5/content"
+          },
+          "refID": {
+            "type": "string",
+            "id": "http://edan.si.edu/schema/Child_Notes/5/refID"
+          },
+          "ead": {
+            "type": "string",
+            "id": "http://edan.si.edu/schema/Child_Notes/5/ead"
+          }
+        },
+        "id": "http://edan.si.edu/schema/Child_Notes/5",
+        "required": [
+          "content",
+          "refID",
+          "ead"
+        ]
+      },
+      "id": "http://edan.si.edu/schema/Child_Notes"
+    },
+    "coll_unitid": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/coll_unitid"
+    },
+    "coll_size": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/coll_size"
+    },
+    "coll_dates": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/coll_dates"
+    },
+    "Personal_Name": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "id": "http://edan.si.edu/schema/Personal_Name"
+    },
+    "creator": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/creator"
+    },
+    "id": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/id"
+    },
+    "coll_corpname": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/coll_corpname"
+    },
+    "Collection_Notes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "content": {
+            "type": "string",
+            "id": "http://edan.si.edu/schema/Collection_Notes/14/content"
+          },
+          "refID": {
+            "type": "string",
+            "id": "http://edan.si.edu/schema/Collection_Notes/14/refID"
+          },
+          "ead": {
+            "type": "string",
+            "id": "http://edan.si.edu/schema/Collection_Notes/14/ead"
+          }
+        },
+        "id": "http://edan.si.edu/schema/Collection_Notes/14",
+        "required": [
+          "content",
+          "refID",
+          "ead"
+        ]
+      },
+      "id": "http://edan.si.edu/schema/Collection_Notes"
+    },
+    "filelocation": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/filelocation"
+    },
+    "Topic": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "id": "http://edan.si.edu/schema/Topic"
+    },
+    "Child_Title": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "id": "http://edan.si.edu/schema/Child_Title"
+    },
+    "edan_ID": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/edan_ID"
+    },
+    "Digital_Assets_Available": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/Digital_Assets_Available"
+    },
+    "Collection_Title": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/Collection_Title"
+    },
+    "coll_language": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/coll_language"
+    },
+    "unit_code": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/unit_code"
+    }
+  },
+  "id": "http://edan.si.edu/schema",
+  "required": [
+    "coll_mainagencycode",
+    "coll_abstract",
+    "coll_unittitle",
+    "Corporate_Name",
+    "Archival_Repository",
+    "coll_fulltitle",
+    "Child_Notes",
+    "coll_unitid",
+    "coll_size",
+    "coll_dates",
+    "Personal_Name",
+    "creator",
+    "id",
+    "coll_corpname",
+    "Collection_Notes",
+    "filelocation",
+    "Topic",
+    "Child_Title",
+    "edan_ID",
+    "Digital_Assets_Available",
+    "Collection_Title",
+    "coll_language",
+    "unit_code"
+  ]
+}

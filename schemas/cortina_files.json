@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "Fields": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Type": {
+            "type": "integer",
+            "id": "http://edan.si.edu/schema/Fields/2/Type"
+          },
+          "Value": {
+            "type": "string",
+            "id": "http://edan.si.edu/schema/Fields/2/Value"
+          },
+          "FKey": {
+            "type": "integer",
+            "id": "http://edan.si.edu/schema/Fields/2/FKey"
+          },
+          "Name": {
+            "type": "string",
+            "id": "http://edan.si.edu/schema/Fields/2/Name"
+          }
+        },
+        "id": "http://edan.si.edu/schema/Fields/2",
+        "required": [
+          "Type",
+          "Value",
+          "FKey",
+          "Name"
+        ]
+      },
+      "id": "http://edan.si.edu/schema/Fields"
+    },
+    "MDate": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/MDate"
+    },
+    "Key": {
+      "type": "integer",
+      "id": "http://edan.si.edu/schema/Key"
+    }
+  },
+  "id": "http://edan.si.edu/schema",
+  "required": [
+    "Fields",
+    "MDate",
+    "Key"
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "setName": {
+      "type": "object",
+      "properties": {
+        "label": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/setName/label"
+        },
+        "content": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/setName/content"
+        }
+      },
+      "id": "http://edan.si.edu/schema/setName",
+      "required": [
+        "label",
+        "content"
+      ]
+    },
+    "featured": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/featured"
+    },
+    "keywords": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/keywords"
+    },
+    "active": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/active"
+    },
+    "record_link": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/record_link"
+    },
+    "title": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/title"
+    },
+    "fullDescription": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/fullDescription"
+    },
+    "record_type": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/record_type"
+    },
+    "data_source": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/data_source"
+    },
+    "room": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/room"
+    },
+    "record_ID": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/record_ID"
+    },
+    "museum": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/museum"
+    },
+    "closedate_text": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/closedate_text"
+    },
+    "unit_code": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/unit_code"
+    },
+    "topic": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "id": "http://edan.si.edu/schema/topic"
+    },
+    "location": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/location"
+    },
+    "dataSource": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/dataSource"
+    },
+    "briefDescription": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/briefDescription"
+    },
+    "opening_date": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/opening_date"
+    }
+  },
+  "id": "http://edan.si.edu/schema",
+  "required": [
+    "setName",
+    "featured",
+    "keywords",
+    "active",
+    "record_link",
+    "title",
+    "fullDescription",
+    "record_type",
+    "data_source",
+    "room",
+    "record_ID",
+    "museum",
+    "closedate_text",
+    "unit_code",
+    "topic",
+    "location",
+    "dataSource",
+    "briefDescription",
+    "opening_date"
+  ]
+}

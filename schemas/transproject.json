@@ -1,0 +1,109 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "projectId": {
+      "type": "integer",
+      "id": "http://jsonschema.net/projectId"
+    },
+    "projectName": {
+      "type": "string",
+      "id": "http://jsonschema.net/projectName"
+    },
+    "projectOwner": {
+      "type": "string",
+      "id": "http://jsonschema.net/projectOwner"
+    },
+    "projectMetadata": {
+      "type": "string",
+      "id": "http://jsonschema.net/projectMetadata"
+    },
+    "projectImage": {
+      "type": "string",
+      "id": "http://jsonschema.net/projectImage"
+    },
+    "projectDate": {
+      "type": "string",
+      "id": "http://jsonschema.net/projectDate"
+    },
+    "assetCount": {
+      "type": "integer",
+      "id": "http://jsonschema.net/assetCount"
+    },
+    "projectUsers": {
+      "type": "integer",
+      "id": "http://jsonschema.net/projectUsers"
+    },
+    "projectSubmits": {
+      "type": "integer",
+      "id": "http://jsonschema.net/projectSubmits"
+    },
+    "assetsCompleted": {
+      "type": "integer",
+      "id": "http://jsonschema.net/assetsCompleted"
+    },
+    "assetsInReview": {
+      "type": "integer",
+      "id": "http://jsonschema.net/assetsInReview"
+    },
+    "assetsTranscribed": {
+      "type": "integer",
+      "id": "http://jsonschema.net/assetsTranscribed"
+    },
+    "assetsApproved": {
+      "type": "integer",
+      "id": "http://jsonschema.net/assetsApproved"
+    },
+    "projectDisplay": {
+      "type": "integer",
+      "id": "http://jsonschema.net/projectDisplay"
+    },
+    "projectDisplayType": {
+      "type": "integer",
+      "id": "http://jsonschema.net/projectDisplayType"
+    },
+    "projectStatus": {
+      "type": "integer",
+      "id": "http://jsonschema.net/projectStatus"
+    },
+    "projectDescription": {
+      "type": "string",
+      "id": "http://jsonschema.net/projectDescription"
+    },
+    "projectSummary": {
+      "type": "string",
+      "id": "http://jsonschema.net/projectSummary"
+    },
+    "projectParentId": {
+      "type": "integer",
+      "id": "http://jsonschema.net/projectParentId"
+    },
+    "projectCompleted": {
+      "type": "boolean",
+      "id": "http://jsonschema.net/projectCompleted"
+    }
+  },
+  "id": "http://jsonschema.net",
+  "required": [
+    "projectId",
+    "projectName",
+    "projectOwner",
+    "projectMetadata",
+    "projectImage",
+    "projectDate",
+    "assetCount",
+    "projectUsers",
+    "projectSubmits",
+    "assetsCompleted",
+    "assetsInReview",
+    "assetsTranscribed",
+    "assetsApproved",
+    "projectDisplay",
+    "projectDisplayType",
+    "projectStatus",
+    "projectDescription",
+    "projectSummary",
+    "projectParentId",
+    "projectCompleted"
+  ]
+}

@@ -1,0 +1,1000 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "unit_codes": {
+      "type": "object",
+      "properties": {
+        "3D_YT": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/unit_codes/3D_YT"
+        },
+        "AAA": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/unit_codes/AAA"
+        },
+        "AAADCD": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/unit_codes/AAADCD"
+        },
+        "AAA_BL": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/unit_codes/AAA_BL"
+        },
+        "AAA_PC": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/unit_codes/AAA_PC"
+        },
+        "SICHANNEL_PC": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/unit_codes/SICHANNEL_PC"
+        },
+        "SICHANNEL_YT": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/unit_codes/SICHANNEL_YT"
+        },
+        "SIEDUC_YT": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/unit_codes/SIEDUC_YT"
+        },
+        "SIL": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/unit_codes/SIL"
+        },
+        "SILAF": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/unit_codes/SILAF"
+        },
+        "SILDF": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/unit_codes/SILDF"
+        },
+        "SILNMAHTL": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/unit_codes/SILNMAHTL"
+        },
+        "SILSRO": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/unit_codes/SILSRO"
+        },
+        "SIL_BL": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/unit_codes/SIL_BL"
+        },
+        "SIL_YT": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/unit_codes/SIL_YT"
+        },
+        "SIMAG_BL": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/unit_codes/SIMAG_BL"
+        },
+        "SIMAG_YT": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/unit_codes/SIMAG_YT"
+        },
+        "SIMBC_YT": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/unit_codes/SIMBC_YT"
+        },
+        "SIOPA_YT": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/unit_codes/SIOPA_YT"
+        },
+        "SITES_BL": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/unit_codes/SITES_BL"
+        },
+        "SITES_PC": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/unit_codes/SITES_PC"
+        },
+        "SITES_YT": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/unit_codes/SITES_YT"
+        },
+        "SI_YT": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/unit_codes/SI_YT"
+        },
+        "SJ_BL": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/unit_codes/SJ_BL"
+        },
+        "SLC_YT": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/unit_codes/SLC_YT"
+        },
+        "SS_BL": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/unit_codes/SS_BL"
+        },
+        "STRI": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/unit_codes/STRI"
+        },
+        "STRI-BDFFP": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/unit_codes/STRI-BDFFP"
+        },
+        "STRI-CTFS": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/unit_codes/STRI-CTFS"
+        },
+        "STRI_YT": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/unit_codes/STRI_YT"
+        }
+      },
+      "id": "http://edan.si.edu/schema/unit_codes",
+      "required": [
+        "3D_YT",
+        "AAA",
+        "AAADCD",
+        "AAA_BL",
+        "AAA_PC",
+        "SICHANNEL_PC",
+        "SICHANNEL_YT",
+        "SIEDUC_YT",
+        "SIL",
+        "SILAF",
+        "SILDF",
+        "SILNMAHTL",
+        "SILSRO",
+        "SIL_BL",
+        "SIL_YT",
+        "SIMAG_BL",
+        "SIMAG_YT",
+        "SIMBC_YT",
+        "SIOPA_YT",
+        "SITES_BL",
+        "SITES_PC",
+        "SITES_YT",
+        "SI_YT",
+        "SJ_BL",
+        "SLC_YT",
+        "SS_BL",
+        "STRI",
+        "STRI-BDFFP",
+        "STRI-CTFS",
+        "STRI_YT"
+      ]
+    },
+    "museums": {
+      "type": "object",
+      "properties": {
+        "3D_YT": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/3D_YT"
+        },
+        "AAA": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/AAA"
+        },
+        "AAG": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/AAG"
+        },
+        "ACAH": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/ACAH"
+        },
+        "ACM": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/ACM"
+        },
+        "ACMA": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/ACMA"
+        },
+        "AECI": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/AECI"
+        },
+        "APAP": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/APAP"
+        },
+        "ARI": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/ARI"
+        },
+        "CEPH": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/CEPH"
+        },
+        "CHNDM": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/CHNDM"
+        },
+        "EEPA": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/EEPA"
+        },
+        "FBR": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/FBR"
+        },
+        "FLP": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/FLP"
+        },
+        "FPMS_YT": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/FPMS_YT"
+        },
+        "FSA": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/FSA"
+        },
+        "FSG": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/FSG"
+        },
+        "HAC": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/HAC"
+        },
+        "HMSG": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/HMSG"
+        },
+        "HSFA": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/HSFA"
+        },
+        "IAHP_BL": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/IAHP_BL"
+        },
+        "MCI_YT": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/MCI_YT"
+        },
+        "MMAM": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/MMAM"
+        },
+        "MSB": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/MSB"
+        },
+        "NAA": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/NAA"
+        },
+        "NASM": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/NASM"
+        },
+        "NASMAC": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/NASMAC"
+        },
+        "NMAAHC": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/NMAAHC"
+        },
+        "NMAH": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/NMAH"
+        },
+        "NMAI": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/NMAI"
+        },
+        "NMAIA": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/NMAIA"
+        },
+        "NMAfA": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/NMAfA"
+        },
+        "NMNHANTHRO": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/NMNHANTHRO"
+        },
+        "NMNHBIRDS": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/NMNHBIRDS"
+        },
+        "NMNHBOTANY": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/NMNHBOTANY"
+        },
+        "NMNHENTO": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/NMNHENTO"
+        },
+        "NMNHFISHES": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/NMNHFISHES"
+        },
+        "NMNHHERPS": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/NMNHHERPS"
+        },
+        "NMNHINV": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/NMNHINV"
+        },
+        "NMNHMAMMALS": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/NMNHMAMMALS"
+        },
+        "NMNHMINSCI": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/NMNHMINSCI"
+        },
+        "NMNHPALEO": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/NMNHPALEO"
+        },
+        "NMNH": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/NMNH"
+        },
+        "NPG": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/NPG"
+        },
+        "NPGCAP": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/NPGCAP"
+        },
+        "NPM": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/NPM"
+        },
+        "NSRC": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/NSRC"
+        },
+        "NZP": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/NZP"
+        },
+        "SAAM": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/SAAM"
+        },
+        "SAAM???": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/SAAM???"
+        },
+        "SAO": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/SAO"
+        },
+        "SERC": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/SERC"
+        },
+        "SI20_BL": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/SI20_BL"
+        },
+        "SIA": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/SIA"
+        },
+        "SIA-HIS": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/SIA-HIS"
+        },
+        "SIAFFIL": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/SIAFFIL"
+        },
+        "SICHANNEL": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/SICHANNEL"
+        },
+        "SIEDUC": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/SIEDUC"
+        },
+        "SIL": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/SIL"
+        },
+        "SIMAG": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/SIMAG"
+        },
+        "SIMBC": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/SIMBC"
+        },
+        "SIOPA": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/SIOPA"
+        },
+        "SITES": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/SITES"
+        },
+        "SI": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/SI"
+        },
+        "SJ": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/SJ"
+        },
+        "SLC": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/SLC"
+        },
+        "SS": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/SS"
+        },
+        "STRI": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/STRI"
+        },
+        "STRI-BDFFP": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/STRI-BDFFP"
+        },
+        "STRI-CTFS": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/museums/STRI-CTFS"
+        }
+      },
+      "id": "http://edan.si.edu/schema/museums",
+      "required": [
+        "3D_YT",
+        "AAA",
+        "AAG",
+        "ACAH",
+        "ACM",
+        "ACMA",
+        "AECI",
+        "APAP",
+        "ARI",
+        "CEPH",
+        "CHNDM",
+        "EEPA",
+        "FBR",
+        "FLP",
+        "FPMS_YT",
+        "FSA",
+        "FSG",
+        "HAC",
+        "HMSG",
+        "HSFA",
+        "IAHP_BL",
+        "MCI_YT",
+        "MMAM",
+        "MSB",
+        "NAA",
+        "NASM",
+        "NASMAC",
+        "NMAAHC",
+        "NMAH",
+        "NMAI",
+        "NMAIA",
+        "NMAfA",
+        "NMNHANTHRO",
+        "NMNHBIRDS",
+        "NMNHBOTANY",
+        "NMNHENTO",
+        "NMNHFISHES",
+        "NMNHHERPS",
+        "NMNHINV",
+        "NMNHMAMMALS",
+        "NMNHMINSCI",
+        "NMNHPALEO",
+        "NMNH",
+        "NPG",
+        "NPGCAP",
+        "NPM",
+        "NSRC",
+        "NZP",
+        "SAAM",
+        "SAAM???",
+        "SAO",
+        "SERC",
+        "SI20_BL",
+        "SIA",
+        "SIA-HIS",
+        "SIAFFIL",
+        "SICHANNEL",
+        "SIEDUC",
+        "SIL",
+        "SIMAG",
+        "SIMBC",
+        "SIOPA",
+        "SITES",
+        "SI",
+        "SJ",
+        "SLC",
+        "SS",
+        "STRI",
+        "STRI-BDFFP",
+        "STRI-CTFS"
+      ]
+    },
+    "app_codes": {
+      "type": "object",
+      "properties": {
+        "NPGOGMT_TEST": {
+          "type": "object",
+          "properties": {
+            "publicSearch": {
+              "type": "boolean",
+              "id": "http://edan.si.edu/schema/app_codes/NPGOGMT_TEST/publicSearch"
+            },
+            "applicationId": {
+              "type": "string",
+              "id": "http://edan.si.edu/schema/app_codes/NPGOGMT_TEST/applicationId"
+            },
+            "name": {
+              "type": "string",
+              "id": "http://edan.si.edu/schema/app_codes/NPGOGMT_TEST/name"
+            },
+            "status": {
+              "type": "integer",
+              "id": "http://edan.si.edu/schema/app_codes/NPGOGMT_TEST/status"
+            }
+          },
+          "id": "http://edan.si.edu/schema/app_codes/NPGOGMT_TEST",
+          "required": [
+            "publicSearch",
+            "applicationId",
+            "name",
+            "status"
+          ]
+        },
+        "NMAH": {
+          "type": "object",
+          "properties": {
+            "publicSearch": {
+              "type": "boolean",
+              "id": "http://edan.si.edu/schema/app_codes/NMAH/publicSearch"
+            },
+            "applicationId": {
+              "type": "string",
+              "id": "http://edan.si.edu/schema/app_codes/NMAH/applicationId"
+            },
+            "name": {
+              "type": "string",
+              "id": "http://edan.si.edu/schema/app_codes/NMAH/name"
+            },
+            "status": {
+              "type": "integer",
+              "id": "http://edan.si.edu/schema/app_codes/NMAH/status"
+            }
+          },
+          "id": "http://edan.si.edu/schema/app_codes/NMAH",
+          "required": [
+            "publicSearch",
+            "applicationId",
+            "name",
+            "status"
+          ]
+        },
+        "NPGOGMT_TEST2": {
+          "type": "object",
+          "properties": {
+            "publicSearch": {
+              "type": "boolean",
+              "id": "http://edan.si.edu/schema/app_codes/NPGOGMT_TEST2/publicSearch"
+            },
+            "applicationId": {
+              "type": "string",
+              "id": "http://edan.si.edu/schema/app_codes/NPGOGMT_TEST2/applicationId"
+            },
+            "name": {
+              "type": "string",
+              "id": "http://edan.si.edu/schema/app_codes/NPGOGMT_TEST2/name"
+            },
+            "status": {
+              "type": "integer",
+              "id": "http://edan.si.edu/schema/app_codes/NPGOGMT_TEST2/status"
+            }
+          },
+          "id": "http://edan.si.edu/schema/app_codes/NPGOGMT_TEST2",
+          "required": [
+            "publicSearch",
+            "applicationId",
+            "name",
+            "status"
+          ]
+        },
+        "OGMT_TEST": {
+          "type": "object",
+          "properties": {
+            "publicSearch": {
+              "type": "boolean",
+              "id": "http://edan.si.edu/schema/app_codes/OGMT_TEST/publicSearch"
+            },
+            "applicationId": {
+              "type": "string",
+              "id": "http://edan.si.edu/schema/app_codes/OGMT_TEST/applicationId"
+            },
+            "name": {
+              "type": "string",
+              "id": "http://edan.si.edu/schema/app_codes/OGMT_TEST/name"
+            },
+            "status": {
+              "type": "integer",
+              "id": "http://edan.si.edu/schema/app_codes/OGMT_TEST/status"
+            }
+          },
+          "id": "http://edan.si.edu/schema/app_codes/OGMT_TEST",
+          "required": [
+            "publicSearch",
+            "applicationId",
+            "name",
+            "status"
+          ]
+        },
+        "TESTER": {
+          "type": "object",
+          "properties": {
+            "publicSearch": {
+              "type": "boolean",
+              "id": "http://edan.si.edu/schema/app_codes/TESTER/publicSearch"
+            },
+            "applicationId": {
+              "type": "string",
+              "id": "http://edan.si.edu/schema/app_codes/TESTER/applicationId"
+            },
+            "name": {
+              "type": "string",
+              "id": "http://edan.si.edu/schema/app_codes/TESTER/name"
+            },
+            "status": {
+              "type": "integer",
+              "id": "http://edan.si.edu/schema/app_codes/TESTER/status"
+            }
+          },
+          "id": "http://edan.si.edu/schema/app_codes/TESTER",
+          "required": [
+            "publicSearch",
+            "applicationId",
+            "name",
+            "status"
+          ]
+        },
+        "ocio_wsd_test": {
+          "type": "object",
+          "properties": {
+            "publicSearch": {
+              "type": "boolean",
+              "id": "http://edan.si.edu/schema/app_codes/ocio_wsd_test/publicSearch"
+            },
+            "applicationId": {
+              "type": "string",
+              "id": "http://edan.si.edu/schema/app_codes/ocio_wsd_test/applicationId"
+            },
+            "name": {
+              "type": "string",
+              "id": "http://edan.si.edu/schema/app_codes/ocio_wsd_test/name"
+            },
+            "status": {
+              "type": "integer",
+              "id": "http://edan.si.edu/schema/app_codes/ocio_wsd_test/status"
+            }
+          },
+          "id": "http://edan.si.edu/schema/app_codes/ocio_wsd_test",
+          "required": [
+            "publicSearch",
+            "applicationId",
+            "name",
+            "status"
+          ]
+        },
+        "QUOTIENT_CI": {
+          "type": "object",
+          "properties": {
+            "publicSearch": {
+              "type": "boolean",
+              "id": "http://edan.si.edu/schema/app_codes/QUOTIENT_CI/publicSearch"
+            },
+            "applicationId": {
+              "type": "string",
+              "id": "http://edan.si.edu/schema/app_codes/QUOTIENT_CI/applicationId"
+            },
+            "name": {
+              "type": "string",
+              "id": "http://edan.si.edu/schema/app_codes/QUOTIENT_CI/name"
+            },
+            "status": {
+              "type": "integer",
+              "id": "http://edan.si.edu/schema/app_codes/QUOTIENT_CI/status"
+            }
+          },
+          "id": "http://edan.si.edu/schema/app_codes/QUOTIENT_CI",
+          "required": [
+            "publicSearch",
+            "applicationId",
+            "name",
+            "status"
+          ]
+        },
+        "NMAAHCOGMT_TEST": {
+          "type": "object",
+          "properties": {
+            "publicSearch": {
+              "type": "boolean",
+              "id": "http://edan.si.edu/schema/app_codes/NMAAHCOGMT_TEST/publicSearch"
+            },
+            "applicationId": {
+              "type": "string",
+              "id": "http://edan.si.edu/schema/app_codes/NMAAHCOGMT_TEST/applicationId"
+            },
+            "name": {
+              "type": "string",
+              "id": "http://edan.si.edu/schema/app_codes/NMAAHCOGMT_TEST/name"
+            },
+            "status": {
+              "type": "integer",
+              "id": "http://edan.si.edu/schema/app_codes/NMAAHCOGMT_TEST/status"
+            }
+          },
+          "id": "http://edan.si.edu/schema/app_codes/NMAAHCOGMT_TEST",
+          "required": [
+            "publicSearch",
+            "applicationId",
+            "name",
+            "status"
+          ]
+        },
+        "AAA_TEST": {
+          "type": "object",
+          "properties": {
+            "publicSearch": {
+              "type": "boolean",
+              "id": "http://edan.si.edu/schema/app_codes/AAA_TEST/publicSearch"
+            },
+            "applicationId": {
+              "type": "string",
+              "id": "http://edan.si.edu/schema/app_codes/AAA_TEST/applicationId"
+            },
+            "name": {
+              "type": "string",
+              "id": "http://edan.si.edu/schema/app_codes/AAA_TEST/name"
+            },
+            "status": {
+              "type": "integer",
+              "id": "http://edan.si.edu/schema/app_codes/AAA_TEST/status"
+            }
+          },
+          "id": "http://edan.si.edu/schema/app_codes/AAA_TEST",
+          "required": [
+            "publicSearch",
+            "applicationId",
+            "name",
+            "status"
+          ]
+        },
+        "NMNH_TEST": {
+          "type": "object",
+          "properties": {
+            "publicSearch": {
+              "type": "boolean",
+              "id": "http://edan.si.edu/schema/app_codes/NMNH_TEST/publicSearch"
+            },
+            "applicationId": {
+              "type": "string",
+              "id": "http://edan.si.edu/schema/app_codes/NMNH_TEST/applicationId"
+            },
+            "name": {
+              "type": "string",
+              "id": "http://edan.si.edu/schema/app_codes/NMNH_TEST/name"
+            },
+            "status": {
+              "type": "integer",
+              "id": "http://edan.si.edu/schema/app_codes/NMNH_TEST/status"
+            }
+          },
+          "id": "http://edan.si.edu/schema/app_codes/NMNH_TEST",
+          "required": [
+            "publicSearch",
+            "applicationId",
+            "name",
+            "status"
+          ]
+        },
+        "SIAOGMT_TEST": {
+          "type": "object",
+          "properties": {
+            "publicSearch": {
+              "type": "boolean",
+              "id": "http://edan.si.edu/schema/app_codes/SIAOGMT_TEST/publicSearch"
+            },
+            "applicationId": {
+              "type": "string",
+              "id": "http://edan.si.edu/schema/app_codes/SIAOGMT_TEST/applicationId"
+            },
+            "name": {
+              "type": "string",
+              "id": "http://edan.si.edu/schema/app_codes/SIAOGMT_TEST/name"
+            },
+            "status": {
+              "type": "integer",
+              "id": "http://edan.si.edu/schema/app_codes/SIAOGMT_TEST/status"
+            }
+          },
+          "id": "http://edan.si.edu/schema/app_codes/SIAOGMT_TEST",
+          "required": [
+            "publicSearch",
+            "applicationId",
+            "name",
+            "status"
+          ]
+        },
+        "ANDREW_CI": {
+          "type": "object",
+          "properties": {
+            "publicSearch": {
+              "type": "boolean",
+              "id": "http://edan.si.edu/schema/app_codes/ANDREW_CI/publicSearch"
+            },
+            "applicationId": {
+              "type": "string",
+              "id": "http://edan.si.edu/schema/app_codes/ANDREW_CI/applicationId"
+            },
+            "name": {
+              "type": "string",
+              "id": "http://edan.si.edu/schema/app_codes/ANDREW_CI/name"
+            },
+            "status": {
+              "type": "integer",
+              "id": "http://edan.si.edu/schema/app_codes/ANDREW_CI/status"
+            }
+          },
+          "id": "http://edan.si.edu/schema/app_codes/ANDREW_CI",
+          "required": [
+            "publicSearch",
+            "applicationId",
+            "name",
+            "status"
+          ]
+        },
+        "QUOTIENTTEST": {
+          "type": "object",
+          "properties": {
+            "publicSearch": {
+              "type": "boolean",
+              "id": "http://edan.si.edu/schema/app_codes/QUOTIENTTEST/publicSearch"
+            },
+            "applicationId": {
+              "type": "string",
+              "id": "http://edan.si.edu/schema/app_codes/QUOTIENTTEST/applicationId"
+            },
+            "name": {
+              "type": "string",
+              "id": "http://edan.si.edu/schema/app_codes/QUOTIENTTEST/name"
+            },
+            "status": {
+              "type": "integer",
+              "id": "http://edan.si.edu/schema/app_codes/QUOTIENTTEST/status"
+            }
+          },
+          "id": "http://edan.si.edu/schema/app_codes/QUOTIENTTEST",
+          "required": [
+            "publicSearch",
+            "applicationId",
+            "name",
+            "status"
+          ]
+        },
+        "EDAN_CM": {
+          "type": "object",
+          "properties": {
+            "applicationId": {
+              "type": "string",
+              "id": "http://edan.si.edu/schema/app_codes/EDAN_CM/applicationId"
+            },
+            "name": {
+              "type": "string",
+              "id": "http://edan.si.edu/schema/app_codes/EDAN_CM/name"
+            },
+            "status": {
+              "type": "integer",
+              "id": "http://edan.si.edu/schema/app_codes/EDAN_CM/status"
+            },
+            "isPublic": {
+              "type": "boolean",
+              "id": "http://edan.si.edu/schema/app_codes/EDAN_CM/isPublic"
+            }
+          },
+          "id": "http://edan.si.edu/schema/app_codes/EDAN_CM",
+          "required": [
+            "applicationId",
+            "name",
+            "status",
+            "isPublic"
+          ]
+        },
+        "MISS_NMAAHC": {
+          "type": "object",
+          "properties": {
+            "applicationId": {
+              "type": "string",
+              "id": "http://edan.si.edu/schema/app_codes/MISS_NMAAHC/applicationId"
+            },
+            "name": {
+              "type": "string",
+              "id": "http://edan.si.edu/schema/app_codes/MISS_NMAAHC/name"
+            },
+            "status": {
+              "type": "integer",
+              "id": "http://edan.si.edu/schema/app_codes/MISS_NMAAHC/status"
+            },
+            "isPublic": {
+              "type": "boolean",
+              "id": "http://edan.si.edu/schema/app_codes/MISS_NMAAHC/isPublic"
+            }
+          },
+          "id": "http://edan.si.edu/schema/app_codes/MISS_NMAAHC",
+          "required": [
+            "applicationId",
+            "name",
+            "status",
+            "isPublic"
+          ]
+        },
+        "MISS_NMAAHC_MOBILE": {
+          "type": "object",
+          "properties": {
+            "applicationId": {
+              "type": "string",
+              "id": "http://edan.si.edu/schema/app_codes/MISS_NMAAHC_MOBILE/applicationId"
+            },
+            "name": {
+              "type": "string",
+              "id": "http://edan.si.edu/schema/app_codes/MISS_NMAAHC_MOBILE/name"
+            },
+            "status": {
+              "type": "integer",
+              "id": "http://edan.si.edu/schema/app_codes/MISS_NMAAHC_MOBILE/status"
+            },
+            "isPublic": {
+              "type": "boolean",
+              "id": "http://edan.si.edu/schema/app_codes/MISS_NMAAHC_MOBILE/isPublic"
+            }
+          },
+          "id": "http://edan.si.edu/schema/app_codes/MISS_NMAAHC_MOBILE",
+          "required": [
+            "applicationId",
+            "name",
+            "status",
+            "isPublic"
+          ]
+        }
+      },
+      "id": "http://edan.si.edu/schema/app_codes",
+      "required": [
+        "NPGOGMT_TEST",
+        "NMAH",
+        "NPGOGMT_TEST2",
+        "OGMT_TEST",
+        "TESTER",
+        "ocio_wsd_test",
+        "QUOTIENT_CI",
+        "NMAAHCOGMT_TEST",
+        "AAA_TEST",
+        "NMNH_TEST",
+        "SIAOGMT_TEST",
+        "ANDREW_CI",
+        "QUOTIENTTEST",
+        "EDAN_CM",
+        "MISS_NMAAHC",
+        "MISS_NMAAHC_MOBILE"
+      ]
+    }
+  },
+  "id": "http://edan.si.edu/schema",
+  "required": [
+    "unit_codes",
+    "museums",
+    "app_codes"
+  ]
+}

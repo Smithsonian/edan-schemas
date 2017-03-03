@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "videoFileUrl": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/videoFileUrl"
+    },
+    "name": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/name"
+    },
+    "emailAddress": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/emailAddress"
+    },
+    "questionId": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/questionId"
+    }
+  },
+  "id": "http://edan.si.edu/schema",
+  "required": [
+    "videoFileUrl",
+    "name",
+    "emailAddress",
+    "questionId"
+  ]
+}

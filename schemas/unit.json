@@ -1,0 +1,345 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "about_this_unit": {
+      "type": "object",
+      "properties": {
+        "extended": {
+          "type": "object",
+          "properties": {
+            "category": {
+              "type": "string",
+              "id": "http://edan.si.edu/schema/about_this_unit/extended/category"
+            },
+            "type": {
+              "type": "string",
+              "id": "http://edan.si.edu/schema/about_this_unit/extended/type"
+            },
+            "label": {
+              "type": "string",
+              "id": "http://edan.si.edu/schema/about_this_unit/extended/label"
+            }
+          },
+          "id": "http://edan.si.edu/schema/about_this_unit/extended",
+          "required": [
+            "category",
+            "type",
+            "label"
+          ]
+        },
+        "content": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/about_this_unit/content"
+        }
+      },
+      "id": "http://edan.si.edu/schema/about_this_unit",
+      "required": [
+        "extended",
+        "content"
+      ]
+    },
+    "hours": {
+      "type": "object",
+      "properties": {
+        "extended": {
+          "type": "object",
+          "properties": {
+            "category": {
+              "type": "string",
+              "id": "http://edan.si.edu/schema/hours/extended/category"
+            },
+            "label": {
+              "type": "string",
+              "id": "http://edan.si.edu/schema/hours/extended/label"
+            }
+          },
+          "id": "http://edan.si.edu/schema/hours/extended",
+          "required": [
+            "category",
+            "label"
+          ]
+        },
+        "content": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/hours/content"
+        }
+      },
+      "id": "http://edan.si.edu/schema/hours",
+      "required": [
+        "extended",
+        "content"
+      ]
+    },
+    "unit_type": {
+      "type": "object",
+      "properties": {
+        "content": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/unit_type/content"
+        }
+      },
+      "id": "http://edan.si.edu/schema/unit_type",
+      "required": [
+        "content"
+      ]
+    },
+    "online_media": {
+      "type": "object",
+      "properties": {
+        "media": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "caption": {
+                "type": "string",
+                "id": "http://edan.si.edu/schema/online_media/media/3/caption"
+              },
+              "type": {
+                "type": "string",
+                "id": "http://edan.si.edu/schema/online_media/media/3/type"
+              },
+              "content": {
+                "type": "string",
+                "id": "http://edan.si.edu/schema/online_media/media/3/content"
+              }
+            },
+            "id": "http://edan.si.edu/schema/online_media/media/3",
+            "required": [
+              "caption",
+              "type",
+              "content"
+            ]
+          },
+          "id": "http://edan.si.edu/schema/online_media/media"
+        }
+      },
+      "id": "http://edan.si.edu/schema/online_media",
+      "required": [
+        "media"
+      ]
+    },
+    "recordType": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/recordType"
+    },
+    "data_source": {
+      "type": "object",
+      "properties": {
+        "extended": {
+          "type": "object",
+          "properties": {
+            "category": {
+              "type": "string",
+              "id": "http://edan.si.edu/schema/data_source/extended/category"
+            },
+            "facet_data_source": {
+              "type": "string",
+              "id": "http://edan.si.edu/schema/data_source/extended/facet_data_source"
+            },
+            "facet_unit_code": {
+              "type": "string",
+              "id": "http://edan.si.edu/schema/data_source/extended/facet_unit_code"
+            },
+            "label": {
+              "type": "string",
+              "id": "http://edan.si.edu/schema/data_source/extended/label"
+            }
+          },
+          "id": "http://edan.si.edu/schema/data_source/extended",
+          "required": [
+            "category",
+            "facet_data_source",
+            "facet_unit_code",
+            "label"
+          ]
+        },
+        "content": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/data_source/content"
+        }
+      },
+      "id": "http://edan.si.edu/schema/data_source",
+      "required": [
+        "extended",
+        "content"
+      ]
+    },
+    "title": {
+      "type": "object",
+      "properties": {
+        "extended": {
+          "type": "object",
+          "properties": {
+            "title_sort": {
+              "type": "string",
+              "id": "http://edan.si.edu/schema/title/extended/title_sort"
+            },
+            "category": {
+              "type": "string",
+              "id": "http://edan.si.edu/schema/title/extended/category"
+            },
+            "label": {
+              "type": "string",
+              "id": "http://edan.si.edu/schema/title/extended/label"
+            }
+          },
+          "id": "http://edan.si.edu/schema/title/extended",
+          "required": [
+            "title_sort",
+            "category",
+            "label"
+          ]
+        },
+        "content": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/title/content"
+        }
+      },
+      "id": "http://edan.si.edu/schema/title",
+      "required": [
+        "extended",
+        "content"
+      ]
+    },
+    "record_link": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/record_link"
+    },
+    "record_ID": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/record_ID"
+    },
+    "telephone": {
+      "type": "object",
+      "properties": {
+        "extended": {
+          "type": "object",
+          "properties": {
+            "category": {
+              "type": "string",
+              "id": "http://edan.si.edu/schema/telephone/extended/category"
+            },
+            "label": {
+              "type": "string",
+              "id": "http://edan.si.edu/schema/telephone/extended/label"
+            }
+          },
+          "id": "http://edan.si.edu/schema/telephone/extended",
+          "required": [
+            "category",
+            "label"
+          ]
+        },
+        "content": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/telephone/content"
+        }
+      },
+      "id": "http://edan.si.edu/schema/telephone",
+      "required": [
+        "extended",
+        "content"
+      ]
+    },
+    "price": {
+      "type": "object",
+      "properties": {
+        "extended": {
+          "type": "object",
+          "properties": {
+            "category": {
+              "type": "string",
+              "id": "http://edan.si.edu/schema/price/extended/category"
+            },
+            "label": {
+              "type": "string",
+              "id": "http://edan.si.edu/schema/price/extended/label"
+            }
+          },
+          "id": "http://edan.si.edu/schema/price/extended",
+          "required": [
+            "category",
+            "label"
+          ]
+        },
+        "content": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/price/content"
+        }
+      },
+      "id": "http://edan.si.edu/schema/price",
+      "required": [
+        "extended",
+        "content"
+      ]
+    },
+    "address": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "content": {
+            "type": "string",
+            "id": "http://edan.si.edu/schema/address/2/content"
+          },
+          "extended": {
+            "type": "object",
+            "properties": {
+              "category": {
+                "type": "string",
+                "id": "http://edan.si.edu/schema/address/2/extended/category"
+              },
+              "label": {
+                "type": "string",
+                "id": "http://edan.si.edu/schema/address/2/extended/label"
+              }
+            },
+            "id": "http://edan.si.edu/schema/address/2/extended",
+            "required": [
+              "category",
+              "label"
+            ]
+          },
+          "-Longitude": {
+            "type": "string",
+            "id": "http://edan.si.edu/schema/address/2/-Longitude"
+          },
+          "-Map": {
+            "type": "string",
+            "id": "http://edan.si.edu/schema/address/2/-Map"
+          },
+          "-Latitude": {
+            "type": "string",
+            "id": "http://edan.si.edu/schema/address/2/-Latitude"
+          }
+        },
+        "id": "http://edan.si.edu/schema/address/2",
+        "required": [
+          "content",
+          "extended",
+          "-Longitude",
+          "-Map",
+          "-Latitude"
+        ]
+      },
+      "id": "http://edan.si.edu/schema/address"
+    }
+  },
+  "id": "http://edan.si.edu/schema",
+  "required": [
+    "about_this_unit",
+    "hours",
+    "unit_type",
+    "online_media",
+    "recordType",
+    "data_source",
+    "title",
+    "record_link",
+    "record_ID",
+    "telephone",
+    "price",
+    "address"
+  ]
+}

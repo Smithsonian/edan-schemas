@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "description": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/description"
+    },
+    "title": {
+      "type": "object",
+      "properties": {
+        "content": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/title/content"
+        }
+      },
+      "id": "http://edan.si.edu/schema/title",
+      "required": [
+        "content"
+      ]
+    }
+  },
+  "id": "http://edan.si.edu/schema",
+  "required": [
+    "description",
+    "title"
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "parent_model_id": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/parent_model_id"
+    },
+    "title": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/title"
+    },
+    "description": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/description"
+    },
+    "version": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/version"
+    },
+    "legacy_data": {
+      "type": "object",
+      "properties": {
+        "legacy_embed_url": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/legacy_data/legacy_embed_url"
+        },
+        "legacy_browsable": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/legacy_data/legacy_browsable"
+        },
+        "legacy_featured": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/legacy_data/legacy_featured"
+        }
+      },
+      "id": "http://edan.si.edu/schema/legacy_data",
+      "required": [
+        "legacy_embed_url",
+        "legacy_browsable",
+        "legacy_featured"
+      ]
+    },
+    "online_media": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "content": {
+            "type": "string",
+            "id": "http://edan.si.edu/schema/online_media/0/content"
+          },
+          "type": {
+            "type": "string",
+            "id": "http://edan.si.edu/schema/online_media/0/type"
+          },
+          "mime_type": {
+            "type": "string",
+            "id": "http://edan.si.edu/schema/online_media/0/mime_type"
+          }
+        },
+        "id": "http://edan.si.edu/schema/online_media/0",
+        "required": [
+          "content",
+          "type",
+          "mime_type"
+        ]
+      },
+      "id": "http://edan.si.edu/schema/online_media"
+    }
+  },
+  "id": "http://edan.si.edu/schema",
+  "required": [
+    "parent_model_id",
+    "title",
+    "description",
+    "version",
+    "legacy_data",
+    "online_media"
+  ]
+}

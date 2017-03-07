@@ -45,8 +45,6 @@
   },
   "id": "http://edan.si.edu/schema",
   "required": [
-    "Fields",
-    "MDate",
-    "Key"
+
   ]
 }

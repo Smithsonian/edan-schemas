@@ -24,9 +24,6 @@
   },
   "id": "http://edan.si.edu/schema",
   "required": [
-    "attractVideos",
-    "text",
-    "imageUrl",
-    "caption"
+
   ]
 }

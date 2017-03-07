@@ -25,10 +25,6 @@
   },
   "id": "http://edan.si.edu/schema",
   "required": [
-    "url",
-    "subType",
-    "id",
-    "url_lowres",
-    "url_highres"
+
   ]
 }

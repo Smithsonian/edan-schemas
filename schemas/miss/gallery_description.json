@@ -18,8 +18,6 @@
   },
   "id": "http://edan.si.edu/schema",
   "required": [
-    "text",
-    "imageUrl",
-    "caption"
+
   ]
 }

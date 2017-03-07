@@ -168,8 +168,6 @@
   },
   "id": "http://edan.si.edu/schema",
   "required": [
-    "descriptiveNonRepeating",
-    "indexedStructured",
-    "freetext"
+
   ]
 }

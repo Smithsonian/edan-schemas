@@ -35,12 +35,6 @@
   },
   "id": "http://jsonschema.net",
   "required": [
-    "title",
-    "url",
-    "listTitle",
-    "content",
-    "feature",
-    "settings",
-    "pageId"
+
   ]
 }

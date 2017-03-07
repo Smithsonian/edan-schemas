@@ -155,28 +155,6 @@
   },
   "id": "http://edan.si.edu/schema",
   "required": [
-    "coll_mainagencycode",
-    "coll_abstract",
-    "coll_unittitle",
-    "Corporate_Name",
-    "Archival_Repository",
-    "coll_fulltitle",
-    "Child_Notes",
-    "coll_unitid",
-    "coll_size",
-    "coll_dates",
-    "Personal_Name",
-    "creator",
-    "id",
-    "coll_corpname",
-    "Collection_Notes",
-    "filelocation",
-    "Topic",
-    "Child_Title",
-    "edan_ID",
-    "Digital_Assets_Available",
-    "Collection_Title",
-    "coll_language",
-    "unit_code"
+
   ]
 }

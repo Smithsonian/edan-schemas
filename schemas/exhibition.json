@@ -98,24 +98,6 @@
   },
   "id": "http://edan.si.edu/schema",
   "required": [
-    "setName",
-    "featured",
-    "keywords",
-    "active",
-    "record_link",
-    "title",
-    "fullDescription",
-    "record_type",
-    "data_source",
-    "room",
-    "record_ID",
-    "museum",
-    "closedate_text",
-    "unit_code",
-    "topic",
-    "location",
-    "dataSource",
-    "briefDescription",
-    "opening_date"
+
   ]
 }

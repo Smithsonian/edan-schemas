@@ -24,9 +24,6 @@
   },
   "id": "http://edan.si.edu/schema",
   "required": [
-    "listType",
-    "size",
-    "listName",
-    "items"
+
   ]
 }

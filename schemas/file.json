@@ -21,9 +21,6 @@
 	},
 	"id": "http://edan.si.edu/schema/file",
 	"required": [
-		"size",
-		"name",
-		"ids",
-		"id"
+
 	]
 }

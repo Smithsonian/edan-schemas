@@ -57,17 +57,6 @@
   },
   "id": "http://edan.si.edu/schema",
   "required": [
-    "menu",
-    "page",
-    "feature",
-    "settings",
-    "defaultPageId",
-    "title",
-    "listTitle",
-    "description",
-    "keywords",
-    "featured",
-    "groupType",
-    "published"
+
   ]
 }

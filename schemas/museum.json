@@ -39,12 +39,6 @@
   },
   "id": "http://edan.si.edu/schema",
   "required": [
-    "unit_codes",
-    "unit",
-    "backgroundImage",
-    "name",
-    "logo",
-    "menu",
-    "url"
+
   ]
 }

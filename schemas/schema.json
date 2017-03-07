@@ -507,7 +507,6 @@
     "id",
     "type",
     "properties",
-    "additionalProperties",
     "required"
   ]
 }

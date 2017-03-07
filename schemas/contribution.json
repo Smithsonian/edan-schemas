@@ -13,7 +13,6 @@
   },
   "id": "http://edan.si.edu/schema",
   "required": [
-    "title",
-    "contributor"
+
   ]
 }

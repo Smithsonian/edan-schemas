@@ -33,12 +33,6 @@
   },
   "id": "http://edan.si.edu/schema",
   "required": [
-    "projectOwner",
-    "projectName",
-    "projectId",
-    "assetName",
-    "assetImage",
-    "transcriptData",
-    "metadata"
+
   ]
 }

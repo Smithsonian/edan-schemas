@@ -100,9 +100,6 @@
   },
   "id": "http://edan.si.edu/schema",
   "required": [
-    "version",
-    "legacy_data",
-    "online_media",
-    "title"
+
   ]
 }

@@ -993,8 +993,6 @@
   },
   "id": "http://edan.si.edu/schema",
   "required": [
-    "unit_codes",
-    "museums",
-    "app_codes"
+
   ]
 }

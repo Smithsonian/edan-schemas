@@ -85,25 +85,6 @@
   },
   "id": "http://jsonschema.net",
   "required": [
-    "projectId",
-    "projectName",
-    "projectOwner",
-    "projectMetadata",
-    "projectImage",
-    "projectDate",
-    "assetCount",
-    "projectUsers",
-    "projectSubmits",
-    "assetsCompleted",
-    "assetsInReview",
-    "assetsTranscribed",
-    "assetsApproved",
-    "projectDisplay",
-    "projectDisplayType",
-    "projectStatus",
-    "projectDescription",
-    "projectSummary",
-    "projectParentId",
-    "projectCompleted"
+
   ]
 }

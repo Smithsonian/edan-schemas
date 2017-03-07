@@ -113,12 +113,6 @@
   },
   "id": "http://edan.si.edu/schema",
   "required": [
-    "related",
-    "subtype",
-    "description",
-    "resources",
-    "media",
-    "title",
-    "facet"
+
   ]
 }

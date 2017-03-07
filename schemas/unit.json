@@ -329,17 +329,6 @@
   },
   "id": "http://edan.si.edu/schema",
   "required": [
-    "about_this_unit",
-    "hours",
-    "unit_type",
-    "online_media",
-    "recordType",
-    "data_source",
-    "title",
-    "record_link",
-    "record_ID",
-    "telephone",
-    "price",
-    "address"
+
   ]
 }

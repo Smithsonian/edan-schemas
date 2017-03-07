@@ -71,11 +71,6 @@
   },
   "id": "http://edan.si.edu/schema",
   "required": [
-    "parent_model_id",
-    "title",
-    "description",
-    "version",
-    "legacy_data",
-    "online_media"
+
   ]
 }

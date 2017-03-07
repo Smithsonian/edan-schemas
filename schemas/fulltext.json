@@ -35,11 +35,6 @@
   },
   "id": "http://edan.si.edu/schema",
   "required": [
-    "text",
-    "fulltext_type",
-    "record_type",
-    "record_ID",
-    "match_record_ID",
-    "unit_code"
+
   ]
 }

@@ -2,29 +2,23 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
-    "url": {
-      "type": "string",
-      "id": "http://edan.si.edu/schema/url"
-    },
-    "subType": {
-      "type": "string",
-      "id": "http://edan.si.edu/schema/subType"
-    },
-    "id": {
-      "type": "string",
-      "id": "http://edan.si.edu/schema/id"
-    },
-    "url_lowres": {
-      "type": "string",
-      "id": "http://edan.si.edu/schema/url_lowres"
-    },
-    "url_highres": {
-      "type": "string",
-      "id": "http://edan.si.edu/schema/url_highres"
-    }
+    "oneOf" : [
+      { "$ref": "#/definitions/age_group" },
+      { "$ref": "#/definitions/art_profile" },
+      { "$ref": "#/definitions/artifact" },
+      { "$ref": "#/definitions/attract_video" },
+      { "$ref": "#/definitions/event" },
+      { "$ref": "#/definitions/gallery_description" },
+      { "$ref": "#/definitions/gallery_tag" },
+      { "$ref": "#/definitions/influence_image" },
+      { "$ref": "#/definitions/movement" },
+      { "$ref": "#/definitions/music" },
+      { "$ref": "#/definitions/prompt_question" },
+      { "$ref": "#/definitions/question" },
+      { "$ref": "#/definitions/sound_asset" },
+      { "$ref": "#/definitions/story" },
+      { "$ref": "#/definitions/vote_record" }
+    ]
   },
-  "id": "http://edan.si.edu/schema",
-  "required": [
-
-  ]
+  "id": "http://edan.si.edu/schema/miss/miss_component"
 }

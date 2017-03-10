@@ -1,0 +1,154 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "artistName": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/artistName"
+    },
+    "songTitle": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/songTitle"
+    },
+    "songDesc": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/songDesc"
+    },
+    "musicTrack": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/musicTrack"
+    },
+    "albumCover": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/albumCover"
+    },
+    "credit": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/credit"
+    },
+    "genre": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/genre"
+    },
+    "relatedGenre": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "id": "http://edan.si.edu/schema/relatedGenre"
+    },
+    "dateRelease": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/dateRelease"
+    },
+    "writtenYear": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/writtenYear"
+    },
+    "dateUsed": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/dateUsed"
+    },
+    "label": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/label"
+    },
+    "songwriter": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/songwriter"
+    },
+    "producer": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/producer"
+    },
+    "performer": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/performer"
+    },
+    "composer": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/composer"
+    },
+    "librettist": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/librettist"
+    },
+    "samplesSounds": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/samplesSounds"
+    },
+    "show": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/show"
+    },
+    "region": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/region"
+    },
+    "spotlight": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/spotlight/title"
+        },
+        "imageUrl": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/spotlight/imageUrl"
+        },
+        "credit": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/spotlight/credit"
+        },
+        "caption": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/spotlight/caption"
+        }
+      },
+      "id": "http://edan.si.edu/schema/spotlight",
+      "required": [
+        "title",
+        "imageUrl",
+        "credit",
+        "caption"
+      ]
+    },
+    "subType": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/subType"
+    },
+    "influence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "id": "http://edan.si.edu/schema/influence"
+    }
+  },
+  "id": "http://edan.si.edu/schema",
+  "required": [
+    "artistName",
+    "songTitle",
+    "songDesc",
+    "musicTrack",
+    "albumCover",
+    "credit",
+    "genre",
+    "relatedGenre",
+    "dateRelease",
+    "writtenYear",
+    "dateUsed",
+    "label",
+    "songwriter",
+    "producer",
+    "performer",
+    "composer",
+    "librettist",
+    "samplesSounds",
+    "show",
+    "region",
+    "spotlight",
+    "subType",
+    "influence"
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "placeStoryTitle": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/placeStoryTitle"
+    },
+    "text": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/text"
+    },
+    "imageUrl": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/imageUrl"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "id": "http://edan.si.edu/schema/tags"
+    },
+    "time": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/time"
+    },
+    "region": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/region"
+    },
+    "place": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/place"
+    },
+    "imageCredit": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/imageCredit"
+    },
+    "subType": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/subType"
+    }
+  },
+  "id": "http://edan.si.edu/schema",
+  "required": [
+    "placeStoryTitle",
+    "text",
+    "imageUrl",
+    "tags",
+    "time",
+    "region",
+    "place",
+    "imageCredit",
+    "subType"
+  ]
+}

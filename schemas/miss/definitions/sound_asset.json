@@ -1,0 +1,72 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "icon": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/icon"
+    },
+    "iconCredit": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/iconCredit"
+    },
+    "title": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/title"
+    },
+    "popUpText": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/popUpText"
+    },
+    "audioClips": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "id": "http://edan.si.edu/schema/audioClips/0/url"
+          },
+          "tempo": {
+            "type": "string",
+            "id": "http://edan.si.edu/schema/audioClips/0/tempo"
+          },
+          "key": {
+            "type": "string",
+            "id": "http://edan.si.edu/schema/audioClips/0/key"
+          }
+        },
+        "id": "http://edan.si.edu/schema/audioClips/0",
+        "required": [
+          "url",
+          "tempo",
+          "key"
+        ]
+      },
+      "id": "http://edan.si.edu/schema/audioClips"
+    },
+    "category": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/category"
+    },
+    "loop": {
+      "type": "boolean",
+      "id": "http://edan.si.edu/schema/loop"
+    },
+    "subType": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/subType"
+    }
+  },
+  "id": "http://edan.si.edu/schema",
+  "required": [
+    "icon",
+    "iconCredit",
+    "title",
+    "popUpText",
+    "audioClips",
+    "category",
+    "loop",
+    "subType"
+  ]
+}

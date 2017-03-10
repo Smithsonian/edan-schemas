@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "promptQuestions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "id": "http://edan.si.edu/schema/promptQuestions"
+    },
+    "subType": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/subType"
+    },
+    "galleryTag": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/galleryTag"
+    },
+    "galleryImageCredit": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/galleryImageCredit"
+    },
+    "galleryImageUrl": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/galleryImageUrl"
+    },
+    "attractMediaLoop": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "id": "http://edan.si.edu/schema/attractMediaLoop"
+    }
+  },
+  "id": "http://edan.si.edu/schema",
+  "required": [
+    "promptQuestions",
+    "subType",
+    "galleryTag",
+    "galleryImageCredit",
+    "galleryImageUrl",
+    "attractMediaLoop"
+  ]
+}

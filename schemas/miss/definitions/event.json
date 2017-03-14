@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "year": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/year"
+    },
+    "caption": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/caption"
+    },
+    "imageUrl": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/imageUrl"
+    },
+    "credit": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/credit"
+    },
+    "subType": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/subType"
+    }
+  },
+  "id": "http://edan.si.edu/schema",
+  "required": [
+    "year",
+    "caption",
+    "imageUrl",
+    "credit",
+    "subType"
+  ]
+}

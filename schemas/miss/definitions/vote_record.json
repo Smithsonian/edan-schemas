@@ -1,0 +1,220 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "cacheServerId": {
+      "type": "integer",
+      "id": "http://edan.si.edu/schema/cacheServerId"
+    },
+    "action": {
+      "type": "object",
+      "properties": {
+        "emailSent": {
+          "type": "boolean",
+          "id": "http://edan.si.edu/schema/action/emailSent"
+        },
+        "emailSentDate": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/action/emailSentDate"
+        },
+        "audits": {
+          "type": "array",
+          "items": {},
+          "id": "http://edan.si.edu/schema/action/audits"
+        }
+      },
+      "id": "http://edan.si.edu/schema/action",
+      "required": [
+        "emailSent",
+        "emailSentDate",
+        "audits"
+      ]
+    },
+    "emailAddress": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/emailAddress"
+    },
+    "schoolName": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/schoolName"
+    },
+    "miscData": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/miscData"
+    },
+    "questionLevel": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/questionLevel"
+    },
+    "timestamp": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/timestamp"
+    },
+    "subType": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/subType"
+    },
+    "vote": {
+      "type": "object",
+      "properties": {
+        "p2b-1481050956801-1481145224168-0": {
+          "type": "object",
+          "properties": {
+            "1": {
+              "type": "object",
+              "properties": {
+                "1": {
+                  "type": "integer",
+                  "id": "http://edan.si.edu/schema/vote/p2b-1481050956801-1481145224168-0/1/1"
+                },
+                "2": {
+                  "type": "integer",
+                  "id": "http://edan.si.edu/schema/vote/p2b-1481050956801-1481145224168-0/1/2"
+                },
+                "3": {
+                  "type": "integer",
+                  "id": "http://edan.si.edu/schema/vote/p2b-1481050956801-1481145224168-0/1/3"
+                }
+              },
+              "id": "http://edan.si.edu/schema/vote/p2b-1481050956801-1481145224168-0/1",
+              "required": [
+                "1",
+                "2",
+                "3"
+              ]
+            },
+            "2": {
+              "type": "object",
+              "properties": {
+                "1": {
+                  "type": "integer",
+                  "id": "http://edan.si.edu/schema/vote/p2b-1481050956801-1481145224168-0/2/1"
+                },
+                "2": {
+                  "type": "integer",
+                  "id": "http://edan.si.edu/schema/vote/p2b-1481050956801-1481145224168-0/2/2"
+                }
+              },
+              "id": "http://edan.si.edu/schema/vote/p2b-1481050956801-1481145224168-0/2",
+              "required": [
+                "1",
+                "2"
+              ]
+            },
+            "3": {
+              "type": "object",
+              "properties": {
+                "1": {
+                  "type": "integer",
+                  "id": "http://edan.si.edu/schema/vote/p2b-1481050956801-1481145224168-0/3/1"
+                },
+                "2": {
+                  "type": "integer",
+                  "id": "http://edan.si.edu/schema/vote/p2b-1481050956801-1481145224168-0/3/2"
+                }
+              },
+              "id": "http://edan.si.edu/schema/vote/p2b-1481050956801-1481145224168-0/3",
+              "required": [
+                "1",
+                "2"
+              ]
+            },
+            "p2b-1481050956801-1481145250372-0": {
+              "type": "object",
+              "properties": {
+                "1": {
+                  "type": "integer",
+                  "id": "http://edan.si.edu/schema/vote/p2b-1481050956801-1481145224168-0/p2b-1481050956801-1481145250372-0/1"
+                },
+                "2": {
+                  "type": "integer",
+                  "id": "http://edan.si.edu/schema/vote/p2b-1481050956801-1481145224168-0/p2b-1481050956801-1481145250372-0/2"
+                }
+              },
+              "id": "http://edan.si.edu/schema/vote/p2b-1481050956801-1481145224168-0/p2b-1481050956801-1481145250372-0",
+              "required": [
+                "1",
+                "2"
+              ]
+            },
+            "p2b-1483541424683-1483630047049-0": {
+              "type": "object",
+              "properties": {
+                "1": {
+                  "type": "integer",
+                  "id": "http://edan.si.edu/schema/vote/p2b-1481050956801-1481145224168-0/p2b-1483541424683-1483630047049-0/1"
+                },
+                "2": {
+                  "type": "integer",
+                  "id": "http://edan.si.edu/schema/vote/p2b-1481050956801-1481145224168-0/p2b-1483541424683-1483630047049-0/2"
+                }
+              },
+              "id": "http://edan.si.edu/schema/vote/p2b-1481050956801-1481145224168-0/p2b-1483541424683-1483630047049-0",
+              "required": [
+                "1",
+                "2"
+              ]
+            },
+            "p2b-1483541424683-1483630087679-0": {
+              "type": "object",
+              "properties": {
+                "1": {
+                  "type": "integer",
+                  "id": "http://edan.si.edu/schema/vote/p2b-1481050956801-1481145224168-0/p2b-1483541424683-1483630087679-0/1"
+                },
+                "2": {
+                  "type": "integer",
+                  "id": "http://edan.si.edu/schema/vote/p2b-1481050956801-1481145224168-0/p2b-1483541424683-1483630087679-0/2"
+                }
+              },
+              "id": "http://edan.si.edu/schema/vote/p2b-1481050956801-1481145224168-0/p2b-1483541424683-1483630087679-0",
+              "required": [
+                "1",
+                "2"
+              ]
+            },
+            "p2b-1483541424683-1483631760653-0": {
+              "type": "object",
+              "properties": {
+                "2": {
+                  "type": "integer",
+                  "id": "http://edan.si.edu/schema/vote/p2b-1481050956801-1481145224168-0/p2b-1483541424683-1483631760653-0/2"
+                }
+              },
+              "id": "http://edan.si.edu/schema/vote/p2b-1481050956801-1481145224168-0/p2b-1483541424683-1483631760653-0",
+              "required": [
+                "2"
+              ]
+            }
+          },
+          "id": "http://edan.si.edu/schema/vote/p2b-1481050956801-1481145224168-0",
+          "required": [
+            "1",
+            "2",
+            "3",
+            "p2b-1481050956801-1481145250372-0",
+            "p2b-1483541424683-1483630047049-0",
+            "p2b-1483541424683-1483630087679-0",
+            "p2b-1483541424683-1483631760653-0"
+          ]
+        }
+      },
+      "id": "http://edan.si.edu/schema/vote",
+      "required": [
+        "p2b-1481050956801-1481145224168-0"
+      ]
+    }
+  },
+  "id": "http://edan.si.edu/schema",
+  "required": [
+    "cacheServerId",
+    "action",
+    "emailAddress",
+    "schoolName",
+    "miscData",
+    "questionLevel",
+    "timestamp",
+    "subType",
+    "vote"
+  ]
+}

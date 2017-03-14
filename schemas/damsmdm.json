@@ -1,0 +1,133 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "born_digital": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/born_digital"
+    },
+    "IPTC_create_date": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/IPTC_create_date"
+    },
+    "IPTC_keywords": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/IPTC_keywords"
+    },
+    "IPTC_contact_state": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/IPTC_contact_state"
+    },
+    "IPTC_copyright": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/IPTC_copyright"
+    },
+    "series_title": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/series_title"
+    },
+    "work_creation_date": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/work_creation_date"
+    },
+    "source_system_id": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/source_system_id"
+    },
+    "IPTC_contact_address": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/IPTC_contact_address"
+    },
+    "version": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/version"
+    },
+    "uan": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/uan"
+    },
+    "title": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/title"
+    },
+    "description": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/description"
+    },
+    "repository_ID": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/repository_ID"
+    },
+    "is_restricted": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/is_restricted"
+    },
+    "credit": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/credit"
+    },
+    "content_type": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/content_type"
+    },
+    "IPTC_contact_phone": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/IPTC_contact_phone"
+    },
+    "path_String": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "id": "http://edan.si.edu/schema/path_String"
+    },
+    "caption": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/caption"
+    },
+    "IPTC_source": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/IPTC_source"
+    },
+    "IPTC_contact_web_url": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/IPTC_contact_web_url"
+    },
+    "IPTC_contact_postal": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/IPTC_contact_postal"
+    },
+    "IPTC_contact_city": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/IPTC_contact_city"
+    },
+    "rights_summary_core": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/rights_summary_core"
+    },
+    "filename": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/filename"
+    },
+    "primary_creator": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/primary_creator"
+    },
+    "public": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/public"
+    },
+    "unit_code": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/unit_code"
+    },
+    "IPTC_contact_email": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/IPTC_contact_email"
+    }
+  },
+  "id": "http://edan.si.edu/schema",
+  "required": [
+
+  ]
+}

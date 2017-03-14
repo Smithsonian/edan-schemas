@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/type"
+    },
+    "title": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/title"
+    },
+    "content": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "object",
+          "properties": {
+            "content": {
+              "type": "string",
+              "id": "http://edan.si.edu/schema/content/title/content"
+            }
+          },
+          "id": "http://edan.si.edu/schema/content/title",
+          "required": [
+            "content"
+          ]
+        },
+        "snapshot_id": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/content/snapshot_id"
+        },
+        "snapshot_body": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/content/snapshot_body"
+        },
+        "parent_tour_id": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/content/parent_tour_id"
+        }
+      },
+      "id": "http://edan.si.edu/schema/content",
+      "required": [
+        "title",
+        "snapshot_id",
+        "snapshot_body",
+        "parent_tour_id"
+      ]
+    }
+  },
+  "id": "http://edan.si.edu/schema",
+  "required": [
+
+  ]
+}

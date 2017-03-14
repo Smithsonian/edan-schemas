@@ -1,0 +1,101 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "subType": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/subType"
+    },
+    "userConsent": {
+      "type": "boolean",
+      "id": "http://edan.si.edu/schema/userConsent"
+    },
+    "sendEmailLink": {
+      "type": "boolean",
+      "id": "http://edan.si.edu/schema/sendEmailLink"
+    },
+    "videoFileUrl": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/videoFileUrl"
+    },
+    "videoFileId": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/videoFileId"
+    },
+    "featured": {
+      "type": "boolean",
+      "id": "http://edan.si.edu/schema/featured"
+    },
+    "emailAddress": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/emailAddress"
+    },
+    "promptQuestionId": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/promptQuestionId"
+    },
+    "galleryTagId": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/galleryTagId"
+    },
+    "name": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/name"
+    },
+    "originalId": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/originalId"
+    },
+    "action": {
+      "type": "object",
+      "properties": {
+        "emailSent": {
+          "type": "boolean",
+          "id": "http://edan.si.edu/schema/action/emailSent"
+        },
+        "awsSync": {
+          "type": "boolean",
+          "id": "http://edan.si.edu/schema/action/awsSync"
+        },
+        "emailSentDate": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/action/emailSentDate"
+        },
+        "awsSyncDate": {
+          "type": "string",
+          "id": "http://edan.si.edu/schema/action/awsSyncDate"
+        },
+        "audits": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "id": "http://edan.si.edu/schema/action/audits"
+        }
+      },
+      "id": "http://edan.si.edu/schema/action",
+      "required": [
+        "emailSent",
+        "awsSync",
+        "emailSentDate",
+        "awsSyncDate",
+        "audits"
+      ]
+    }
+  },
+  "id": "http://edan.si.edu/schema",
+  "required": [
+    "subType",
+    "userConsent",
+    "sendEmailLink",
+    "videoFileUrl",
+    "videoFileId",
+    "featured",
+    "emailAddress",
+    "promptQuestionId",
+    "galleryTagId",
+    "name",
+    "originalId",
+    "action"
+  ]
+}

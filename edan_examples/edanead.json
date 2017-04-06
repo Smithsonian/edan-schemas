@@ -1,0 +1,74 @@
+{
+  "coll_mainagencycode": "collmainagency",
+  "record_link": "reclink",
+  "sort_title": "sortitle",
+  "sort_creator": "sortcreator",
+  "coll_abstract": [
+    "collAbstract"
+  ],
+  "coll_unittitle": "unititle",
+  "Archival_Repository": "archivalRepository",
+  "coll_fulltitle": "colfulltitle",
+  "record_ID": "recid",
+  "coll_unitid": "unitid",
+  "coll_size": [
+    "size"
+  ],
+  "coll_dates": [
+    "collDates"
+  ],
+  "Personal_Name": [
+    "personalName"
+  ],
+  "Corporate_Name": [
+    "corpname"
+  ],
+  "id": "id",
+  "coll_corpname": [
+    "collCorpname"
+  ],
+  "Collection_Notes": [
+    "notes"
+  ],
+  "filelocation": "filelocation",
+  "Topic": [
+    "topic"
+  ],
+  "Digital_Assets_Available": "yes",
+  "Collection_Title": "coltitle",
+  "coll_language": [
+    "lang"
+  ],
+  "unit_code": "unit_code",
+  "fileSignature": "filesig",
+  "content": [
+    "content"
+  ],
+  "dao": [
+    "dao"
+  ],
+  "Family_Name": [
+    "familyName"
+  ],
+  "Function": [
+    "function"
+  ],
+  "Geographic_Name": [
+    "geoname"
+  ],
+  "creator": [
+    "creator"
+  ],
+  "Culture": [
+    "culture"
+  ],
+  "UniformTitle": [
+    "uniform_title"
+  ],
+  "Child_Notes": [
+   "notes"
+  ],
+  "Child_Title": [
+    "childTitle"
+  ]
+}

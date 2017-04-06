@@ -1,0 +1,131 @@
+{
+	"descriptiveNonRepeating": {
+		"record_ID": "nmnhvz_10276011",
+		"online_media": {
+			"mediaCount": "1",
+			"media": {
+				"thumbnail": "http://collections.nmnh.si.edu/media/?irn=10802672&thumb=yes",
+				"type": "Images",
+				"content": "http://collections.nmnh.si.edu/media/?irn=10802672"
+			}
+		},
+		"unit_code": "NMNHHERPS",
+		"title_sort": "SPHAERODACTYLUS MILLEPUNCTATUS",
+		"record_link": "http://collections.nmnh.si.edu/search/herps/?irn=10276011",
+		"title": {
+			"label": "title",
+			"content": "Sphaerodactylus millepunctatus"
+		},
+		"data_source": "NMNH - Vertebrate Zoology - Herpetology Division"
+	},
+	"descriptiveOptional": {
+		"freetext": [{
+			"label": "Specimen Count",
+			"category": "notes",
+			"content": "1"
+		}, {
+			"label": "Preparation",
+			"category": "physicalDescription",
+			"content": "Ethanol"
+		}, {
+			"label": "Other Numbers",
+			"category": "identifier",
+			"content": "Field Number : USNM-FS 256314"
+		}, {
+			"label": "See more items in",
+			"category": "setName",
+			"content": "Amphibians & Reptiles"
+		}, {
+			"label": "USNM Number",
+			"category": "identifier",
+			"content": "580000"
+		}, {
+			"label": "Record Last Modified",
+			"category": "notes",
+			"content": "4 Dec 2014"
+		}, {
+			"label": "Taxonomy",
+			"category": "taxonomicName",
+			"content": "Animalia Animalia Chordata Chordata Reptilia Reptilia Squamata Squamata Sphaerodactylidae Sphaerodactylidae"
+		}, {
+			"label": "Collection Date",
+			"category": "date",
+			"content": "16 Nov 2011"
+		}, {
+			"label": "Sex",
+			"category": "physicalDescription",
+			"content": "Male"
+		}, {
+			"label": "Data Source",
+			"category": "dataSource",
+			"content": "NMNH - Vertebrate Zoology - Herpetology Division"
+		}, {
+			"label": "Biogeographical Region",
+			"category": "name",
+			"content": "Middle America"
+		}, {
+			"label": "Type Status",
+			"category": "objectType",
+			"content": "Holotype"
+		}, {
+			"label": "Type Citation",
+			"category": "objectType",
+			"content": "McCranie, J. R. & Hedges, S. B. 2012. Zootaxa. 3492: 70, Figure 4."
+		}, {
+			"label": "Published Name",
+			"category": "publisher",
+			"content": "Sphaerodactylus millepunctatus"
+		}, {
+			"label": "Published Name",
+			"category": "publisher",
+			"content": "Sphaerodactylus guanajae"
+		}, {
+			"label": "See more items in",
+			"category": "setName",
+			"content": "Vertebrate Zoology"
+		}, {
+			"label": "Place",
+			"category": "place",
+			"content": "Isla de Guanaja, East End, Islas de la Bahía, Honduras"
+		}]
+	},
+	"indexedStructured": {
+		"date": "16 Nov 2011",
+		"tax_family": ["Sphaerodactylidae", "Sphaerodactylidae"],
+		"tax_phylum": ["Chordata", "Chordata"],
+		"geoLocation": {
+			"L2": {
+				"type": "Country",
+				"content": "Honduras"
+			},
+			"L3": {
+				"type": "State",
+				"content": "Islas de la Bahía"
+			},
+			"points": {
+				"point": {
+					"latitude": {
+						"type": "decimal",
+						"content": "16.48"
+					},
+					"longitude": {
+						"type": "decimal",
+						"content": "-85.83"
+					}
+				}
+			},
+			"Other": {
+				"type": "Locality",
+				"content": "Isla de Guanaja, East End"
+			}
+		},
+		"object_type": "Holotype",
+		"tax_class": ["Reptilia", "Reptilia"],
+		"tax_order": ["Squamata", "Squamata"],
+		"topic": ["Reptilia", "Reptilia", "Amphibians & Reptiles"],
+		"tax_kingdom": ["Animalia", "Animalia"],
+		"scientific_name": ["Sphaerodactylus millepunctatus", "Sphaerodactylus guanajae"],
+		"place": ["Honduras", "Islas de la Bahía"],
+		"online_media_type": "Images"
+	}
+}

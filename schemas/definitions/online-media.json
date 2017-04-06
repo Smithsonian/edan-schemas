@@ -12,12 +12,45 @@
 					"items": {
 						"type": "object",
 						"oneOf": [{
-							"$ref": "media-element.json#/edanMediaElement"
+							"$ref": "media-element.json#/definitions/edanMediaElement"
 						}],
 						"preferred": "string"
 					}
 				}
 			}
+		},
+		"online_media": {
+			"type": ["object"],
+			"properties": {
+				"mediaCount": {
+					"type": "string"
+				},
+				"media": {
+					"type": ["object", "array"],
+					"properties": {
+						"content": {
+							"type": "string"
+						},
+						"thumbnail": {
+							"type": "string"
+						},
+						"type": {
+							"type": "string"
+						}
+					},
+					"required": [
+						"content",
+						"thumbnail",
+						"type"
+					]
+				}
+			},
+			"required": [
+				"mediaCount",
+				"media"
+			]
 		}
 	}
+
+
 }

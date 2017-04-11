@@ -195,6 +195,16 @@
       "id": "/properties/id",
       "type": "string"
     },
+    "online_media": {
+      "id": "/properties/online_media",
+      "properties": {
+        "mediaCount": {
+          "id": "/properties/online_media/properties/mediaCount",
+          "type": "integer"
+        }
+      },
+      "type": "object"
+    },
     "record_ID": {
       "id": "/properties/record_ID",
       "type": "string"

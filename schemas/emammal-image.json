@@ -16,7 +16,7 @@
   "definitions": {
     "online_media": {
       "title": "Online Media",
-      "description": "Asset in IDS",
+      "description": "Asset(s) in IDS",
       "type": "array",
       "minItems": 1,
       "properties": {
@@ -24,11 +24,17 @@
           "type": "object",
           "required": [
             "idsId",
+            "sidoraPid",
             "type",
             "content"
           ],
           "properties": {
             "idsId": {
+              "title": "IDS asset ID",
+              "type": "string"
+            },
+            "sidoraPid": {
+              "title": "Sidora PID",
               "type": "string"
             },
             "type": {
@@ -38,11 +44,11 @@
               ]
             },
             "content": {
-              "description": "IDS full-sized asset URL",
+              "title": "IDS full-sized asset URL",
               "type": "string"
             },
             "thumbnail": {
-              "description": "IDS thumbnail asset URL",
+              "title": "IDS thumbnail asset URL",
               "type": "string"
             },
             "caption": {

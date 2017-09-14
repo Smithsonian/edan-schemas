@@ -1,0 +1,65 @@
+{
+  "type": "publication",
+  "id": "",
+  "url": "",
+  "title": "Milestones of Flight: The Epic of Aviation with the National Air and Space Museum",
+  "unit_code": "SIL",
+  "content": {
+    "authors": [{
+      "content": "Van der Linden, F. Robert",
+      "author_id": "VanderLindenB12212004"
+    },{
+      "content": "Spencer, Alex M.",
+      "author_id": "SpencerAM12212004"
+    },{
+      "content": "Paone, Thomas J."
+    }],
+    "body": {
+      "label": "citation",
+      "content": "Kinney, Jeremy R. 2016. Boeing B-29 Superfortress. In: van der Linden, F. Robert, Spencer, Alex M. and Paone, Thomas J., Milestones of Flight: The Epic of Aviation with the National Air and Space Museum. Minneapolis: Zenith Press pp. 118-127.",
+      "format": "text"
+    },
+    "freetext": {
+      "date": [{
+        "content": "2016",
+        "label": "Published",
+        "flag": ["published_date", "precision:year"],
+        "indexedContent": "2016"
+      }],
+      "name": [{
+        "content": "Robert Van der Linden",
+        "label": "Author",
+        "indexedContent": "Van der Linden, F. Robert",
+        "flag": ["creator"]
+      },{
+        "content": "Alex Spencer",
+        "label": "Author",
+        "indexedContent": "Spencer, Alex M.",
+        "flag": ["creator"]
+      },{
+        "content": "Tom Paone",
+        "label": "Author",
+        "indexedContent": "Paone, Thomas J.",
+        "flag": ["creator"]
+      }],
+      "setName": [{
+        "content": "Zenith Press",
+        "label": "Published",
+        "indexContent": "publication--zenith-press"
+      }],
+      "dataSource": [{
+        "content": "Smithsonian Libraries",
+        "label": "Data Source",
+        "indexContent": "smithsonian libraries"
+      },{
+        "content": "National Air and Space Museum",
+        "label": "Data Source",
+        "indexContent": "national air and space museum"
+      }]
+    },
+    "pages": "208",
+    "publish_date": "2016",
+    "publisher": "Zenith Press",
+    "subType": "book"
+  }
+}

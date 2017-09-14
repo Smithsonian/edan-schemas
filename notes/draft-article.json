@@ -2,58 +2,49 @@
   "type": "article",
   "id": "",
   "url": "",
-  "title": "string",
+  "title": "5 examples of rebellious women's workwear throughout history, inspired by objects from our collection",
   "content": {
     "authors": [{
-      "content": "string",
-      "author_id": "string",
+      "content": "Kathryn Anastasi"
     }],
     "body": {
-      "content": "string",
+      "content": "<p>Go to college, get a job, lose your style. Is that how this works? I am grateful for my college education and internship at the National Museum of American History, but the world of professional wear in Washington, D.C., poses some unprecedented challenges for me, a 23-year-old with holes in her stockings and a closet full of short skirts and pink.</p><p>I turn to history to navigate this dilemma. In the <a href=\"http://americanhistory.si.edu/american-enterprise\" target=\"_blank\"><em>American Enterprise</em></a> exhibition located in the Mars Hall of American Business, I came across a section featuring <em>The Woman's Dress for Success Book</em> written by a man named John T. Molloy in 1977. Molloy, whose previous work <em>Dress for Success</em> was tailored to white masculine notions of \"successful\" appearances, researched businesswomen's clothing and respective levels of \"success\" in their fields. Throughout the guide, he advises women to dress as simply, modestly, and sophisticatedly as possible, and encourages women to \"adopt a business uniform\" with \"a skirted suit and blouse,\" much like the one above.</p>(...truncated for ease of review...)",
       "format": "htmlblock"
     },
     "freetext": {
       "date": [{
-        "content": "2017-09-11",
+        "content": "Tuesday, March 16, 2016",
         "label": "Published",
         "flag": ["published_date"],
-        "indexedContent": "string"
-      },{
-        "content": "2017-09-11",
-        "label": "Last Edited",
-        "flag": ["lastedited_date"],
-        "indexedContent": "string"
+        "indexedContent": "2016-03-10 17:32:28"
       }],
       "name": [{
-        "content": "Mike Schall",
+        "content": "Kathryn Anastasi",
         "label": "Author",
-        "indexedContent": "Schall, Michael 1981-",
-        "flag": ["author", "editor"]
-      },{
-        "content": "Jonny Bylsma",
-        "label": "Author",
-        "indexedContent": "Bylsma, Michael 1981-",
         "flag": ["author"]
-      },{
-        "content": "Taylor Brucki",
-        "label": "Editor",
-        "indexedContent": "Schall, Michael 1981-",
-        "flag": ["editor"]
+      }],
+      "setName": [{
+        "content": "O Say Can You See?",
+        "label": "Blog",
+        "indexContent": "article--o-say-can-you-see"
+      }],
+      "dataSource": [{
+        "content": "National Museum of American History",
+        "label": "Data Source",
+        "indexContent": "national museum of american history"
       }]
     },
     "online_media": {
       "mediaCount": 1,
       "media": [{
-        "content": "string",
-        "idsid": "string",
-        "type": "string",
-        "thumbnail": "string",
+        "content": "https://americanhistory.si.edu/sites/default/files/styles/blog_image/public/McCardell_suit_NMAH-JN2014-3611.jpg",
+        "type": "Image"
       }]
     },
-    "publish_date": "timestamp",
-    "summary": "string",
-    "subtype": "string, enum(article, press release, blog post, essay)"
+    "publish_date": "10 Mar 2016 17:32:28 +0000",
+    "publisher": "O Say Can You See?",
+    "publisher_link": "http://americanhistory.si.edu/blog/",
+    "summary": "Go to college, get a job, lose your style. Is that how this works? I am grateful for my college education and internship at the National Museum of American History, but the world of professional wear in Washington, D.C., poses some unprecedented challenges for me, a 23-year-old with holes in her stockings and a closet full of short skirts and pink.",
+    "subType": "blog post"
   }
 }
-
-

@@ -1,0 +1,59 @@
+{
+  "type": "article",
+  "id": "",
+  "url": "",
+  "title": "string",
+  "content": {
+    "authors": [{
+      "content": "string",
+      "author_id": "string",
+    }],
+    "body": {
+      "content": "string",
+      "format": "htmlblock"
+    },
+    "freetext": {
+      "date": [{
+        "content": "2017-09-11",
+        "label": "Published",
+        "flag": ["published_date"],
+        "indexedContent": "string"
+      },{
+        "content": "2017-09-11",
+        "label": "Last Edited",
+        "flag": ["lastedited_date"],
+        "indexedContent": "string"
+      }],
+      "name": [{
+        "content": "Mike Schall",
+        "label": "Author",
+        "indexedContent": "Schall, Michael 1981-",
+        "flag": ["author", "editor"]
+      },{
+        "content": "Jonny Bylsma",
+        "label": "Author",
+        "indexedContent": "Bylsma, Michael 1981-",
+        "flag": ["author"]
+      },{
+        "content": "Taylor Brucki",
+        "label": "Editor",
+        "indexedContent": "Schall, Michael 1981-",
+        "flag": ["editor"]
+      }]
+    },
+    "online_media": {
+      "mediaCount": 1,
+      "media": [{
+        "content": "string",
+        "idsid": "string",
+        "type": "string",
+        "thumbnail": "string",
+      }]
+    },
+    "publish_date": "timestamp",
+    "summary": "string",
+    "subtype": "string, enum(article, press release, blog post, essay)"
+  }
+}
+
+

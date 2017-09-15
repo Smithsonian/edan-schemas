@@ -30,7 +30,7 @@
 				"label": {
 					"type": "string"
 				},
-                                "indexedContent": {
+        "indexedContent": {
 					"type": "string"
 				},
 				"flag": {
@@ -42,12 +42,11 @@
 					"uniqueItems": true
 				}
 			},
-			"required": ["content", "label", "flag", "indexedContent"]
+			"required": ["content"]
 		}
 	},
 
 	"type": "object",
-
 	"properties": {
 		"freetext": {
 			"$ref": "#/definitions/freetext"

@@ -1,0 +1,56 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+
+	"definitions": {
+		"freetext": {
+			"type": "object",
+      "additionalProperties": false,
+			"properties": {
+				"name": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/freetext_object"
+					}
+				},
+        "date": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/freetext_object"
+          }
+        }
+			}
+		},
+		"freetext_object": {
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"content": {
+					"type": "string"
+				},
+				"label": {
+					"type": "string"
+				},
+                                "indexedContent": {
+					"type": "string"
+				},
+				"flag": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					},
+					"minItems": 1,
+					"uniqueItems": true
+				}
+			},
+			"required": ["content", "label", "flag", "indexedContent"]
+		}
+	},
+
+	"type": "object",
+
+	"properties": {
+		"freetext": {
+			"$ref": "#/definitions/freetext"
+		}
+	}
+}

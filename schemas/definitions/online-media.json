@@ -1,12 +1,15 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"definitions": {
-		"onlineMedia": {
+		"online_media": {
 			"title": "Online Media (DRAFT)",
 			"description": "Object that stores all media within a record.",
 			"type": "object",
 			"required": [],
 			"properties": {
+				"mediaCount": {
+					"type": "integer"
+				},
 				"media": {
 					"type": "array",
 					"items": {
@@ -18,39 +21,6 @@
 					}
 				}
 			}
-		},
-		"online_media": {
-			"type": ["object"],
-			"properties": {
-				"mediaCount": {
-					"type": "string"
-				},
-				"media": {
-					"type": ["object", "array"],
-					"properties": {
-						"content": {
-							"type": "string"
-						},
-						"thumbnail": {
-							"type": "string"
-						},
-						"type": {
-							"type": "string"
-						}
-					},
-					"required": [
-						"content",
-						"thumbnail",
-						"type"
-					]
-				}
-			},
-			"required": [
-				"mediaCount",
-				"media"
-			]
 		}
 	}
-
-
 }

@@ -25,7 +25,7 @@
 					]
 				},
 				"online_media": {
-					"$ref": "atoms/online-media.json#/definitions/online_media"
+					"$ref": "definitions/online-media.json#/definitions/online_media"
 				},
 				"data_source": {
 					"type": "string"

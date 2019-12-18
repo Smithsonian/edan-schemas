@@ -25,7 +25,77 @@
 					]
 				},
 				"online_media": {
-					"$ref": "definitions/online-media.json#/definitions/online_media"
+					"title": "Online Media (DRAFT)",
+					"description": "Object that stores all media within a record.",
+					"type": "object",
+					"properties": {
+						"mediaCount": {
+							"type": [
+								"integer",
+								"string"
+							]
+						},
+						"media": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"oneOf": [
+									{
+										"title": "Online Media Element Object (DRAFT)",
+										"description": "",
+										"type": "object",
+										"required": [
+											"content",
+											"type",
+											"thumbnail"
+										],
+										"properties": {
+											"content": {
+												"title": "content",
+												"type": "string"
+											},
+											"summary": {
+												"title": "summary",
+												"type": "string"
+											},
+											"type": {
+												"title": "type",
+												"type": "string"
+											},
+											"thumbnail": {
+												"title": "thumbnail",
+												"type": "string"
+											},
+											"idsid": {
+												"title": "idsid",
+												"type": "string"
+											},
+											"caption": {
+												"title": "caption",
+												"type": "string"
+											},
+											"alt": {
+												"title": "alt",
+												"type": "string"
+											},
+											"credit": {
+												"title": "credit",
+												"type": "string"
+											},
+											"rights": {
+												"title": "content",
+												"type": "string"
+											},
+											"mime_type": {
+												"title": "content",
+												"type": "string"
+											}
+										}
+									}
+								]
+							}
+						}
+					}
 				},
 				"data_source": {
 					"type": "string"
@@ -52,76 +122,149 @@
 			"additionalProperties": false,
 			"properties": {
 				"sortdate": {
-					"type": ["string"]
+					"type": [
+						"string"
+					]
 				},
 				"topic": {
-					"type": ["array", "string"]
+					"type": [
+						"array",
+						"string"
+					]
 				},
 				"occupation": {
-					"type": ["array", "string"]
+					"type": [
+						"array",
+						"string"
+					]
 				},
 				"object_type": {
-					"type": ["array", "string"]
+					"type": [
+						"array",
+						"string"
+					]
 				},
 				"name": {
-					"type": ["array", "string", "object"]
+					"type": [
+						"array",
+						"string",
+						"object"
+					]
 				},
 				"usage_flag": {
-					"type": ["array", "string"]
+					"type": [
+						"array",
+						"string"
+					]
 				},
 				"online_media_type": {
-					"type": ["array", "string"]
+					"type": [
+						"array",
+						"string"
+					]
 				},
 				"language": {
-					"type": ["array", "string"]
+					"type": [
+						"array",
+						"string"
+					]
 				},
 				"date": {
-					"type": ["array", "string"]
+					"type": [
+						"array",
+						"string"
+					]
 				},
 				"tax_kingdom": {
-					"type": ["array", "string"]
+					"type": [
+						"array",
+						"string"
+					]
 				},
 				"geo_age-era": {
-					"type": ["array", "string"]
+					"type": [
+						"array",
+						"string"
+					]
 				},
 				"strat_formation": {
-					"type": ["array", "string"]
+					"type": [
+						"array",
+						"string"
+					]
 				},
 				"tax_phylum": {
-					"type": ["array", "string"]
+					"type": [
+						"array",
+						"string"
+					]
 				},
 				"tax_class": {
-					"type": ["array", "string"]
+					"type": [
+						"array",
+						"string"
+					]
 				},
 				"tax_family": {
-					"type": ["array", "string"]
+					"type": [
+						"array",
+						"string"
+					]
 				},
 				"tax_order": {
-					"type": ["array", "string"]
+					"type": [
+						"array",
+						"string"
+					]
 				},
 				"geo_age-system": {
-					"type": ["array", "string"]
+					"type": [
+						"array",
+						"string"
+					]
 				},
 				"geo_age-stage": {
-					"type": ["array", "string"]
+					"type": [
+						"array",
+						"string"
+					]
 				},
 				"geo_age-series": {
-					"type": ["array", "string"]
+					"type": [
+						"array",
+						"string"
+					]
 				},
 				"common_name": {
-					"type": ["string", "array"]
+					"type": [
+						"string",
+						"array"
+					]
 				},
 				"tax_sub-family": {
-					"type": ["string", "array"]
+					"type": [
+						"string",
+						"array"
+					]
 				},
 				"culture": {
-					"type": ["string", "array"]
+					"type": [
+						"string",
+						"array"
+					]
 				},
 				"online_media_rights": {
-					"type": ["string", "array"]
+					"type": [
+						"string",
+						"array"
+					]
 				},
 				"geoLocation": {
-					"type": ["object", "string", "array"],
+					"type": [
+						"object",
+						"string",
+						"array"
+					],
 					"properties": {
 						"L1": {
 							"type": "object",
@@ -186,30 +329,60 @@
 					}
 				},
 				"onPhysicalExhibit": {
-					"type": "string"
+					"type": ["string", "array"]
 				},
 				"exhibition": {
-					"type": "object",
-					"properties": {
-						"building": {
-							"type": "string"
+					"anyOf": [
+						{
+							"type": "object",
+							"properties": {
+								"building": {
+									"type": "string"
+								},
+								"exhibitionTitle": {
+									"type": "string"
+								},
+								"externalLink": {
+									"type": "string"
+								},
+								"room": {
+									"type": "string"
+								}
+							}
 						},
-						"exhibitionTitle": {
-							"type": "string"
-						},
-						"externalLink": {
-							"type": "string"
-						},
-						"room": {
-							"type": "string"
+						{
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"building": {
+										"type": "string"
+									},
+									"exhibitionTitle": {
+										"type": "string"
+									},
+									"externalLink": {
+										"type": "string"
+									},
+									"room": {
+										"type": "string"
+									}
+								}
+							}
 						}
-					}
+					]
 				},
 				"scientific_name": {
-					"type": ["array", "string"]
+					"type": [
+						"array",
+						"string"
+					]
 				},
 				"place": {
-					"type": ["array", "string"],
+					"type": [
+						"array",
+						"string"
+					],
 					"items": {
 						"type": "string"
 					}
@@ -228,7 +401,6 @@
 	"required": [
 		"descriptiveNonRepeating"
 	],
-	"id":"file:/Users/gunthera/Desktop/git/edan-schemas/schemas/edanmdm.json",
 	"properties": {
 		"descriptiveNonRepeating": {
 			"$ref": "#/definitions/descriptiveNonRepeating"

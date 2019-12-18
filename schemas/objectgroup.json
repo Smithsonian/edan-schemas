@@ -55,8 +55,6 @@
       "id": "http://edan.si.edu/schema/published"
     }
   },
-  "id": "http://edan.si.edu/schema",
-  "required": [
-
-  ]
+  "additionalProperties":false,
+  "id": "http://edan.si.edu/schema"
 }

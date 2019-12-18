@@ -5,15 +5,15 @@
   "properties": {
     "Archival_Repository": {
       "id": "/properties/Archival_Repository",
-      "type": "string"
+      "type": ["string", "object"]
     },
     "Child_Notes": {
       "id": "/properties/Child_Notes",
       "items": {
         "id": "/properties/Child_Notes/items",
-        "type": "string"
+        "type": ["string", "object"]
       },
-      "type": "array"
+      "type": ["array","string"]
     },
     "Child_Title": {
       "id": "/properties/Child_Title",
@@ -21,15 +21,15 @@
         "id": "/properties/Child_Title/items",
         "type": "string"
       },
-      "type": "array"
+      "type": ["array","string"]
     },
     "Collection_Notes": {
       "id": "/properties/Collection_Notes",
       "items": {
         "id": "/properties/Collection_Notes/items",
-        "type": "string"
+        "type": ["string","object"]
       },
-      "type": "array"
+      "type": ["array","string"]
     },
     "Collection_Title": {
       "id": "/properties/Collection_Title",
@@ -41,7 +41,7 @@
         "id": "/properties/Corporate_Name/items",
         "type": "string"
       },
-      "type": "array"
+      "type": ["array","string"]
     },
     "Culture": {
       "id": "/properties/Culture",
@@ -49,7 +49,7 @@
         "id": "/properties/Culture/items",
         "type": "string"
       },
-      "type": "array"
+      "type": ["array","string"]
     },
     "Digital_Assets_Available": {
       "id": "/properties/Digital_Assets_Available",
@@ -61,7 +61,7 @@
         "id": "/properties/Family_Name/items",
         "type": "string"
       },
-      "type": "array"
+      "type": ["array","string"]
     },
     "Function": {
       "id": "/properties/Function",
@@ -69,7 +69,7 @@
         "id": "/properties/Function/items",
         "type": "string"
       },
-      "type": "array"
+      "type": ["array","string"]
     },
     "Geographic_Name": {
       "id": "/properties/Geographic_Name",
@@ -77,7 +77,7 @@
         "id": "/properties/Geographic_Name/items",
         "type": "string"
       },
-      "type": "array"
+      "type": ["array","string"]
     },
     "Personal_Name": {
       "id": "/properties/Personal_Name",
@@ -85,7 +85,7 @@
         "id": "/properties/Personal_Name/items",
         "type": "string"
       },
-      "type": "array"
+      "type": ["array","string"]
     },
     "Topic": {
       "id": "/properties/Topic",
@@ -93,7 +93,7 @@
         "id": "/properties/Topic/items",
         "type": "string"
       },
-      "type": "array"
+      "type": ["array","string"]
     },
     "UniformTitle": {
       "id": "/properties/UniformTitle",
@@ -101,7 +101,7 @@
         "id": "/properties/UniformTitle/items",
         "type": "string"
       },
-      "type": "array"
+      "type": ["array","string"]
     },
     "coll_abstract": {
       "id": "/properties/coll_abstract",
@@ -109,7 +109,7 @@
         "id": "/properties/coll_abstract/items",
         "type": "string"
       },
-      "type": "array"
+      "type": ["array","string","object"]
     },
     "coll_corpname": {
       "id": "/properties/coll_corpname",
@@ -117,7 +117,7 @@
         "id": "/properties/coll_corpname/items",
         "type": "string"
       },
-      "type": "array"
+      "type": ["array","string"]
     },
     "coll_dates": {
       "id": "/properties/coll_dates",
@@ -125,7 +125,7 @@
         "id": "/properties/coll_dates/items",
         "type": "string"
       },
-      "type": "array"
+      "type": ["array","string"]
     },
     "coll_fulltitle": {
       "id": "/properties/coll_fulltitle",
@@ -137,11 +137,11 @@
         "id": "/properties/coll_language/items",
         "type": "string"
       },
-      "type": "array"
+      "type": ["array","string", "object"]
     },
     "coll_mainagencycode": {
       "id": "/properties/coll_mainagencycode",
-      "type": "string"
+      "type": ["object","string"]
     },
     "coll_size": {
       "id": "/properties/coll_size",
@@ -149,7 +149,7 @@
         "id": "/properties/coll_size/items",
         "type": "string"
       },
-      "type": "array"
+      "type": ["array","string","object"]
     },
     "coll_unitid": {
       "id": "/properties/coll_unitid",
@@ -173,7 +173,7 @@
         "id": "/properties/creator/items",
         "type": "string"
       },
-      "type": "array"
+      "type": ["array","string"]
     },
     "dao": {
       "id": "/properties/dao",
@@ -224,7 +224,12 @@
     "unit_code": {
       "id": "/properties/unit_code",
       "type": "string"
+    },
+    "edan_ID": {
+      "id": "/properties/edan_ID",
+      "type": "string"
     }
   },
+  "additionalProperties": false,
   "type": "object"
 }

@@ -20,21 +20,178 @@
     },
     "feature": {
       "type": "object",
-      "properties": {},
+      "properties": {
+      	"thumbnail":{
+      		"type": "string",
+      		"id": "http://jsonschema.net/feature/thumbnail"
+      	},
+      	"pages":{
+      		"type": "string",
+      		"id": "http://jsonschema.net/feature/pages"
+      	},
+      	"alt":{
+      		"type": "string",
+      		"id": "http://jsonschema.net/feature/alt"
+      	},
+      	"html":{
+      		"type": "string",
+      		"id": "http://jsonschema.net/feature/html"
+      	},
+    	"type":{
+      		"type": "string",
+      		"id": "http://jsonschema.net/feature/type"
+      	},
+      	"url":{
+      		"type": "string",
+      		"id": "http://jsonschema.net/feature/url"
+      	}
+      },
       "id": "http://jsonschema.net/feature"
     },
     "settings": {
       "type": "object",
-      "properties": {},
+      "properties": {
+      	"ux_objects_display":{
+      		"type":"integer",
+      		"id": "http://jsonschema.net/settings/ux_objects_display"
+      	}
+      },
       "id": "http://jsonschema.net/settings"
     },
     "pageId": {
       "type": "string",
       "id": "http://jsonschema.net/pageId"
+    },
+    "objectGroupId": {
+      "type": "string",
+      "id": "http://jsonschema.net/objectGroupId"
+    },
+    "published": {
+      "type": "integer",
+      "id": "http://jsonschema.net/published"
+    },
+    "error": {
+      "type": "string",
+      "id": "http://jsonschema.net/error"
+    },
+    "defaultPage":{
+    	"type":"object",
+    	"id": "http://jsonschema.net/defaultPage" 	
+    }, 
+    "defaultPageId":{
+    	"type":"string",
+    	"id": "http://jsonschema.net/defaultPageId" 	
+    },
+    "description":{
+    	"type":"string",
+    	"id": "http://jsonschema.net/description" 	
+    },
+    "groupType":{
+    	"type":"integer",
+    	"id": "http://jsonschema.net/groupType" 	
+    }, 
+    "featured":{
+    	"type":"integer",
+    	"id": "http://jsonschema.net/featured" 	
+    }, 
+    "keywords": {
+      "type": "string",
+      "id": "http://jsonschema.net/keywords"
+    },
+    "objects":{
+    	"type":"object",
+    	"properties":{
+    		"size":{
+    			"type":"integer",
+    			"id": "http://jsonschema.net/objects/size"
+    		},
+    		"listName":{
+    			"type":"string",
+    			"id": "http://jsonschema.net/objects/listName"
+    		},
+    		"listType":{
+    			"type":"integer",
+    			"id": "http://jsonschema.net/objects/listType"
+    		},
+    		"items":{
+    			"type":"array",
+    			"id": "http://jsonschema.net/objects/items",
+    			"items":{
+    				"type":"string",
+    				"id": "http://jsonschema.net/objects/items"
+    			}
+    		}
+       	} 	
+    }, 
+    "menu": {
+       "id": "http://jsonschema.net/menu",
+       "type": "array",
+       "items": {
+         "id": "http://jsonschema.net/menu/items",
+         "type": "object",
+         "properties": {
+           "listTitle": {
+           	 "id": "http://jsonschema.net/menu/items/listTitle",
+             "type": "string"
+           },
+           "id": {
+             "id": "http://jsonschema.net/menu/items/id",
+             "type": "string"
+           },
+           "title": {
+             "id": "http://jsonschema.net/menu/items/title",
+             "type": "string"
+           },
+           "url": {
+             "id": "http://jsonschema.net/menu/items/url",
+             "type": "string"
+           }
+         }
+       }
+     },
+    "page": {
+    	"type":"object",
+    	"properties":{
+ 			"listTitle":{
+ 				"type": "string",
+ 				"id": "http://jsonschema.net/page/listTitle"
+ 			},
+ 			"settings":{
+ 				"type": "object",
+ 				"properties": {
+ 					"disableObjects":{
+ 						"type":"integer",
+ 						"id":"http://jsonschema.net/page/settings/disableObjects"
+ 					}
+ 				} 						
+ 			},
+ 			"feature":{
+ 				"type": "object"
+ 				
+ 			},
+ 			"objectGroupId":{
+ 				"type":"string",
+ 				"id":"http://jsonschema.net/page/objectGroupId" 				
+ 			},
+ 			"title":{
+ 				"type":"string",
+ 				"id":"http://jsonschema.net/page/title" 
+ 			},
+ 			"pageId":{
+ 				"type":"string",
+ 				"id":"http://jsonschema.net/page/pageId" 
+ 			},
+ 			"url":{
+ 				"type":"string",
+ 				"id":"http://jsonschema.net/page/url" 
+ 			},
+ 			"content":{
+ 				"type":"string",
+ 				"id":"http://jsonschema.net/page/content" 
+ 			}
+    	}    	
     }
   },
-  "id": "http://jsonschema.net",
-  "required": [
-
-  ]
+ "additionalProperties":false,
+  "id": "http://jsonschema.net"
 }

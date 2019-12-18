@@ -1,55 +1,106 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "type": "object",
-  "properties": {
-    "type": {
-      "type": "string",
-      "id": "http://edan.si.edu/schema/type"
-    },
-    "title": {
-      "type": "string",
-      "id": "http://edan.si.edu/schema/title"
-    },
-    "content": {
-      "type": "object",
-      "properties": {
-        "title": {
-          "type": "object",
-          "properties": {
-            "content": {
-              "type": "string",
-              "id": "http://edan.si.edu/schema/content/title/content"
-            }
-          },
-          "id": "http://edan.si.edu/schema/content/title",
-          "required": [
-            "content"
-          ]
-        },
-        "snapshot_id": {
-          "type": "string",
-          "id": "http://edan.si.edu/schema/content/snapshot_id"
-        },
-        "snapshot_body": {
-          "type": "string",
-          "id": "http://edan.si.edu/schema/content/snapshot_body"
-        },
-        "parent_tour_id": {
-          "type": "string",
-          "id": "http://edan.si.edu/schema/content/parent_tour_id"
-        }
-      },
-      "id": "http://edan.si.edu/schema/content",
-      "required": [
-        "title",
-        "snapshot_id",
-        "snapshot_body",
-        "parent_tour_id"
-      ]
-    }
-  },
-  "id": "http://edan.si.edu/schema",
-  "required": [
-
-  ]
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"type": "object",
+	"properties": {
+		"type": {
+			"type": "string",
+			"id": "http://edan.si.edu/schema/type"
+		},
+		"title": {
+			"type": ["string","object"],
+			"id":"http://edan.si.edu/schema/title",
+			"properties": {
+				"content":{
+					"type":"string"
+				}
+			}
+		},
+		"parent_tour_id": {
+			"type": "string",
+			"id": "http://edan.si.edu/schema/parent_tour_id"
+		},
+		"3d_article_id": {
+			"type": "string",
+			"id": "http://edan.si.edu/schema/3d_article_id"
+		},
+		"lastUpdatedBy": {
+			"type": "object",
+			"id": "http://edan.si.edu/schema/lastUpdatedBy",
+			"properties":{
+				"content":{
+					"type":"string",
+					"id": "http://edan.si.edu/schema/lastUpdatedBy/content"
+				},
+				"extended":{
+					"type":"object",
+					"id": "http://edan.si.edu/schema/lastUpdatedBy/extended",
+					"properties":{
+						"id":{
+							"type":"string",
+							"id": "http://edan.si.edu/schema/lastUpdatedBy/extended/id"
+						}
+					}					
+				}
+			}
+		},
+		"author": {
+			"type": "object",
+			"id": "http://edan.si.edu/schema/author",
+			"properties":{
+				"content":{
+					"type":"string",
+					"id": "http://edan.si.edu/schema/author/content"
+				},
+				"extended":{
+					"type":"object",
+					"id": "http://edan.si.edu/schema/author/extended",
+					"properties":{
+						"id":{
+							"type":"string",
+							"id": "http://edan.si.edu/schema/author/extended/id"
+						}
+					}					
+				}
+			}
+		},
+		"content": {
+			"type": "object",
+			"properties": {
+				"title": {
+					"type": "object",
+					"properties": {
+						"content": {
+							"type": "string",
+							"id": "http://edan.si.edu/schema/content/title/content"
+						}
+					},
+					"id": "http://edan.si.edu/schema/content/title",
+					"required": [
+						"content"
+					]
+				},
+				"snapshot_id": {
+					"type": "string",
+					"id": "http://edan.si.edu/schema/content/snapshot_id"
+				},
+				"snapshot_body": {
+					"type": "string",
+					"id": "http://edan.si.edu/schema/content/snapshot_body"
+				},
+				"parent_tour_id": {
+					"type": "string",
+					"id": "http://edan.si.edu/schema/content/parent_tour_id"
+				}
+			},
+			"id": "http://edan.si.edu/schema/content",
+			"required": [
+				"title",
+				"snapshot_id",
+				"snapshot_body",
+				"parent_tour_id"
+			]
+		}
+	},
+	"additionalProperties":false,
+	"id": "http://edan.si.edu/schema"
 }

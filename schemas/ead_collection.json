@@ -1,0 +1,421 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"type": "object",
+	"properties": {
+		"online_media": {
+			"type": "object",
+			"properties": {
+				"mediaCount": {
+					"type": "string"
+				},
+				"media": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"thumbnail": {
+								"type": "string"
+							},
+							"indexedType": {
+								"type": "string"
+							},
+							"caption": {
+								"type": "string"
+							},
+							"type": {
+								"type": "string"
+							},
+							"content": {
+								"type": "string"
+							},
+							"flag": {
+								"type": "array",
+								"items": {
+									"type": "string"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"freetext": {
+			"type": "object",
+			"properties": {
+				"setName": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"label": {
+								"type": "string"
+							},
+							"content": {
+								"type": "string"
+							},
+							"indexedContent": {
+								"type": "string"
+							}
+						}
+					}
+				},
+				"identifier": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"label": {
+								"type": "string"
+							},
+							"content": {
+								"type": "string"
+							}
+						}
+					}
+				},
+				"creator": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"label": {
+								"type": "string"
+							},
+							"content": {
+								"type": "string"
+							}
+						}
+					}
+				},
+				"bioghist": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"label": {
+								"type": "string"
+							},
+							"content": {
+								"type": "string"
+							}
+						}
+					}
+				},
+				"processinfo": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"label": {
+								"type": "string"
+							},
+							"content": {
+								"type": "string"
+							}
+						}
+					}
+				},
+				"unitdate": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"label": {
+								"type": "string"
+							},
+							"content": {
+								"type": "string"
+							},
+							"indexedContent": {
+								"type": [
+									"string",
+									"object"
+								]
+							},
+							"flag": {
+								"type": "array",
+								"items": {
+									"type": "string"
+								}
+							}
+						}
+					}
+				},
+				"relatedmaterial": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"label": {
+								"type": "string"
+							},
+							"content": {
+								"type": "string"
+							}
+						}
+					}
+				},
+				"acqinfo": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"label": {
+								"type": "string"
+							},
+							"content": {
+								"type": "string"
+							}
+						}
+					}
+				},
+				"physdesc": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"label": {
+								"type": "string"
+							},
+							"content": {
+								"type": "string"
+							}
+						}
+					}
+				},
+				"accessrestrict": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"label": {
+								"type": "string"
+							},
+							"content": {
+								"type": "string"
+							}
+						}
+					}
+				},
+				"objectType": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"label": {
+								"type": "string"
+							},
+							"content": {
+								"type": "string"
+							},
+							"indexedContent": {
+								"type": [
+									"string",
+									"object"
+								]
+							}
+						}
+					}
+				},
+				"arrangement": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"label": {
+								"type": "string"
+							},
+							"content": {
+								"type": "string"
+							}
+						}
+					}
+				},
+				"scopecontent": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"label": {
+								"type": "string"
+							},
+							"content": {
+								"type": "string"
+							}
+						}
+					}
+				},
+				"genre_format": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"label": {
+								"type": "string"
+							},
+							"content": {
+								"type": "string"
+							},
+							"indexedContent": {
+								"type": [
+									"string",
+									"object"
+								]
+							}
+						}
+					}
+				},
+				"userestrict": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"label": {
+								"type": "string"
+							},
+							"content": {
+								"type": "string"
+							}
+						}
+					}
+				},
+				"name": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"label": {
+								"type": "string"
+							},
+							"content": {
+								"type": "string"
+							},
+							"indexedContent": {
+								"type": [
+									"string",
+									"object"
+								]
+							},
+							"flag": {
+								"type": "array",
+								"items": {
+									"type": "string"
+								}
+							}
+						}
+					}
+				},
+				"topic": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"label": {
+								"type": "string"
+							},
+							"content": {
+								"type": "string"
+							},
+							"indexedContent": {
+								"type": [
+									"string",
+									"object"
+								]
+							}
+						}
+					}
+				},
+				"dataSource": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"label": {
+								"type": "string"
+							},
+							"content": {
+								"type": "string"
+							},
+							"indexedContent": {
+								"type": [
+									"string",
+									"object"
+								]
+							}
+						}
+					}
+				}
+			}
+		},
+		"level": {
+			"type": "string"
+		},
+		"language": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			}
+		},
+		"digital_assets_available": {
+			"type": "string"
+		},
+		"fileSignature": {
+			"type": "string"
+		},
+		"usage_flag": {
+			"type": "string"
+		},
+		"record_link": {
+			"type": "string"
+		},
+		"title": {
+			"type": "string"
+		},
+		"type": {
+			"type": "string"
+		},
+		"collection_id": {
+			"type": "string"
+		},
+		"record_id": {
+			"type": "string"
+		},
+		"filelocation": {
+			"type": "string"
+		},
+		"archival_repository": {
+			"type": "string"
+		},
+		"containedIn": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"unititle": {
+						"type": "string"
+					},
+					"unitid": {
+						"type": "string"
+					},
+					"type": {
+						"type": "string"
+					},
+					"url": {
+						"type": "string"
+					}
+				}
+			}
+		},
+		"boost": {
+			"type": "string"
+		},
+		"id": {
+			"type": "string"
+		},
+		"related_bib_record": {
+			"type": "string"
+		}
+	},
+	"additionalProperties": false,
+	"id": "http://edan.si.edu/schema"
+}

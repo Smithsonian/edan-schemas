@@ -86,91 +86,91 @@
 			"type": "string",
 			"id": "http://edan.si.edu/schema/damsmdm/intellectual_content_creator"
 		},
-		"iptc_category": {
+		"IPTC_category": {
 			"type": "string",
 			"id": "http://edan.si.edu/schema/damsmdm/iptc_category"
 		},
-		"iptc_city": {
+		"IPTC_city": {
 			"type": "string",
 			"id": "http://edan.si.edu/schema/damsmdm/iptc_city"
 		},
-		"iptc_contact_address": {
+		"IPTC_contact_address": {
 			"type": "string",
 			"id": "http://edan.si.edu/schema/damsmdm/iptc_contact_address"
 		},
-		"iptc_contact_city": {
+		"IPTC_contact_city": {
 			"type": "string",
 			"id": "http://edan.si.edu/schema/damsmdm/iptc_contact_city"
 		},
-		"iptc_contact_country": {
+		"IPTC_contact_country": {
 			"type": "string",
 			"id": "http://edan.si.edu/schema/damsmdm/iptc_contact_country"
 		},
-		"iptc_contact_email": {
+		"IPTC_contact_email": {
 			"type": "string",
 			"id": "http://edan.si.edu/schema/damsmdm/iptc_contact_email"
 		},
-		"iptc_contact_phone": {
+		"IPTC_contact_phone": {
 			"type": "string",
 			"id": "http://edan.si.edu/schema/damsmdm/iptc_contact_phone"
 		},
-		"iptc_contact_postal": {
+		"IPTC_contact_postal": {
 			"type": "string",
 			"id": "http://edan.si.edu/schema/damsmdm/iptc_contact_postal"
 		},
-		"iptc_contact_state": {
+		"IPTC_contact_state": {
 			"type": "string",
 			"id": "http://edan.si.edu/schema/damsmdm/iptc_contact_state"
 		},
-		"iptc_contact_web_url": {
+		"IPTC_contact_web_url": {
 			"type": "string",
 			"id": "http://edan.si.edu/schema/damsmdm/iptc_contact_web_url"
 		},
-		"iptc_copyright": {
+		"IPTC_copyright": {
 			"type": "string",
 			"id": "http://edan.si.edu/schema/damsmdm/iptc_copyright"
 		},
-		"iptc_country_code": {
+		"IPTC_country_code": {
 			"type": "string",
 			"id": "http://edan.si.edu/schema/damsmdm/iptc_country_code"
 		},
-		"iptc_country_name": {
+		"IPTC_country_name": {
 			"type": "string",
 			"id": "http://edan.si.edu/schema/damsmdm/iptc_country_name"
 		},
-		"iptc_create_date": {
+		"IPTC_create_date": {
 			"type": "string",
 			"id": "http://edan.si.edu/schema/damsmdm/iptc_create_date"
 		},
-		"iptc_credit": {
+		"IPTC_credit": {
 			"type": "string",
 			"id": "http://edan.si.edu/schema/damsmdm/iptc_credit"
 		},
-		"iptc_headline": {
+		"IPTC_headline": {
 			"type": "string",
 			"id": "http://edan.si.edu/schema/damsmdm/iptc_headline"
 		},
-		"iptc_image_orientation": {
+		"IPTC_image_orientation": {
 			"type": "string",
 			"id": "http://edan.si.edu/schema/damsmdm/iptc_image_orientation"
 		},
-		"iptc_keywords": {
+		"IPTC_keywords": {
 			"type": "string",
 			"id": "http://edan.si.edu/schema/damsmdm/iptc_keywords"
 		},
-		"iptc_source": {
+		"IPTC_source": {
 			"type": "string",
 			"id": "http://edan.si.edu/schema/damsmdm/iptc_source"
 		},
-		"iptc_special_instructions": {
+		"IPTC_special_instructions": {
 			"type": "string",
 			"id": "http://edan.si.edu/schema/damsmdm/iptc_special_instructions"
 		},
-		"iptc_state": {
+		"IPTC_state": {
 			"type": "string",
 			"id": "http://edan.si.edu/schema/damsmdm/iptc_state"
 		},
-		"iptc_supplemental_category": {
+		"IPTC_supplemental_category": {
 			"type": "string",
 			"id": "http://edan.si.edu/schema/damsmdm/iptc_supplemental_category"
 		},
@@ -207,8 +207,19 @@
 			"id": "http://edan.si.edu/schema/damsmdm/other_constraints"
 		},
 		"path_string": {
-			"type": "string",
-			"id": "http://edan.si.edu/schema/damsmdm/path_string"
+			"anyOf": [
+				{
+					"type": "string",
+					"id": "http://edan.si.edu/schema/damsmdm/path_string"
+				},
+				{
+					"type": "array",
+					"items": {
+						"type": "string",
+						"id": "http://edan.si.edu/schema/damsmdm/path_string"
+					}
+				}
+			]
 		},
 		"primary_creator": {
 			"type": "string",
@@ -222,7 +233,7 @@
 			"type": "string",
 			"id": "http://edan.si.edu/schema/damsmdm/related_si_collection_objects"
 		},
-		"repository_id": {
+		"repository_ID": {
 			"type": "string",
 			"id": "http://edan.si.edu/schema/damsmdm/repository_id"
 		},
@@ -275,5 +286,6 @@
 			"id": "http://edan.si.edu/schema/damsmdm/work_creation_date"
 		}
 	},
-	"id": "http://edan.si.edu/schema/damsmdm"
+	"id": "http://edan.si.edu/schema/damsmdm",
+	"additionalProperties":false
 }

@@ -20,10 +20,16 @@
         "type": "string"
       },
       "id": "http://edan.si.edu/schema/items"
+    },
+    "description": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/description"
+    },
+    "thumbnail": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/listName"
     }
   },
-  "id": "http://edan.si.edu/schema",
-  "required": [
-
-  ]
+  "additionalProperties":false,
+  "id": "http://edan.si.edu/schema"
 }

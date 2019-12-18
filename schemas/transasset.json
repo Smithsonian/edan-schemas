@@ -18,12 +18,34 @@
       "type": "string",
       "id": "http://edan.si.edu/schema/assetName"
     },
+    "assetCompleted": {
+      "type": "boolean",
+      "id": "http://edan.si.edu/schema/assetCompleted"
+    },
+    "assetDisplay": {
+      "type": "integer",
+      "id": "http://edan.si.edu/schema/assetDisplay"
+    },
+    "assetStatus": {
+      "type": "integer",
+      "id": "http://edan.si.edu/schema/assetStatus"
+    },
+    "projectDisplay": {
+      "type": "integer",
+      "id": "http://edan.si.edu/schema/projectDisplay"
+    },
     "assetImage": {
       "type": "string",
       "id": "http://edan.si.edu/schema/assetImage"
     },
     "transcriptData": {
-      "type": "string",
+      "type": "object",
+      "properties":{
+      	"tl1_text":{
+      		"type":"string",
+      		"id": "http://edan.si.edu/schema/transcriptData/tl1_text"
+      	}      	
+      },
       "id": "http://edan.si.edu/schema/transcriptData"
     },
     "metadata": {
@@ -31,8 +53,6 @@
       "id": "http://edan.si.edu/schema/metadata"
     }
   },
-  "id": "http://edan.si.edu/schema",
-  "required": [
-
-  ]
+  "additionalProperties":false,
+  "id": "http://edan.si.edu/schema"
 }

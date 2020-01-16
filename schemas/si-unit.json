@@ -1,115 +1,283 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "SI Unit Record (DRAFT)",
-  "description": "Units are used to describe Smithsonian units",
-  "required": [
-    "title"
-  ],
-  "properties": {
-    "record_link": {
-      "type": "string",
-      "description": "Link to the unit's primary website."
-    },
-    "parent_unit_ID": {
-      "type": "string",
-      "description": "The ID of the parent unit, if applicable."
-    },
-    "objectgroup_ID": {
-      "type": "string",
-      "description": "The ID of the related object group, if applicable."
-    },
-    "online_media": {
-      "type": "object",
-      "description": "EDAN online media object",
-      "$ref": "online-media.json#/onlineMedia"
-    },
-    "title": {
-      "type": "object",
-      "description": "EDAN field object",
-      "$ref": "field-object.json#/fieldObject"
-    },
-    "address": {
-      "type": "object",
-      "description": "EDAN field object",
-      "$ref": "field-object.json#/fieldObject"
-    },
-    "telephone": {
-      "type": "object",
-      "description": "EDAN field array object",
-      "$ref": "field-object.json#/fieldObject"
-    },
-    "fax": {
-      "type": "object",
-      "description": "EDAN field object",
-      "$ref": "field-object.json#/fieldObject"
-    },
-    "name": {
-      "type": "array",
-      "items": "object",
-      "description": "EDAN field object",
-      "$ref": "field-object.json#/fieldObject"
-    },
-    "topic": {
-      "type": "array",
-      "items": "object",
-      "description": "EDAN field object",
-      "$ref": "field-object.json#/fieldObject"
-    },
-    "culture": {
-      "type": "array",
-      "items": "object",
-      "description": "EDAN field object",
-      "$ref": "field-object.json#/fieldObject"
-    },
-    "language": {
-      "type": "array",
-      "items": "object",
-      "description": "EDAN field object",
-      "$ref": "field-object.json#/fieldObject"
-    },
-    "place": {
-      "type": "array",
-      "items": "object",
-      "description": "EDAN field object",
-      "$ref": "field-object.json#/fieldObject"
-    },
-    "category": {
-      "type": "array",
-      "items": "object",
-      "description": "EDAN field object",
-      "$ref": "field-object.json#/fieldObject"
-    },
-    "description": {
-      "type": "string",
-      "items": "Description of the event."
-    },
-    "summary": {
-      "type": "string",
-      "items": "Short description of the event."
-    },
-    "email": {
-      "type": "string",
-      "description": ""
-    },
-    "notes": {
-      "type": "object",
-      "items": "EDAN field object",
-      "$ref": "field-object.json#/fieldObject"
-    },
-    "data_source": {
-      "type": "object",
-      "items": "EDAN field object",
-      "$ref": "field-object.json#/fieldObject"
-    },
-    "usage_flag": {
-      "type": "object",
-      "description": "EDAN field object",
-      "$ref": "field-object.json#/fieldObject"
-    },
-    "set_name": {
-      "type": "object",
-      "items": "EDAN field object",
-      "$ref": "field-object.json#/fieldObject"
-    }
-  }
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"definitions": {
+		"extendedField": {
+			"title": "Extended Field (DRAFT)",
+			"description": "Object that tracks enriched content.",
+			"required": [
+				"content"
+			],
+			"additionalProperties": false,
+			"properties": {
+				"type": {
+					"type": "string"
+				},
+				"category": {
+					"type": "string"
+				},
+				"content": {
+					"type": "string"
+				},
+				"summary": {
+					"type": "string"
+				},
+				"label": {
+					"type": "string"
+				},
+				"viaf": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"wikipedia": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"geo_names": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"lcsh": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"alt": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				}
+			}
+		},
+		"fieldObject": {
+			"title": "Field Object (DRAFT)",
+			"description": "Object that defines a field with extended enrichment data.",
+			"additionalProperties": false,
+			"properties": {
+				"content": {
+					"type": "string"
+				},
+				"extended": {
+					"type": [
+						"array",
+						"object"
+					],
+					"items": {
+						"oneOf": [
+							{
+								"$ref": "#/definitions/extendedField"
+							}
+						]
+					}
+				}
+			}
+		}
+	},
+	"title": "SI Unit Record (DRAFT)",
+	"description": "Units are used to describe Smithsonian units",
+	"required": [
+		"title"
+	],
+	"additionalProperties": false,
+	"properties": {
+		"record_link": {
+			"type": "string",
+			"description": "Link to the unit's primary website."
+		},
+		"parent_unit_ID": {
+			"type": "string",
+			"description": "The ID of the parent unit, if applicable."
+		},
+		"mission_statement": {
+			"type": "string"
+		},
+		"record_ID": {
+			"type": "string"
+		},
+		"short_title": {
+			"type": "string"
+		},
+		"unit_type": {
+			"type": "string"
+		},
+		"unit_codes": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			}
+		},
+		"trumba_sponsor_ID": {
+			"type": "string"
+		},
+		"url": {
+			"type": "string"
+		},
+		"objectgroup_ID": {
+			"type": "string",
+			"description": "The ID of the related object group, if applicable."
+		},
+		"app_ids": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			}
+		},
+		"online_media": {
+			"type": "array",
+			"description": "EDAN online media object",
+			"items": {
+				"type": "object",
+				"additionalProperties": false,
+				"properties": {
+					"mime_type": {
+						"type": "string"
+					},
+					"description": {
+						"type": "string"
+					},
+					"alt": {
+						"type": "string"
+					},
+					"type": {
+						"type": "string"
+					},
+					"content": {
+						"type": "string"
+					},
+					"caption": {
+						"type": "string"
+					},
+					"credit": {
+						"type": "string"
+					},
+					"extended": {
+						"type": "object",
+						"additionalProperties": false,
+						"properties": {
+							"mime_type": {
+								"type": "string"
+							},
+							"description": {
+								"type": "string"
+							},
+							"type": {
+								"type": "string"
+							},
+							"alt": {
+								"type": "string"
+							},
+							"caption": {
+								"type": "string"
+							},
+							"credit": {
+								"type": "string"
+							}
+						}
+					}
+				}
+			}
+		},
+		"title": {
+			"type": "object",
+			"description": "EDAN field object",
+			"$ref": "#/definitions/fieldObject"
+		},
+		"address": {
+			"type": "object",
+			"description": "EDAN field object",
+			"$ref": "#/definitions/fieldObject"
+		},
+		"telephone": {
+			"type": "object",
+			"description": "EDAN field array object",
+			"$ref": "#/definitions/fieldObject"
+		},
+		"fax": {
+			"type": "object",
+			"description": "EDAN field object",
+			"$ref": "#/definitions/fieldObject"
+		},
+		"name": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"description": "EDAN field object",
+				"$ref": "#/definitions/fieldObject"
+			}
+		},
+		"topic": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"description": "EDAN field object",
+				"$ref": "#/definitions/fieldObject"
+			}
+		},
+		"culture": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"description": "EDAN field object",
+				"$ref": "#/definitions/fieldObject"
+			}
+		},
+		"language": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"description": "EDAN field object",
+				"$ref": "#/definitions/fieldObject"
+			}
+		},
+		"place": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"description": "EDAN field object",
+				"$ref": "#/definitions/fieldObject"
+			}
+		},
+		"category": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"description": "EDAN field object",
+				"$ref": "#/definitions/fieldObject"
+			}
+		},
+		"description": {
+			"type": "string"
+		},
+		"summary": {
+			"type": "string"
+		},
+		"email": {
+			"type": "string",
+			"description": ""
+		},
+		"notes": {
+			"type": "object",
+			"$ref": "#/definitions/fieldObject"
+		},
+		"data_source": {
+			"type": "object",
+			"$ref": "#/definitions/fieldObject"
+		},
+		"usage_flag": {
+			"type": "object",
+			"description": "EDAN field object",
+			"$ref": "#/definitions/fieldObject"
+		},
+		"set_name": {
+			"type": "object",
+			"$ref": "#/definitions/fieldObject"
+		}
+	}
 }

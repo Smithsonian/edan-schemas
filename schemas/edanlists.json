@@ -1,6 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
+  "additionalProperties":false,
   "properties": {
     "IP": {
       "type": "string",
@@ -9,8 +10,30 @@
     "time": {
       "type": "string",
       "id": "http://edan.si.edu/schema/time"
+    },
+    "description": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/description"
+    },
+    "items": {
+      "type": "array",
+      "id": "http://edan.si.edu/schema/items",
+      "items":{
+      	"type":"string"
+      }
+    },
+    "listName": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/listName"
+    },
+    "size": {
+      "type": "integer",
+      "id": "http://edan.si.edu/schema/size"
+    },
+    "thumbnail": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/thumbnail"
     }
   },
-  "additionalProperties":false,
   "id": "http://edan.si.edu/schema"
 }

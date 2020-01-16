@@ -1,6 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
+  "additionalProperties":false,
   "properties": {
     "name": {
       "type": "string",
@@ -12,6 +13,7 @@
     },
     "story": {
       "type": "object",
+  	  "additionalProperties":false,
       "properties": {
         "storyTitle": {
           "type": "string",
@@ -48,6 +50,7 @@
     },
     "image": {
       "type": "object",
+  	  "additionalProperties":false,
       "properties": {
         "source": {
           "type": "string",
@@ -86,6 +89,7 @@
     },
     "video": {
       "type": "object",
+  	  "additionalProperties":false,
       "properties": {
         "description": {
           "type": "string",
@@ -109,6 +113,7 @@
     },
     "animation": {
       "type": "object",
+  	  "additionalProperties":false,
       "properties": {
         "playOnStart": {
           "type": "string",
@@ -130,6 +135,7 @@
           "type": "array",
           "items": {
             "type": "object",
+  			"additionalProperties":false,
             "properties": {
               "title": {
                 "type": "string",

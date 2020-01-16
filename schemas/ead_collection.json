@@ -1,9 +1,11 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"type": "object",
+	"additionalProperties": false,
 	"properties": {
 		"online_media": {
 			"type": "object",
+			"additionalProperties": false,
 			"properties": {
 				"mediaCount": {
 					"type": "string"
@@ -46,6 +48,7 @@
 					"type": "array",
 					"items": {
 						"type": "object",
+						"additionalProperties": false,
 						"properties": {
 							"label": {
 								"type": "string"
@@ -63,6 +66,7 @@
 					"type": "array",
 					"items": {
 						"type": "object",
+						"additionalProperties": false,
 						"properties": {
 							"label": {
 								"type": "string"
@@ -77,6 +81,7 @@
 					"type": "array",
 					"items": {
 						"type": "object",
+						"additionalProperties": false,
 						"properties": {
 							"label": {
 								"type": "string"
@@ -91,6 +96,7 @@
 					"type": "array",
 					"items": {
 						"type": "object",
+						"additionalProperties": false,
 						"properties": {
 							"label": {
 								"type": "string"
@@ -105,6 +111,7 @@
 					"type": "array",
 					"items": {
 						"type": "object",
+						"additionalProperties": false,
 						"properties": {
 							"label": {
 								"type": "string"
@@ -119,6 +126,7 @@
 					"type": "array",
 					"items": {
 						"type": "object",
+						"additionalProperties": false,
 						"properties": {
 							"label": {
 								"type": "string"
@@ -145,6 +153,7 @@
 					"type": "array",
 					"items": {
 						"type": "object",
+						"additionalProperties": false,
 						"properties": {
 							"label": {
 								"type": "string"
@@ -159,6 +168,7 @@
 					"type": "array",
 					"items": {
 						"type": "object",
+						"additionalProperties": false,
 						"properties": {
 							"label": {
 								"type": "string"
@@ -173,6 +183,7 @@
 					"type": "array",
 					"items": {
 						"type": "object",
+						"additionalProperties": false,
 						"properties": {
 							"label": {
 								"type": "string"
@@ -187,6 +198,7 @@
 					"type": "array",
 					"items": {
 						"type": "object",
+						"additionalProperties": false,
 						"properties": {
 							"label": {
 								"type": "string"
@@ -201,6 +213,7 @@
 					"type": "array",
 					"items": {
 						"type": "object",
+						"additionalProperties": false,
 						"properties": {
 							"label": {
 								"type": "string"
@@ -221,6 +234,7 @@
 					"type": "array",
 					"items": {
 						"type": "object",
+						"additionalProperties": false,
 						"properties": {
 							"label": {
 								"type": "string"
@@ -235,6 +249,7 @@
 					"type": "array",
 					"items": {
 						"type": "object",
+						"additionalProperties": false,
 						"properties": {
 							"label": {
 								"type": "string"
@@ -249,6 +264,70 @@
 					"type": "array",
 					"items": {
 						"type": "object",
+						"additionalProperties": false,
+						"properties": {
+							"label": {
+								"type": "string"
+							},
+							"content": {
+								"type": "string"
+							},
+							"indexedContent": {
+								"type": [
+									"string",
+									"object"
+								]
+							}
+						}
+					}
+				},
+				"abstract": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"additionalProperties": false,
+						"properties": {
+							"label": {
+								"type": "string"
+							},
+							"content": {
+								"type": "string"
+							},
+							"indexedContent": {
+								"type": [
+									"string",
+									"object"
+								]
+							}
+						}
+					}
+				},
+				"prefercite": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"additionalProperties": false,
+						"properties": {
+							"label": {
+								"type": "string"
+							},
+							"content": {
+								"type": "string"
+							},
+							"indexedContent": {
+								"type": [
+									"string",
+									"object"
+								]
+							}
+						}
+					}
+				},
+				"place": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"additionalProperties": false,
 						"properties": {
 							"label": {
 								"type": "string"
@@ -269,6 +348,7 @@
 					"type": "array",
 					"items": {
 						"type": "object",
+						"additionalProperties": false,
 						"properties": {
 							"label": {
 								"type": "string"
@@ -283,6 +363,7 @@
 					"type": "array",
 					"items": {
 						"type": "object",
+						"additionalProperties": false,
 						"properties": {
 							"label": {
 								"type": "string"
@@ -309,6 +390,7 @@
 					"type": "array",
 					"items": {
 						"type": "object",
+						"additionalProperties": false,
 						"properties": {
 							"label": {
 								"type": "string"
@@ -329,6 +411,7 @@
 					"type": "array",
 					"items": {
 						"type": "object",
+						"additionalProperties": false,
 						"properties": {
 							"label": {
 								"type": "string"
@@ -390,6 +473,7 @@
 			"type": "array",
 			"items": {
 				"type": "object",
+				"additionalProperties": false,
 				"properties": {
 					"unititle": {
 						"type": "string"
@@ -402,6 +486,9 @@
 					},
 					"url": {
 						"type": "string"
+					},
+					"unittitle": {
+						"type": "string"
 					}
 				}
 			}
@@ -413,9 +500,8 @@
 			"type": "string"
 		},
 		"related_bib_record": {
-			"type": "string"
+			"type": ["string","array"]
 		}
 	},
-	"additionalProperties": false,
 	"id": "http://edan.si.edu/schema"
 }

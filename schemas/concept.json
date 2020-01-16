@@ -111,8 +111,5 @@
       ]
     }
   },
-  "id": "http://edan.si.edu/schema",
-  "required": [
-
-  ]
+  "id": "http://edan.si.edu/schema"
 }

@@ -1,6 +1,7 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"type": "object",
+	"additionalProperties": false,
 	"properties": {
 		"size": {
 			"type": "string",
@@ -24,9 +25,11 @@
 		},
 		"signature": {
 			"type": "array",
+			"additionalProperties": false,
 			"properties": {
 				"items": {
 					"type": "object",
+					"additionalProperties": false,
 					"properties": {
 						"signature": {
 							"type": "string",
@@ -46,9 +49,11 @@
 		},
 		"filescanner": {
 			"type": "array",
+			"additionalProperties": false,
 			"properties": {
 				"items": {
 					"type": "object",
+					"additionalProperties": false,
 					"properties": {
 						"scanner": {
 							"type": "string",
@@ -85,6 +90,7 @@
 		"extendedAttributes": {
 			"type": "object",
 			"id": "http://edan.si.edu/schema/edanmdm/extendedAttributes",
+			"additionalProperties": false,
 			"properties": {
 				"duration": {
 					"type": "number",
@@ -93,6 +99,10 @@
 				"archive": {
 					"type": "string",
 					"id": "http://edan.si.edu/schema/edanmdm/extendedAttributes/archive"
+				},
+				"fileId": {
+					"type": "string",
+					"id": "http://edan.si.edu/schema/edanmdm/extendedAttributes/fileId"
 				}
 			}
 		},
@@ -101,6 +111,5 @@
 			"id": "http://edan.si.edu/schema/edanmdm/fileId"
 		}
 	},
-	"id": "http://edan.si.edu/schema/file",
-	"additionalProperties": false
+	"id": "http://edan.si.edu/schema/file"
 }

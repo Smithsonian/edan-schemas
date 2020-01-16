@@ -1,6 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
+  "additionalProperties": false,
   "properties": {
     "cacheServerId": {
       "type": "integer",
@@ -8,6 +9,7 @@
     },
     "action": {
       "type": "object",
+  	  "additionalProperties": false,
       "properties": {
         "emailSent": {
           "type": "boolean",
@@ -59,9 +61,11 @@
       "properties": {
         "p2b-1481050956801-1481145224168-0": {
           "type": "object",
+  		  "additionalProperties": false,
           "properties": {
             "1": {
               "type": "object",
+  			  "additionalProperties": false,
               "properties": {
                 "1": {
                   "type": "integer",
@@ -85,6 +89,7 @@
             },
             "2": {
               "type": "object",
+  			  "additionalProperties": false,
               "properties": {
                 "1": {
                   "type": "integer",
@@ -103,6 +108,7 @@
             },
             "3": {
               "type": "object",
+  			  "additionalProperties": false,
               "properties": {
                 "1": {
                   "type": "integer",
@@ -121,6 +127,7 @@
             },
             "p2b-1481050956801-1481145250372-0": {
               "type": "object",
+  			  "additionalProperties": false,
               "properties": {
                 "1": {
                   "type": "integer",
@@ -139,6 +146,7 @@
             },
             "p2b-1483541424683-1483630047049-0": {
               "type": "object",
+  			  "additionalProperties": false,
               "properties": {
                 "1": {
                   "type": "integer",
@@ -157,6 +165,7 @@
             },
             "p2b-1483541424683-1483630087679-0": {
               "type": "object",
+   			  "additionalProperties": false,
               "properties": {
                 "1": {
                   "type": "integer",
@@ -175,6 +184,7 @@
             },
             "p2b-1483541424683-1483631760653-0": {
               "type": "object",
+  			  "additionalProperties": false,
               "properties": {
                 "2": {
                   "type": "integer",

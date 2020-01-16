@@ -2,6 +2,7 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "definitions": {},
   "id": "http://example.com/example.json",
+  "additionalProperties": false,
   "properties": {
     "Archival_Repository": {
       "id": "/properties/Archival_Repository",
@@ -165,7 +166,7 @@
         "id": "/properties/content/items",
         "type": "string"
       },
-      "type": "array"
+      "type": ["array","string"]
     },
     "creator": {
       "id": "/properties/creator",
@@ -197,6 +198,7 @@
     },
     "online_media": {
       "id": "/properties/online_media",
+      "additionalProperties":false,
       "properties": {
         "mediaCount": {
           "id": "/properties/online_media/properties/mediaCount",
@@ -230,6 +232,5 @@
       "type": "string"
     }
   },
-  "additionalProperties": false,
   "type": "object"
 }

@@ -9,6 +9,7 @@
 		"title": {
 			"type": ["string","object"],
 			"id":"http://edan.si.edu/schema/title",
+			"additionalProperties":false,
 			"properties": {
 				"content":{
 					"type":"string"
@@ -26,6 +27,7 @@
 		"lastUpdatedBy": {
 			"type": "object",
 			"id": "http://edan.si.edu/schema/lastUpdatedBy",
+			"additionalProperties":false,
 			"properties":{
 				"content":{
 					"type":"string",
@@ -34,6 +36,7 @@
 				"extended":{
 					"type":"object",
 					"id": "http://edan.si.edu/schema/lastUpdatedBy/extended",
+					"additionalProperties":false,
 					"properties":{
 						"id":{
 							"type":"string",
@@ -46,6 +49,7 @@
 		"author": {
 			"type": "object",
 			"id": "http://edan.si.edu/schema/author",
+			"additionalProperties":false,
 			"properties":{
 				"content":{
 					"type":"string",
@@ -54,6 +58,7 @@
 				"extended":{
 					"type":"object",
 					"id": "http://edan.si.edu/schema/author/extended",
+					"additionalProperties":false,
 					"properties":{
 						"id":{
 							"type":"string",
@@ -68,6 +73,7 @@
 			"properties": {
 				"title": {
 					"type": "object",
+					"additionalProperties":false,
 					"properties": {
 						"content": {
 							"type": "string",

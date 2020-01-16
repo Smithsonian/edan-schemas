@@ -1,6 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
+  "additionalProperties":false,
   "properties": {
     "text": {
       "type": "array",
@@ -33,8 +34,5 @@
       "id": "http://edan.si.edu/schema/unit_code"
     }
   },
-  "id": "http://edan.si.edu/schema",
-  "required": [
-
-  ]
+  "id": "http://edan.si.edu/schema"
 }

@@ -1,6 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
+  "additionalProperties": false,
   "properties": {
     "text": {
       "type": "string",
@@ -28,6 +29,7 @@
       "type": "array",
       "items": {
         "type": "object",
+  		"additionalProperties": false,
         "properties": {
           "2": {
             "type": "string",

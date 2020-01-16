@@ -11,6 +11,7 @@
 				},
 				"title": {
 					"type": "object",
+					"additionalProperties": false,
 					"properties": {
 						"content": {
 							"type": "string"
@@ -28,6 +29,7 @@
 					"title": "Online Media (DRAFT)",
 					"description": "Object that stores all media within a record.",
 					"type": "object",
+					"additionalProperties": false,
 					"properties": {
 						"mediaCount": {
 							"type": [
@@ -36,7 +38,7 @@
 							]
 						},
 						"media": {
-							"type": "array",
+							"type": ["array","object"],
 							"items": {
 								"type": "object",
 								"oneOf": [
@@ -49,6 +51,7 @@
 											"type",
 											"thumbnail"
 										],
+										"additionalProperties": false,
 										"properties": {
 											"content": {
 												"title": "content",
@@ -66,8 +69,8 @@
 												"title": "thumbnail",
 												"type": "string"
 											},
-											"idsid": {
-												"title": "idsid",
+											"idsId": {
+												"title": "idsId",
 												"type": "string"
 											},
 											"caption": {
@@ -89,6 +92,23 @@
 											"mime_type": {
 												"title": "content",
 												"type": "string"
+											},
+											"usage": {
+												"title": "usage",
+												"type": "object",
+												"additionalProperties": false,
+												"properties":{
+													"access":{
+														"type":"string"
+													},
+													"text":{
+														"type":"string"
+													}
+												}
+											},
+											"usage_flag": {
+												"title": "usage_flag",
+												"type": "string"
 											}
 										}
 									}
@@ -99,6 +119,18 @@
 				},
 				"data_source": {
 					"type": "string"
+				},
+				"metadata_usage": {
+					"type": "object",
+					"properties":{
+						"access":{
+							"type":"string"
+						},
+						"text":{
+							"type":"string"
+						}
+
+					}
 				},
 				"record_ID": {
 					"type": "string"
@@ -123,10 +155,29 @@
 			"properties": {
 				"sortdate": {
 					"type": [
-						"string"
+						"string",
+						"array"
 					]
 				},
 				"topic": {
+					"type": [
+						"array",
+						"string"
+					]
+				},
+				"strat_member": {
+					"type": [
+						"array",
+						"string"
+					]
+				},				
+				"strat_group": {
+					"type": [
+						"array",
+						"string"
+					]
+				},
+				"coordinates": {
 					"type": [
 						"array",
 						"string"
@@ -265,9 +316,11 @@
 						"string",
 						"array"
 					],
+					"additionalProperties": false,
 					"properties": {
 						"L1": {
 							"type": "object",
+							"additionalProperties": false,
 							"properties": {
 								"content": {
 									"type": "string"
@@ -283,6 +336,7 @@
 						},
 						"L2": {
 							"type": "object",
+							"additionalProperties": false,
 							"properties": {
 								"content": {
 									"type": "string"
@@ -298,6 +352,7 @@
 						},
 						"L3": {
 							"type": "object",
+							"additionalProperties": false,
 							"properties": {
 								"content": {
 									"type": "string"
@@ -313,6 +368,7 @@
 						},
 						"Other": {
 							"type": "object",
+							"additionalProperties": false,
 							"properties": {
 								"content": {
 									"type": "string"
@@ -335,6 +391,7 @@
 					"anyOf": [
 						{
 							"type": "object",
+							"additionalProperties": false,
 							"properties": {
 								"building": {
 									"type": "string"
@@ -354,6 +411,7 @@
 							"type": "array",
 							"items": {
 								"type": "object",
+								"additionalProperties": false,
 								"properties": {
 									"building": {
 										"type": "string"
@@ -391,6 +449,7 @@
 		},
 		"descriptiveOptional": {
 			"type": "object",
+			"additionalProperties": false,
 			"properties": {
 				"freetext": {
 					"type": "array"
@@ -401,6 +460,7 @@
 	"required": [
 		"descriptiveNonRepeating"
 	],
+	"additionalProperties": false,
 	"properties": {
 		"descriptiveNonRepeating": {
 			"$ref": "#/definitions/descriptiveNonRepeating"
@@ -410,6 +470,9 @@
 		},
 		"descriptiveOptional": {
 			"$ref": "#/definitions/descriptiveOptional"
+		},
+		"freetext": {
+			"type": "object"
 		}
 	}
 }

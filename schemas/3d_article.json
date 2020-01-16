@@ -13,12 +13,14 @@
 		"lastUpdatedBy": {
 			"type": "object",
 			"id": "http://edan.si.edu/schema/lastUpdatedBy",
+			"additionalProperties": false,
 			"properties": {
 				"content": {
 					"type": "string"
 				},
 				"extended": {
 					"type": "object",
+					"additionalProperties": false,
 					"properties": {
 						"id": {
 							"type": [
@@ -33,12 +35,14 @@
 		"author": {
 			"type": "object",
 			"id": "http://edan.si.edu/schema/author",
+			"additionalProperties": false,
 			"properties": {
 				"content": {
 					"type": "string"
 				},
 				"extended": {
 					"type": "object",
+					"additionalProperties": false,
 					"properties": {
 						"id": {
 							"type": [
@@ -52,6 +56,7 @@
 		},
 		"title": {
 			"type": "object",
+			"additionalProperties": false,
 			"properties": {
 				"content": {
 					"type": "string",

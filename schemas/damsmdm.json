@@ -1,6 +1,7 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"type": "object",
+	"additionalProperties":false,
 	"properties": {
 		"alt_id_1": {
 			"type": "string",
@@ -286,6 +287,5 @@
 			"id": "http://edan.si.edu/schema/damsmdm/work_creation_date"
 		}
 	},
-	"id": "http://edan.si.edu/schema/damsmdm",
-	"additionalProperties":false
+	"id": "http://edan.si.edu/schema/damsmdm"
 }

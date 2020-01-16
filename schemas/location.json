@@ -1,192 +1,356 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "Location Record (DRAFT)",
-  "description": "Locations are used to describe physical locations, such as a location pertaining to a unit.",
-  "required": [
-    "title"
-  ],
-  "properties": {
-    "record_link": {
-      "type": "string",
-      "description": "Link to the location's primary website."
-    },
-    "ofeo_ID": {
-      "type": "string",
-      "description": "The OFEO ID for this Location. Not all Locations belong to SI Units."
-    },
-    "facility_type": {
-      "type": "string",
-      "description": "Such as EventVenue, ArtGallery, MovieTheater, Zoo, Museum- from schema.org."
-    },
-    "parent_unit_ID": {
-      "type": "string",
-      "description": "The ID of the parent unit, if applicable."
-    },
-    "objectgroup_ID": {
-      "type": "string",
-      "description": "The ID of the related object group, if applicable."
-    },
-    "online_media": {
-      "type": "object",
-      "description": "EDAN online media object",
-      "$ref": "online-media.json#/onlineMedia"
-    },
-    "online_media_type": {
-      "type": "object",
-      "description": "EDAN field object"
-    },
-    "title": {
-      "type": "object",
-      "description": "EDAN field object",
-      "$ref": "field-object.json#/fieldObject"
-    },
-    "name": {
-      "type": "array",
-      "description": "EDAN field object",
-      "items": {
-        "type": "object",
-        "oneOf": [
-          {
-            "$ref": "field-object.json#/fieldObject"
-          }
-        ],
-        "preferred": "string"
-      }
-    },
-    "topic": {
-      "type": "array",
-      "description": "EDAN field object",
-      "items": {
-        "type": "object",
-        "oneOf": [
-          {
-            "$ref": "field-object.json#/fieldObject"
-          }
-        ],
-        "preferred": "string"
-      }
-    },
-    "culture": {
-      "type": "array",
-      "description": "EDAN field object",
-      "items": {
-        "type": "object",
-        "oneOf": [
-          {
-            "$ref": "field-object.json#/fieldObject"
-          }
-        ],
-        "preferred": "string"
-      }
-    },
-    "language": {
-      "type": "array",
-      "description": "EDAN field object",
-      "items": {
-        "type": "object",
-        "oneOf": [
-          {
-            "$ref": "field-object.json#/fieldObject"
-          }
-        ],
-        "preferred": "string"
-      }
-    },
-    "place": {
-      "type": "array",
-      "description": "EDAN field object",
-      "items": {
-        "type": "object",
-        "oneOf": [
-          {
-            "$ref": "field-object.json#/fieldObject"
-          }
-        ],
-        "preferred": "string"
-      }
-    },
-    "category": {
-      "type": "array",
-      "description": "EDAN field object",
-      "items": {
-        "type": "object",
-        "oneOf": [
-          {
-            "$ref": "field-object.json#/fieldObject"
-          }
-        ],
-        "preferred": "string"
-      }
-    },
-    "status": {
-      "type": "string",
-      "description": "Open or Closed"
-    },
-    "usage_flag": {
-      "type": "object",
-      "description": "EDAN field object",
-      "$ref": "field-object.json#/fieldObject"
-    },
-    "hours": {
-      "type": "object",
-      "description": "EDAN field object",
-      "$ref": "field-object.json#/fieldObject"
-    },
-    "address": {
-      "type": "object",
-      "description": "EDAN field object",
-      "$ref": "field-object.json#/fieldObject"
-    },
-    "telephone": {
-      "type": "array",
-      "items": "object",
-      "description": "EDAN field object",
-      "$ref": "field-object.json#/fieldObject"
-    },
-    "email": {
-      "type": "object",
-      "description": "EDAN field object",
-      "$ref": "field-object.json#/fieldObject"
-    },
-    "fax": {
-      "type": "object",
-      "description": "EDAN field object",
-      "$ref": "field-object.json#/fieldObject"
-    },
-    "description": {
-      "type": "string"
-    },
-    "summary": {
-      "type": "string"
-    },
-    "public_transportation": {
-      "type": "object",
-      "description": "EDAN field object",
-      "$ref": "field-object.json#/fieldObject"
-    },
-    "accessibility_services": {
-      "type": "string"
-    },
-    "parking": {
-      "type": "string"
-    },
-    "keywords": {
-      "type": "string"
-    },
-    "notes": {
-      "type": "object",
-      "description": "EDAN field object",
-      "$ref": "field-object.json#/fieldObject"
-    },
-    "data_source": {
-      "type": "object",
-      "description": "EDAN field object",
-      "$ref": "field-object.json#/fieldObject"
-    },
-    "set_name": {
-      "type": "object",
-      "description": "EDAN field object",
-      "$ref": "field-object.json#/fieldObject"
-    }
-  }
+	"definitions": {
+		"extendedField": {
+			"title": "Extended Field (DRAFT)",
+			"description": "Object that tracks enriched content.",
+			"required": [
+				"content"
+			],
+			"additionalProperties":false,
+			"properties": {
+				"type":{
+					"type":"string"
+				},
+				"category":{
+					"type":"string"
+				},
+				"content":{
+					"type":"string"
+				},
+				"summary":{
+					"type":"string"
+				},
+				"label":{
+					"type":"string"
+				},
+				
+				"viaf": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"wikipedia": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"geo_names": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"lcsh": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"alt": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				}
+			}
+		},
+		"fieldObject": {
+			"title": "Field Object (DRAFT)",
+			"description": "Object that defines a field with extended enrichment data.",
+			"additionalProperties":false,
+			"properties": {
+				"content": {
+					"type":"string"
+				},
+				
+				"extended": {
+					"type": ["array","object"],
+					"items": {
+						"oneOf": [
+							{
+								"$ref": "#/definitions/extendedField"
+							}
+						]
+					}
+				}
+			}
+		}
+	},
+	"title": "Location Record (DRAFT)",
+	"description": "Locations are used to describe physical locations, such as a location pertaining to a unit.",
+	"required": [
+		"title"
+	],
+	"additionalProperties": false,
+	"properties": {
+		"record_link": {
+			"type": "string",
+			"description": "Link to the location's primary website."
+		},
+		"ofeo_ID": {
+			"type": "string",
+			"description": "The OFEO ID for this Location. Not all Locations belong to SI Units."
+		},
+		"facility_type": {
+			"type": "string",
+			"description": "Such as EventVenue, ArtGallery, MovieTheater, Zoo, Museum- from schema.org."
+		},
+		"parent_unit_ID": {
+			"type": "string",
+			"description": "The ID of the parent unit, if applicable."
+		},
+		"objectgroup_ID": {
+			"type": "string",
+			"description": "The ID of the related object group, if applicable."
+		},
+		"online_media": {
+			"type": "array",
+			"description": "EDAN online media object",
+			"items":{
+				"type":"object",
+				"additionalProperties":false,
+				"properties":{
+					"mime_type":{
+						"type":"string"
+					},
+					"description":{
+						"type":"string"
+					},
+					"alt":{
+						"type":"string"
+					},
+					"type":{
+						"type":"string"
+					},
+					"content":{
+						"type":"string"
+					},
+					"caption":{
+						"type":"string"
+					},
+					"extended":{
+						"type":"object",
+						"additionalProperties":false,
+						"properties":{
+							"mime_type":{
+								"type":"string"
+							},
+							"description":{
+								"type":"string"
+							},
+							"type":{
+								"type":"string"
+							},
+							"alt":{
+								"type":"string"
+							},
+							"caption":{
+								"type":"string"
+							}
+						}
+					}
+				}
+			}
+		},
+		"online_media_type": {
+			"type": "object",
+			"description": "EDAN field object"
+		},
+		"title": {
+			"type": "object",
+			"description": "EDAN field object",
+			"$ref": "#/definitions/fieldObject"
+		},
+		"name": {
+			"type": "array",
+			"description": "EDAN field object",
+			"items": {
+				"type": "object",
+				"oneOf": [
+					{
+						"$ref": "#/definitions/fieldObject"
+					}
+				]
+			}
+		},
+		"topic": {
+			"type": "array",
+			"description": "EDAN field object",
+			"items": {
+				"type": "object",
+				"oneOf": [
+					{
+						"$ref": "#/definitions/fieldObject"
+					}
+				]
+			}
+		},
+		"culture": {
+			"type": "array",
+			"description": "EDAN field object",
+			"items": {
+				"type": "object",
+				"oneOf": [
+					{
+						"$ref": "#/definitions/fieldObject"
+					}
+				]
+			}
+		},
+		"language": {
+			"type": "array",
+			"description": "EDAN field object",
+			"items": {
+				"type": "object",
+				"oneOf": [
+					{
+						"$ref": "#/definitions/fieldObject"
+					}
+				]
+			}
+		},
+		"place": {
+			"type": "array",
+			"description": "EDAN field object",
+			"items": {
+				"type": "object",
+				"oneOf": [
+					{
+						"$ref": "#/definitions/fieldObject"
+					}
+				]
+			}
+		},
+		"category": {
+			"type": "array",
+			"description": "EDAN field object",
+			"items": {
+				"type": "object",
+				"oneOf": [
+					{
+						"$ref": "#/definitions/fieldObject"
+					}
+				]
+			}
+		},
+		"status": {
+			"type": "string",
+			"description": "Open or Closed"
+		},
+		"usage_flag": {
+			"type": "object",
+			"description": "EDAN field object",
+			"$ref": "#/definitions/fieldObject"
+		},
+		"hours": {
+			"type": "object",
+			"description": "EDAN field object",
+			"$ref": "#/definitions/fieldObject"
+		},
+		"address": {
+			"type": "object",
+			"description": "EDAN field object",
+			"$ref": "#/definitions/fieldObject"
+		},
+		"telephone": {
+			"type": "array",
+			"items": {
+				"type":"object",
+				"description": "EDAN field object",
+				"$ref": "#/definitions/fieldObject"
+			}
+		},
+		"email": {
+			"type": "object",
+			"description": "EDAN field object",
+			"$ref": "#/definitions/fieldObject"
+		},
+		"fax": {
+			"type": "object",
+			"description": "EDAN field object",
+			"$ref": "#/definitions/fieldObject"
+		},
+		"description": {
+			"type": "string"
+		},
+		"summary": {
+			"type": "string"
+		},
+		"public_transportation": {
+			"type": "object",
+			"description": "EDAN field object",
+			"$ref": "#/definitions/fieldObject"
+		},
+		"accessibility_services": {
+			"type": "string"
+		},
+		"parking": {
+			"type": "string"
+		},
+		"keywords": {
+			"type": "string"
+		},
+		"notes": {
+			"type": "object",
+			"description": "EDAN field object",
+			"$ref": "#/definitions/fieldObject"
+		},
+		"data_source": {
+			"type": "object",
+			"description": "EDAN field object",
+			"$ref": "#/definitions/fieldObject"
+		},
+		"set_name": {
+			"type": "object",
+			"description": "EDAN field object",
+			"$ref": "#/definitions/fieldObject"
+		},
+		"acronym": {
+			"type": "object",
+			"description": "EDAN field object",
+			"$ref": "#/definitions/fieldObject"
+		},
+		"admission": {
+			"type": "object",
+			"description": "EDAN field object",
+			"$ref": "#/definitions/fieldObject"
+		},
+		"geolocation": {
+			"type": "object",
+			"description": "EDAN field object",
+			"$ref": "#/definitions/fieldObject"
+		},
+		"highlights": {
+			"type": "object",
+			"description": "EDAN field object",
+			"$ref": "#/definitions/fieldObject"
+		},
+		"location_status": {
+			"type": "object",
+			"description": "EDAN field object",
+			"$ref": "#/definitions/fieldObject"
+		},
+		"record_ID": {
+			"type": "object",
+			"description": "EDAN field object",
+			"$ref": "#/definitions/fieldObject"
+		},
+		"title_shortname": {
+			"type": "object",
+			"description": "EDAN field object",
+			"$ref": "#/definitions/fieldObject"
+		},
+		"trumba_venue_ID": {
+			"type": "object",
+			"description": "EDAN field object",
+			"$ref": "#/definitions/fieldObject"
+		},
+		"url": {
+			"type": "object",
+			"description": "EDAN field object",
+			"$ref": "#/definitions/fieldObject"
+		}
+	}
 }

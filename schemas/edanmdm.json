@@ -1,5 +1,5 @@
 {
-	"$schema": "http://json-schema.org/draft-04/schema#",
+	"$schema": "http://json-schema.org/draft-07/schema#",
 	"type": "object",
 	"definitions": {
 		"descriptiveNonRepeating": {
@@ -32,87 +32,78 @@
 					"additionalProperties": false,
 					"properties": {
 						"mediaCount": {
-							"type": [
-								"integer",
-								"string"
-							]
+							"type": "string"
 						},
 						"media": {
-							"type": ["array","object"],
+							"type": "array",
 							"items": {
+								"title": "Online Media Element Object (DRAFT)",
+								"description": "",
 								"type": "object",
-								"oneOf": [
-									{
-										"title": "Online Media Element Object (DRAFT)",
-										"description": "",
+								"required": [
+									"content",
+									"type",
+									"thumbnail"
+								],
+								"additionalProperties": false,
+								"properties": {
+									"content": {
+										"type": "string"
+									},
+									"summary": {
+										"type": "string"
+									},
+									"guid": {
+										"type": "string"
+									},
+									"voyagerId": {
+										"type": "string"
+									},
+									"type": {
+										"type": "string"
+									},
+									"thumbnail": {
+										"type": "string"
+									},
+									"idsId": {
+										"type": "string"
+									},
+									"caption": {
+										"type": "string"
+									},
+									"alt": {
+										"type": "string"
+									},
+									"credit": {
+										"type": "string"
+									},
+									"rights": {
+										"type": "string"
+									},
+									"mime_type": {
+										"type": "string"
+									},
+									"usage": {
+										"title": "usage",
 										"type": "object",
-										"required": [
-											"content",
-											"type",
-											"thumbnail"
-										],
 										"additionalProperties": false,
 										"properties": {
-											"content": {
-												"title": "content",
+											"access": {
 												"type": "string"
 											},
-											"summary": {
-												"title": "summary",
+											"text": {
 												"type": "string"
 											},
-											"type": {
-												"title": "type",
-												"type": "string"
-											},
-											"thumbnail": {
-												"title": "thumbnail",
-												"type": "string"
-											},
-											"idsId": {
-												"title": "idsId",
-												"type": "string"
-											},
-											"caption": {
-												"title": "caption",
-												"type": "string"
-											},
-											"alt": {
-												"title": "alt",
-												"type": "string"
-											},
-											"credit": {
-												"title": "credit",
-												"type": "string"
-											},
-											"rights": {
-												"title": "content",
-												"type": "string"
-											},
-											"mime_type": {
-												"title": "content",
-												"type": "string"
-											},
-											"usage": {
-												"title": "usage",
-												"type": "object",
-												"additionalProperties": false,
-												"properties":{
-													"access":{
-														"type":"string"
-													},
-													"text":{
-														"type":"string"
-													}
-												}
-											},
-											"usage_flag": {
-												"title": "usage_flag",
+											"codes": {
 												"type": "string"
 											}
 										}
+									},
+									"usage_flag": {
+										"title": "usage_flag",
+										"type": "string"
 									}
-								]
+								}
 							}
 						}
 					}
@@ -120,16 +111,19 @@
 				"data_source": {
 					"type": "string"
 				},
+				"guid": {
+					"type": "string"
+				},
 				"metadata_usage": {
 					"type": "object",
-					"properties":{
-						"access":{
-							"type":"string"
+					"additionalProperties": false,
+					"properties": {
+						"access": {
+							"type": "string"
 						},
-						"text":{
-							"type":"string"
+						"text": {
+							"type": "string"
 						}
-
 					}
 				},
 				"record_ID": {
@@ -154,238 +148,214 @@
 			"additionalProperties": false,
 			"properties": {
 				"sortdate": {
-					"type": [
-						"string",
-						"array"
-					]
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
 				},
 				"topic": {
-					"type": [
-						"array",
-						"string"
-					]
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
 				},
 				"strat_member": {
-					"type": [
-						"array",
-						"string"
-					]
-				},				
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
 				"strat_group": {
-					"type": [
-						"array",
-						"string"
-					]
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
 				},
 				"coordinates": {
-					"type": [
-						"array",
-						"string"
-					]
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
 				},
 				"occupation": {
-					"type": [
-						"array",
-						"string"
-					]
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
 				},
 				"object_type": {
-					"type": [
-						"array",
-						"string"
-					]
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
 				},
 				"name": {
-					"type": [
-						"array",
-						"string",
-						"object"
-					]
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"type": {
+								"type": "string"
+							},
+							"content": {
+								"type": "string"
+							}
+						}
+					}
 				},
 				"usage_flag": {
-					"type": [
-						"array",
-						"string"
-					]
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
 				},
 				"online_media_type": {
-					"type": [
-						"array",
-						"string"
-					]
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
 				},
 				"language": {
-					"type": [
-						"array",
-						"string"
-					]
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
 				},
 				"date": {
-					"type": [
-						"array",
-						"string"
-					]
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
 				},
 				"tax_kingdom": {
-					"type": [
-						"array",
-						"string"
-					]
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
 				},
 				"geo_age-era": {
-					"type": [
-						"array",
-						"string"
-					]
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
 				},
 				"strat_formation": {
-					"type": [
-						"array",
-						"string"
-					]
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
 				},
 				"tax_phylum": {
-					"type": [
-						"array",
-						"string"
-					]
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
 				},
 				"tax_class": {
-					"type": [
-						"array",
-						"string"
-					]
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
 				},
 				"tax_family": {
-					"type": [
-						"array",
-						"string"
-					]
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
 				},
 				"tax_order": {
-					"type": [
-						"array",
-						"string"
-					]
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
 				},
 				"geo_age-system": {
-					"type": [
-						"array",
-						"string"
-					]
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
 				},
 				"geo_age-stage": {
-					"type": [
-						"array",
-						"string"
-					]
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
 				},
 				"geo_age-series": {
-					"type": [
-						"array",
-						"string"
-					]
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
 				},
 				"common_name": {
-					"type": [
-						"string",
-						"array"
-					]
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
 				},
 				"tax_sub-family": {
-					"type": [
-						"string",
-						"array"
-					]
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
 				},
 				"culture": {
-					"type": [
-						"string",
-						"array"
-					]
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
 				},
 				"online_media_rights": {
-					"type": [
-						"string",
-						"array"
-					]
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
 				},
 				"geoLocation": {
-					"type": [
-						"object",
-						"string",
-						"array"
-					],
-					"additionalProperties": false,
-					"properties": {
-						"L1": {
-							"type": "object",
-							"additionalProperties": false,
-							"properties": {
-								"content": {
-									"type": "string"
+					"type": "array",
+					"itmes": {
+						"additionalProperties": false,
+						"patternProperties": {
+							"^L": {
+								"type": "object",
+								"additionalProperties": false,
+								"properties": {
+									"content": {
+										"type": "string"
+									},
+									"type": {
+										"type": "string"
+									}
 								},
-								"type": {
-									"type": "string"
-								}
+								"required": [
+									"content",
+									"type"
+								]
 							},
-							"required": [
-								"content",
-								"type"
-							]
-						},
-						"L2": {
-							"type": "object",
-							"additionalProperties": false,
-							"properties": {
-								"content": {
-									"type": "string"
+							"Other": {
+								"type": "object",
+								"additionalProperties": false,
+								"properties": {
+									"content": {
+										"type": "string"
+									},
+									"type": {
+										"type": "string"
+									}
 								},
-								"type": {
-									"type": "string"
-								}
-							},
-							"required": [
-								"content",
-								"type"
-							]
-						},
-						"L3": {
-							"type": "object",
-							"additionalProperties": false,
-							"properties": {
-								"content": {
-									"type": "string"
-								},
-								"type": {
-									"type": "string"
-								}
-							},
-							"required": [
-								"content",
-								"type"
-							]
-						},
-						"Other": {
-							"type": "object",
-							"additionalProperties": false,
-							"properties": {
-								"content": {
-									"type": "string"
-								},
-								"type": {
-									"type": "string"
-								}
-							},
-							"required": [
-								"content",
-								"type"
-							]
+								"required": [
+									"content",
+									"type"
+								]
+							}
 						}
 					}
 				},
 				"onPhysicalExhibit": {
-					"type": ["string", "array"]
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
 				},
 				"exhibition": {
 					"anyOf": [
@@ -431,16 +401,13 @@
 					]
 				},
 				"scientific_name": {
-					"type": [
-						"array",
-						"string"
-					]
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
 				},
 				"place": {
-					"type": [
-						"array",
-						"string"
-					],
+					"type": "array",
 					"items": {
 						"type": "string"
 					}
@@ -452,7 +419,10 @@
 			"additionalProperties": false,
 			"properties": {
 				"freetext": {
-					"type": "array"
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
 				}
 			}
 		}
@@ -472,7 +442,23 @@
 			"$ref": "#/definitions/descriptiveOptional"
 		},
 		"freetext": {
-			"type": "object"
+			"type": "object",
+			"patternProperties": {
+				"^.*$": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"label": {
+								"type": "string"
+							},
+							"content": {
+								"type": "string"
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 }

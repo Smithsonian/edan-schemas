@@ -1,4 +1,5 @@
 {
+	"$schema": "http://json-schema.org/draft-07/schema#",
 	"definitions": {
 		"extendedField": {
 			"title": "Extended Field (DRAFT)",
@@ -6,24 +7,23 @@
 			"required": [
 				"content"
 			],
-			"additionalProperties":false,
+			"additionalProperties": false,
 			"properties": {
-				"type":{
-					"type":"string"
+				"type": {
+					"type": "string"
 				},
-				"category":{
-					"type":"string"
+				"category": {
+					"type": "string"
 				},
-				"content":{
-					"type":"string"
+				"content": {
+					"type": "string"
 				},
-				"summary":{
-					"type":"string"
+				"summary": {
+					"type": "string"
 				},
-				"label":{
-					"type":"string"
+				"label": {
+					"type": "string"
 				},
-				
 				"viaf": {
 					"type": "array",
 					"items": {
@@ -59,14 +59,13 @@
 		"fieldObject": {
 			"title": "Field Object (DRAFT)",
 			"description": "Object that defines a field with extended enrichment data.",
-			"additionalProperties":false,
+			"additionalProperties": false,
 			"properties": {
 				"content": {
-					"type":"string"
+					"type": "string"
 				},
-				
 				"extended": {
-					"type": ["array","object"],
+					"type": "object",
 					"items": {
 						"oneOf": [
 							{
@@ -108,46 +107,46 @@
 		"online_media": {
 			"type": "array",
 			"description": "EDAN online media object",
-			"items":{
-				"type":"object",
-				"additionalProperties":false,
-				"properties":{
-					"mime_type":{
-						"type":"string"
+			"items": {
+				"type": "object",
+				"additionalProperties": false,
+				"properties": {
+					"mime_type": {
+						"type": "string"
 					},
-					"description":{
-						"type":"string"
+					"description": {
+						"type": "string"
 					},
-					"alt":{
-						"type":"string"
+					"alt": {
+						"type": "string"
 					},
-					"type":{
-						"type":"string"
+					"type": {
+						"type": "string"
 					},
-					"content":{
-						"type":"string"
+					"content": {
+						"type": "string"
 					},
-					"caption":{
-						"type":"string"
+					"caption": {
+						"type": "string"
 					},
-					"extended":{
-						"type":"object",
-						"additionalProperties":false,
-						"properties":{
-							"mime_type":{
-								"type":"string"
+					"extended": {
+						"type": "object",
+						"additionalProperties": false,
+						"properties": {
+							"mime_type": {
+								"type": "string"
 							},
-							"description":{
-								"type":"string"
+							"description": {
+								"type": "string"
 							},
-							"type":{
-								"type":"string"
+							"type": {
+								"type": "string"
 							},
-							"alt":{
-								"type":"string"
+							"alt": {
+								"type": "string"
 							},
-							"caption":{
-								"type":"string"
+							"caption": {
+								"type": "string"
 							}
 						}
 					}
@@ -245,9 +244,7 @@
 			"$ref": "#/definitions/fieldObject"
 		},
 		"hours": {
-			"type": "object",
-			"description": "EDAN field object",
-			"$ref": "#/definitions/fieldObject"
+			"type": "string"
 		},
 		"address": {
 			"type": "object",
@@ -257,7 +254,7 @@
 		"telephone": {
 			"type": "array",
 			"items": {
-				"type":"object",
+				"type": "object",
 				"description": "EDAN field object",
 				"$ref": "#/definitions/fieldObject"
 			}
@@ -308,14 +305,10 @@
 			"$ref": "#/definitions/fieldObject"
 		},
 		"acronym": {
-			"type": "object",
-			"description": "EDAN field object",
-			"$ref": "#/definitions/fieldObject"
+			"type": "string"
 		},
 		"admission": {
-			"type": "object",
-			"description": "EDAN field object",
-			"$ref": "#/definitions/fieldObject"
+			"type": "string"
 		},
 		"geolocation": {
 			"type": "object",
@@ -323,34 +316,22 @@
 			"$ref": "#/definitions/fieldObject"
 		},
 		"highlights": {
-			"type": "object",
-			"description": "EDAN field object",
-			"$ref": "#/definitions/fieldObject"
+			"type": "string"
 		},
 		"location_status": {
-			"type": "object",
-			"description": "EDAN field object",
-			"$ref": "#/definitions/fieldObject"
+			"type": "string"
 		},
 		"record_ID": {
-			"type": "object",
-			"description": "EDAN field object",
-			"$ref": "#/definitions/fieldObject"
+			"type": "string"
 		},
 		"title_shortname": {
-			"type": "object",
-			"description": "EDAN field object",
-			"$ref": "#/definitions/fieldObject"
+			"type": "string"
 		},
 		"trumba_venue_ID": {
-			"type": "object",
-			"description": "EDAN field object",
-			"$ref": "#/definitions/fieldObject"
+			"type": "string"
 		},
 		"url": {
-			"type": "object",
-			"description": "EDAN field object",
-			"$ref": "#/definitions/fieldObject"
+			"type": "string"
 		}
 	}
 }

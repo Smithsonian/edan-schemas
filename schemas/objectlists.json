@@ -1,35 +1,41 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "type": "object",
-  "properties": {
-    "listType": {
-      "type": "integer",
-      "id": "http://edan.si.edu/schema/listType"
-    },
-    "size": {
-      "type": "integer",
-      "id": "http://edan.si.edu/schema/size"
-    },
-    "listName": {
-      "type": "string",
-      "id": "http://edan.si.edu/schema/listName"
-    },
-    "items": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "id": "http://edan.si.edu/schema/items"
-    },
-    "description": {
-      "type": "string",
-      "id": "http://edan.si.edu/schema/description"
-    },
-    "thumbnail": {
-      "type": "string",
-      "id": "http://edan.si.edu/schema/listName"
-    }
-  },
-  "additionalProperties":false,
-  "id": "http://edan.si.edu/schema"
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"type": "object",
+	"required": [
+		"size",
+		"listName",
+		"listType",
+		"items"
+	],
+	"properties": {
+		"listType": {
+			"type": "integer",
+			"$id": "http://edan.si.edu/schema/listType"
+		},
+		"size": {
+			"type": "integer",
+			"$id": "http://edan.si.edu/schema/size"
+		},
+		"listName": {
+			"type": "string",
+			"$id": "http://edan.si.edu/schema/listName"
+		},
+		"items": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			},
+			"$id": "http://edan.si.edu/schema/items"
+		},
+		"description": {
+			"type": "string",
+			"$id": "http://edan.si.edu/schema/description"
+		},
+		"thumbnail": {
+			"type": "string",
+			"$id": "http://edan.si.edu/schema/listName"
+		}
+	},
+	"additionalProperties": false,
+	"$id": "http://edan.si.edu/schema"
 }

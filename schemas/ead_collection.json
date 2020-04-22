@@ -1,10 +1,30 @@
 {
-	"$schema": "http://json-schema.org/draft-04/schema#",
+	"$schema": "http://json-schema.org/draft-07/schema#",
 	"type": "object",
+	"required": [
+		"online_media",
+		"freetext",
+		"digital_assets_available",
+		"id",
+		"archival_repository",
+		"containedIn",
+		"filelocation",
+		"record_id",
+		"collection_id",
+		"title",
+		"type",
+		"record_link",
+		"fileSignature",
+		"level"
+	],
 	"additionalProperties": false,
 	"properties": {
 		"online_media": {
 			"type": "object",
+			"required": [
+				"mediaCount",
+				"media"
+			],
 			"additionalProperties": false,
 			"properties": {
 				"mediaCount": {
@@ -14,6 +34,14 @@
 					"type": "array",
 					"items": {
 						"type": "object",
+						"required": [
+							"thumbnail",
+							"indexedType",
+							"caption",
+							"type",
+							"content"
+						],
+						"additionalProperties": false,
 						"properties": {
 							"thumbnail": {
 								"type": "string"
@@ -43,11 +71,16 @@
 		},
 		"freetext": {
 			"type": "object",
-			"properties": {
-				"setName": {
+			"additionalProperties": false,
+			"patternProperties": {
+				"^.*$": {
 					"type": "array",
 					"items": {
 						"type": "object",
+						"required": [
+							"label",
+							"content"
+						],
 						"additionalProperties": false,
 						"properties": {
 							"label": {
@@ -58,372 +91,12 @@
 							},
 							"indexedContent": {
 								"type": "string"
-							}
-						}
-					}
-				},
-				"identifier": {
-					"type": "array",
-					"items": {
-						"type": "object",
-						"additionalProperties": false,
-						"properties": {
-							"label": {
-								"type": "string"
-							},
-							"content": {
-								"type": "string"
-							}
-						}
-					}
-				},
-				"creator": {
-					"type": "array",
-					"items": {
-						"type": "object",
-						"additionalProperties": false,
-						"properties": {
-							"label": {
-								"type": "string"
-							},
-							"content": {
-								"type": "string"
-							}
-						}
-					}
-				},
-				"bioghist": {
-					"type": "array",
-					"items": {
-						"type": "object",
-						"additionalProperties": false,
-						"properties": {
-							"label": {
-								"type": "string"
-							},
-							"content": {
-								"type": "string"
-							}
-						}
-					}
-				},
-				"processinfo": {
-					"type": "array",
-					"items": {
-						"type": "object",
-						"additionalProperties": false,
-						"properties": {
-							"label": {
-								"type": "string"
-							},
-							"content": {
-								"type": "string"
-							}
-						}
-					}
-				},
-				"unitdate": {
-					"type": "array",
-					"items": {
-						"type": "object",
-						"additionalProperties": false,
-						"properties": {
-							"label": {
-								"type": "string"
-							},
-							"content": {
-								"type": "string"
-							},
-							"indexedContent": {
-								"type": [
-									"string",
-									"object"
-								]
 							},
 							"flag": {
 								"type": "array",
 								"items": {
 									"type": "string"
 								}
-							}
-						}
-					}
-				},
-				"relatedmaterial": {
-					"type": "array",
-					"items": {
-						"type": "object",
-						"additionalProperties": false,
-						"properties": {
-							"label": {
-								"type": "string"
-							},
-							"content": {
-								"type": "string"
-							}
-						}
-					}
-				},
-				"acqinfo": {
-					"type": "array",
-					"items": {
-						"type": "object",
-						"additionalProperties": false,
-						"properties": {
-							"label": {
-								"type": "string"
-							},
-							"content": {
-								"type": "string"
-							}
-						}
-					}
-				},
-				"physdesc": {
-					"type": "array",
-					"items": {
-						"type": "object",
-						"additionalProperties": false,
-						"properties": {
-							"label": {
-								"type": "string"
-							},
-							"content": {
-								"type": "string"
-							}
-						}
-					}
-				},
-				"accessrestrict": {
-					"type": "array",
-					"items": {
-						"type": "object",
-						"additionalProperties": false,
-						"properties": {
-							"label": {
-								"type": "string"
-							},
-							"content": {
-								"type": "string"
-							}
-						}
-					}
-				},
-				"objectType": {
-					"type": "array",
-					"items": {
-						"type": "object",
-						"additionalProperties": false,
-						"properties": {
-							"label": {
-								"type": "string"
-							},
-							"content": {
-								"type": "string"
-							},
-							"indexedContent": {
-								"type": [
-									"string",
-									"object"
-								]
-							}
-						}
-					}
-				},
-				"arrangement": {
-					"type": "array",
-					"items": {
-						"type": "object",
-						"additionalProperties": false,
-						"properties": {
-							"label": {
-								"type": "string"
-							},
-							"content": {
-								"type": "string"
-							}
-						}
-					}
-				},
-				"scopecontent": {
-					"type": "array",
-					"items": {
-						"type": "object",
-						"additionalProperties": false,
-						"properties": {
-							"label": {
-								"type": "string"
-							},
-							"content": {
-								"type": "string"
-							}
-						}
-					}
-				},
-				"genre_format": {
-					"type": "array",
-					"items": {
-						"type": "object",
-						"additionalProperties": false,
-						"properties": {
-							"label": {
-								"type": "string"
-							},
-							"content": {
-								"type": "string"
-							},
-							"indexedContent": {
-								"type": [
-									"string",
-									"object"
-								]
-							}
-						}
-					}
-				},
-				"abstract": {
-					"type": "array",
-					"items": {
-						"type": "object",
-						"additionalProperties": false,
-						"properties": {
-							"label": {
-								"type": "string"
-							},
-							"content": {
-								"type": "string"
-							},
-							"indexedContent": {
-								"type": [
-									"string",
-									"object"
-								]
-							}
-						}
-					}
-				},
-				"prefercite": {
-					"type": "array",
-					"items": {
-						"type": "object",
-						"additionalProperties": false,
-						"properties": {
-							"label": {
-								"type": "string"
-							},
-							"content": {
-								"type": "string"
-							},
-							"indexedContent": {
-								"type": [
-									"string",
-									"object"
-								]
-							}
-						}
-					}
-				},
-				"place": {
-					"type": "array",
-					"items": {
-						"type": "object",
-						"additionalProperties": false,
-						"properties": {
-							"label": {
-								"type": "string"
-							},
-							"content": {
-								"type": "string"
-							},
-							"indexedContent": {
-								"type": [
-									"string",
-									"object"
-								]
-							}
-						}
-					}
-				},
-				"userestrict": {
-					"type": "array",
-					"items": {
-						"type": "object",
-						"additionalProperties": false,
-						"properties": {
-							"label": {
-								"type": "string"
-							},
-							"content": {
-								"type": "string"
-							}
-						}
-					}
-				},
-				"name": {
-					"type": "array",
-					"items": {
-						"type": "object",
-						"additionalProperties": false,
-						"properties": {
-							"label": {
-								"type": "string"
-							},
-							"content": {
-								"type": "string"
-							},
-							"indexedContent": {
-								"type": [
-									"string",
-									"object"
-								]
-							},
-							"flag": {
-								"type": "array",
-								"items": {
-									"type": "string"
-								}
-							}
-						}
-					}
-				},
-				"topic": {
-					"type": "array",
-					"items": {
-						"type": "object",
-						"additionalProperties": false,
-						"properties": {
-							"label": {
-								"type": "string"
-							},
-							"content": {
-								"type": "string"
-							},
-							"indexedContent": {
-								"type": [
-									"string",
-									"object"
-								]
-							}
-						}
-					}
-				},
-				"dataSource": {
-					"type": "array",
-					"items": {
-						"type": "object",
-						"additionalProperties": false,
-						"properties": {
-							"label": {
-								"type": "string"
-							},
-							"content": {
-								"type": "string"
-							},
-							"indexedContent": {
-								"type": [
-									"string",
-									"object"
-								]
 							}
 						}
 					}
@@ -440,7 +113,11 @@
 			}
 		},
 		"digital_assets_available": {
-			"type": "string"
+			"type": "string",
+			"enum": [
+				"true",
+				"false"
+			]
 		},
 		"fileSignature": {
 			"type": "string"
@@ -455,7 +132,7 @@
 			"type": "string"
 		},
 		"type": {
-			"type": "string"
+			"const": "ead_collection"
 		},
 		"collection_id": {
 			"type": "string"
@@ -473,11 +150,14 @@
 			"type": "array",
 			"items": {
 				"type": "object",
+				"required": [
+					"unitid",
+					"type",
+					"url",
+					"unittitle"
+				],
 				"additionalProperties": false,
 				"properties": {
-					"unititle": {
-						"type": "string"
-					},
 					"unitid": {
 						"type": "string"
 					},
@@ -500,8 +180,8 @@
 			"type": "string"
 		},
 		"related_bib_record": {
-			"type": ["string","array"]
+			"type": "string"
 		}
 	},
-	"id": "http://edan.si.edu/schema"
+	"$id": "http://edan.si.edu/schema"
 }

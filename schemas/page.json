@@ -1,22 +1,31 @@
 {
-	"$schema": "http://json-schema.org/draft-04/schema#",
+	"$schema": "http://json-schema.org/draft-07/schema#",
 	"type": "object",
+	"required": [
+		"listTitle",
+		"settings",
+		"feature",
+		"title",
+		"pageId",
+		"url",
+		"content"
+	],
 	"properties": {
 		"title": {
 			"type": "string",
-			"id": "http://jsonschema.net/title"
+			"$id": "http://jsonschema.net/title"
 		},
 		"url": {
 			"type": "string",
-			"id": "http://jsonschema.net/url"
+			"$id": "http://jsonschema.net/url"
 		},
 		"listTitle": {
 			"type": "string",
-			"id": "http://jsonschema.net/listTitle"
+			"$id": "http://jsonschema.net/listTitle"
 		},
 		"content": {
 			"type": "string",
-			"id": "http://jsonschema.net/content"
+			"$id": "http://jsonschema.net/content"
 		},
 		"feature": {
 			"type": "object",
@@ -24,54 +33,54 @@
 			"properties": {
 				"thumbnail": {
 					"type": "string",
-					"id": "http://jsonschema.net/feature/thumbnail"
+					"$id": "http://jsonschema.net/feature/thumbnail"
 				},
 				"pages": {
 					"type": "string",
-					"id": "http://jsonschema.net/feature/pages"
+					"$id": "http://jsonschema.net/feature/pages"
 				},
 				"alt": {
 					"type": "string",
-					"id": "http://jsonschema.net/feature/alt"
+					"$id": "http://jsonschema.net/feature/alt"
 				},
 				"html": {
 					"type": "string",
-					"id": "http://jsonschema.net/feature/html"
+					"$id": "http://jsonschema.net/feature/html"
 				},
 				"type": {
 					"type": "string",
-					"id": "http://jsonschema.net/feature/type"
+					"$id": "http://jsonschema.net/feature/type"
 				},
 				"url": {
 					"type": "string",
-					"id": "http://jsonschema.net/feature/url"
+					"$id": "http://jsonschema.net/feature/url"
 				},
 				"media": {
 					"type": "string",
-					"id": "http://jsonschema.net/feature/url"
+					"$id": "http://jsonschema.net/feature/url"
 				},
 				"UxPageDisplay": {
 					"type": "integer",
-					"id": "http://jsonschema.net/feature/UxPageDisplay"
+					"$id": "http://jsonschema.net/feature/UxPageDisplay"
 				},
 				"featurePageImage": {
 					"type": "string",
-					"id": "http://jsonschema.net/feature/featurePageImage"
+					"$id": "http://jsonschema.net/feature/featurePageImage"
 				},
 				"featurePageImageAlt": {
 					"type": "string",
-					"id": "http://jsonschema.net/feature/featurePageImageAlt"
+					"$id": "http://jsonschema.net/feature/featurePageImageAlt"
 				},
 				"featurePageThumbnail": {
 					"type": "string",
-					"id": "http://jsonschema.net/feature/featurePageThumbnail"
+					"$id": "http://jsonschema.net/feature/featurePageThumbnail"
 				},
 				"teaserTitle": {
 					"type": "string",
-					"id": "http://jsonschema.net/feature/teaserTitle"
+					"$id": "http://jsonschema.net/feature/teaserTitle"
 				}
 			},
-			"id": "http://jsonschema.net/feature"
+			"$id": "http://jsonschema.net/feature"
 		},
 		"settings": {
 			"type": "object",
@@ -79,76 +88,75 @@
 			"properties": {
 				"ux_objects_display": {
 					"type": "integer",
-					"id": "http://jsonschema.net/settings/ux_objects_display"
+					"$id": "http://jsonschema.net/settings/ux_objects_display"
 				},
 				"disableObjects": {
 					"type": "integer",
-					"id": "http://jsonschema.net/settings/ux_objects_display"
+					"$id": "http://jsonschema.net/settings/ux_objects_display"
 				},
 				"grid_count": {
 					"type": "integer",
-					"id": "http://jsonschema.net/settings/grid_count"
+					"$id": "http://jsonschema.net/settings/grid_count"
 				},
 				"show_facets": {
 					"type": "integer",
-					"id": "http://jsonschema.net/settings/show_facets"
+					"$id": "http://jsonschema.net/settings/show_facets"
 				},
-				"csc":{
-					"type":"object",
-					"properties":{
-						"search_parameters":{
-							"type":"object",
-							"properties":{
-								"date.slider":{
-									"type":"string"
+				"csc": {
+					"type": "object",
+					"properties": {
+						"search_parameters": {
+							"type": "object",
+							"properties": {
+								"date.slider": {
+									"type": "string"
 								}
 							}
-							
 						}
 					}
 				}
 			},
-			"id": "http://jsonschema.net/settings"
+			"$id": "http://jsonschema.net/settings"
 		},
 		"pageId": {
 			"type": "string",
-			"id": "http://jsonschema.net/pageId"
+			"$id": "http://jsonschema.net/pageId"
 		},
 		"objectGroupId": {
 			"type": "string",
-			"id": "http://jsonschema.net/objectGroupId"
+			"$id": "http://jsonschema.net/objectGroupId"
 		},
 		"published": {
 			"type": "integer",
-			"id": "http://jsonschema.net/published"
+			"$id": "http://jsonschema.net/published"
 		},
 		"error": {
 			"type": "string",
-			"id": "http://jsonschema.net/error"
+			"$id": "http://jsonschema.net/error"
 		},
 		"defaultPage": {
 			"type": "object",
-			"id": "http://jsonschema.net/defaultPage"
+			"$id": "http://jsonschema.net/defaultPage"
 		},
 		"defaultPageId": {
 			"type": "string",
-			"id": "http://jsonschema.net/defaultPageId"
+			"$id": "http://jsonschema.net/defaultPageId"
 		},
 		"description": {
 			"type": "string",
-			"id": "http://jsonschema.net/description"
+			"$id": "http://jsonschema.net/description"
 		},
 		"groupType": {
 			"type": "integer",
-			"id": "http://jsonschema.net/groupType"
+			"$id": "http://jsonschema.net/groupType"
 		},
 		"featured": {
 			"type": "integer",
-			"id": "http://jsonschema.net/featured"
+			"$id": "http://jsonschema.net/featured"
 		},
 		"keywords": {
 			"type": "string",
-			"id": "http://jsonschema.net/keywords"
+			"$id": "http://jsonschema.net/keywords"
 		},
 		"objects": {
 			"type": "object",
@@ -156,48 +164,48 @@
 			"properties": {
 				"size": {
 					"type": "integer",
-					"id": "http://jsonschema.net/objects/size"
+					"$id": "http://jsonschema.net/objects/size"
 				},
 				"listName": {
 					"type": "string",
-					"id": "http://jsonschema.net/objects/listName"
+					"$id": "http://jsonschema.net/objects/listName"
 				},
 				"listType": {
 					"type": "integer",
-					"id": "http://jsonschema.net/objects/listType"
+					"$id": "http://jsonschema.net/objects/listType"
 				},
 				"items": {
 					"type": "array",
-					"id": "http://jsonschema.net/objects/items",
+					"$id": "http://jsonschema.net/objects/items",
 					"items": {
 						"type": "string",
-						"id": "http://jsonschema.net/objects/items"
+						"$id": "http://jsonschema.net/objects/items"
 					}
 				}
 			}
 		},
 		"menu": {
-			"id": "http://jsonschema.net/menu",
+			"$id": "http://jsonschema.net/menu",
 			"type": "array",
 			"items": {
-				"id": "http://jsonschema.net/menu/items",
+				"$id": "http://jsonschema.net/menu/items",
 				"type": "object",
 				"additionalProperties": false,
 				"properties": {
 					"listTitle": {
-						"id": "http://jsonschema.net/menu/items/listTitle",
+						"$id": "http://jsonschema.net/menu/items/listTitle",
 						"type": "string"
 					},
 					"id": {
-						"id": "http://jsonschema.net/menu/items/id",
+						"$id": "http://jsonschema.net/menu/items/id",
 						"type": "string"
 					},
 					"title": {
-						"id": "http://jsonschema.net/menu/items/title",
+						"$id": "http://jsonschema.net/menu/items/title",
 						"type": "string"
 					},
 					"url": {
-						"id": "http://jsonschema.net/menu/items/url",
+						"$id": "http://jsonschema.net/menu/items/url",
 						"type": "string"
 					}
 				}
@@ -209,7 +217,7 @@
 			"properties": {
 				"listTitle": {
 					"type": "string",
-					"id": "http://jsonschema.net/page/listTitle"
+					"$id": "http://jsonschema.net/page/listTitle"
 				},
 				"settings": {
 					"type": "object",
@@ -217,7 +225,7 @@
 					"properties": {
 						"disableObjects": {
 							"type": "integer",
-							"id": "http://jsonschema.net/page/settings/disableObjects"
+							"$id": "http://jsonschema.net/page/settings/disableObjects"
 						}
 					}
 				},
@@ -227,41 +235,41 @@
 					"properties": {
 						"alt": {
 							"type": "string",
-							"id": "http://jsonschema.net/page/settings/alt"
+							"$id": "http://jsonschema.net/page/settings/alt"
 						},
 						"media": {
 							"type": "string",
-							"id": "http://jsonschema.net/page/settings/media"
+							"$id": "http://jsonschema.net/page/settings/media"
 						},
 						"thumbnail": {
 							"type": "string",
-							"id": "http://jsonschema.net/page/settings/thumbnail"
+							"$id": "http://jsonschema.net/page/settings/thumbnail"
 						}
 					}
 				},
 				"objectGroupId": {
 					"type": "string",
-					"id": "http://jsonschema.net/page/objectGroupId"
+					"$id": "http://jsonschema.net/page/objectGroupId"
 				},
 				"title": {
 					"type": "string",
-					"id": "http://jsonschema.net/page/title"
+					"$id": "http://jsonschema.net/page/title"
 				},
 				"pageId": {
 					"type": "string",
-					"id": "http://jsonschema.net/page/pageId"
+					"$id": "http://jsonschema.net/page/pageId"
 				},
 				"url": {
 					"type": "string",
-					"id": "http://jsonschema.net/page/url"
+					"$id": "http://jsonschema.net/page/url"
 				},
 				"content": {
 					"type": "string",
-					"id": "http://jsonschema.net/page/content"
+					"$id": "http://jsonschema.net/page/content"
 				}
 			}
 		}
 	},
 	"additionalProperties": false,
-	"id": "http://jsonschema.net"
+	"$id": "http://jsonschema.net"
 }

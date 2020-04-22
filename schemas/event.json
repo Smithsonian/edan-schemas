@@ -1,10 +1,29 @@
 {
-	"$schema": "http://json-schema.org/draft-04/schema#",
+	"$schema": "http://json-schema.org/draft-07/schema#",
 	"title": "Event Record (DRAFT)",
 	"description": "Events are used to describe exhibitions and other events.",
 	"required": [
 		"event_type",
-		"title"
+		"title",
+		"summary",
+		"_drm_record_version",
+		"sponsor",
+		"comments",
+		"online_media",
+		"description",
+		"record_link",
+		"title",
+		"grand_challenges",
+		"record_ID",
+		"event_type",
+		"event_type",
+		"original_db_record_updatedate",
+		"online_exhibit",
+		"location",
+		"categories",
+		"close",
+		"open",
+		"event_status"
 	],
 	"additionalProperties": false,
 	"properties": {
@@ -71,6 +90,14 @@
 				},
 				"extended": {
 					"type": "object",
+					"required": [
+						"edan_facility_id",
+						"label",
+						"category",
+						"floor",
+						"building",
+						"location_id"
+					],
 					"additionalProperties": false,
 					"properties": {
 						"edan_facility_id": {
@@ -118,6 +145,13 @@
 			"description": "EDAN online media object",
 			"items": {
 				"type": "object",
+				"required": [
+					"rights",
+					"caption",
+					"type",
+					"credit",
+					"content"
+				],
 				"additionalProperties": false,
 				"properties": {
 					"thumbnail": {
@@ -165,10 +199,18 @@
 		"sponsor": {
 			"type": "object",
 			"description": "EDAN field object",
+			"required": [
+				"extended",
+				"content"
+			],
 			"additionalProperties": false,
 			"properties": {
 				"extended": {
 					"type": "object",
+					"required": [
+						"label",
+						"category"
+					],
 					"additionalProperties": false,
 					"properties": {
 						"label": {
@@ -191,6 +233,10 @@
 			"type": "object",
 			"description": "EDAN field object",
 			"additionalProperties": false,
+			"required": [
+				"extended",
+				"content"
+			],
 			"properties": {
 				"content": {
 					"type": "string"
@@ -198,6 +244,11 @@
 				"extended": {
 					"type": "object",
 					"additionalProperties": false,
+					"required": [
+						"title_sort",
+						"label",
+						"category"
+					],
 					"properties": {
 						"title_sort": {
 							"type": "string"
@@ -216,6 +267,10 @@
 			"type": "object",
 			"description": "EDAN field object",
 			"additionalProperties": false,
+			"required": [
+				"extended",
+				"content"
+			],
 			"properties": {
 				"content": {
 					"type": "string"
@@ -223,6 +278,11 @@
 				"extended": {
 					"type": "object",
 					"additionalProperties": false,
+					"required": [
+						"opening_sort",
+						"open_text",
+						"opening_date"
+					],
 					"properties": {
 						"opening_sort": {
 							"type": "string"
@@ -241,12 +301,22 @@
 			"type": "object",
 			"description": "EDAN field object",
 			"additionalProperties": false,
+			"required": [
+				"extended",
+				"content"
+			],
 			"properties": {
 				"content": {
 					"type": "string"
 				},
 				"extended": {
 					"type": "object",
+					"additionalProperties": false,
+					"required": [
+						"closing_date",
+						"closing_sort",
+						"close_text"
+					],
 					"properties": {
 						"closing_date": {
 							"type": "string"

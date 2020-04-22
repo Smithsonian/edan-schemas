@@ -1,134 +1,83 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "type": "object",
-  "additionalProperties":false,
-  "properties": {
-    "projectOwner": {
-      "type": "string",
-      "id": "http://edan.si.edu/schema/projectOwner"
-    },
-    "projectName": {
-      "type": "string",
-      "id": "http://edan.si.edu/schema/projectName"
-    },
-    "projectId": {
-      "type": "string",
-      "id": "http://edan.si.edu/schema/projectId"
-    },
-    "assetName": {
-      "type": "string",
-      "id": "http://edan.si.edu/schema/assetName"
-    },
-    "assetCompleted": {
-      "type": "boolean",
-      "id": "http://edan.si.edu/schema/assetCompleted"
-    },
-    "assetDisplay": {
-      "type": "integer",
-      "id": "http://edan.si.edu/schema/assetDisplay"
-    },
-    "assetStatus": {
-      "type": "integer",
-      "id": "http://edan.si.edu/schema/assetStatus"
-    },
-    "projectDisplay": {
-      "type": "integer",
-      "id": "http://edan.si.edu/schema/projectDisplay"
-    },
-    "assetImage": {
-      "type": "string",
-      "id": "http://edan.si.edu/schema/assetImage"
-    },
-    "transcriptData": {
-      "type": "object",
-      "additionalProperties":false,
-      "properties":{
-      	"tl1_text":{
-      		"type":"string",
-      		"id": "http://edan.si.edu/schema/transcriptData/tl1_text"
-      	},
-      	"tl2_is_cultivated":{
-      		"type":"boolean",
-      		"id": "http://edan.si.edu/schema/transcriptData/tl2_is_cultivated"
-      	},
-      	"tl2_longitude":{
-      		"type":"string",
-      		"id": "http://edan.si.edu/schema/transcriptData/tl2_longitude"
-      	},
-      	"tl2_collectors":{
-      		"type":"array",
-      		"id": "http://edan.si.edu/schema/transcriptData/tl2_collectors",
-      		"items":{
-      			"type":"string"
-      		}
-      	},
-      	"tl2_province_ca":{
-      		"type":"string",
-      		"id": "http://edan.si.edu/schema/transcriptData/tl2_province_ca"
-      	},
-      	"tl2_collection_number":{
-      		"type":"string",
-      		"id": "http://edan.si.edu/schema/transcriptData/tl2_collection_number"
-      	},
-      	"tl2_elevation_unit":{
-      		"type":"string",
-      		"id": "http://edan.si.edu/schema/transcriptData/tl2_elevation_unit"
-      	},
-      	"tl2_elevation_from":{
-      		"type":"string",
-      		"id": "http://edan.si.edu/schema/transcriptData/tl2_elevation_from"
-      	},
-      	"tl2_country":{
-      		"type":"string",
-      		"id": "http://edan.si.edu/schema/transcriptData/tl2_country"
-      	},
-      	"tl2_latitude":{
-      		"type":"string",
-      		"id": "http://edan.si.edu/schema/transcriptData/tl2_latitude"
-      	},
-      	"tl2_usnm_number":{
-      		"type":"string",
-      		"id": "http://edan.si.edu/schema/transcriptData/tl2_usnm_number"
-      	},
-      	"tl2_collection_date_range":{
-      		"type":"string",
-      		"id": "http://edan.si.edu/schema/transcriptData/tl2_collection_date_range"
-      	},
-      	"tl2_state":{
-      		"type":"string",
-      		"id": "http://edan.si.edu/schema/transcriptData/tl2_state"
-      	},
-      	"tl2_elevation_to":{
-      		"type":"string",
-      		"id": "http://edan.si.edu/schema/transcriptData/tl2_elevation_to"
-      	},
-      	"tl2_collection_date2":{
-      		"type":"string",
-      		"id": "http://edan.si.edu/schema/transcriptData/tl2_collection_date2"
-      	},
-      	"tl2_territory":{
-      		"type":"string",
-      		"id": "http://edan.si.edu/schema/transcriptData/tl2_territory"
-      	},
-      	"tl2_precise_locality":{
-      		"type":"string",
-      		"id": "http://edan.si.edu/schema/transcriptData/tl2_precise_locality"
-      	},
-      	"tl2_collection_date1":{
-      		"type":"string",
-      		"id": "http://edan.si.edu/schema/transcriptData/tl2_collection_date1"
-      	},
-      	"tl2_county":{
-      		"type":"string",
-      		"id": "http://edan.si.edu/schema/transcriptData/tl2_county"
-      	}
-      },
-      "id": "http://edan.si.edu/schema/transcriptData"
-    },
-    "metadata": {
-      "type": "string",
-      "id": "http://edan.si.edu/schema/metadata"
-    }
-  },
-  "id": "http://edan.si.edu/schema"
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"type": "object",
+	"required": [
+		"assetImage",
+		"transcriptData",
+		"transcriptData",
+		"projectOwner",
+		"projectName",
+		"assetCompleted",
+		"assetStatus",
+		"projectId"
+	],
+	"additionalProperties": false,
+	"properties": {
+		"projectOwner": {
+			"type": "string",
+			"$id": "http://edan.si.edu/schema/projectOwner"
+		},
+		"projectName": {
+			"type": "string",
+			"$id": "http://edan.si.edu/schema/projectName"
+		},
+		"projectId": {
+			"type": "string",
+			"$id": "http://edan.si.edu/schema/projectId"
+		},
+		"assetName": {
+			"type": "string",
+			"$id": "http://edan.si.edu/schema/assetName"
+		},
+		"assetCompleted": {
+			"type": "boolean",
+			"$id": "http://edan.si.edu/schema/assetCompleted"
+		},
+		"assetDisplay": {
+			"type": "integer",
+			"$id": "http://edan.si.edu/schema/assetDisplay"
+		},
+		"assetStatus": {
+			"type": "integer",
+			"$id": "http://edan.si.edu/schema/assetStatus"
+		},
+		"projectDisplay": {
+			"type": "integer",
+			"$id": "http://edan.si.edu/schema/projectDisplay"
+		},
+		"assetImage": {
+			"type": "string",
+			"$id": "http://edan.si.edu/schema/assetImage"
+		},
+		"transcriptData": {
+			"type": "object",
+			"additionalProperties": false,
+			"patternProperties": {
+				"^.*$": {
+					"type": [
+						"string",
+						"array",
+						"boolean"
+					],
+					"items": {
+						"type": [
+							"string",
+							"object"
+						],
+						"patternProperties":{
+							"^.*$": {
+								"type":"string"
+							}
+						}		
+					}
+				}
+			},
+			"$id": "http://edan.si.edu/schema/transcriptData"
+		},
+		"metadata": {
+			"type": "string",
+			"$id": "http://edan.si.edu/schema/metadata"
+		}
+	},
+	"$id": "http://edan.si.edu/schema"
 }

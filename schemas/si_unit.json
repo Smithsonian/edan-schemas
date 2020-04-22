@@ -1,5 +1,5 @@
 {
-	"$schema": "http://json-schema.org/draft-04/schema#",
+	"$schema": "http://json-schema.org/draft-07/schema#",
 	"definitions": {
 		"extendedField": {
 			"title": "Extended Field (DRAFT)",
@@ -65,10 +65,7 @@
 					"type": "string"
 				},
 				"extended": {
-					"type": [
-						"array",
-						"object"
-					],
+					"type": "object",
 					"items": {
 						"oneOf": [
 							{
@@ -83,7 +80,19 @@
 	"title": "SI Unit Record (DRAFT)",
 	"description": "Units are used to describe Smithsonian units",
 	"required": [
-		"title"
+		"title",
+		"summary",
+		"unit_codes",
+		"online_media",
+		"mission_statement",
+		"app_ids",
+		"description",
+		"record_link",
+		"unit_type",
+		"trumba_sponsor_ID",
+		"parent_unit_ID",
+		"record_ID",
+		"short_title"
 	],
 	"additionalProperties": false,
 	"properties": {

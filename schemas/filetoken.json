@@ -1,14 +1,18 @@
 {
-	"$schema": "http://json-schema.org/draft-04/schema#",
+	"$schema": "http://json-schema.org/draft-07/schema#",
 	"type": "object",
+	"required": [
+		"IP",
+		"time"
+	],
 	"properties": {
-		"IP":{
-			"type":"string"		
+		"IP": {
+			"type": "string"
 		},
-		"time":{
-			"type":"string"		
+		"time": {
+			"type": "string"
 		}
 	},
 	"additionalProperties": false,
-	"id": "http://edan.si.edu/schema"
+	"$id": "http://edan.si.edu/schema"
 }

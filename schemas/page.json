@@ -210,64 +210,6 @@
 					}
 				}
 			}
-		},
-		"page": {
-			"type": "object",
-			"additionalProperties": false,
-			"properties": {
-				"listTitle": {
-					"type": "string",
-					"$id": "http://jsonschema.net/page/listTitle"
-				},
-				"settings": {
-					"type": "object",
-					"additionalProperties": false,
-					"properties": {
-						"disableObjects": {
-							"type": "integer",
-							"$id": "http://jsonschema.net/page/settings/disableObjects"
-						}
-					}
-				},
-				"feature": {
-					"type": "object",
-					"additionalProperties": false,
-					"properties": {
-						"alt": {
-							"type": "string",
-							"$id": "http://jsonschema.net/page/settings/alt"
-						},
-						"media": {
-							"type": "string",
-							"$id": "http://jsonschema.net/page/settings/media"
-						},
-						"thumbnail": {
-							"type": "string",
-							"$id": "http://jsonschema.net/page/settings/thumbnail"
-						}
-					}
-				},
-				"objectGroupId": {
-					"type": "string",
-					"$id": "http://jsonschema.net/page/objectGroupId"
-				},
-				"title": {
-					"type": "string",
-					"$id": "http://jsonschema.net/page/title"
-				},
-				"pageId": {
-					"type": "string",
-					"$id": "http://jsonschema.net/page/pageId"
-				},
-				"url": {
-					"type": "string",
-					"$id": "http://jsonschema.net/page/url"
-				},
-				"content": {
-					"type": "string",
-					"$id": "http://jsonschema.net/page/content"
-				}
-			}
 		}
 	},
 	"additionalProperties": false,

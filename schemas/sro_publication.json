@@ -244,6 +244,10 @@
 			"type": "string",
 			"$id": "http://jsonschema.net/publications/0/content/journal_issue"
 		},
+		"version": {
+			"type": "string",
+			"$id": "http://jsonschema.net/publications/0/content/version"
+		},
 		"journal_volume": {
 			"type": "string",
 			"$id": "http://jsonschema.net/publications/0/content/journal_volume"
@@ -327,10 +331,37 @@
 			"type": "string",
 			"$id": "http://jsonschema.net/publications/0/content/page_last"
 		},
+		"edition": {
+			"type": "string",
+			"$id": "http://jsonschema.net/publications/0/content/edition"
+		},
+		"collection_number": {
+			"type": "string",
+			"$id": "http://jsonschema.net/publications/0/content/collection_number"
+		},
+		"page_count": {
+			"type": "string",
+			"$id": "http://jsonschema.net/publications/0/content/page_count"
+		},
+		"degree_type": {
+			"type": "string",
+			"$id": "http://jsonschema.net/publications/0/content/degree_type"
+		},
+		"scale": {
+			"type": "string",
+			"$id": "http://jsonschema.net/publications/0/content/scale"
+		},
+		"event_place": {
+			"type": "string",
+			"$id": "http://jsonschema.net/publications/0/content/event_place"
+		},
 		"csl": {
-			"type": "array",
-			"items": {
-				"type": "string"
+			"type": "object",
+			"patternProperties": {
+				"[0-9]+": {
+					"type": "string",
+					"$id": "http://jsonschema.net/publications/0/content/csl"
+				}
 			},
 			"$id": "http://jsonschema.net/publications/0/content/csl"
 		}

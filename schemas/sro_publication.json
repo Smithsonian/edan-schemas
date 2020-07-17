@@ -357,10 +357,15 @@
 		},
 		"csl": {
 			"type": "object",
-			"patternProperties": {
-				"[0-9]+": {
+			"additionalProperties": false,
+			"properties":{
+				"id": {
+					"type": "integer",
+					"$id": "http://jsonschema.net/publications/0/content/csl/id"
+				},
+				"content": {
 					"type": "string",
-					"$id": "http://jsonschema.net/publications/0/content/csl"
+					"$id": "http://jsonschema.net/publications/0/content/csl/content"
 				}
 			},
 			"$id": "http://jsonschema.net/publications/0/content/csl"

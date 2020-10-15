@@ -1,0 +1,422 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/project.json",
+  "type": "object",
+  "title": "Project",
+  "required": [
+    "title"
+  ],
+  "definitions": {
+    "contact": {
+      "$id": "#/definitions/contact",
+      "type": "object",
+      "title": "",
+      "required": [
+        "name",
+        "email",
+        "identifier"
+      ],
+      "properties": {
+        "name": {
+          "$id": "#/definitions/contact/properties/name",
+          "type": "string",
+          "title": "Contact Name",
+          "default": "",
+          "examples": [
+            "Ian Davidson"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "email": {
+          "$id": "#/definitions/contact/properties/email",
+          "type": "string",
+          "title": "Contact Email Address",
+          "description": "Example: example@example.com",
+          "default": "",
+          "examples": [
+            "idavidson@si.edu"
+          ],
+          "format": "email"
+        },
+        "identifier": {
+          "$id": "#/definitions/contact/properties/identifier",
+          "type": "string",
+          "title": "Contact Identifier",
+          "default": "",
+          "examples": [
+            "string"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "collaborator": {
+      "$id": "#/definitions/collaborator",
+      "type": "object",
+      "title": "",
+      "required": [
+        "name",
+        "url",
+        "identifier"
+      ],
+      "properties": {
+        "name": {
+          "$id": "#/definitions/collaborator/properties/name",
+          "type": "string",
+          "title": "Collaborator Name",
+          "default": "",
+          "examples": [
+            "Alaska Department of Fish and Game"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "url": {
+          "$id": "#/definitions/collaborator/properties/url",
+          "type": "string",
+          "title": "Collaborator URL",
+          "description": "Example: https://www.example.com/",
+          "default": "",
+          "examples": [
+            "http://www.adfg.alaska.gov/index.cfm?adfg=invasive.main"
+          ],
+          "format": "uri"
+        },
+        "identifier": {
+          "$id": "#/definitions/collaborator/properties/identifier",
+          "type": "string",
+          "title": "Collaborator Identifier",
+          "default": "",
+          "examples": [
+            "string"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "resource": {
+      "$id": "#/definitions/resource",
+      "type": "object",
+      "title": "",
+      "required": [
+        "name",
+        "url",
+        "identifier"
+      ],
+      "properties": {
+        "name": {
+          "$id": "#/definitions/resource/properties/name",
+          "type": "string",
+          "title": "Resource Name",
+          "default": "",
+          "examples": [
+            "Shoreline Blog"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "url": {
+          "$id": "#/definitions/resource/properties/url",
+          "type": "string",
+          "title": "Resource URL",
+          "description": "Example: https://www.example.com/",
+          "default": "",
+          "examples": [
+            "http://shorelinebloglink.com"
+          ],
+          "format": "uri"
+        },
+        "identifier": {
+          "$id": "#/definitions/resource/properties/identifier",
+          "type": "string",
+          "title": "Resource Identifier",
+          "default": "",
+          "examples": [
+            "string"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "online_media": {
+      "$id": "#/definitions/online_media",
+      "type": "object",
+      "required": [
+        "content",
+        "thumbnail",
+        "mimeType",
+        "type"
+      ],
+      "properties": {
+        "imagePicker": {
+          "$id": "#/definitions/online_media/properties/imagePicker",
+          "type": "string",
+          "contentMediaType": "image/jpeg",
+          "title": "",
+          "default": "",
+          "description": ""
+        },
+        "content": {
+          "$id": "#/definitions/online_media/properties/content",
+          "type": "string",
+          "title": "Image URL",
+          "default": "",
+          "description": "Example: https://www.example.com/image.jpg",
+          "examples": [
+            "https://www.si.edu/Content/img/Exhibitions/db/saam-federal-model.jpg"
+          ],
+          "format": "uri"
+        },
+        "thumbnail": {
+          "$id": "#/definitions/online_media/properties/thumbnail",
+          "type": "string",
+          "title": "Image Thumbnail",
+          "default": "",
+          "description": "Example: https://www.example.com/image_thumbnail.jpg",
+          "examples": [
+            "https://www.si.edu/Content/img/Exhibitions/db/saam-federal-model.jpg"
+          ],
+          "format": "uri"
+        },
+        "caption": {
+          "$id": "#/definitions/online_media/properties/caption",
+          "type": "string",
+          "title": "Caption",
+          "default": "",
+          "description": "Image caption (may include HTML)",
+          "examples": [
+            "<p>Sol LeWitt, <em>Maquette for One, Two, Three</em>, 1979, assembled and painted balsa wood, Smithsonian American Art Museum &copy; 2019 The LeWitt Estate / Artists Rights Society (ARS), New York</p>"
+          ],
+          "pattern": "^(.*)$",
+          "contentMediaType": "text/plain"
+        },
+        "credit": {
+          "$id": "#/definitions/online_media/properties/credit",
+          "type": "string",
+          "title": "Credit",
+          "default": "Unknown",
+          "description": "Image credit",
+          "examples": [
+            "Unknown"
+          ],
+          "pattern": "^(.*)$",
+          "contentMediaType": "text/plain"
+        },
+        "rights": {
+          "$id": "#/definitions/online_media/properties/rights",
+          "type": "string",
+          "title": "Rights",
+          "default": "Unknown",
+          "description": "Image rights",
+          "examples": [
+            "Unknown"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "mimeType": {
+          "$id": "#/definitions/online_media/properties/mimeType",
+          "type": "string",
+          "title": "Mime Type",
+          "default": "image/jpeg",
+          "description": "Example: image/jpeg",
+          "examples": [
+            "image/jpeg"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "type": {
+          "$id": "#/definitions/online_media/properties/type",
+          "type": "string",
+          "title": "Media Type",
+          "default": "Images",
+          "description": "Example: Images",
+          "examples": [
+            "Images"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    }
+  },
+  "properties": {
+    "title": {
+      "$id": "#/properties/title",
+      "type": "string",
+      "title": "* Title",
+      "minLength": 1,
+      "maxLength": 255,
+      "description": "The project title",
+      "examples": [
+        "Object: Teapot"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "unitCode": {
+      "$id": "#/properties/unitCode",
+      "type": "string",
+      "title": "Unit Code",
+      "minLength": 2,
+      "maxLength": 255,
+      "description": "The Smithsonian unit code (read only)",
+      "examples": [
+        "SI_CM"
+      ],
+      "pattern": "^(.*)$",
+      "readOnly": true
+    },
+    "content": {
+      "$id": "#/properties/content",
+      "type": "object",
+      "title": "",
+      "description": "",
+      "required": [
+        "project_url",
+        "bodyHTML",
+        "summaryHTML",
+        "objective",
+        "start_date",
+        "end_date",
+        "primary_location",
+        "resultsHTML",
+        "contact",
+        "collaborator",
+        "resource",
+        "online_media"
+      ],
+      "properties": {
+        "project_url": {
+          "$id": "#/properties/content/properties/project_url",
+          "type": "string",
+          "title": "* Project URL",
+          "description": "Example: https://www.example.com/",
+          "default": "",
+          "examples": [
+            "https://serc.si.edu/research/projects/alaska-headwater-streams-linking-land-wetlands-streams"
+          ],
+          "format": "uri"
+        },
+        "start_date": {
+          "$id": "#/properties/content/properties/start_date",
+          "type": "string",
+          "title": "* Project Start Date",
+          "default": "",
+          "examples": [
+            "YYYY-MM-DD"
+          ],
+          "format": "date"
+        },
+        "end_date": {
+          "$id": "#/properties/content/properties/end_date",
+          "type": "string",
+          "title": "* Project End Date",
+          "default": "",
+          "examples": [
+            "YYYY-MM-DD"
+          ],
+          "format": "date"
+        },
+        "primary_location": {
+          "$id": "#/properties/content/properties/primary_location",
+          "type": "string",
+          "title": "* Primary Location",
+          "minLength": 2,
+          "maxLength": 255,
+          "description": "The Project's Primary Location",
+          "default": "",
+          "pattern": "^(.*)$"
+        },
+        "summaryHTML": {
+          "$id": "#/properties/content/properties/summaryHTML",
+          "type": "string",
+          "title": "* Summary HTML",
+          "description": "Project summary narrative",
+          "default": "",
+          "examples": [
+            "<p>Headwater streams in Alaska are rich in biodiversity, including juvenile salmon that eventually return to the ocean.</p>"
+          ],
+          "pattern": "^(.*)$",
+          "contentMediaType": "text/plain"
+        },
+        "bodyHTML": {
+          "$id": "#/properties/content/properties/bodyHTML",
+          "type": "string",
+          "title": "* Body HTML",
+          "description": "Project description narrative",
+          "default": "",
+          "examples": [
+            "<p>A decadal study of headwater streams has involved SERC and partner organizations (Baylor University, University of South Florida, and Kachemak Bay Research Reserve) with funding from the EPA and the Alaska Salmon Fund. The project has focused on headwater streams that are too small for adult salmon to reach but serve as rearing habitat for millions of juvenile salmon that spend one to three years in the streams before migrating to the sea. The project has demonstrated that the streams fall into two broad functional groups (high and low gradient), based primarily on the slope of the stream. The study has also demonstrated strong linkages between the land and the streams, with more than 60% of the nitrogen in the bodies of juvenile salmon coming from the land. Primary and secondary production of the streams appears to be either nitrogen or carbon limited, which is a function of whether or not alder (a nitrogen-fixing plant) is present on the watershed and how much of the watershed consists of large peat-based wetlands. For the first time, it has also been demonstrated that structure and function of the streamside wetlands is strongly influenced by the presence or absence of alder on the watershed.</p>"
+          ],
+          "pattern": "^(.*)$",
+          "contentMediaType": "text/plain"
+        },
+        "objective": {
+          "$id": "#/properties/content/properties/objective",
+          "type": "string",
+          "title": "* Project Objective",
+          "description": "Project objective narrative",
+          "default": "",
+          "examples": [
+            "string mapped to project_goal"
+          ],
+          "pattern": "^(.*)$",
+          "contentMediaType": "text/plain"
+        },
+        "resultsHTML": {
+          "$id": "#/properties/content/properties/resultsHTML",
+          "type": "string",
+          "title": "* Results HTML",
+          "description": "Project results narrative",
+          "default": "",
+          "examples": [
+            "insert results narrative here"
+          ],
+          "pattern": "^(.*)$",
+          "contentMediaType": "text/plain"
+        },
+        "contact": {
+          "$id": "#/properties/content/properties/contact",
+          "type": "array",
+          "title": "* Project Contacts",
+          "description": "",
+          "items": {"$ref": "#/definitions/contact"}
+        },
+        "collaborator": {
+          "$id": "#/properties/content/properties/collaborator",
+          "type": "array",
+          "title": "* Project Collaborators",
+          "description": "",
+          "items": {"$ref": "#/definitions/collaborator"}
+        },
+        "resource": {
+          "$id": "#/properties/content/properties/resource",
+          "type": "array",
+          "title": "* Project Resources",
+          "description": "",
+          "items": {"$ref": "#/definitions/resource"}
+        },
+        "online_media": {
+          "$id": "#/properties/content/properties/online_media",
+          "type": "array",
+          "title": "Online Media",
+          "description": "",
+          "items": {"$ref": "#/definitions/online_media"}
+        }
+      }
+    },
+    "status": {
+      "$id": "#/properties/status",
+      "type": "integer",
+      "title": "* Status",
+      "description": "",
+      "default": "Unpublished in EDAN",
+      "enum": [-1, 0, 1]
+    },
+    "publicSearch": {
+      "$id": "#/properties/publicSearch",
+      "type": "boolean",
+      "title": "Public Search",
+      "description": "Flag to expose the record to public search",
+      "default": true,
+      "enum": [true, false]
+    }
+  },
+  "additionalProperties": true
+}

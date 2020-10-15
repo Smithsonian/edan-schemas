@@ -1,0 +1,374 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "Publications",
+	"type": "object",
+	"$id": "http://jsonschema.net/publications/0/content",
+	"additionalProperties": false,
+	"properties": {
+		"title": {
+			"type": "object",
+			"$id": "http://jsonschema.net/publications/0/content/title",
+			"additionalProperties": false,
+			"patternProperties": {
+				"t[0-9]+": {
+					"type": "string",
+					"$id": "http://jsonschema.net/publications/0/content/title/t1"
+				}
+			}
+		},
+		"subType": {
+			"type": "string",
+			"$id": "http://jsonschema.net/names/0/content/type",
+			"enum": [
+				"Abstract",
+				"Artwork",
+				"Book, Edited",
+				"Book, Section",
+				"Book, Whole",
+				"Computer Program",
+				"Conference Proceedings",
+				"Dataset",
+				"Dissertation/Thesis",
+				"Dissertation/Thesis, Unpublished",
+				"Exhibition",
+				"Generic",
+				"Journal, Electronic",
+				"Magazine Article",
+				"Map",
+				"Monograph",
+				"Journal Article",
+				"Motion Picture",
+				"Newspaper Article",
+				"Online Discussion Forum/Blogs",
+				"Patent",
+				"Poster",
+				"Presentation",
+				"Report",
+				"Sound Recording",
+				"Unpublished Material",
+				"Video/DVD",
+				"Web Page"
+			]
+		},
+		"abstract": {
+			"type": "string",
+			"$id": "http://jsonschema.net/publications/0/content/abstract"
+		},
+		"authors": {
+			"type": "array",
+			"$id": "http://jsonschema.net/publications/0/content/authors",
+			"items": {
+				"type": "object",
+				"$id": "http://jsonschema.net/publications/0/content/authors/0",
+				"additionalProperties": false,
+				"properties": {
+					"id": {
+						"type": "string",
+						"$id": "http://jsonschema.net/publications/0/content/authors/0/id"
+					},
+					"name": {
+						"type": "string",
+						"$id": "http://jsonschema.net/publications/0/content/authors/0/name"
+					},
+					"old_id": {
+						"type": "string",
+						"$id": "http://jsonschema.net/publications/0/content/authors/0/old_id"
+					},
+					"sro_order": {
+						"type": "string",
+						"$id": "http://jsonschema.net/publications/0/content/authors/0/sro_order"
+					},
+					"role": {
+						"type": "string",
+						"$id": "http://jsonschema.net/publications/0/content/authors/0/role",
+						"enum": [
+							"author",
+							"primary author",
+							"numbered author",
+							"editor",
+							"primary editor",
+							"numbered editor",
+							"curator",
+							"lecturer",
+							"investigator",
+							"primary investigator",
+							"co-investigator",
+							"interviewee",
+							"interviewer",
+							"panelist",
+							"advisor",
+							"advisee",
+							"participant",
+							"awardee",
+							"composer",
+							"series_editor",
+							"website_editor",
+							"compiler",
+							"patron",
+							"former owner",
+							"correspondent",
+							"subject",
+							"artist",
+							"member",
+							"staff",
+							"translator",
+							"crew member",
+							"producer",
+							"owner",
+							"family"
+						]
+					}
+				}
+			}
+		},
+		"citation": {
+			"type": "string",
+			"$id": "http://jsonschema.net/publications/0/content/citation"
+		},
+		"multiple_citations": {
+			"type": "array",
+			"$id": "http://jsonschema.net/publications/0/content/multiple_citation",
+			"items": {
+				"type": "object",
+				"$id": "http://jsonschema.net/publications/0/content/multiple_citation/0",
+				"additionalProperties": false,
+				"properties": {
+					"type": {
+						"type": "string",
+						"$id": "http://jsonschema.net/names/0/content/multiple_citation/0/content/type"
+					},
+					"citation": {
+						"type": "string",
+						"$id": "http://jsonschema.net/names/0/content/multiple_citation/0/content/citation"
+					}
+				}
+			}
+		},
+		"date_added": {
+			"type": "string",
+			"$id": "http://jsonschema.net/publications/0/content/date_added"
+		},
+		"date_updated": {
+			"type": "string",
+			"$id": "http://jsonschema.net/publications/0/content/date_updated"
+		},
+		"dspace": {
+			"type": "object",
+			"$id": "http://jsonschema.net/publications/0/content/dspace",
+			"additionalProperties": false,
+			"properties": {
+				"direct_url": {
+					"type": "string",
+					"$id": "http://jsonschema.net/publications/0/content/dspace/direct_url"
+				},
+				"direct": {
+					"type": "string",
+					"$id": "http://jsonschema.net/publications/0/content/dspace/direct"
+				},
+				"epub": {
+					"type": "string",
+					"$id": "http://jsonschema.net/publications/0/content/dspace/epub"
+				},
+				"hi_res_pdf": {
+					"type": "string",
+					"$id": "http://jsonschema.net/publications/0/content/dspace/hi_res_pdf"
+				},
+				"item": {
+					"type": "string",
+					"$id": "http://jsonschema.net/publications/0/content/dspace/item"
+				},
+				"mobi": {
+					"type": "string",
+					"$id": "http://jsonschema.net/publications/0/content/dspace/mobi"
+				},
+				"pagination": {
+					"type": "string",
+					"$id": "http://jsonschema.net/publications/0/content/dspace/pagination"
+				}
+			}
+		},
+		"editor": {
+			"type": "string",
+			"$id": "http://jsonschema.net/publications/0/content/editor"
+		},
+		"freetext": {
+			"type": "object",
+			"$id": "http://jsonschema.net/publications/0/content/freetext",
+			"additionalProperties": false,
+			"patternProperties": {
+				"^.*$": {
+					"type": "array",
+					"$id": "http://jsonschema.net/publications/0/content/freetext/dataSource",
+					"items": {
+						"type": "object",
+						"$id": "http://jsonschema.net/publications/0/content/freetext/dataSource/0",
+						"additionalProperties": false,
+						"properties": {
+							"content": {
+								"type": "string",
+								"$id": "http://jsonschema.net/publications/0/content/freetext/dataSource/0/content"
+							},
+							"indexedContent": {
+								"type": "string",
+								"$id": "http://jsonschema.net/publications/0/content/freetext/dataSource/0/indexedContent"
+							},
+							"label": {
+								"type": "string",
+								"$id": "http://jsonschema.net/publications/0/content/freetext/dataSource/0/label"
+							}
+						}
+					}
+				}
+			}
+		},
+		"identifiers": {
+			"type": "array",
+			"$id": "http://jsonschema.net/names/0/content/identifers",
+			"items": {
+				"type": "object",
+				"$id": "http://jsonschema.net/names/0/content/identifiers/0",
+				"additionalProperties": false,
+				"properties": {
+					"type": {
+						"type": "string",
+						"$id": "http://jsonschema.net/names/0/content/identifiers/0/content/type"
+					},
+					"id": {
+						"type": "string",
+						"$id": "http://jsonschema.net/names/0/content/identifiers/0/content/id"
+					}
+				}
+			}
+		},
+		"journal_issue": {
+			"type": "string",
+			"$id": "http://jsonschema.net/publications/0/content/journal_issue"
+		},
+		"version": {
+			"type": "string",
+			"$id": "http://jsonschema.net/publications/0/content/version"
+		},
+		"journal_volume": {
+			"type": "string",
+			"$id": "http://jsonschema.net/publications/0/content/journal_volume"
+		},
+		"keywords": {
+			"type": "array",
+			"$id": "http://jsonschema.net/publications/0/content/keywords",
+			"items": {
+				"type": "string",
+				"$id": "http://jsonschema.net/publications/0/content/keywords/0"
+			}
+		},
+		"other_pages": {
+			"type": "string",
+			"$id": "http://jsonschema.net/publications/0/content/other_pages"
+		},
+		"publication_name": {
+			"type": "string",
+			"$id": "http://jsonschema.net/publications/0/content/publication_name"
+		},
+		"publication_url": {
+			"type": "string",
+			"$id": "http://jsonschema.net/publications/0/content/publication_url"
+		},
+		"publication_year": {
+			"type": "number",
+			"$id": "http://jsonschema.net/publications/0/content/publication_year"
+		},
+		"publisher_city": {
+			"type": "string",
+			"$id": "http://jsonschema.net/publications/0/content/publisher_city"
+		},
+		"publisher_name": {
+			"type": "string",
+			"$id": "http://jsonschema.net/publications/0/content/publisher_name"
+		},
+		"record_ID": {
+			"type": "number",
+			"$id": "http://jsonschema.net/publications/0/content/record_ID"
+		},
+		"starting_page": {
+			"type": "string",
+			"$id": "http://jsonschema.net/publications/0/content/starting_page"
+		},
+		"descriptor": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			},
+			"$id": "http://jsonschema.net/publications/0/content/descriptor"
+		},
+		"event": {
+			"type": "string",
+			"$id": "http://jsonschema.net/publications/0/content/event"
+		},
+		"event_date": {
+			"type": "string",
+			"$id": "http://jsonschema.net/publications/0/content/event_date"
+		},
+		"url": {
+			"type": "string",
+			"$id": "http://jsonschema.net/publications/0/content/url"
+		},
+		"date_created": {
+			"type": "string",
+			"$id": "http://jsonschema.net/publications/0/content/date_created"
+		},
+		"item_type": {
+			"type": "string",
+			"$id": "http://jsonschema.net/publications/0/content/item_type"
+		},
+		"container_title": {
+			"type": "string",
+			"$id": "http://jsonschema.net/publications/0/content/container_title"
+		},
+		"page_first": {
+			"type": "string",
+			"$id": "http://jsonschema.net/publications/0/content/page_first"
+		},
+		"page_last": {
+			"type": "string",
+			"$id": "http://jsonschema.net/publications/0/content/page_last"
+		},
+		"edition": {
+			"type": "string",
+			"$id": "http://jsonschema.net/publications/0/content/edition"
+		},
+		"collection_number": {
+			"type": "string",
+			"$id": "http://jsonschema.net/publications/0/content/collection_number"
+		},
+		"page_count": {
+			"type": "string",
+			"$id": "http://jsonschema.net/publications/0/content/page_count"
+		},
+		"degree_type": {
+			"type": "string",
+			"$id": "http://jsonschema.net/publications/0/content/degree_type"
+		},
+		"scale": {
+			"type": "string",
+			"$id": "http://jsonschema.net/publications/0/content/scale"
+		},
+		"event_place": {
+			"type": "string",
+			"$id": "http://jsonschema.net/publications/0/content/event_place"
+		},
+		"csl": {
+			"type": "object",
+			"additionalProperties": false,
+			"properties":{
+				"id": {
+					"type": "integer",
+					"$id": "http://jsonschema.net/publications/0/content/csl/id"
+				},
+				"content": {
+					"type": "string",
+					"$id": "http://jsonschema.net/publications/0/content/csl/content"
+				}
+			},
+			"$id": "http://jsonschema.net/publications/0/content/csl"
+		}
+	}
+}

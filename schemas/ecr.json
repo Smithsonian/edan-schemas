@@ -1,108 +1,208 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "type": "object",
-  "title": "ECR Record (DRAFT)",
-  "description": "ECRs are used to describe electronic content.",
-  "properties": {
-    "created_by": {
-      "type": "string",
-      "id": "http://edan.si.edu/schema//created_by"
-    },
-    "challenges": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "id": "http://edan.si.edu/schema//challenges"
-    },
-    "keywords": {
-      "type": "string",
-      "id": "http://edan.si.edu/schema//keywords"
-    },
-    "online_media": {
-      "type": "array",
-      "items": {},
-      "id": "http://edan.si.edu/schema//online_media"
-    },
-    "ec_asset_type": {
-      "type": "string",
-      "id": "http://edan.si.edu/schema//ec_asset_type"
-    },
-    "record_ID": {
-      "type": "string",
-      "id": "http://edan.si.edu/schema//record_ID"
-    },
-    "status_id": {
-      "type": "string",
-      "id": "http://edan.si.edu/schema//status_id"
-    },
-    "ecr_type": {
-      "type": "string",
-      "id": "http://edan.si.edu/schema//ecr_type"
-    },
-    "url": {
-      "type": "string",
-      "id": "http://edan.si.edu/schema//url"
-    },
-    "title": {
-      "type": "object",
-      "properties": {
-        "content": {
-          "type": "string",
-          "id": "http://edan.si.edu/schema//title/content"
-        },
-        "extended": {
-          "type": "object",
-          "properties": {
-            "title_sort": {
-              "type": "string",
-              "id": "http://edan.si.edu/schema//title/extended/title_sort"
-            },
-            "category": {
-              "type": "string",
-              "id": "http://edan.si.edu/schema//title/extended/category"
-            },
-            "label": {
-              "type": "string",
-              "id": "http://edan.si.edu/schema//title/extended/label"
-            }
-          },
-          "id": "http://edan.si.edu/schema//title/extended",
-          "required": [
-            "title_sort",
-            "category",
-            "label"
-          ]
-        }
-      },
-      "id": "http://edan.si.edu/schema//title",
-      "required": [
-        "content",
-        "extended"
-      ]
-    },
-    "permanent_link": {
-      "type": "string",
-      "id": "http://edan.si.edu/schema//permanent_link"
-    },
-    "topics": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "id": "http://edan.si.edu/schema//topics"
-    },
-    "description": {
-      "type": "string",
-      "id": "http://edan.si.edu/schema//description"
-    },
-    "_drm_record_version": {
-      "type": "string",
-      "id": "http://edan.si.edu/schema//_drm_record_version"
-    }
-  },
-  "id": "http://edan.si.edu/schema/",
-  "required": [
-
-  ]
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"type": "object",
+	"title": "ECR Record (DRAFT)",
+	"description": "ECRs are used to describe electronic content.",
+	"required": [
+		"created_by",
+		"challenges",
+		"keywords",
+		"online_media",
+		"ec_asset_type",
+		"record_ID",
+		"status_id",
+		"ecr_type",
+		"url",
+		"title",
+		"permanent_link",
+		"topics",
+		"description"
+	],
+	"additionalProperties": false,
+	"properties": {
+		"created_by": {
+			"type": "string",
+			"$id": "http://edan.si.edu/schema/created_by"
+		},
+		"challenges": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			},
+			"$id": "http://edan.si.edu/schema/challenges"
+		},
+		"keywords": {
+			"type": "string",
+			"$id": "http://edan.si.edu/schema/keywords"
+		},
+		"online_media": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"additionalProperties": false,
+				"properties": {
+					"mime_type": {
+						"type": "string"
+					},
+					"alt": {
+						"type": "string"
+					},
+					"description": {
+						"type": "string"
+					},
+					"type": {
+						"type": "string"
+					},
+					"content": {
+						"type": "string"
+					},
+					"rights": {
+						"type": "string"
+					},
+					"caption": {
+						"type": "string"
+					},
+					"credit": {
+						"type": "string"
+					},
+					"extended": {
+						"type": "object",
+						"additionalProperties": false,
+						"properties": {
+							"mime_type": {
+								"type": "string"
+							},
+							"alt": {
+								"type": "string"
+							},
+							"description": {
+								"type": "string"
+							},
+							"type": {
+								"type": "string"
+							},
+							"rights": {
+								"type": "string"
+							},
+							"caption": {
+								"type": "string"
+							},
+							"credit": {
+								"type": "string"
+							}
+						}
+					}
+				}
+			},
+			"$id": "http://edan.si.edu/schema/online_media"
+		},
+		"ec_asset_type": {
+			"type": "string",
+			"$id": "http://edan.si.edu/schema/ec_asset_type"
+		},
+		"record_ID": {
+			"type": "string",
+			"$id": "http://edan.si.edu/schema/record_ID"
+		},
+		"status_id": {
+			"type": "string",
+			"$id": "http://edan.si.edu/schema/status_id"
+		},
+		"ecr_type": {
+			"type": "string",
+			"$id": "http://edan.si.edu/schema/ecr_type"
+		},
+		"url": {
+			"type": "string",
+			"$id": "http://edan.si.edu/schema/url"
+		},
+		"title": {
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"content": {
+					"type": "string",
+					"$id": "http://edan.si.edu/schema/title/content"
+				},
+				"extended": {
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"title_sort": {
+							"type": "string",
+							"$id": "http://edan.si.edu/schema/title/extended/title_sort"
+						},
+						"category": {
+							"type": "string",
+							"$id": "http://edan.si.edu/schema/title/extended/category"
+						},
+						"label": {
+							"type": "string",
+							"$id": "http://edan.si.edu/schema/title/extended/label"
+						}
+					},
+					"$id": "http://edan.si.edu/schema/title/extended",
+					"required": [
+						"title_sort",
+						"category",
+						"label"
+					]
+				}
+			},
+			"$id": "http://edan.si.edu/schema/title",
+			"required": [
+				"content",
+				"extended"
+			]
+		},
+		"permanent_link": {
+			"type": "string",
+			"$id": "http://edan.si.edu/schema/permanent_link"
+		},
+		"boost": {
+			"type": "number",
+			"$id": "http://edan.si.edu/schema/permanent_link"
+		},
+		"status": {
+			"type": "string",
+			"$id": "http://edan.si.edu/schema/permanent_link"
+		},
+		"online_media_alt": {
+			"type": "string",
+			"$id": "http://edan.si.edu/schema/permanent_link"
+		},
+		"parent_unit_ID": {
+			"type": "string",
+			"$id": "http://edan.si.edu/schema/permanent_link"
+		},
+		"topics": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			}
+		},
+		"extended_topics": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			},
+			"$id": "http://edan.si.edu/schema/topics"
+		},
+		"topic_category": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			},
+			"$id": "http://edan.si.edu/schema/topics"
+		},
+		"description": {
+			"type": "string",
+			"$id": "http://edan.si.edu/schema/description"
+		},
+		"_drm_record_version": {
+			"type": "string",
+			"$id": "http://edan.si.edu/schema/_drm_record_version"
+		}
+	},
+	"$id": "http://edan.si.edu/schema/"
 }

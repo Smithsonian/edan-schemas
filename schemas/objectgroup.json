@@ -1,62 +1,160 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "type": "object",
-  "properties": {
-    "menu": {
-      "type": "array",
-      "items": {},
-      "id": "http://edan.si.edu/schema/menu"
-    },
-    "page": {
-      "type": "object",
-      "properties": {},
-      "id": "http://edan.si.edu/schema/page"
-    },
-    "feature": {
-      "type": "object",
-      "properties": {},
-      "id": "http://edan.si.edu/schema/feature"
-    },
-    "settings": {
-      "type": "object",
-      "properties": {},
-      "id": "http://edan.si.edu/schema/settings"
-    },
-    "defaultPageId": {
-      "type": "string",
-      "id": "http://edan.si.edu/schema/defaultPageId"
-    },
-    "title": {
-      "type": "string",
-      "id": "http://edan.si.edu/schema/title"
-    },
-    "listTitle": {
-      "type": "string",
-      "id": "http://edan.si.edu/schema/listTitle"
-    },
-    "description": {
-      "type": "string",
-      "id": "http://edan.si.edu/schema/description"
-    },
-    "keywords": {
-      "type": "string",
-      "id": "http://edan.si.edu/schema/keywords"
-    },
-    "featured": {
-      "type": "integer",
-      "id": "http://edan.si.edu/schema/featured"
-    },
-    "groupType": {
-      "type": "integer",
-      "id": "http://edan.si.edu/schema/groupType"
-    },
-    "published": {
-      "type": "integer",
-      "id": "http://edan.si.edu/schema/published"
-    }
-  },
-  "id": "http://edan.si.edu/schema",
-  "required": [
-
-  ]
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"type": "object",
+	"required": [
+		"defaultPageId",
+		"listTitle",
+		"settings",
+		"featured",
+		"groupType",
+		"feature",
+		"keywords",
+		"description",
+		"page",
+		"published",
+		"menu",
+		"title"
+	],
+	"properties": {
+		"menu": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			},
+			"$id": "http://edan.si.edu/schema/menu"
+		},
+		"page": {
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"listTitle": {
+					"type": "string"
+				},
+				"settings": {
+					"type": "object"
+				},
+				"feature": {
+					"type": "object"
+				},
+				"title": {
+					"type": "string"
+				},
+				"pageId": {
+					"type": "string"
+				},
+				"url": {
+					"type": "string"
+				},
+				"content": {
+					"type": "string"
+				}
+			},
+			"$id": "http://edan.si.edu/schema/page"
+		},
+		"feature": {
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"alt": {
+					"type": "string"
+				},
+				"html": {
+					"type": "string"
+				},
+				"url": {
+					"type": "string"
+				},
+				"type": {
+					"type": "string"
+				},
+				"media": {
+					"type": "string"
+				},
+				"thumbnail": {
+					"type": "string"
+				},
+				"pages": {
+					"type": "string"
+				}
+			},
+			"$id": "http://edan.si.edu/schema/feature"
+		},
+		"settings": {
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"grid_count": {
+					"type": "string"
+				},
+				"show_facets": {
+					"type": "string"
+				},
+				"ux_objects_display": {
+					"type": "string"
+				},
+				"csc": {
+					"type": "object",
+					"properties": {
+						"always_link_landing_page": {
+							"type": "boolean"
+						}
+					}
+				},
+				"disableMenu": {
+					"type": "string"
+				}
+			},
+			"$id": "http://edan.si.edu/schema/settings"
+		},
+		"defaultPageId": {
+			"type": "string",
+			"$id": "http://edan.si.edu/schema/defaultPageId"
+		},
+		"objectGroupId": {
+			"type": "string",
+			"$id": "http://edan.si.edu/schema/defaultPageId"
+		},
+		"defaultPageUrl": {
+			"type": "string",
+			"$id": "http://edan.si.edu/schema/defaultPageId"
+		},
+		"title": {
+			"type": "string",
+			"$id": "http://edan.si.edu/schema/title"
+		},
+		"listTitle": {
+			"type": "string",
+			"$id": "http://edan.si.edu/schema/listTitle"
+		},
+		"description": {
+			"type": "string",
+			"$id": "http://edan.si.edu/schema/description"
+		},
+		"keywords": {
+			"type": "string",
+			"$id": "http://edan.si.edu/schema/keywords"
+		},
+		"featured": {
+			"type": "integer",
+			"$id": "http://edan.si.edu/schema/featured"
+		},
+		"groupType": {
+			"type": "string",
+			"$id": "http://edan.si.edu/schema/groupType"
+		},
+		"published": {
+			"type": "integer",
+			"$id": "http://edan.si.edu/schema/published"
+		},
+		"url": {
+			"type": "string",
+			"$id": "http://edan.si.edu/schema/published"
+		},
+		"defaultPage": {
+			"type": "object",
+			"$id": "http://edan.si.edu/schema/published"
+		}
+	},
+	"additionalProperties": false,
+	"$id": "http://edan.si.edu/schema"
 }

@@ -1,0 +1,422 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "urn:edan_json_schema:emammal_image",
+	"title": "eMammal Image",
+	"type": "object",
+	"required": [
+		"project_id",
+		"project_name",
+		"sub_project_id",
+		"sub_project_name",
+		"deployment_id",
+		"deployment_name",
+		"image_sequence_id",
+		"image",
+		"image_identifications"
+	],
+	"definitions": {
+		"online_media": {
+			"title": "Online Media",
+			"description": "Asset(s) in IDS",
+			"type": "array",
+			"minItems": 1,
+			"items": {
+				"type": "object",
+				"required": [
+					"idsId",
+					"sidoraPid",
+					"type",
+					"content",
+					"thumbnail",
+					"caption"
+				],
+				"properties": {
+					"idsId": {
+						"title": "IDS asset ID",
+						"type": "string"
+					},
+					"sidoraPid": {
+						"title": "Sidora PID",
+						"type": "string"
+					},
+					"type": {
+						"title": "Asset Type",
+						"enum": [
+							"Images"
+						]
+					},
+					"content": {
+						"title": "IDS full-sized asset URL",
+						"type": "string"
+					},
+					"thumbnail": {
+						"title": "IDS thumbnail asset URL",
+						"type": "string"
+					},
+					"caption": {
+						"type": "string"
+					}
+				},
+				"additionalProperties": false
+			}
+		}
+	},
+	"additionalProperties": false,
+	"properties": {
+		"project_id": {
+			"title": "Project ID",
+			"type": "string"
+		},
+		"project_name": {
+			"title": "Project Name",
+			"type": "string"
+		},
+		"source": {
+			"title": "Source",
+			"type": "string"
+		},
+		"sub_project_id": {
+			"title": "Subproject ID",
+			"type": "string"
+		},
+		"sub_project_name": {
+			"title": "Subproject Name",
+			"type": "string"
+		},
+		"deployment_id": {
+			"title": "Deployment ID",
+			"description": "CameraDeploymentID in the manifest",
+			"type": "string"
+		},
+		"deployment_name": {
+			"title": "Deployment Name",
+			"description": "CameraSiteName in the manifest",
+			"type": "string"
+		},
+		"image_sequence_id": {
+			"title": "Image Sequence ID",
+			"description": "Typically the deployment ID with a s[0-9]+ suffix",
+			"type": "string"
+		},
+		"image": {
+			"title": "Image",
+			"type": "object",
+			"required": [
+				"id",
+				"online_media"
+			],
+			"additionalProperties": false,
+			"properties": {
+				"id": {
+					"title": "Image ID",
+					"description": "Typically the image sequence ID with a i[0-9]+ suffix",
+					"type": "string"
+				},
+				"online_media": {
+					"$ref": "#/definitions/online_media"
+				},
+				"date_time": {
+					"title": "Date and Time",
+					"description": "Appears to use YYYY-MM-DD HH:MM:SS, which is not compliant with RFC 3339, section 5.6",
+					"type": "string"
+				},
+				"interest_ranking": {
+					"title": "Favorited Image",
+					"description": "Determined by the volunteer or reviewing researcher",
+					"enum": [
+						"",
+						"None",
+						"Favorite"
+					]
+				},
+				"photo_type": {
+					"title": "Photo Type",
+					"description": "",
+					"enum": [
+						"",
+						"time lapse",
+						"unidentifiable",
+						"staff",
+						"unknown",
+						"animal",
+						"blank",
+						"set up",
+						"end",
+						"start"
+					]
+				},
+				"photo_type_identified_by": {
+					"title": "Photo Type Identified By",
+					"description": "Full name of person who provided the photo type",
+					"type": "string"
+				},
+				"image_identifications": {
+					"title": "Image Species Identifications",
+					"anyOf": [
+						{
+							"type": "array",
+							"items": {
+								"type": "object",
+								"required": [
+									"iucn_id",
+									"species_scientific_name"
+								],
+								"additionalProperties": false,
+								"properties": {
+									"iucn_id": {
+										"title": "IUCN ID",
+										"type": "string"
+									},
+									"species_scientific_name": {
+										"title": "Species Scientific Name",
+										"type": "string"
+									},
+									"species_common_name": {
+										"title": "Species Common Name",
+										"type": "string"
+									},
+									"count": {
+										"title": "Count",
+										"description": "Total number of animals from this species in the identification",
+										"type": "integer"
+									},
+									"age": {
+										"title": "Age",
+										"enum": [
+											"",
+											"Juvenile",
+											"Adult",
+											"Unknown"
+										]
+									},
+									"sex": {
+										"title": "Sex",
+										"enum": [
+											"",
+											"Male",
+											"Female",
+											"Unknown"
+										]
+									},
+									"individual_id": {
+										"title": "Individual ID",
+										"description": "Used to uniquely identify an animal for tracking purposes",
+										"type": "string"
+									},
+									"animal_recognizable": {
+										"title": "Animal Recognizable",
+										"type": "string"
+									},
+									"individual_animal_notes": {
+										"title": "Individual Animal Notes",
+										"type": "string"
+									}
+								}
+							}
+						},
+						{
+							"type": "object",
+							"additionalProperties": false,
+							"properties": {
+								"image_identifications_array_element": {
+									"type": "object",
+									"items": {
+										"type": "object",
+										"required": [
+											"iucn_id",
+											"species_scientific_name"
+										],
+										"additionalProperties": false,
+										"properties": {
+											"iucn_id": {
+												"title": "IUCN ID",
+												"type": "string"
+											},
+											"species_scientific_name": {
+												"title": "Species Scientific Name",
+												"type": "string"
+											},
+											"species_common_name": {
+												"title": "Species Common Name",
+												"type": "string"
+											},
+											"count": {
+												"title": "Count",
+												"description": "Total number of animals from this species in the identification",
+												"type": "integer"
+											},
+											"age": {
+												"title": "Age",
+												"enum": [
+													"",
+													"Juvenile",
+													"Adult",
+													"Unknown"
+												]
+											},
+											"sex": {
+												"title": "Sex",
+												"enum": [
+													"",
+													"Male",
+													"Female",
+													"Unknown"
+												]
+											},
+											"individual_id": {
+												"title": "Individual ID",
+												"description": "Used to uniquely identify an animal for tracking purposes",
+												"type": "string"
+											},
+											"animal_recognizable": {
+												"title": "Animal Recognizable",
+												"type": "string"
+											},
+											"individual_animal_notes": {
+												"title": "Individual Animal Notes",
+												"type": "string"
+											}
+										}
+									}
+								}
+							}
+						}
+					]
+				}
+			}
+		},
+		"image_identifications": {
+			"title": "Image Species Identifications",
+			"anyOf": [
+				{
+					"type": "array",
+					"items": {
+						"type": "object",
+						"required": [
+							"iucn_id",
+							"species_scientific_name"
+						],
+						"additionalProperties": false,
+						"properties": {
+							"iucn_id": {
+								"title": "IUCN ID",
+								"type":	"string"
+							},
+							"species_scientific_name": {
+								"title": "Species Scientific Name",
+								"type": "string"
+							},
+							"species_common_name": {
+								"title": "Species Common Name",
+								"type": "string"
+							},
+							"count": {
+								"title": "Count",
+								"description": "Total number of animals from this species in the identification",
+								"type": "integer"
+							},
+							"age": {
+								"title": "Age",
+								"enum": [
+									"",
+									"Juvenile",
+									"Adult",
+									"Unknown"
+								]
+							},
+							"sex": {
+								"title": "Sex",
+								"enum": [
+									"",
+									"Male",
+									"Female",
+									"Unknown"
+								]
+							},
+							"individual_id": {
+								"title": "Individual ID",
+								"description": "Used to uniquely identify an animal for tracking purposes",
+								"type": "string"
+							},
+							"animal_recognizable": {
+								"title": "Animal Recognizable",
+								"type": "string"
+							},
+							"individual_animal_notes": {
+								"title": "Individual Animal Notes",
+								"type": "string"
+							}
+						}
+					}
+				},
+				{
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"image_identifications_array_element": {
+							"type": "object",
+							"items": {
+								"type": "object",
+								"required": [
+									"iucn_id",
+									"species_scientific_name"
+								],
+								"additionalProperties": false,
+								"properties": {
+									"iucn_id": {
+										"title": "IUCN ID",
+										"type": "string"
+									},
+									"species_scientific_name": {
+										"title": "Species Scientific Name",
+										"type": "string"
+									},
+									"species_common_name": {
+										"title": "Species Common Name",
+										"type": "string"
+									},
+									"count": {
+										"title": "Count",
+										"description": "Total number of animals from this species in the identification",
+										"type": "integer"
+									},
+									"age": {
+										"title": "Age",
+										"enum": [
+											"",
+											"Juvenile",
+											"Adult",
+											"Unknown"
+										]
+									},
+									"sex": {
+										"title": "Sex",
+										"enum": [
+											"",
+											"Male",
+											"Female",
+											"Unknown"
+										]
+									},
+									"individual_id": {
+										"title": "Individual ID",
+										"description": "Used to uniquely identify an animal for tracking purposes",
+										"type": "string"
+									},
+									"animal_recognizable": {
+										"title": "Animal Recognizable",
+										"type": "string"
+									},
+									"individual_animal_notes": {
+										"title": "Individual Animal Notes",
+										"type": "string"
+									}
+								}
+							}
+						}
+					}
+				}
+			]
+		}
+	}
+}

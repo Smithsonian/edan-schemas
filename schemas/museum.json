@@ -1,6 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
+  "additionalProperties":false,
   "properties": {
     "unit_codes": {
       "type": "array",
@@ -23,8 +24,7 @@
       "id": "http://edan.si.edu/schema/name"
     },
     "logo": {
-      "type": "object",
-      "properties": {},
+      "type": "string",
       "id": "http://edan.si.edu/schema/logo"
     },
     "menu": {
@@ -35,10 +35,155 @@
     "url": {
       "type": "string",
       "id": "http://edan.si.edu/schema/url"
+    },
+    "accessibility": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/accessibility"
+    },
+    "acronymn": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/acronymn"
+    },
+    "addressCountry": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/addressCountry"
+    },
+    "addressRegion": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/addressRegion"
+    },
+    "addressLocality": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/addressLocality"
+    },
+    "admission": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/admission"
+    },
+    "bicycle": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/bicycle"
+    },
+    "category": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/category"
+    },
+    "date": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/date"
+    },
+    "dining": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/dining"
+    },
+    "email": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/email"
+    },
+    "floor_plan": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/floor_plan"
+    },
+    "icon": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/icon"
+    },
+    "image": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/image"
+    },
+    "latitude": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/latitude"
+    },
+    "lockers": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/lockers"
+    },
+    "longitude": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/longitude"
+    },
+    "metroBus": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/metroBus"
+    },
+    "metroRail": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/metroRail"
+    },
+    "mission_statement": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/mission_statement"
+    },
+    "museum": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/museum"
+    },
+    "openingHours": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/openingHours"
+    },
+    "organizational_parent": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/organizational_parent"
+    },
+    "parkingGarage": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/parkingGarage"
+    },
+    "phone": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/phone"
+    },
+    "postalCode": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/postalCode"
+    },
+    "record_ID": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/record_ID"
+    },
+    "record_link": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/record_link"
+    },
+    "record_type": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/record_type"
+    },
+    "short_name": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/short_name"
+    },
+    "streetAddress": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/streetAddress"
+    },
+    "unit_category": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/unit_category"
+    },
+    "highlights": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/unit_category"
+    },
+    "edan_object_group_id": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/unit_category"
+    },
+    "trumba_sponsor_id": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/unit_category"
+    },
+    "exhibitions": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/exhibitions"
+    },
+    "trumba_vendor_id": {
+      "type": "string",
+      "id": "http://edan.si.edu/schema/unit_category"
     }
   },
-  "id": "http://edan.si.edu/schema",
-  "required": [
-
-  ]
+  "id": "http://edan.si.edu/schema"
 }

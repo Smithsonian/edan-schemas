@@ -1,6 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
+  "additionalProperties":false,
   "properties": {
     "artworkImage": {
       "type": "string",
@@ -36,6 +37,7 @@
     },
     "makerDetails": {
       "type": "object",
+  	  "additionalProperties":false,
       "properties": {
         "text": {
           "type": "string",
@@ -45,6 +47,7 @@
           "type": "array",
           "items": {
             "type": "object",
+ 			"additionalProperties":false,
             "properties": {
               "caption": {
                 "type": "string",
@@ -77,6 +80,7 @@
     },
     "artworkDetails": {
       "type": "object",
+  	  "additionalProperties":false,
       "properties": {
         "text": {
           "type": "string",
@@ -86,6 +90,7 @@
           "type": "array",
           "items": {
             "type": "object",
+ 			"additionalProperties":false,
             "properties": {
               "caption": {
                 "type": "string",
@@ -118,6 +123,7 @@
     },
     "artisticContext": {
       "type": "object",
+  	  "additionalProperties":false,
       "properties": {
         "text": {
           "type": "string",
@@ -127,6 +133,7 @@
           "type": "array",
           "items": {
             "type": "object",
+  			"additionalProperties":false,
             "properties": {
               "caption": {
                 "type": "string",
@@ -159,6 +166,7 @@
     },
     "historicContext": {
       "type": "object",
+ 	  "additionalProperties":false,
       "properties": {
         "text": {
           "type": "string",
@@ -168,6 +176,7 @@
           "type": "array",
           "items": {
             "type": "object",
+  			"additionalProperties":false,
             "properties": {
               "caption": {
                 "type": "string",

@@ -1,0 +1,177 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "Authors",
+	"type": "object",
+	"$id": "http://jsonschema.net/names/0/content",
+	"additionalProperties": false,
+	"properties": {
+		"first_name": {
+			"type": "string",
+			"$id": "http://jsonschema.net/names/0/content/first_name"
+		},
+		"middle_name": {
+			"type": "string",
+			"$id": "http://jsonschema.net/names/0/content/middle_name"
+		},
+		"last_name": {
+			"type": "string",
+			"$id": "http://jsonschema.net/names/0/content/last_name"
+		},
+		"birth_year": {
+			"type": "number",
+			"$id": "http://jsonschema.net/names/0/content/birth_year"
+		},
+		"death_year": {
+			"type": "string",
+			"$id": "http://jsonschema.net/names/0/content/death_year"
+		},
+		"subType": {
+			"type": "string",
+			"$id": "http://jsonschema.net/names/0/content/subType"
+		},
+		"suffix": {
+			"type": "string",
+			"$id": "http://jsonschema.net/names/0/content/suffix"
+		},
+		"alternative_name": {
+			"type": "array",
+			"$id": "http://jsonschema.net/names/0/content/alternative_name",
+			"items": {
+				"type": "object",
+				"$id": "http://jsonschema.net/names/0/content/alternative_name/0",
+				"properties": {
+					"first_name": {
+						"type": "string",
+						"$id": "http://jsonschema.net/names/0/content/alternative_name/0/content/first_name"
+					},
+					"last_name": {
+						"type": "string",
+						"$id": "http://jsonschema.net/names/0/content/alternative_name/0/content/last_name"
+					},
+					"middle_name": {
+						"type": "string",
+						"$id": "http://jsonschema.net/names/0/content/alternative_name/0/content/middle_name"
+					},
+					"suffix": {
+						"type": "string",
+						"$id": "http://jsonschema.net/names/0/content/alternative_name/0/content/suffix"
+					}
+				}
+			}
+		},
+		"identifiers": {
+			"type": "array",
+			"$id": "http://jsonschema.net/names/0/content/identifers",
+			"items": {
+				"type": "object",
+				"$id": "http://jsonschema.net/names/0/content/identifiers/0",
+				"properties": {
+					"type": {
+						"type": "string",
+						"$id": "http://jsonschema.net/names/0/content/identifiers/0/content/type"
+					},
+					"id": {
+						"type": "string",
+						"$id": "http://jsonschema.net/names/0/content/identifiers/0/content/id"
+					}
+				}
+			}
+		},
+		"related_to": {
+			"type": "array",
+			"$id": "http://jsonschema.net/names/0/content/related_to",
+			"items": {
+				"type": "object",
+				"$id": "http://jsonschema.net/names/0/content/related_to/0",
+				"properties": {
+					"type": {
+						"type": "string",
+						"$id": "http://jsonschema.net/names/0/content/related_to/0/content/type"
+					},
+					"id": {
+						"type": "string",
+						"$id": "http://jsonschema.net/names/0/content/related_to/0/content/id"
+					}
+				}
+			}
+		},
+		"si_unit_assigned": {
+			"type": "object",
+			"$id": "http://jsonschema.net/names/0/content/si_unit_assigned",
+			"properties": {
+				"si_unit": {
+					"type": "string",
+					"$id": "http://jsonschema.net/names/0/content/si_unit_assigned/0/content/si_unit"
+				},
+				"date_assigned": {
+					"type": "string",
+					"$id": "http://jsonschema.net/names/0/content/si_unit_assigned/0/content/date_assigned"
+				},
+				"date_changed": {
+					"type": "string",
+					"$id": "http://jsonschema.net/names/0/content/si_unit_assigned/0/content/date_changed"
+				}
+			}
+		},
+		"si_unit_previous": {
+			"type": "array",
+			"$id": "http://jsonschema.net/names/0/content/si_unit_previous",
+			"items": {
+				"type": "object",
+				"$id": "http://jsonschema.net/names/0/content/related_to/0",
+				"properties": {
+					"si_unit": {
+						"type": "string",
+						"$id": "http://jsonschema.net/names/0/content/si_unit_previous/0/content/si_unit"
+					},
+					"date_assigned": {
+						"type": "string",
+						"$id": "http://jsonschema.net/names/0/content/si_unit_previous/0/content/date_assigned"
+					},
+					"date_changed": {
+						"type": "string",
+						"$id": "http://jsonschema.net/names/0/content/si_unit_previous/0/content/date_changed"
+					}
+				}
+			}
+		},
+		"active": {
+			"type": "string",
+			"$id": "http://jsonschema.net/names/0/content/active"
+		},
+		"status": {
+			"type": "array",
+			"$id": "http://jsonschema.net/names/0/content/si_unit_previous",
+			"items": {
+				"type": "object",
+				"$id": "http://jsonschema.net/names/0/content/related_to/0",
+				"properties": {
+					"role_title_position": {
+						"type": "string",
+						"$id": "http://jsonschema.net/names/0/content/si_unit_previous/0/content/si_unit"
+					},
+					"date_assigned": {
+						"type": "string",
+						"$id": "http://jsonschema.net/names/0/content/si_unit_previous/0/content/date_assigned"
+					},
+					"date_changed": {
+						"type": "string",
+						"$id": "http://jsonschema.net/names/0/content/si_unit_previous/0/content/date_changed"
+					}
+				}
+			}
+		},
+		"si_edu_email": {
+			"type": "string",
+			"$id": "http://jsonschema.net/names/0/content/active"
+		},
+		"other_email": {
+			"type": "array",
+			"$id": "http://jsonschema.net/publications/0/content/identifers",
+			"items": {
+				"type": "string",
+				"$id": "http://jsonschema.net/publications/0/content/keywords/0"
+			}
+		}
+	}
+}

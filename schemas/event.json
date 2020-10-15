@@ -1,101 +1,365 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "Event Record (DRAFT)",
-  "description": "Events are used to describe exhibitions and other events.",
-  "required": [
-    "event_type",
-    "title",
-    "open"
-  ],
-  "properties": {
-    "objectgroup_ID": {
-      "type": "string",
-      "description": "Related EDAN Object Group record, if applicable."
-    },
-    "event_type": {
-      "type": "string",
-      "description": "Exhibition, IMAX, or whatever type this is."
-    },
-    "event_type_detail": {
-      "type": "string",
-      "description": "Exhibition, IMAX, or whatever type this is."
-    },
-    "event_detail": {
-      "type": "object",
-      "description": "EDAN field object describing any specifics for this event.",
-      "$ref": "field-object.json#/fieldObject"
-    },
-    "showtimes": {
-      "type": "array",
-      "description": "An array of strings representing showtime dates, each containing its own array of strings representing start times."
-    },
-    "location": {
-      "type": "object",
-      "description": "EDAN field object including values for edan_facility_id, floor, building (text).",
-      "$ref": "field-object.json#/fieldObject"
-    },
-    "keywords": {
-      "type": "array",
-      "items": "string"
-    },
-    "online_media": {
-      "type": "object",
-      "description": "EDAN online media object",
-      "$ref": "online-media.json#/onlineMedia"
-    },
-    "event_status": {
-      "type": "string"
-    },
-    "sponsor": {
-      "type": "object",
-      "description": "EDAN field object",
-      "$ref": "field-object.json#/fieldObject"
-    },
-    "original_db_record_updatedate": "string",
-    "title": {
-      "type": "object",
-      "description": "EDAN field object",
-      "$ref": "field-object.json#/fieldObject"
-    },
-    "open": {
-      "type": "object",
-      "description": "EDAN field object",
-      "$ref": "field-object.json#/fieldObject"
-    },
-    "close": {
-      "type": "object",
-      "description": "EDAN field object",
-      "$ref": "field-object.json#/fieldObject"
-    },
-    "on_sale": {
-      "type": "object",
-      "description": "EDAN field object",
-      "$ref": "field-object.json#/fieldObject"
-    },
-    "online_exhibit": {
-      "type": "string",
-      "description": "This is the link to the online exhibition."
-    },
-    "description": {
-      "type": "object",
-      "items": "EDAN field object",
-      "$ref": "field-object.json#/fieldObject"
-    },
-    "teaser": {
-      "type": "object",
-      "items": "EDAN field object",
-      "$ref": "field-object.json#/fieldObject"
-    },
-    "record_link": {
-      "type": "string",
-      "description": "This is the link to the web page containing info about a physical exhibition."
-    },
-    "categories": {
-      "type": "array",
-      "items": "string"
-    },
-    "comments": {
-      "type": "string"
-    }
-  }
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "Event Record (DRAFT)",
+	"description": "Events are used to describe exhibitions and other events.",
+	"required": [
+		"event_type",
+		"title",
+		"summary",
+		"_drm_record_version",
+		"sponsor",
+		"comments",
+		"online_media",
+		"description",
+		"record_link",
+		"title",
+		"grand_challenges",
+		"record_ID",
+		"event_type",
+		"event_type",
+		"original_db_record_updatedate",
+		"online_exhibit",
+		"location",
+		"categories",
+		"close",
+		"open",
+		"event_status"
+	],
+	"additionalProperties": false,
+	"properties": {
+		"objectgroup_ID": {
+			"type": "string",
+			"description": "Related EDAN Object Group record, if applicable."
+		},
+		"buyticket_id": {
+			"type": "string"
+		},
+		"date": {
+			"type": "string"
+		},
+		"house_id": {
+			"type": "string"
+		},
+		"movie_id": {
+			"type": "string"
+		},
+		"si_movie_id": {
+			"type": "string"
+		},
+		"museum": {
+			"type": "string"
+		},
+		"rating": {
+			"type": "string"
+		},
+		"runtime": {
+			"type": "string"
+		},
+		"showtime": {
+			"type": "string"
+		},
+		"theater": {
+			"type": "string"
+		},
+		"ticketscom_venueval": {
+			"type": "string"
+		},
+		"event_type": {
+			"type": "string",
+			"description": "Exhibition, IMAX, or whatever type this is."
+		},
+		"event_type_detail": {
+			"type": "string",
+			"description": "Exhibition, IMAX, or whatever type this is."
+		},
+		"event_detail": {
+			"type": "object",
+			"description": "EDAN field object describing any specifics for this event."
+		},
+		"showtimes": {
+			"type": "array",
+			"description": "An array of strings representing showtime dates, each containing its own array of strings representing start times."
+		},
+		"location": {
+			"type": "object",
+			"description": "EDAN field object including values for edan_facility_id, floor, building (text).",
+			"additionalProperties": false,
+			"properties": {
+				"content": {
+					"type": "string"
+				},
+				"extended": {
+					"type": "object",
+					"required": [
+						"edan_facility_id",
+						"label",
+						"category",
+						"floor",
+						"building",
+						"location_id"
+					],
+					"additionalProperties": false,
+					"properties": {
+						"edan_facility_id": {
+							"type": "string"
+						},
+						"label": {
+							"type": "string"
+						},
+						"category": {
+							"type": "string"
+						},
+						"floor": {
+							"type": "string"
+						},
+						"building": {
+							"type": "string"
+						},
+						"location_id": {
+							"type": "string"
+						}
+					}
+				}
+			}
+		},
+		"keywords": {
+			"type": "string"
+		},
+		"_drm_record_version": {
+			"type": "string"
+		},
+		"grand_challenges": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			}
+		},
+		"record_ID": {
+			"type": "string"
+		},
+		"summary": {
+			"type": "string"
+		},
+		"online_media": {
+			"type": "array",
+			"description": "EDAN online media object",
+			"items": {
+				"type": "object",
+				"required": [
+					"rights",
+					"caption",
+					"type",
+					"credit",
+					"content"
+				],
+				"additionalProperties": false,
+				"properties": {
+					"thumbnail": {
+						"type": "string"
+					},
+					"rights": {
+						"type": "string"
+					},
+					"caption": {
+						"type": "string"
+					},
+					"mimeType": {
+						"type": "string"
+					},
+					"type": {
+						"type": "string"
+					},
+					"credit": {
+						"type": "string"
+					},
+					"content": {
+						"type": "string"
+					}
+				}
+			}
+		},
+		"event_status": {
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"content": {
+					"type": "string"
+				},
+				"extended": {
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"event_status_original": {
+							"type": "string"
+						}
+					}
+				}
+			}
+		},
+		"sponsor": {
+			"type": "object",
+			"description": "EDAN field object",
+			"required": [
+				"extended",
+				"content"
+			],
+			"additionalProperties": false,
+			"properties": {
+				"extended": {
+					"type": "object",
+					"required": [
+						"label",
+						"category"
+					],
+					"additionalProperties": false,
+					"properties": {
+						"label": {
+							"type": "string"
+						},
+						"category": {
+							"type": "string"
+						}
+					}
+				},
+				"content": {
+					"type": "string"
+				}
+			}
+		},
+		"original_db_record_updatedate": {
+			"type": "string"
+		},
+		"title": {
+			"type": "object",
+			"description": "EDAN field object",
+			"additionalProperties": false,
+			"required": [
+				"extended",
+				"content"
+			],
+			"properties": {
+				"content": {
+					"type": "string"
+				},
+				"extended": {
+					"type": "object",
+					"additionalProperties": false,
+					"required": [
+						"title_sort",
+						"label",
+						"category"
+					],
+					"properties": {
+						"title_sort": {
+							"type": "string"
+						},
+						"label": {
+							"type": "string"
+						},
+						"category": {
+							"type": "string"
+						}
+					}
+				}
+			}
+		},
+		"open": {
+			"type": "object",
+			"description": "EDAN field object",
+			"additionalProperties": false,
+			"required": [
+				"extended",
+				"content"
+			],
+			"properties": {
+				"content": {
+					"type": "string"
+				},
+				"extended": {
+					"type": "object",
+					"additionalProperties": false,
+					"required": [
+						"opening_sort",
+						"open_text",
+						"opening_date"
+					],
+					"properties": {
+						"opening_sort": {
+							"type": "string"
+						},
+						"open_text": {
+							"type": "string"
+						},
+						"opening_date": {
+							"type": "string"
+						}
+					}
+				}
+			}
+		},
+		"close": {
+			"type": "object",
+			"description": "EDAN field object",
+			"additionalProperties": false,
+			"required": [
+				"extended",
+				"content"
+			],
+			"properties": {
+				"content": {
+					"type": "string"
+				},
+				"extended": {
+					"type": "object",
+					"additionalProperties": false,
+					"required": [
+						"closing_date",
+						"closing_sort",
+						"close_text"
+					],
+					"properties": {
+						"closing_date": {
+							"type": "string"
+						},
+						"closing_sort": {
+							"type": "string"
+						},
+						"close_text": {
+							"type": "string"
+						}
+					}
+				}
+			}
+		},
+		"on_sale": {
+			"type": "object",
+			"description": "EDAN field object"
+		},
+		"online_exhibit": {
+			"type": "string",
+			"description": "This is the link to the online exhibition."
+		},
+		"description": {
+			"type": "string"
+		},
+		"teaser": {
+			"type": "object"
+		},
+		"record_link": {
+			"type": "string",
+			"description": "This is the link to the web page containing info about a physical exhibition."
+		},
+		"categories": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			}
+		},
+		"comments": {
+			"type": "string"
+		},
+		"boost": {
+			"type": "number"
+		}
+	}
 }

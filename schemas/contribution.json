@@ -1,6 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
+  "additionalProperties":false,
   "properties": {
     "title": {
       "type": "string",
@@ -9,10 +10,10 @@
     "contributor": {
       "type": "string",
       "id": "http://edan.si.edu/schema/contributor"
+    },
+    "timestamp":{
+    	"type":"number"
     }
   },
-  "id": "http://edan.si.edu/schema",
-  "required": [
-
-  ]
+  "id": "http://edan.si.edu/schema"
 }

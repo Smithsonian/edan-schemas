@@ -1,230 +1,291 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "definitions": {},
-  "id": "http://example.com/example.json",
-  "properties": {
-    "Archival_Repository": {
-      "id": "/properties/Archival_Repository",
-      "type": "string"
-    },
-    "Child_Notes": {
-      "id": "/properties/Child_Notes",
-      "items": {
-        "id": "/properties/Child_Notes/items",
-        "type": "string"
-      },
-      "type": "array"
-    },
-    "Child_Title": {
-      "id": "/properties/Child_Title",
-      "items": {
-        "id": "/properties/Child_Title/items",
-        "type": "string"
-      },
-      "type": "array"
-    },
-    "Collection_Notes": {
-      "id": "/properties/Collection_Notes",
-      "items": {
-        "id": "/properties/Collection_Notes/items",
-        "type": "string"
-      },
-      "type": "array"
-    },
-    "Collection_Title": {
-      "id": "/properties/Collection_Title",
-      "type": "string"
-    },
-    "Corporate_Name": {
-      "id": "/properties/Corporate_Name",
-      "items": {
-        "id": "/properties/Corporate_Name/items",
-        "type": "string"
-      },
-      "type": "array"
-    },
-    "Culture": {
-      "id": "/properties/Culture",
-      "items": {
-        "id": "/properties/Culture/items",
-        "type": "string"
-      },
-      "type": "array"
-    },
-    "Digital_Assets_Available": {
-      "id": "/properties/Digital_Assets_Available",
-      "type": "string"
-    },
-    "Family_Name": {
-      "id": "/properties/Family_Name",
-      "items": {
-        "id": "/properties/Family_Name/items",
-        "type": "string"
-      },
-      "type": "array"
-    },
-    "Function": {
-      "id": "/properties/Function",
-      "items": {
-        "id": "/properties/Function/items",
-        "type": "string"
-      },
-      "type": "array"
-    },
-    "Geographic_Name": {
-      "id": "/properties/Geographic_Name",
-      "items": {
-        "id": "/properties/Geographic_Name/items",
-        "type": "string"
-      },
-      "type": "array"
-    },
-    "Personal_Name": {
-      "id": "/properties/Personal_Name",
-      "items": {
-        "id": "/properties/Personal_Name/items",
-        "type": "string"
-      },
-      "type": "array"
-    },
-    "Topic": {
-      "id": "/properties/Topic",
-      "items": {
-        "id": "/properties/Topic/items",
-        "type": "string"
-      },
-      "type": "array"
-    },
-    "UniformTitle": {
-      "id": "/properties/UniformTitle",
-      "items": {
-        "id": "/properties/UniformTitle/items",
-        "type": "string"
-      },
-      "type": "array"
-    },
-    "coll_abstract": {
-      "id": "/properties/coll_abstract",
-      "items": {
-        "id": "/properties/coll_abstract/items",
-        "type": "string"
-      },
-      "type": "array"
-    },
-    "coll_corpname": {
-      "id": "/properties/coll_corpname",
-      "items": {
-        "id": "/properties/coll_corpname/items",
-        "type": "string"
-      },
-      "type": "array"
-    },
-    "coll_dates": {
-      "id": "/properties/coll_dates",
-      "items": {
-        "id": "/properties/coll_dates/items",
-        "type": "string"
-      },
-      "type": "array"
-    },
-    "coll_fulltitle": {
-      "id": "/properties/coll_fulltitle",
-      "type": "string"
-    },
-    "coll_language": {
-      "id": "/properties/coll_language",
-      "items": {
-        "id": "/properties/coll_language/items",
-        "type": "string"
-      },
-      "type": "array"
-    },
-    "coll_mainagencycode": {
-      "id": "/properties/coll_mainagencycode",
-      "type": "string"
-    },
-    "coll_size": {
-      "id": "/properties/coll_size",
-      "items": {
-        "id": "/properties/coll_size/items",
-        "type": "string"
-      },
-      "type": "array"
-    },
-    "coll_unitid": {
-      "id": "/properties/coll_unitid",
-      "type": "string"
-    },
-    "coll_unittitle": {
-      "id": "/properties/coll_unittitle",
-      "type": "string"
-    },
-    "content": {
-      "id": "/properties/content",
-      "items": {
-        "id": "/properties/content/items",
-        "type": "string"
-      },
-      "type": "array"
-    },
-    "creator": {
-      "id": "/properties/creator",
-      "items": {
-        "id": "/properties/creator/items",
-        "type": "string"
-      },
-      "type": "array"
-    },
-    "dao": {
-      "id": "/properties/dao",
-      "items": {
-        "id": "/properties/dao/items",
-        "type": "string"
-      },
-      "type": "array"
-    },
-    "fileSignature": {
-      "id": "/properties/fileSignature",
-      "type": "string"
-    },
-    "filelocation": {
-      "id": "/properties/filelocation",
-      "type": "string"
-    },
-    "id": {
-      "id": "/properties/id",
-      "type": "string"
-    },
-    "online_media": {
-      "id": "/properties/online_media",
-      "properties": {
-        "mediaCount": {
-          "id": "/properties/online_media/properties/mediaCount",
-          "type": "integer"
-        }
-      },
-      "type": "object"
-    },
-    "record_ID": {
-      "id": "/properties/record_ID",
-      "type": "string"
-    },
-    "record_link": {
-      "id": "/properties/record_link",
-      "type": "string"
-    },
-    "sort_creator": {
-      "id": "/properties/sort_creator",
-      "type": "string"
-    },
-    "sort_title": {
-      "id": "/properties/sort_title",
-      "type": "string"
-    },
-    "unit_code": {
-      "id": "/properties/unit_code",
-      "type": "string"
-    }
-  },
-  "type": "object"
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "http://example.com/example.json",
+	"required": [
+		"coll_fulltitle",
+		"coll_abstract",
+		"coll_unitid",
+		"Archival_Repository",
+		"record_ID",
+		"filelocation",
+		"Collection_Title",
+		"Collection_Notes",
+		"coll_corpname",
+		"Digital_Assets_Available",
+		"unit_code",
+		"id",
+		"coll_mainagencycode",
+		"coll_unittitle"
+	],
+	"additionalProperties": false,
+	"properties": {
+		"Archival_Repository": {
+			"$id": "/properties/Archival_Repository",
+			"additionalProperties": false,
+			"type": "string"
+		},
+		"Child_Notes": {
+			"$id": "/properties/Child_Notes",
+			"items": {
+				"$id": "/properties/Child_Notes/items",
+				"additionalProperties": false,
+				"type": "string",
+				"properties": {
+					"ead": {
+						"type": "string"
+					},
+					"refID": {
+						"type": "string"
+					},
+					"content": {
+						"type": "string"
+					}
+				}
+			},
+			"additionalProperties": false,
+			"type":	"array"
+		},
+		"Child_Title": {
+			"$id": "/properties/Child_Title",
+			"items": {
+				"$id": "/properties/Child_Title/items",
+				"additionalProperties": false,
+				"type": "string"
+			},
+			"additionalProperties": false,
+			"type": "array"
+		},
+		"Collection_Notes": {
+			"$id": "/properties/Collection_Notes",
+			"items": {
+				"$id": "/properties/Collection_Notes/items",
+				"additionalProperties": false,
+				"type": "object",
+				"properties": {
+					"ead": {
+						"type": "string"
+					},
+					"refID": {
+						"type": "string"
+					},
+					"content": {
+						"type": "string"
+					}
+				}
+			},
+			"additionalProperties": false,
+			"type": "array"
+		},
+		"Collection_Title": {
+			"$id": "/properties/Collection_Title",
+			"type": "string"
+		},
+		"Corporate_Name": {
+			"$id": "/properties/Corporate_Name",
+			"items": {
+				"$id": "/properties/Corporate_Name/items",
+				"type": "string"
+			},
+			"type": "array"
+		},
+		"Culture": {
+			"$id": "/properties/Culture",
+			"items": {
+				"$id": "/properties/Culture/items",
+				"type": "string"
+			},
+			"type": "array"
+		},
+		"Digital_Assets_Available": {
+			"$id": "/properties/Digital_Assets_Available",
+			"type": "string",
+			"required": [
+				"true",
+				"false"
+			]
+		},
+		"Family_Name": {
+			"$id": "/properties/Family_Name",
+			"items": {
+				"$id": "/properties/Family_Name/items",
+				"type": "string"
+			},
+			"type":	"array"
+		},
+		"Function": {
+			"$id": "/properties/Function",
+			"items": {
+				"$id": "/properties/Function/items",
+				"type": "string"
+			},
+			"type": "array"
+		},
+		"Geographic_Name": {
+			"$id": "/properties/Geographic_Name",
+			"items": {
+				"$id": "/properties/Geographic_Name/items",
+				"type": "string"
+			},
+			"type": "array"
+		},
+		"Personal_Name": {
+			"$id": "/properties/Personal_Name",
+			"items": {
+				"$id": "/properties/Personal_Name/items",
+				"additionalProperties": false,
+				"type": "string"
+			},
+			"type": "array"
+		},
+		"Topic": {
+			"$id": "/properties/Topic",
+			"items": {
+				"$id": "/properties/Topic/items",
+				"type": "string"
+			},
+			"type": "array"
+		},
+		"UniformTitle": {
+			"$id": "/properties/UniformTitle",
+			"items": {
+				"$id": "/properties/UniformTitle/items",
+				"type": "string"
+			},
+			"type": "array"
+		},
+		"coll_abstract": {
+			"$id": "/properties/coll_abstract",
+			"items": {
+				"$id": "/properties/coll_abstract/items",
+				"type": "string"
+			},
+			"additionalProperties": false,
+			"type": "array"
+		},
+		"coll_corpname": {
+			"$id": "/properties/coll_corpname",
+			"items": {
+				"$id": "/properties/coll_corpname/items",
+				"type": "string"
+			},
+			"type": "array"
+		},
+		"coll_dates": {
+			"$id": "/properties/coll_dates",
+			"items": {
+				"$id": "/properties/coll_dates/items",
+				"type": "string"
+			},
+			"additionalProperties": false,
+			"type": "array"
+		},
+		"coll_fulltitle": {
+			"$id": "/properties/coll_fulltitle",
+			"type": "string"
+		},
+		"coll_language": {
+			"$id": "/properties/coll_language",
+			"items": {
+				"$id": "/properties/coll_language/items",
+				"type": "string"
+			},
+			"additionalProperties": false,
+			"type": "array"
+		},
+		"coll_mainagencycode": {
+			"$id": "/properties/coll_mainagencycode",
+			"additionalProperties": false,
+			"type": "string"
+		},
+		"coll_size": {
+			"$id": "/properties/coll_size",
+			"items": {
+				"$id": "/properties/coll_size/items",
+				"type": "string"
+			},
+			"additionalProperties": false,
+			"type": "array"
+		},
+		"coll_unitid": {
+			"$id": "/properties/coll_unitid",
+			"type": "string"
+		},
+		"coll_unittitle": {
+			"$id": "/properties/coll_unittitle",
+			"type": "string"
+		},
+		"content": {
+			"$id": "/properties/content",
+			"items": {
+				"$id": "/properties/content/items",
+				"type": "string"
+			},
+			"type": "array"
+		},
+		"creator": {
+			"$id": "/properties/creator",
+			"items": {
+				"$id": "/properties/creator/items",
+				"type": "string"
+			},
+			"additionalProperties": false,
+			"type": "array"
+		},
+		"dao": {
+			"$id": "/properties/dao",
+			"items": {
+				"$id": "/properties/dao/items",
+				"type": "string"
+			},
+			"type": "array"
+		},
+		"fileSignature": {
+			"$id": "/properties/fileSignature",
+			"type": "string"
+		},
+		"filelocation": {
+			"$id": "/properties/filelocation",
+			"type": "string"
+		},
+		"id": {
+			"$id": "/properties/id",
+			"type": "string"
+		},
+		"online_media": {
+			"$id": "/properties/online_media",
+			"additionalProperties": false,
+			"properties": {
+				"mediaCount": {
+					"$id": "/properties/online_media/properties/mediaCount",
+					"type": "integer"
+				}
+			},
+			"type": "object"
+		},
+		"record_ID": {
+			"$id": "/properties/record_ID",
+			"type": "string"
+		},
+		"record_link": {
+			"$id": "/properties/record_link",
+			"type": "string"
+		},
+		"sort_creator": {
+			"$id": "/properties/sort_creator",
+			"type": "string"
+		},
+		"sort_title": {
+			"$id": "/properties/sort_title",
+			"type": "string"
+		},
+		"unit_code": {
+			"$id": "/properties/unit_code",
+			"type": "string"
+		},
+		"edan_ID": {
+			"$id": "/properties/edan_ID",
+			"type": "string"
+		}
+	},
+	"type": "object"
 }

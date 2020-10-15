@@ -858,7 +858,7 @@
           ]
         },
         "QUOTIENTTEST": {
-          "type": "object",
+          "type": ["object","string"],
           "properties": {
             "publicSearch": {
               "type": "boolean",
@@ -970,29 +970,8 @@
           ]
         }
       },
-      "id": "http://edan.si.edu/schema/app_codes",
-      "required": [
-        "NPGOGMT_TEST",
-        "NMAH",
-        "NPGOGMT_TEST2",
-        "OGMT_TEST",
-        "TESTER",
-        "ocio_wsd_test",
-        "QUOTIENT_CI",
-        "NMAAHCOGMT_TEST",
-        "AAA_TEST",
-        "NMNH_TEST",
-        "SIAOGMT_TEST",
-        "ANDREW_CI",
-        "QUOTIENTTEST",
-        "EDAN_CM",
-        "MISS_NMAAHC",
-        "MISS_NMAAHC_MOBILE"
-      ]
+      "id": "http://edan.si.edu/schema/app_codes"
     }
   },
-  "id": "http://edan.si.edu/schema",
-  "required": [
-
-  ]
+  "id": "http://edan.si.edu/schema"
 }

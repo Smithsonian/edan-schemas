@@ -1,6 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
+  "additionalProperties":false,
   "properties": {
     "subType": {
       "type": "string",
@@ -48,6 +49,7 @@
     },
     "action": {
       "type": "object",
+  	  "additionalProperties":false,
       "properties": {
         "emailSent": {
           "type": "boolean",

@@ -139,7 +139,7 @@
 			"$id": "http://edan.si.edu/schema/featured"
 		},
 		"groupType": {
-			"type": "string",
+			"type": "integer",
 			"$id": "http://edan.si.edu/schema/groupType"
 		},
 		"published": {

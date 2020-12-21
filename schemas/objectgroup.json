@@ -24,7 +24,6 @@
 		},
 		"page": {
 			"type": "object",
-			"additionalProperties": false,
 			"$id": "http://edan.si.edu/schema/page"
 		},
 		"feature": {

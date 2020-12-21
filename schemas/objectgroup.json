@@ -10,7 +10,6 @@
 		"feature",
 		"keywords",
 		"description",
-		"page",
 		"published",
 		"menu",
 		"title"
@@ -26,29 +25,6 @@
 		"page": {
 			"type": "object",
 			"additionalProperties": false,
-			"properties": {
-				"listTitle": {
-					"type": "string"
-				},
-				"settings": {
-					"type": "object"
-				},
-				"feature": {
-					"type": "object"
-				},
-				"title": {
-					"type": "string"
-				},
-				"pageId": {
-					"type": "string"
-				},
-				"url": {
-					"type": "string"
-				},
-				"content": {
-					"type": "string"
-				}
-			},
 			"$id": "http://edan.si.edu/schema/page"
 		},
 		"feature": {

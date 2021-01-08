@@ -146,10 +146,6 @@
 			"type": "string",
 			"$id": "http://jsonschema.net/description"
 		},
-		"groupType": {
-			"type": "integer",
-			"$id": "http://jsonschema.net/groupType"
-		},
 		"featured": {
 			"type": "integer",
 			"$id": "http://jsonschema.net/featured"

@@ -114,7 +114,7 @@
 			"$id": "http://edan.si.edu/schema/featured"
 		},
 		"groupType": {
-			"type": "integer",
+			"type": "string",
 			"$id": "http://edan.si.edu/schema/groupType"
 		},
 		"published": {

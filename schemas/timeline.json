@@ -20,6 +20,11 @@
 			"type": "object",
 			"title": "Featured Image",
 			"description": "The object holding the timeline's primary image. (Named to be consistent with the objectgroup.content.feature field)",
+			"required": [
+				"url",
+				"thumbnail",
+				"alt"
+			],
 			"additionalProperties": false,
 			"properties": {
 				"url": {

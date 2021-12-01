@@ -41,7 +41,6 @@
 				"end_date": {
 					"title": "End Date",
 					"type": "object",
-					"title": "",
 					"required": [
 						"date_time"
 					],

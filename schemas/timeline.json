@@ -3,6 +3,12 @@
 	"$id": "http://edan.si.edu/schema/timeline",
 	"title": "Timeline",
 	"type": "object",
+	"required": [
+		"content",
+		"feature",
+		"sharing_description",
+		"cosmological"
+	],
 	"additionalProperties": false,
 	"properties": {
 		"content": {

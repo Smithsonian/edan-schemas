@@ -3,6 +3,11 @@
 	"$id": "http://edan.si.edu/schema/timeline",
 	"title": "Timeline Event",
 	"type": "object",
+	"required": [
+		"era",
+		"dates",
+		"autolink"
+	],
 	"additionalProperties": false,
 	"properties": {
 		"era": {

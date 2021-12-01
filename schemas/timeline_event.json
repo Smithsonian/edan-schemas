@@ -1,5 +1,7 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "http://edan.si.edu/schema/timeline",
+	"title": "Timeline Event",
 	"type": "object",
 	"additionalProperties": false,
 	"properties": {

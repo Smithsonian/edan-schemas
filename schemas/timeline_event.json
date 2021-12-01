@@ -92,6 +92,9 @@
 			"type": "object",
 			"title": "Event Media",
 			"description": "Optional media that can be associated with the event.",
+			"required": [
+				"url"
+			],
 			"additionalProperties": false,
 			"properties": {
 				"url": {

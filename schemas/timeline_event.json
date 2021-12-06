@@ -1,0 +1,161 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "http://edan.si.edu/schema/timeline",
+	"title": "Timeline Event",
+	"type": "object",
+	"required": [
+		"era",
+		"dates",
+		"autolink"
+	],
+	"additionalProperties": false,
+	"properties": {
+		"era": {
+			"type": "boolean",
+			"title": "Era",
+			"description": "A boolean flag that sets the event_timeline as an Era, which are used to label a span of time on the timeline navigation. Eras only support the content.dates and content.text fields."
+		},
+		"dates": {
+			"type": "object",
+			"title": "Dates",
+			"description": "An object that holds values relating to the dates within the event.",
+			"required": [
+				"start_date",
+				"end_date"
+			],
+			"properties": {
+				"start_date": {
+					"type": "object",
+					"title": "Start Date",
+					"required": [
+						"date_time"
+					],
+					"additionalProperties": false,
+					"properties": {
+						"date_time": {
+							"type": "string",
+							"title": "Date and Time",
+							"description": "A string that represents the date and time of the event. Determines the event's placement on the timeline Uses the ISO-8601 (yyyy-mm-ddThh:mm:ss) date format except that the year value may exceed four digits when using cosmological scale. (When rendering, should be split and each value should be put into their corresponding fields in the timeline.js format)",
+							"minLength": 1
+						},
+						"display_date": {
+							"type": "string",
+							"title": "Display Date",
+							"description": "An optional string that overrides the default date formatting in the timeline navigation."
+						}
+					}
+				},
+				"end_date": {
+					"title": "End Date",
+					"type": "object",
+					"required": [
+						"date_time"
+					],
+					"additionalProperties": false,
+					"properties": {
+						"date_time": {
+							"type": "string",
+							"title": "Date and Time",
+							"description": "A string that represents the date and time of the event. Uses the ISO-8601 (yyyy-mm-ddThh:mm:ss) date format except that the year value may exceed four digits when using cosmological scale. (When rendering, should be split and each value should be put into their corresponding fields in the timeline.js format)",
+							"minLength": 1
+						},
+						"display_date": {
+							"type": "string",
+							"title": "Display Date",
+							"description": "An optional string that overrides the default date formatting in the timeline navigation."
+						}
+					}
+				},
+				"display_date": {
+					"type": "string",
+					"title": "Display Date",
+					"description": "An optional string that overrides all default date formatting in the timeline navigation."
+				}
+			}
+		},
+		"group": {
+			"type": "string",
+			"title": "Group",
+			"description": "An optional string that allows multiple events with the same value to be grouped together on the timeline navigation."
+		},
+		"autolink": {
+			"type": "boolean",
+			"title": "Autolink",
+			"description": "A boolean flag that automatically links any URLs and email addresses."
+		},
+		"content": {
+			"type": "string",
+			"title": "Content",
+			"description": "The html content for describing the event. This will likely take up the bulk of the space in the events display."
+		},
+		"media": {
+			"type": "object",
+			"title": "Event Media",
+			"description": "Optional media that can be associated with the event.",
+			"required": [
+				"url"
+			],
+			"additionalProperties": false,
+			"properties": {
+				"url": {
+					"type": "string",
+					"title": "URL",
+					"description": "A URL to display in the timeline slide. For a list of supported media types, see https://timeline.knightlab.com/docs/media-types.html. Currently, the iframe and blockquote media objects are not supported."
+				},
+				"thumbnail": {
+					"type": "string",
+					"title": "Thumbnail",
+					"description": "An image URL used as the icon for the event in the timeline. If omitted, Timeline will use an icon based on the media type. Not relevant for title slides because they do not have a marker."
+				},
+				"title": {
+					"type": "string",
+					"title": "Title",
+					"description": "For image media types, a title for the image. If none is provided, the caption, if any, will be used."
+				},
+				"alt": {
+					"type": "string",
+					"title": "Alternate Text",
+					"description": "For image media types, a short textual description of the image. Required for 508 compliance."
+				},
+				"link": {
+					"type": "string",
+					"title": "External Link",
+					"description": "Optional URL to use as the href for wrapping the media with an <a> tag."
+				},
+				"link_target": {
+					"type": "string",
+					"title": "Link Target",
+					"description": "Optional target to be associated with the media link."
+				},
+				"caption": {
+					"type": "string",
+					"title": "Caption",
+					"description": "A brief text to accompany the media."
+				},
+				"credit": {
+					"type": "string",
+					"title": "Credit",
+					"description": "The source attribution of the media."
+				}
+			}
+		},
+		"background": {
+			"type": "object",
+			"title": "Background Display",
+			"description": "An optional image and color that can be provided to the event's background.",
+			"additionalProperties": false,
+			"properties": {
+				"url": {
+					"type": "string",
+					"title": "Image URL",
+					"description": "The URL for the event's background image."
+				},
+				"color": {
+					"type": "string",
+					"title": "Color",
+					"description": "A CSS color in hexadecimal or a valid CSS color keyword."
+				}
+			}
+		}
+	}
+}

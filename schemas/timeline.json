@@ -1,0 +1,58 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "http://edan.si.edu/schema/timeline",
+	"title": "Timeline",
+	"type": "object",
+	"required": [
+		"content",
+		"feature",
+		"sharing_description",
+		"cosmological"
+	],
+	"additionalProperties": false,
+	"properties": {
+		"content": {
+			"type": "string",
+			"title": "Content",
+			"description": "The HTML-enabled description that serves to introduce the timeline. Usually paired with the Featured Image and shown before the timeline. (Named to be consistent with the objectgroup.content.content field)"
+		},
+		"feature": {
+			"type": "object",
+			"title": "Featured Image",
+			"description": "The object holding the timeline's primary image. (Named to be consistent with the objectgroup.content.feature field)",
+			"required": [
+				"url",
+				"thumbnail",
+				"alt"
+			],
+			"additionalProperties": false,
+			"properties": {
+				"url": {
+					"type": "string",
+					"title": "Image URL",
+					"description": "The primary image shown on the Timeline record's page. Usually paired with the Content field and shown before the timeline."
+				},
+				"thumbnail": {
+					"type": "string",
+					"title": "Image Thumbnail",
+					"description": "The small image used when the Timeline record is displayed in a list of records."
+				},
+				"alt": {
+					"type": "string",
+					"title": "Image Alternate Text",
+					"description": "A short textual description of the Featured Image. Required for 508 compliance."
+				}
+			}
+		},
+		"description": {
+			"type": "string",
+			"title": "Sharing Description (Meta)",
+			"description": "A short description of the Timeline, intended to be displayed when sharing the record on social media. Supports limited HTML and is restricted to 250 characters."
+		},
+		"cosmological": {
+			"type": "boolean",
+			"title": "Cosmological",
+			"description": "A boolean flag that allows timeline events to have year values that exceed four digits. Defaults to false."
+		}
+	}
+}

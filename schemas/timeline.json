@@ -14,12 +14,12 @@
 		"content": {
 			"type": "string",
 			"title": "Content",
-			"description": "The HTML-enabled description that serves to introduce the timeline. Usually paired with the Featured Image and shown before the timeline. (Named to be consistent with the objectgroup.content.content field)"
+			"description": "The HTML-enabled description that serves to introduce the timeline. Usually paired with the Featured Image and shown before the timeline."
 		},
 		"feature": {
 			"type": "object",
 			"title": "Featured Image",
-			"description": "The object holding the timeline's primary image. (Named to be consistent with the objectgroup.content.feature field)",
+			"description": "The object holding the timeline's primary image.",
 			"required": [
 				"url",
 				"thumbnail",

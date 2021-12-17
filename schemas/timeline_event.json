@@ -56,7 +56,7 @@
 						"date_time": {
 							"type": "string",
 							"title": "Date and Time",
-							"description": "A string that represents the date and time of the event. Uses the ISO-8601 (yyyy-mm-ddThh:mm:ss) date format except that the year value may exceed four digits when using cosmological scale. (When rendering, should be split and each value should be put into their corresponding fields in the timeline.js format)",
+							"description": "A string that represents the date and time of the event. Uses the ISO-8601 (yyyy-mm-ddThh:mm:ss) date format except that the year value may exceed four digits when using cosmological scale.",
 							"minLength": 1
 						},
 						"display_date": {

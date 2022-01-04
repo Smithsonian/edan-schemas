@@ -5,7 +5,7 @@
 	"type": "object",
 	"required": [
 		"era",
-		"dates",
+		"title_slide",
 		"autolink"
 	],
 	"additionalProperties": false,
@@ -15,21 +15,19 @@
 			"title": "Era",
 			"description": "A boolean flag that sets the event_timeline as an Era, which are used to label a span of time on the timeline navigation. Eras only support the content.dates and content.text fields."
 		},
+		"title_slide": {
+			"type": "boolean",
+			"title": "Title Slide",
+			"description": "A boolean flag that sets the event_timeline as the Title Slide of the timeline, This title slide is identical to an event with the exception that the start date is not required."
+		},
 		"dates": {
 			"type": "object",
 			"title": "Dates",
 			"description": "An object that holds values relating to the dates within the event.",
-			"required": [
-				"start_date",
-				"end_date"
-			],
 			"properties": {
 				"start_date": {
 					"type": "object",
 					"title": "Start Date",
-					"required": [
-						"date_time"
-					],
 					"additionalProperties": false,
 					"properties": {
 						"date_time": {
@@ -48,9 +46,6 @@
 				"end_date": {
 					"title": "End Date",
 					"type": "object",
-					"required": [
-						"date_time"
-					],
 					"additionalProperties": false,
 					"properties": {
 						"date_time": {

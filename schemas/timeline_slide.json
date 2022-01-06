@@ -18,7 +18,7 @@
 		"dates": {
 			"type": "object",
 			"title": "Dates",
-			"description": "An object that holds values relating to the dates within the event.",
+			"description": "An object that holds values relating to the dates within the slide.",
 			"properties": {
 				"start_date": {
 					"type": "object",
@@ -28,7 +28,7 @@
 						"date_time": {
 							"type": "string",
 							"title": "Date and Time",
-							"description": "A string that represents the date and time of the event. Determines the event's placement on the timeline Uses the ISO-8601 (yyyy-mm-ddThh:mm:ss) date format except that the year value may exceed four digits when using cosmological scale. (When rendering, should be split and each value should be put into their corresponding fields in the timeline.js format)",
+							"description": "A string that represents the date and time of the slide. Determines the slide's placement on the timeline Uses the ISO-8601 (yyyy-mm-ddThh:mm:ss) date format except that the year value may exceed four digits when using cosmological scale. (When rendering, should be split and each value should be put into their corresponding fields in the timeline.js format)",
 							"minLength": 1
 						},
 						"display_date": {
@@ -46,7 +46,7 @@
 						"date_time": {
 							"type": "string",
 							"title": "Date and Time",
-							"description": "A string that represents the date and time of the event. Uses the ISO-8601 (yyyy-mm-ddThh:mm:ss) date format except that the year value may exceed four digits when using cosmological scale.",
+							"description": "A string that represents the date and time of the slide. Uses the ISO-8601 (yyyy-mm-ddThh:mm:ss) date format except that the year value may exceed four digits when using cosmological scale.",
 							"minLength": 1
 						},
 						"display_date": {
@@ -76,12 +76,12 @@
 		"content": {
 			"type": "string",
 			"title": "Content",
-			"description": "The html content for describing the event. This will likely take up the bulk of the space in the events display."
+			"description": "The html content for describing the slide. This will likely take up the bulk of the space in the slide's display."
 		},
 		"media": {
 			"type": "object",
-			"title": "Event Media",
-			"description": "Optional media that can be associated with the event.",
+			"title": "Slide Media",
+			"description": "Optional media that can be associated with the slide.",
 			"required": [
 				"url"
 			],
@@ -132,13 +132,13 @@
 		"background": {
 			"type": "object",
 			"title": "Background Display",
-			"description": "An optional image and color that can be provided to the event's background.",
+			"description": "An optional image and color that can be provided to the slide's background.",
 			"additionalProperties": false,
 			"properties": {
 				"url": {
 					"type": "string",
 					"title": "Image URL",
-					"description": "The URL for the event's background image."
+					"description": "The URL for the slide's background image."
 				},
 				"color": {
 					"type": "string",

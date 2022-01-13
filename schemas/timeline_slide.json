@@ -4,8 +4,7 @@
 	"title": "Timeline Slide",
 	"type": "object",
 	"required": [
-		"slide_type",
-		"autolink"
+		"slide_type"
 	],
 	"additionalProperties": false,
 	"properties": {
@@ -28,8 +27,7 @@
 						"date_time": {
 							"type": "string",
 							"title": "Date and Time",
-							"description": "A string that represents the date and time of the slide. Determines the slide's placement on the timeline Uses the ISO-8601 (yyyy-mm-ddThh:mm:ss) date format except that the year value may exceed four digits when using cosmological scale. (When rendering, should be split and each value should be put into their corresponding fields in the timeline.js format)",
-							"minLength": 1
+							"description": "A string that represents the date and time of the slide. Determines the slide's placement on the timeline Uses the ISO-8601 (yyyy-mm-ddThh:mm:ss) date format except that the year value may exceed four digits when using cosmological scale. (When rendering, should be split and each value should be put into their corresponding fields in the timeline.js format)"
 						},
 						"display_date": {
 							"type": "string",
@@ -46,8 +44,7 @@
 						"date_time": {
 							"type": "string",
 							"title": "Date and Time",
-							"description": "A string that represents the date and time of the slide. Uses the ISO-8601 (yyyy-mm-ddThh:mm:ss) date format except that the year value may exceed four digits when using cosmological scale.",
-							"minLength": 1
+							"description": "A string that represents the date and time of the slide. Uses the ISO-8601 (yyyy-mm-ddThh:mm:ss) date format except that the year value may exceed four digits when using cosmological scale."
 						},
 						"display_date": {
 							"type": "string",

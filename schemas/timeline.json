@@ -48,11 +48,6 @@
 			"type": "string",
 			"title": "Sharing Description (Meta)",
 			"description": "A short description of the Timeline, intended to be displayed when sharing the record on social media. Supports limited HTML and is restricted to 250 characters."
-		},
-		"cosmological": {
-			"type": "boolean",
-			"title": "Cosmological",
-			"description": "A boolean flag that allows timeline events to have year values that exceed four digits. Defaults to false."
 		}
 	}
 }

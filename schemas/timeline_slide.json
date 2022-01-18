@@ -1,42 +1,33 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
 	"$id": "http://edan.si.edu/schema/timeline",
-	"title": "Timeline Event",
+	"title": "Timeline Slide",
 	"type": "object",
 	"required": [
-		"era",
-		"dates",
-		"autolink"
+		"slide_type"
 	],
 	"additionalProperties": false,
 	"properties": {
-		"era": {
-			"type": "boolean",
-			"title": "Era",
-			"description": "A boolean flag that sets the event_timeline as an Era, which are used to label a span of time on the timeline navigation. Eras only support the content.dates and content.text fields."
+		"slide_type": {
+			"type": "string",
+			"title": "Slide Type",
+			"enum": ["event", "title", "era"],
+			"description": "The type of slide, either event, title, or era. Events slides populate timeline navigation entries and require a start date. A timeline require at least one event. Title slides are an optional slide displayed first on a timeline. They do not accept a start date and do not create an entry in the timeline navigation. Only one title slide may be associated with a timeline. Era slides are an optional slide to create spans of time in the timeline navigation. They only accept a start and end date. Many era slides may be associated with a timeline."
 		},
 		"dates": {
 			"type": "object",
 			"title": "Dates",
-			"description": "An object that holds values relating to the dates within the event.",
-			"required": [
-				"start_date",
-				"end_date"
-			],
+			"description": "An object that holds values relating to the dates within the slide.",
 			"properties": {
 				"start_date": {
 					"type": "object",
 					"title": "Start Date",
-					"required": [
-						"date_time"
-					],
 					"additionalProperties": false,
 					"properties": {
 						"date_time": {
 							"type": "string",
 							"title": "Date and Time",
-							"description": "A string that represents the date and time of the event. Determines the event's placement on the timeline Uses the ISO-8601 (yyyy-mm-ddThh:mm:ss) date format except that the year value may exceed four digits when using cosmological scale. (When rendering, should be split and each value should be put into their corresponding fields in the timeline.js format)",
-							"minLength": 1
+							"description": "A string that represents the date and time of the slide. Determines the slide's placement on the timeline Uses the ISO-8601 (yyyy-mm-ddThh:mm:ss) date format except that the year value may exceed four digits when using cosmological scale. (When rendering, should be split and each value should be put into their corresponding fields in the timeline.js format)"
 						},
 						"display_date": {
 							"type": "string",
@@ -48,16 +39,12 @@
 				"end_date": {
 					"title": "End Date",
 					"type": "object",
-					"required": [
-						"date_time"
-					],
 					"additionalProperties": false,
 					"properties": {
 						"date_time": {
 							"type": "string",
 							"title": "Date and Time",
-							"description": "A string that represents the date and time of the event. Uses the ISO-8601 (yyyy-mm-ddThh:mm:ss) date format except that the year value may exceed four digits when using cosmological scale.",
-							"minLength": 1
+							"description": "A string that represents the date and time of the slide. Uses the ISO-8601 (yyyy-mm-ddThh:mm:ss) date format except that the year value may exceed four digits when using cosmological scale."
 						},
 						"display_date": {
 							"type": "string",
@@ -86,12 +73,12 @@
 		"content": {
 			"type": "string",
 			"title": "Content",
-			"description": "The html content for describing the event. This will likely take up the bulk of the space in the events display."
+			"description": "The html content for describing the slide. This will likely take up the bulk of the space in the slide's display."
 		},
 		"media": {
 			"type": "object",
-			"title": "Event Media",
-			"description": "Optional media that can be associated with the event.",
+			"title": "Slide Media",
+			"description": "Optional media that can be associated with the slide.",
 			"required": [
 				"url"
 			],
@@ -142,13 +129,13 @@
 		"background": {
 			"type": "object",
 			"title": "Background Display",
-			"description": "An optional image and color that can be provided to the event's background.",
+			"description": "An optional image and color that can be provided to the slide's background.",
 			"additionalProperties": false,
 			"properties": {
 				"url": {
 					"type": "string",
 					"title": "Image URL",
-					"description": "The URL for the event's background image."
+					"description": "The URL for the slide's background image."
 				},
 				"color": {
 					"type": "string",

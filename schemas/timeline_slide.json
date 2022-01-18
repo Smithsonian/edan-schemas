@@ -11,8 +11,8 @@
 		"slide_type": {
 			"type": "string",
 			"title": "Slide Type",
-			"enum": ["event", "title", "era"]
-			"description": "A enum that sets the timeline_slide as the either an event, title slide, or era. An event slide uses every field available in this schema and requires at least the start_date.date_time field. A Title Slide is identical to an event with the exception that the start date is not required. Eras are used to label a span of time on the timeline navigation. Eras only support the content.dates and content.text fields. Eras also require the the start_date.date_time and end_date.date_time fields."
+			"enum": ["event", "title", "era"],
+			"description": "The type of slide, either event, title, or era. Events slides populate timeline navigation entries and require a start date. A timeline require at least one event. Title slides are an optional slide displayed first on a timeline. They do not accept a start date and do not create an entry in the timeline navigation. Only one title slide may be associated with a timeline. Era slides are an optional slide to create spans of time in the timeline navigation. They only accept a start and end date. Many era slides may be associated with a timeline."
 		},
 		"dates": {
 			"type": "object",

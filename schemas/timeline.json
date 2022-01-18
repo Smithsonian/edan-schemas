@@ -6,8 +6,7 @@
 	"required": [
 		"content",
 		"feature",
-		"description",
-		"cosmological"
+		"description"
 	],
 	"additionalProperties": false,
 	"properties": {

@@ -1,8 +1,8 @@
 {
 	"$schema": "https://json-schema.org/draft/2019-09/schema",
 	"$id": "http://edan.si.edu/schema/3d_package",
-	"title": "3d_package schema",
-	"description": "This schema defines the wrapper around the voyager package schema that supports 3d",
+	"title": "3D Package",
+	"description": "The wrapper for the Voyager package schemas that supports 3D",
 	"type": "object",
 	"required": [
 		"document",
@@ -14,16 +14,18 @@
 	"properties": {
 		"document": {
 			"type": "object",
-			"title": "This is the voyager schema",
+			"title": "Voyager Package",
+			"description": "The Voyager data necessary to render the Voyager 3D interface",
 			"default": {}
 		},
 		"versions": {
 			"type": "array",
-			"title": "The versions array.. Noting passed UUIDS submitted and stored in repo",
+			"title": "Versions",
+			"description": "An array of associated UUIDs and version IDs",
 			"default": [],
 			"items": {
 				"type": "string",
-				"title": "UUID and versionid",
+				"title": "A single UUID or version ID",
 				"examples": [
 					"8455b195-6d82-4f04-b830-f45a74ec6ff9_1638199280442",
 					"8455b195-6d82-4f04-b830-f45a74ec6ff9_1638200420337"
@@ -38,12 +40,14 @@
 		},
 		"resources": {
 			"type": "array",
-			"title": "The resources array is referene auxiullary files",
+			"title": "Resources",
+			"description": "An array of resources associated with the Voyager package",
 			"default": [],
 			"items": {
 				"type": "object",
-				"title": "Items in the array objects",
-				"_comment": "skipping type, category for now",
+				"title": "Resource",
+				"description": "A resource associated with the Voyager package",
+				"_comment": "The type and category properties are not currently required",
 				"required": [
 					"filename",
 					"url",
@@ -54,7 +58,8 @@
 				"properties": {
 					"filename": {
 						"type": "string",
-						"title": "The filename Schema",
+						"title": "File Name",
+						"description": "The filename of the resource, including the file extension",
 						"examples": [
 							"1996_0008_0001-150k-4096-gltf_std.zip",
 							"1996_0008_0001-150k-4096-obj_std.zip",
@@ -67,7 +72,8 @@
 					},
 					"url": {
 						"type": "string",
-						"title": "The url Schema",
+						"title": "URL",
+						"description": "The URL for the resource",
 						"examples": [
 							"https://3d-api.si.edu/content/document/3d_package:8455b195-6d82-4f04-b830-f45a74ec6ff9/resources/1996_0008_0001-150k-4096-gltf_std.zip",
 							"https://3d-api.si.edu/content/document/3d_package:8455b195-6d82-4f04-b830-f45a74ec6ff9/resources/1996_0008_0001-150k-4096-obj_std.zip",
@@ -80,14 +86,16 @@
 					},
 					"type": {
 						"type": "string",
-						"title": "The type Schema",
+						"title": "Type",
+						"description": "A description of the type of resource",
 						"examples": [
 							"3D mesh"
 						]
 					},
 					"category": {
 						"type": "string",
-						"title": "The category Schema",
+						"title": "Category",
+						"description": "A description of the resource's category",
 						"examples": [
 							"Low resolution",
 							"Full resolution"
@@ -95,7 +103,8 @@
 					},
 					"title": {
 						"type": "string",
-						"title": "The title Schema",
+						"title": "Title",
+						"description": "The title for the resource. Usually contains information from other properties",
 						"examples": [
 							"Raft used by Cuban balseros (Low resolution 3D mesh, gltf, scale in m)",
 							"Raft used by Cuban balseros (Low resolution 3D mesh, obj, scale in m)",
@@ -106,29 +115,34 @@
 					},
 					"name": {
 						"type": "string",
-						"title": "The name Schema",
+						"title": "Name",
+						"description": "A description of the resource",
 						"examples": [
 							"Raft used by Cuban balseros"
 						]
 					},
 					"attributes": {
 						"type": "array",
-						"title": "The attributes Schema",
+						"title": "Attributes",
+						"description": "An array of pre-defined attributes describing the resource",
 						"items": {
 							"type": "object",
-							"title": "A Schema",
+							"title": "A pre-defined attribute describing the resource. An attribute shall contain a single property",
 							"additionalProperties": false,
 							"properties": {
 								"UNITS": {
 									"type": "string",
-									"title": "The UNITS Schema",
+									"title": "Units",
+									"description": "The abbreviation of the measurement used for the resource",
 									"examples": [
-										"m"
+										"m",
+										"mm"
 									]
 								},
 								"MODEL_FILE_TYPE": {
 									"type": "string",
-									"title": "The MODEL_FILE_TYPE Schema",
+									"title": "Model File Type",
+									"description": "The model's file type used in the resource. May be the resource's file name extension",
 									"examples": [
 										"gltf",
 										"obj",
@@ -138,7 +152,8 @@
 								},
 								"FILE_TYPE": {
 									"type": "string",
-									"title": "The FILE_TYPE Schema",
+									"title": "File Type",
+									"description": "The resource's file type. May be the resource's file name extension",
 									"examples": [
 										"zip",
 										"glb",
@@ -147,19 +162,13 @@
 								},
 								"GLTF_STANDARDIZED": {
 									"type": "boolean",
-									"title": "The GLTF_STANDARDIZED Schema",
-									"examples": [
-										true,
-										false
-									]
+									"title": "glTF Standardized",
+									"description": "If the resource is glTF standardized"
 								},
 								"DRACO_COMPRESSED": {
 									"type": "boolean",
-									"title": "The DRACO_COMPRESSED Schema",
-									"examples": [
-										false,
-										true
-									]
+									"title": "Draco Compressed",
+									"description": "If the resource is Draco compressed"
 								}
 							},
 							"examples": [
@@ -529,7 +538,8 @@
 		},
 		"media_usage": {
 			"type": "object",
-			"title": "The media_usage Schema",
+			"title": "Media Usage",
+			"title": "The access rights associated with the 3D package",
 			"required": [
 				"access"
 			],
@@ -537,7 +547,8 @@
 			"properties": {
 				"access": {
 					"type": "string",
-					"title": "The access Schema",
+					"title": "Access",
+					"description": "The description of the access rights",
 					"default": "",
 					"examples": [
 						"Usage Conditions Apply"

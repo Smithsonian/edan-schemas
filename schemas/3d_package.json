@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2019-09/schema",
-	"$id": "http://example.com/example.json",
+	"$id": "http://edan.si.edu/schema/3d_package",
 	"title": "3d_package schema",
 	"description": "This schema defines the wrapper around the voyager package schema that supports 3d",
 	"type": "object",

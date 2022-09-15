@@ -1,26 +1,26 @@
 {
 	"$schema": "https://json-schema.org/draft/2019-09/schema",
 	"$id": "http://example.com/example.json",
-	"type": "object",
-	"default": {},
 	"title": "3d_package schema",
 	"description": "This schema defines the wrapper around the voyager package schema that supports 3d",
+	"type": "object",
 	"required": [
 		"document",
 		"versions",
 		"resources",
 		"media_usage"
 	],
+	"default": {},
 	"properties": {
 		"document": {
 			"type": "object",
-			"default": {},
-			"title": "This is the voyager schema"
+			"title": "This is the voyager schema",
+			"default": {}
 		},
 		"versions": {
 			"type": "array",
-			"default": [],
 			"title": "The versions array.. Noting passed UUIDS submitted and stored in repo",
+			"default": [],
 			"items": {
 				"type": "string",
 				"title": "UUID and versionid",
@@ -38,8 +38,8 @@
 		},
 		"resources": {
 			"type": "array",
-			"default": [],
 			"title": "The resources array is referene auxiullary files",
+			"default": [],
 			"items": {
 				"type": "object",
 				"title": "Items in the array objects",
@@ -529,16 +529,16 @@
 		},
 		"media_usage": {
 			"type": "object",
-			"default": {},
 			"title": "The media_usage Schema",
 			"required": [
 				"access"
 			],
+			"default": {},
 			"properties": {
 				"access": {
 					"type": "string",
-					"default": "",
 					"title": "The access Schema",
+					"default": "",
 					"examples": [
 						"Usage Conditions Apply"
 					]

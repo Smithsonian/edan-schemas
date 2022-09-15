@@ -1,0 +1,698 @@
+{
+	"$schema": "https://json-schema.org/draft/2019-09/schema",
+	"$id": "http://edan.si.edu/schema/3d_package",
+	"title": "3D Package",
+	"description": "The wrapper for the Voyager package schemas that supports 3D",
+	"type": "object",
+	"required": [
+		"document",
+		"versions",
+		"resources",
+		"media_usage"
+	],
+	"default": {},
+	"properties": {
+		"document": {
+			"type": "object",
+			"title": "Voyager Package",
+			"description": "The Voyager data necessary to render the Voyager 3D interface",
+			"default": {}
+		},
+		"versions": {
+			"type": "array",
+			"title": "Versions",
+			"description": "An array of associated UUIDs and version IDs",
+			"default": [],
+			"items": {
+				"type": "string",
+				"title": "A single UUID or version ID",
+				"examples": [
+					"8455b195-6d82-4f04-b830-f45a74ec6ff9_1638199280442",
+					"8455b195-6d82-4f04-b830-f45a74ec6ff9_1638200420337"
+				]
+			},
+			"examples": [
+				[
+					"8455b195-6d82-4f04-b830-f45a74ec6ff9_1638199280442",
+					"8455b195-6d82-4f04-b830-f45a74ec6ff9_1638200420337"
+				]
+			]
+		},
+		"resources": {
+			"type": "array",
+			"title": "Resources",
+			"description": "An array of resources associated with the Voyager package",
+			"default": [],
+			"items": {
+				"type": "object",
+				"title": "Resource",
+				"description": "A resource associated with the Voyager package",
+				"_comment": "The type and category properties are not currently required",
+				"required": [
+					"filename",
+					"url",
+					"title",
+					"name",
+					"attributes"
+				],
+				"properties": {
+					"filename": {
+						"type": "string",
+						"title": "File Name",
+						"description": "The filename of the resource, including the file extension",
+						"examples": [
+							"1996_0008_0001-150k-4096-gltf_std.zip",
+							"1996_0008_0001-150k-4096-obj_std.zip",
+							"1996_0008_0001-100k-2048_std_draco.glb",
+							"1996_0008_0001-100k-2048_std.usdz",
+							"1996_0008_0001-full_resolution-obj_std.zip",
+							"1996_0008_0001-150k-4096.gltf",
+							"1996_0008_0001-150k-4096_std.glb"
+						]
+					},
+					"url": {
+						"type": "string",
+						"title": "URL",
+						"description": "The URL for the resource",
+						"examples": [
+							"https://3d-api.si.edu/content/document/3d_package:8455b195-6d82-4f04-b830-f45a74ec6ff9/resources/1996_0008_0001-150k-4096-gltf_std.zip",
+							"https://3d-api.si.edu/content/document/3d_package:8455b195-6d82-4f04-b830-f45a74ec6ff9/resources/1996_0008_0001-150k-4096-obj_std.zip",
+							"https://3d-api.si.edu/content/document/3d_package:8455b195-6d82-4f04-b830-f45a74ec6ff9/resources/1996_0008_0001-100k-2048_std_draco.glb",
+							"https://3d-api.si.edu/content/document/3d_package:8455b195-6d82-4f04-b830-f45a74ec6ff9/resources/1996_0008_0001-100k-2048_std.usdz",
+							"https://3d-api.si.edu/content/document/3d_package:8455b195-6d82-4f04-b830-f45a74ec6ff9/resources/1996_0008_0001-full_resolution-obj_std.zip",
+							"https://3d-api.si.edu/content/document/3d_package:8455b195-6d82-4f04-b830-f45a74ec6ff9/resources/1996_0008_0001-150k-4096.gltf",
+							"https://3d-api.si.edu/content/document/3d_package:8455b195-6d82-4f04-b830-f45a74ec6ff9/resources/1996_0008_0001-150k-4096_std.glb"
+						]
+					},
+					"type": {
+						"type": "string",
+						"title": "Type",
+						"description": "A description of the type of resource",
+						"examples": [
+							"3D mesh"
+						]
+					},
+					"category": {
+						"type": "string",
+						"title": "Category",
+						"description": "A description of the resource's category",
+						"examples": [
+							"Low resolution",
+							"Full resolution"
+						]
+					},
+					"title": {
+						"type": "string",
+						"title": "Title",
+						"description": "The title for the resource. Usually contains information from other properties",
+						"examples": [
+							"Raft used by Cuban balseros (Low resolution 3D mesh, gltf, scale in m)",
+							"Raft used by Cuban balseros (Low resolution 3D mesh, obj, scale in m)",
+							"Raft used by Cuban balseros (Low resolution 3D mesh, glb, scale in m)",
+							"Raft used by Cuban balseros (Low resolution 3D mesh, usdz, scale in m)",
+							"Raft used by Cuban balseros (Full resolution 3D mesh, obj, scale in m)"
+						]
+					},
+					"name": {
+						"type": "string",
+						"title": "Name",
+						"description": "A description of the resource",
+						"examples": [
+							"Raft used by Cuban balseros"
+						]
+					},
+					"attributes": {
+						"type": "array",
+						"title": "Attributes",
+						"description": "An array of pre-defined attributes describing the resource",
+						"items": {
+							"type": "object",
+							"title": "A pre-defined attribute describing the resource. An attribute shall contain a single property",
+							"additionalProperties": false,
+							"properties": {
+								"UNITS": {
+									"type": "string",
+									"title": "Units",
+									"description": "The abbreviation of the measurement used for the resource",
+									"examples": [
+										"m",
+										"mm"
+									]
+								},
+								"MODEL_FILE_TYPE": {
+									"type": "string",
+									"title": "Model File Type",
+									"description": "The model's file type used in the resource. May be the resource's file name extension",
+									"examples": [
+										"gltf",
+										"obj",
+										"glb",
+										"usdz"
+									]
+								},
+								"FILE_TYPE": {
+									"type": "string",
+									"title": "File Type",
+									"description": "The resource's file type. May be the resource's file name extension",
+									"examples": [
+										"zip",
+										"glb",
+										"usdz"
+									]
+								},
+								"GLTF_STANDARDIZED": {
+									"type": "boolean",
+									"title": "glTF Standardized",
+									"description": "If the resource is glTF standardized"
+								},
+								"DRACO_COMPRESSED": {
+									"type": "boolean",
+									"title": "Draco Compressed",
+									"description": "If the resource is Draco compressed"
+								}
+							},
+							"examples": [
+								{
+									"UNITS": "m",
+									"MODEL_FILE_TYPE": "gltf",
+									"FILE_TYPE": "zip",
+									"GLTF_STANDARDIZED": true,
+									"DRACO_COMPRESSED": false
+								},
+								{
+									"UNITS": "m",
+									"MODEL_FILE_TYPE": "obj",
+									"FILE_TYPE": "zip",
+									"GLTF_STANDARDIZED": false,
+									"DRACO_COMPRESSED": false
+								},
+								{
+									"UNITS": "m",
+									"MODEL_FILE_TYPE": "glb",
+									"FILE_TYPE": "glb",
+									"GLTF_STANDARDIZED": true,
+									"DRACO_COMPRESSED": true
+								},
+								{
+									"UNITS": "m",
+									"MODEL_FILE_TYPE": "usdz",
+									"FILE_TYPE": "usdz",
+									"GLTF_STANDARDIZED": false,
+									"DRACO_COMPRESSED": false
+								},
+								{
+									"UNITS": "m",
+									"MODEL_FILE_TYPE": "obj",
+									"FILE_TYPE": "zip",
+									"GLTF_STANDARDIZED": false,
+									"DRACO_COMPRESSED": false
+								},
+								{
+									"UNITS": "m",
+									"MODEL_FILE_TYPE": "gltf",
+									"FILE_TYPE": "zip",
+									"GLTF_STANDARDIZED": true,
+									"DRACO_COMPRESSED": false
+								},
+								{
+									"UNITS": "m",
+									"MODEL_FILE_TYPE": "glb",
+									"FILE_TYPE": "glb",
+									"GLTF_STANDARDIZED": true,
+									"DRACO_COMPRESSED": true
+								}
+							]
+						},
+						"examples": [
+							[
+								{
+									"UNITS": "m",
+									"MODEL_FILE_TYPE": "gltf",
+									"FILE_TYPE": "zip",
+									"GLTF_STANDARDIZED": true,
+									"DRACO_COMPRESSED": false
+								}
+							],
+							[
+								{
+									"UNITS": "m",
+									"MODEL_FILE_TYPE": "obj",
+									"FILE_TYPE": "zip",
+									"GLTF_STANDARDIZED": false,
+									"DRACO_COMPRESSED": false
+								}
+							],
+							[
+								{
+									"UNITS": "m",
+									"MODEL_FILE_TYPE": "glb",
+									"FILE_TYPE": "glb",
+									"GLTF_STANDARDIZED": true,
+									"DRACO_COMPRESSED": true
+								}
+							],
+							[
+								{
+									"UNITS": "m",
+									"MODEL_FILE_TYPE": "usdz",
+									"FILE_TYPE": "usdz",
+									"GLTF_STANDARDIZED": false,
+									"DRACO_COMPRESSED": false
+								}
+							],
+							[
+								{
+									"UNITS": "m",
+									"MODEL_FILE_TYPE": "obj",
+									"FILE_TYPE": "zip",
+									"GLTF_STANDARDIZED": false,
+									"DRACO_COMPRESSED": false
+								}
+							],
+							[
+								{
+									"UNITS": "m",
+									"MODEL_FILE_TYPE": "gltf",
+									"FILE_TYPE": "zip",
+									"GLTF_STANDARDIZED": true,
+									"DRACO_COMPRESSED": false
+								}
+							],
+							[
+								{
+									"UNITS": "m",
+									"MODEL_FILE_TYPE": "glb",
+									"FILE_TYPE": "glb",
+									"GLTF_STANDARDIZED": true,
+									"DRACO_COMPRESSED": true
+								}
+							]
+						]
+					}
+				},
+				"examples": [
+					{
+						"filename": "1996_0008_0001-150k-4096-gltf_std.zip",
+						"url": "https://3d-api.si.edu/content/document/3d_package:8455b195-6d82-4f04-b830-f45a74ec6ff9/resources/1996_0008_0001-150k-4096-gltf_std.zip",
+						"type": "3D mesh",
+						"category": "Low resolution",
+						"title": "Raft used by Cuban balseros (Low resolution 3D mesh, gltf, scale in m)",
+						"name": "Raft used by Cuban balseros",
+						"attributes": [
+							{
+								"UNITS": "m",
+								"MODEL_FILE_TYPE": "gltf",
+								"FILE_TYPE": "zip",
+								"GLTF_STANDARDIZED": true,
+								"DRACO_COMPRESSED": false
+							}
+						]
+					},
+					{
+						"filename": "1996_0008_0001-150k-4096-obj_std.zip",
+						"url": "https://3d-api.si.edu/content/document/3d_package:8455b195-6d82-4f04-b830-f45a74ec6ff9/resources/1996_0008_0001-150k-4096-obj_std.zip",
+						"type": "3D mesh",
+						"category": "Low resolution",
+						"title": "Raft used by Cuban balseros (Low resolution 3D mesh, obj, scale in m)",
+						"name": "Raft used by Cuban balseros",
+						"attributes": [
+							{
+								"UNITS": "m",
+								"MODEL_FILE_TYPE": "obj",
+								"FILE_TYPE": "zip",
+								"GLTF_STANDARDIZED": false,
+								"DRACO_COMPRESSED": false
+							}
+						]
+					},
+					{
+						"filename": "1996_0008_0001-100k-2048_std_draco.glb",
+						"url": "https://3d-api.si.edu/content/document/3d_package:8455b195-6d82-4f04-b830-f45a74ec6ff9/resources/1996_0008_0001-100k-2048_std_draco.glb",
+						"type": "3D mesh",
+						"category": "Low resolution",
+						"title": "Raft used by Cuban balseros (Low resolution 3D mesh, glb, scale in m)",
+						"name": "Raft used by Cuban balseros",
+						"attributes": [
+							{
+								"UNITS": "m",
+								"MODEL_FILE_TYPE": "glb",
+								"FILE_TYPE": "glb",
+								"GLTF_STANDARDIZED": true,
+								"DRACO_COMPRESSED": true
+							}
+						]
+					},
+					{
+						"filename": "1996_0008_0001-100k-2048_std.usdz",
+						"url": "https://3d-api.si.edu/content/document/3d_package:8455b195-6d82-4f04-b830-f45a74ec6ff9/resources/1996_0008_0001-100k-2048_std.usdz",
+						"type": "3D mesh",
+						"category": "Low resolution",
+						"title": "Raft used by Cuban balseros (Low resolution 3D mesh, usdz, scale in m)",
+						"name": "Raft used by Cuban balseros",
+						"attributes": [
+							{
+								"UNITS": "m",
+								"MODEL_FILE_TYPE": "usdz",
+								"FILE_TYPE": "usdz",
+								"GLTF_STANDARDIZED": false,
+								"DRACO_COMPRESSED": false
+							}
+						]
+					},
+					{
+						"filename": "1996_0008_0001-full_resolution-obj_std.zip",
+						"url": "https://3d-api.si.edu/content/document/3d_package:8455b195-6d82-4f04-b830-f45a74ec6ff9/resources/1996_0008_0001-full_resolution-obj_std.zip",
+						"type": "3D mesh",
+						"category": "Full resolution",
+						"title": "Raft used by Cuban balseros (Full resolution 3D mesh, obj, scale in m)",
+						"name": "Raft used by Cuban balseros",
+						"attributes": [
+							{
+								"UNITS": "m",
+								"MODEL_FILE_TYPE": "obj",
+								"FILE_TYPE": "zip",
+								"GLTF_STANDARDIZED": false,
+								"DRACO_COMPRESSED": false
+							}
+						]
+					},
+					{
+						"filename": "1996_0008_0001-150k-4096.gltf",
+						"url": "https://3d-api.si.edu/content/document/3d_package:8455b195-6d82-4f04-b830-f45a74ec6ff9/resources/1996_0008_0001-150k-4096.gltf",
+						"type": "3D mesh",
+						"category": "Low resolution",
+						"title": "Raft used by Cuban balseros (Low resolution 3D mesh, gltf, scale in m)",
+						"name": "Raft used by Cuban balseros",
+						"attributes": [
+							{
+								"UNITS": "m",
+								"MODEL_FILE_TYPE": "gltf",
+								"FILE_TYPE": "zip",
+								"GLTF_STANDARDIZED": true,
+								"DRACO_COMPRESSED": false
+							}
+						]
+					},
+					{
+						"filename": "1996_0008_0001-150k-4096_std.glb",
+						"url": "https://3d-api.si.edu/content/document/3d_package:8455b195-6d82-4f04-b830-f45a74ec6ff9/resources/1996_0008_0001-150k-4096_std.glb",
+						"type": "3D mesh",
+						"category": "Low resolution",
+						"title": "Raft used by Cuban balseros (Low resolution 3D mesh, glb, scale in m)",
+						"name": "Raft used by Cuban balseros",
+						"attributes": [
+							{
+								"UNITS": "m",
+								"MODEL_FILE_TYPE": "glb",
+								"FILE_TYPE": "glb",
+								"GLTF_STANDARDIZED": true,
+								"DRACO_COMPRESSED": true
+							}
+						]
+					}
+				]
+			},
+			"examples": [
+				[
+					{
+						"filename": "1996_0008_0001-150k-4096-gltf_std.zip",
+						"url": "https://3d-api.si.edu/content/document/3d_package:8455b195-6d82-4f04-b830-f45a74ec6ff9/resources/1996_0008_0001-150k-4096-gltf_std.zip",
+						"type": "3D mesh",
+						"category": "Low resolution",
+						"title": "Raft used by Cuban balseros (Low resolution 3D mesh, gltf, scale in m)",
+						"name": "Raft used by Cuban balseros",
+						"attributes": [
+							{
+								"UNITS": "m",
+								"MODEL_FILE_TYPE": "gltf",
+								"FILE_TYPE": "zip",
+								"GLTF_STANDARDIZED": true,
+								"DRACO_COMPRESSED": false
+							}
+						]
+					},
+					{
+						"filename": "1996_0008_0001-150k-4096-obj_std.zip",
+						"url": "https://3d-api.si.edu/content/document/3d_package:8455b195-6d82-4f04-b830-f45a74ec6ff9/resources/1996_0008_0001-150k-4096-obj_std.zip",
+						"type": "3D mesh",
+						"category": "Low resolution",
+						"title": "Raft used by Cuban balseros (Low resolution 3D mesh, obj, scale in m)",
+						"name": "Raft used by Cuban balseros",
+						"attributes": [
+							{
+								"UNITS": "m",
+								"MODEL_FILE_TYPE": "obj",
+								"FILE_TYPE": "zip",
+								"GLTF_STANDARDIZED": false,
+								"DRACO_COMPRESSED": false
+							}
+						]
+					},
+					{
+						"filename": "1996_0008_0001-100k-2048_std_draco.glb",
+						"url": "https://3d-api.si.edu/content/document/3d_package:8455b195-6d82-4f04-b830-f45a74ec6ff9/resources/1996_0008_0001-100k-2048_std_draco.glb",
+						"type": "3D mesh",
+						"category": "Low resolution",
+						"title": "Raft used by Cuban balseros (Low resolution 3D mesh, glb, scale in m)",
+						"name": "Raft used by Cuban balseros",
+						"attributes": [
+							{
+								"UNITS": "m",
+								"MODEL_FILE_TYPE": "glb",
+								"FILE_TYPE": "glb",
+								"GLTF_STANDARDIZED": true,
+								"DRACO_COMPRESSED": true
+							}
+						]
+					},
+					{
+						"filename": "1996_0008_0001-100k-2048_std.usdz",
+						"url": "https://3d-api.si.edu/content/document/3d_package:8455b195-6d82-4f04-b830-f45a74ec6ff9/resources/1996_0008_0001-100k-2048_std.usdz",
+						"type": "3D mesh",
+						"category": "Low resolution",
+						"title": "Raft used by Cuban balseros (Low resolution 3D mesh, usdz, scale in m)",
+						"name": "Raft used by Cuban balseros",
+						"attributes": [
+							{
+								"UNITS": "m",
+								"MODEL_FILE_TYPE": "usdz",
+								"FILE_TYPE": "usdz",
+								"GLTF_STANDARDIZED": false,
+								"DRACO_COMPRESSED": false
+							}
+						]
+					},
+					{
+						"filename": "1996_0008_0001-full_resolution-obj_std.zip",
+						"url": "https://3d-api.si.edu/content/document/3d_package:8455b195-6d82-4f04-b830-f45a74ec6ff9/resources/1996_0008_0001-full_resolution-obj_std.zip",
+						"type": "3D mesh",
+						"category": "Full resolution",
+						"title": "Raft used by Cuban balseros (Full resolution 3D mesh, obj, scale in m)",
+						"name": "Raft used by Cuban balseros",
+						"attributes": [
+							{
+								"UNITS": "m",
+								"MODEL_FILE_TYPE": "obj",
+								"FILE_TYPE": "zip",
+								"GLTF_STANDARDIZED": false,
+								"DRACO_COMPRESSED": false
+							}
+						]
+					},
+					{
+						"filename": "1996_0008_0001-150k-4096.gltf",
+						"url": "https://3d-api.si.edu/content/document/3d_package:8455b195-6d82-4f04-b830-f45a74ec6ff9/resources/1996_0008_0001-150k-4096.gltf",
+						"type": "3D mesh",
+						"category": "Low resolution",
+						"title": "Raft used by Cuban balseros (Low resolution 3D mesh, gltf, scale in m)",
+						"name": "Raft used by Cuban balseros",
+						"attributes": [
+							{
+								"UNITS": "m",
+								"MODEL_FILE_TYPE": "gltf",
+								"FILE_TYPE": "zip",
+								"GLTF_STANDARDIZED": true,
+								"DRACO_COMPRESSED": false
+							}
+						]
+					},
+					{
+						"filename": "1996_0008_0001-150k-4096_std.glb",
+						"url": "https://3d-api.si.edu/content/document/3d_package:8455b195-6d82-4f04-b830-f45a74ec6ff9/resources/1996_0008_0001-150k-4096_std.glb",
+						"type": "3D mesh",
+						"category": "Low resolution",
+						"title": "Raft used by Cuban balseros (Low resolution 3D mesh, glb, scale in m)",
+						"name": "Raft used by Cuban balseros",
+						"attributes": [
+							{
+								"UNITS": "m",
+								"MODEL_FILE_TYPE": "glb",
+								"FILE_TYPE": "glb",
+								"GLTF_STANDARDIZED": true,
+								"DRACO_COMPRESSED": true
+							}
+						]
+					}
+				]
+			]
+		},
+		"media_usage": {
+			"type": "object",
+			"title": "Media Usage",
+			"title": "The access rights associated with the 3D package",
+			"required": [
+				"access"
+			],
+			"default": {},
+			"properties": {
+				"access": {
+					"type": "string",
+					"title": "Access",
+					"description": "The description of the access rights",
+					"default": "",
+					"examples": [
+						"Usage Conditions Apply"
+					]
+				}
+			},
+			"examples": [
+				{
+					"access": "Usage Conditions Apply"
+				}
+			]
+		}
+	},
+	"examples": [
+		{
+			"document": {},
+			"versions": [
+				"8455b195-6d82-4f04-b830-f45a74ec6ff9_1638199280442",
+				"8455b195-6d82-4f04-b830-f45a74ec6ff9_1638200420337"
+			],
+			"resources": [
+				{
+					"filename": "1996_0008_0001-150k-4096-gltf_std.zip",
+					"url": "https://3d-api.si.edu/content/document/3d_package:8455b195-6d82-4f04-b830-f45a74ec6ff9/resources/1996_0008_0001-150k-4096-gltf_std.zip",
+					"type": "3D mesh",
+					"category": "Low resolution",
+					"title": "Raft used by Cuban balseros (Low resolution 3D mesh, gltf, scale in m)",
+					"name": "Raft used by Cuban balseros",
+					"attributes": [
+						{
+							"UNITS": "m",
+							"MODEL_FILE_TYPE": "gltf",
+							"FILE_TYPE": "zip",
+							"GLTF_STANDARDIZED": true,
+							"DRACO_COMPRESSED": false
+						}
+					]
+				},
+				{
+					"filename": "1996_0008_0001-150k-4096-obj_std.zip",
+					"url": "https://3d-api.si.edu/content/document/3d_package:8455b195-6d82-4f04-b830-f45a74ec6ff9/resources/1996_0008_0001-150k-4096-obj_std.zip",
+					"type": "3D mesh",
+					"category": "Low resolution",
+					"title": "Raft used by Cuban balseros (Low resolution 3D mesh, obj, scale in m)",
+					"name": "Raft used by Cuban balseros",
+					"attributes": [
+						{
+							"UNITS": "m",
+							"MODEL_FILE_TYPE": "obj",
+							"FILE_TYPE": "zip",
+							"GLTF_STANDARDIZED": false,
+							"DRACO_COMPRESSED": false
+						}
+					]
+				},
+				{
+					"filename": "1996_0008_0001-100k-2048_std_draco.glb",
+					"url": "https://3d-api.si.edu/content/document/3d_package:8455b195-6d82-4f04-b830-f45a74ec6ff9/resources/1996_0008_0001-100k-2048_std_draco.glb",
+					"type": "3D mesh",
+					"category": "Low resolution",
+					"title": "Raft used by Cuban balseros (Low resolution 3D mesh, glb, scale in m)",
+					"name": "Raft used by Cuban balseros",
+					"attributes": [
+						{
+							"UNITS": "m",
+							"MODEL_FILE_TYPE": "glb",
+							"FILE_TYPE": "glb",
+							"GLTF_STANDARDIZED": true,
+							"DRACO_COMPRESSED": true
+						}
+					]
+				},
+				{
+					"filename": "1996_0008_0001-100k-2048_std.usdz",
+					"url": "https://3d-api.si.edu/content/document/3d_package:8455b195-6d82-4f04-b830-f45a74ec6ff9/resources/1996_0008_0001-100k-2048_std.usdz",
+					"type": "3D mesh",
+					"category": "Low resolution",
+					"title": "Raft used by Cuban balseros (Low resolution 3D mesh, usdz, scale in m)",
+					"name": "Raft used by Cuban balseros",
+					"attributes": [
+						{
+							"UNITS": "m",
+							"MODEL_FILE_TYPE": "usdz",
+							"FILE_TYPE": "usdz",
+							"GLTF_STANDARDIZED": false,
+							"DRACO_COMPRESSED": false
+						}
+					]
+				},
+				{
+					"filename": "1996_0008_0001-full_resolution-obj_std.zip",
+					"url": "https://3d-api.si.edu/content/document/3d_package:8455b195-6d82-4f04-b830-f45a74ec6ff9/resources/1996_0008_0001-full_resolution-obj_std.zip",
+					"type": "3D mesh",
+					"category": "Full resolution",
+					"title": "Raft used by Cuban balseros (Full resolution 3D mesh, obj, scale in m)",
+					"name": "Raft used by Cuban balseros",
+					"attributes": [
+						{
+							"UNITS": "m",
+							"MODEL_FILE_TYPE": "obj",
+							"FILE_TYPE": "zip",
+							"GLTF_STANDARDIZED": false,
+							"DRACO_COMPRESSED": false
+						}
+					]
+				},
+				{
+					"filename": "1996_0008_0001-150k-4096.gltf",
+					"url": "https://3d-api.si.edu/content/document/3d_package:8455b195-6d82-4f04-b830-f45a74ec6ff9/resources/1996_0008_0001-150k-4096.gltf",
+					"type": "3D mesh",
+					"category": "Low resolution",
+					"title": "Raft used by Cuban balseros (Low resolution 3D mesh, gltf, scale in m)",
+					"name": "Raft used by Cuban balseros",
+					"attributes": [
+						{
+							"UNITS": "m",
+							"MODEL_FILE_TYPE": "gltf",
+							"FILE_TYPE": "zip",
+							"GLTF_STANDARDIZED": true,
+							"DRACO_COMPRESSED": false
+						}
+					]
+				},
+				{
+					"filename": "1996_0008_0001-150k-4096_std.glb",
+					"url": "https://3d-api.si.edu/content/document/3d_package:8455b195-6d82-4f04-b830-f45a74ec6ff9/resources/1996_0008_0001-150k-4096_std.glb",
+					"type": "3D mesh",
+					"category": "Low resolution",
+					"title": "Raft used by Cuban balseros (Low resolution 3D mesh, glb, scale in m)",
+					"name": "Raft used by Cuban balseros",
+					"attributes": [
+						{
+							"UNITS": "m",
+							"MODEL_FILE_TYPE": "glb",
+							"FILE_TYPE": "glb",
+							"GLTF_STANDARDIZED": true,
+							"DRACO_COMPRESSED": true
+						}
+					]
+				}
+			],
+			"media_usage": {
+				"access": "Usage Conditions Apply"
+			}
+		}
+	]
+}

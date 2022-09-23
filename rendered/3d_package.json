@@ -1,0 +1,310 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "https://edan.si.edu/edan/schemas/rendered/3d_pacakge.json",
+    "type": "object",
+    "default": {},
+    "title": "The rendered schema for 3d_package objects.",
+    "required": [
+        "uuid",
+        "usage",
+        "resources",
+        "thumbnail",
+        "voyagerId",
+        "ar_enabled",
+        "3d_document",
+        "content.edanmdm",
+        "content.edanurl"
+    ],
+    "properties": {
+        "uuid": {
+            "type": "string",
+            "default": "",
+            "title": "The uuid Schema",
+            "examples": [
+                "00013118-9675-493b-a712-1ec57d7b7997"
+            ]
+        },
+        "usage": {
+            "type": "object",
+            "default": {},
+            "title": "The usage Schema",
+            "required": [
+                "text",
+                "codes",
+                "access"
+            ],
+            "properties": {
+                "text": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The text Schema",
+                    "examples": [
+                        ""
+                    ]
+                },
+                "codes": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The codes Schema",
+                    "examples": [
+                        ""
+                    ]
+                },
+                "access": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The access Schema",
+                    "examples": [
+                        "Usage Conditions Apply"
+                    ]
+                }
+            },
+            "examples": [{
+                "text": "",
+                "codes": "",
+                "access": "Usage Conditions Apply"
+            }]
+        },
+        "resources": {
+            "type": "array",
+            "default": [],
+            "title": "The resources Schema",
+            "items": {
+                "type": "object",
+                "default": {},
+                "title": "A Schema",
+                "note": "type and category",
+                "required": [
+                    "filename",
+                    "url",
+                    "attributes",
+                    "name",
+                    "title"
+                ],
+                "properties": {
+                    "filename": {
+                        "type": "string",
+                        "default": "",
+                        "title": "The filename Schema",
+                        "examples": [
+                            "USNM153798_cranium_-400.ply"
+                        ]
+                    },
+                    "type": {
+                        "type": "string",
+                        "default": "",
+                        "title": "The type Schema",
+                        "examples": [
+                            "3D mesh"
+                        ]
+                    },
+                    "category": {
+                        "type": "string",
+                        "default": "",
+                        "title": "The category Schema",
+                        "examples": [
+                            "Full resolution"
+                        ]
+                    },
+                    "url": {
+                        "type": "string",
+                        "default": "",
+                        "title": "The url Schema",
+                        "examples": [
+                            "https://3d-api.si.edu/content/document/3d_package:002f2567-7384-4027-9b99-bcb7a7e6361e/resources/USNM153798_cranium_-400.ply"
+                        ]
+                    },
+                    "attributes": {
+                        "type": "array",
+                        "default": [],
+                        "title": "The attributes Schema",
+                        "items": {
+                            "type": "object",
+                            "title": "A Schema",
+                            "required": [
+
+                            ],
+                            "properties": {
+                                "UNITS": {
+                                    "type": "string",
+                                    "default": "",
+                                    "title": "The UNITS Schema",
+                                    "examples": [
+                                        "mm"
+                                    ]
+                                },
+                                "MODEL_FILE_TYPE": {
+                                    "type": "string",
+                                    "default": "",
+                                    "title": "The MODEL_FILE_TYPE Schema",
+                                    "examples": [
+                                        "ply"
+                                    ]
+                                },
+                                "FILE_TYPE": {
+                                    "type": "string",
+                                    "default": "",
+                                    "title": "The FILE_TYPE Schema",
+                                    "examples": [
+                                        "ply"
+                                    ]
+                                }
+                            },
+                            "examples": [{
+                                "UNITS": "mm"
+                            },
+                            {
+                                "MODEL_FILE_TYPE": "ply"
+                            },
+                            {
+                                "FILE_TYPE": "ply"
+                            }]
+                        },
+                        "examples": [
+                            [{
+                                "UNITS": "mm"
+                            },
+                            {
+                                "MODEL_FILE_TYPE": "ply"
+                            },
+                            {
+                                "FILE_TYPE": "ply"
+                            }]
+                        ]
+                    },
+                    "name": {
+                        "type": "string",
+                        "default": "",
+                        "title": "The name Schema",
+                        "examples": [
+                            "Hylobates albibarbis: Cranium"
+                        ]
+                    },
+                    "title": {
+                        "type": "string",
+                        "default": "",
+                        "title": "The title Schema",
+                        "examples": [
+                            "Hylobates albibarbis: Cranium (Full resolution 3D mesh, ply, scale in mm)"
+                        ]
+                    }
+                },
+                "examples": [{
+                    "filename": "USNM153798_cranium_-400.ply",
+                    "type": "3D mesh",
+                    "category": "Full resolution",
+                    "url": "https://3d-api.si.edu/content/document/3d_package:002f2567-7384-4027-9b99-bcb7a7e6361e/resources/USNM153798_cranium_-400.ply",
+                    "attributes": [{
+                        "UNITS": "mm"
+                    },
+                    {
+                        "MODEL_FILE_TYPE": "ply"
+                    },
+                    {
+                        "FILE_TYPE": "ply"
+                    }],
+                    "name": "Hylobates albibarbis: Cranium",
+                    "title": "Hylobates albibarbis: Cranium (Full resolution 3D mesh, ply, scale in mm)"
+                }]
+            },
+            "examples": [
+                [{
+                    "filename": "USNM153798_cranium_-400.ply",
+                    "type": "3D mesh",
+                    "category": "Full resolution",
+                    "url": "https://3d-api.si.edu/content/document/3d_package:002f2567-7384-4027-9b99-bcb7a7e6361e/resources/USNM153798_cranium_-400.ply",
+                    "attributes": [{
+                        "UNITS": "mm"
+                    },
+                    {
+                        "MODEL_FILE_TYPE": "ply"
+                    },
+                    {
+                        "FILE_TYPE": "ply"
+                    }],
+                    "name": "Hylobates albibarbis: Cranium",
+                    "title": "Hylobates albibarbis: Cranium (Full resolution 3D mesh, ply, scale in mm)"
+                }]
+            ]
+        },
+        "thumbnail": {
+            "type": "string",
+            "default": "",
+            "title": "The thumbnail Schema",
+            "examples": [
+                "https://3d-api.si.edu/content/document/3d_package:00013118-9675-493b-a712-1ec57d7b7997/scene-image-thumb.jpg"
+            ]
+        },
+        "voyagerId": {
+            "type": "string",
+            "default": "",
+            "title": "The voyagerId Schema",
+            "examples": [
+                "3d_package:00013118-9675-493b-a712-1ec57d7b7997"
+            ]
+        },
+        "ar_enabled": {
+            "type": "boolean",
+            "default": false,
+            "title": "The ar_enabled Schema",
+            "examples": [
+                false
+            ]
+        },
+        "3d_document": {
+            "type": "string",
+            "default": "",
+            "title": "The 3d_document Schema",
+            "examples": [
+                "https://3d-api.si.edu/content/document/3d_package:00013118-9675-493b-a712-1ec57d7b7997/document.json"
+            ]
+        },
+        "content.edanmdm": {
+            "type": "object",
+            "default": {},
+            "title": "The content.edanmdm Schema",
+            "required": [],
+            "properties": {},
+            "examples": [{}]
+        },
+        "content.edanurl": {
+            "type": "string",
+            "default": "",
+            "title": "The content.edanurl Schema",
+            "examples": [
+                "edanmdm:dpo_3d_200105"
+            ]
+        }
+    },
+    "examples": [{
+        "uuid": "00013118-9675-493b-a712-1ec57d7b7997",
+        "usage": {
+            "text": "",
+            "codes": "",
+            "access": "Usage Conditions Apply"
+        },
+        "resources": [{
+            "filename": "USNM153798_cranium_-400.ply",
+            "type": "3D mesh",
+            "category": "Full resolution",
+            "url": "https://3d-api.si.edu/content/document/3d_package:002f2567-7384-4027-9b99-bcb7a7e6361e/resources/USNM153798_cranium_-400.ply",
+            "attributes": [{
+                "UNITS": "mm"
+            },
+            {
+                "MODEL_FILE_TYPE": "ply"
+            },
+            {
+                "FILE_TYPE": "ply"
+            }],
+            "name": "Hylobates albibarbis: Cranium",
+            "title": "Hylobates albibarbis: Cranium (Full resolution 3D mesh, ply, scale in mm)"
+        }],
+        "thumbnail": "https://3d-api.si.edu/content/document/3d_package:00013118-9675-493b-a712-1ec57d7b7997/scene-image-thumb.jpg",
+        "voyagerId": "3d_package:00013118-9675-493b-a712-1ec57d7b7997",
+        "ar_enabled": false,
+        "3d_document": "https://3d-api.si.edu/content/document/3d_package:00013118-9675-493b-a712-1ec57d7b7997/document.json",
+        "content.edanmdm": {},
+        "content.edanurl": "edanmdm:dpo_3d_200105"
+    }]
+}

@@ -1,4 +1,7 @@
 {
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "http://edan.si.edu/schema/storymap_slide",
+	"title": "Storymap Slide",
 	"type": "object",
 	"additionalProperties": false,
 	"required": [
@@ -59,6 +62,10 @@
 				"credit": {
 					"type": "string",
 					"description": "Optional credit given to for the photo."
+				},
+				"alt": {
+					"type": "string",
+					"description": "A short description of the image (Required for 508 compliance)."
 				}
 			}
 		}

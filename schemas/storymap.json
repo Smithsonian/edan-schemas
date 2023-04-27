@@ -1,5 +1,7 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "http://edan.si.edu/schema/storymap",
+	"title": "Storymap",
 	"type": "object",
 	"additionalProperties": false,
 	"properties": {
@@ -17,7 +19,7 @@
 			"properties": {
 				"language": {
 					"type": "string",
-					"description": "a string giving the two letter indication for a language"
+					"description": "a string giving the two letter code for a language"
 				},
 				"tile_layer": {
 					"type": "string",

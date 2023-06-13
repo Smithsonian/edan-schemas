@@ -35,6 +35,10 @@
 			"type": "number",
 			"description": "Determines how far the map zooms in on a marker when it is selected."
 		},
+		"icon": {
+			"type": "string",
+			"description": "A font awesome icon that represents the marker on the map."
+		},
 		"content": {
 			"type": "string",
 			"description": "Text that summarizes the slide."

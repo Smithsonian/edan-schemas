@@ -70,6 +70,14 @@
 				"alt": {
 					"type": "string",
 					"description": "A short description of the image (Required for 508 compliance)."
+				},
+				"edanObjectUrl": {
+					"type": "string",
+					"description": "An EDAN url that is linked to the marker's image. Allows the user to follow a direct link to the object's page."
+				},
+				"useEdanLink": {
+					"type": "boolean",
+					"description": "Determines whether or not the user is able to follow the url from edanObjectUrl"
 				}
 			}
 		}

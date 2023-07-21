@@ -44,6 +44,14 @@
 				"map_background_color": {
 					"type": "string",
 					"description": "A hexidecimal string that lets the user determine the background color of the map."
+				},
+				"marker_type": {
+					"type": "string",
+					"description": "A set of enums that determines whether map markers are displayed using icons or are assigned numerical icons"
+				},
+				"table_of_contents": {
+					"type": "boolean",
+					"description": "Displays a table of contents for the user to interact with."
 				}
 			}
 		},

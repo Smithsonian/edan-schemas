@@ -52,9 +52,70 @@
 				"table_of_contents": {
 					"type": "boolean",
 					"description": "Displays a table of contents for the user to interact with."
+				},
+				"map_as_image": {
+					"type": "boolean",
+					"description": "Allows users to display an image that replaces the overworld map."
+				},
+				"max_zoom": {
+					"type": "number",
+					"description": "Prevents user from zooming in past a certain value"
+				},
+				"min_zoom": {
+					"type": "number",
+					"description": "Prevents user from zooming out past a certain value"
 				}
 			}
 		},
+		"image_overlay": {
+			"type": "object",
+			"description": "Image data that is used to replace overworld map. Only used when 'map_as_image' is true.",
+			"additionalProperties": false,
+			"required": [
+				"overlay_url",
+				"overlay_alt",
+				"overlay_height",
+				"overlay_width",
+				"overlay_center"
+			],
+			"properties": {
+				"overlay_url": {
+					"type": "string",
+					"description": "Image url that is displayed on the map"
+				},
+				"overlay_alt": {
+					"type": "string",
+					"description": "An alt text description of the image"
+				},
+				"overlay_height": {
+					"type": "number",
+					"description": "Height of the image to be displayed on the map"
+				},
+				"overlay_width": {
+					"type": "number",
+					"description": "Width of the image to be displayed on the map"
+				},
+				"overlay_center": {
+					"type": "object",
+					"description": "Coordinates that point to where the center of the image will be.",
+					"additionalProperties": false,
+					"required": [
+						"lat",
+						"lon"
+					],
+					"properties": {
+						"lat": {
+							"type": "number",
+							"description": "Latitude coordinates for image center"
+						},
+						"lon": {
+							"type": "number",
+							"description": "Latitude coordinates for image center"
+						}
+					}
+				}
+			}
+        },
 		"feature": {
 			"type": "object",
 			"additionalProperties": false,

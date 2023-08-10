@@ -1,0 +1,150 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "http://edan.si.edu/schema/storymap",
+	"title": "Storymap",
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+		"content": {
+			"type": "string",
+			"description": "A summary of the Storymap that will be displayed on the same page as the storymap but not within the storymap itself."
+		},
+		"map_type": {
+			"type": "string",
+			"description": "A set of designations determined by the Unit. Equivalent to groupType for object groups"
+		},
+		"storymap": {
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"language": {
+					"type": "string",
+					"description": "a string giving the two letter code for a language"
+				},
+				"tile_layer": {
+					"type": "string",
+					"description": "A leaflet link to a visual style that the map can use. A list of these can be found at https://leaflet-extras.github.io/leaflet-providers/preview/."
+				},
+				"tile_attribution": {
+					"type": "string",
+					"description": "An acknowledgement given to the providers of the tile layer."
+				},
+				"connect_markers": {
+					"type": "boolean",
+					"description": "Draws a line between each marker determined by the order of each slide."
+				},
+				"fullscreen_button": {
+					"type": "boolean",
+					"description": "Allows the user to click a button that displays a fullscreen view of the map."
+				},
+				"reset_button": {
+					"type": "boolean",
+					"description": "Allows the user to click a button that resets the display of the map."
+				},
+				"map_background_color": {
+					"type": "string",
+					"description": "A hexidecimal string that lets the user determine the background color of the map."
+				},
+				"marker_type": {
+					"type": "string",
+					"description": "A set of enums that determines whether map markers are displayed using icons or are assigned numerical icons"
+				},
+				"table_of_contents": {
+					"type": "boolean",
+					"description": "Displays a table of contents for the user to interact with."
+				},
+				"map_as_image": {
+					"type": "boolean",
+					"description": "Allows users to display an image that replaces the overworld map."
+				},
+				"max_zoom": {
+					"type": "number",
+					"description": "Prevents user from zooming in past a certain value"
+				},
+				"min_zoom": {
+					"type": "number",
+					"description": "Prevents user from zooming out past a certain value"
+				}
+			}
+		},
+		"image_overlay": {
+			"type": "object",
+			"description": "Image data that is used to replace overworld map. Only used when 'map_as_image' is true.",
+			"additionalProperties": false,
+			"required": [
+				"overlay_url",
+				"overlay_alt",
+				"overlay_height",
+				"overlay_width",
+				"overlay_center"
+			],
+			"properties": {
+				"overlay_url": {
+					"type": "string",
+					"description": "Image url that is displayed on the map"
+				},
+				"overlay_alt": {
+					"type": "string",
+					"description": "An alt text description of the image"
+				},
+				"overlay_height": {
+					"type": "number",
+					"description": "Height of the image to be displayed on the map"
+				},
+				"overlay_width": {
+					"type": "number",
+					"description": "Width of the image to be displayed on the map"
+				},
+				"overlay_center": {
+					"type": "object",
+					"description": "Coordinates that point to where the center of the image will be.",
+					"additionalProperties": false,
+					"required": [
+						"lat",
+						"lon"
+					],
+					"properties": {
+						"lat": {
+							"type": "number",
+							"description": "Latitude coordinates for image center"
+						},
+						"lon": {
+							"type": "number",
+							"description": "Latitude coordinates for image center"
+						}
+					}
+				}
+			}
+        },
+		"feature": {
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"url": {
+					"type": "string",
+					"description": "A link to the Map's featured image."
+				},
+				"thumbnail": {
+					"type": "string",
+					"description": "A link to a thumbnail for the map's featured image."
+				},
+				"alt": {
+					"type": "string",
+					"description": "A short description of the image (Required for 508 compliance)."
+				}
+			}
+		},
+		"description": {
+			"type": "string",
+			"maxLength": 250,
+			"description": "A short discription of the storymap. This is used when sharing the record on social media. It is limited to 250 characters."
+		},
+		"menu": {
+			"type": "array",
+			"items": {
+				"type": "string",
+				"description": "the EDAN-ID of each slide belonging to the storymap. The order determines the games."
+			}
+		}
+	}
+}

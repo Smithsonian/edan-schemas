@@ -1,0 +1,85 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "http://edan.si.edu/schema/storymap_slide",
+	"title": "Storymap Slide",
+	"type": "object",
+	"additionalProperties": false,
+	"required": [
+		"location",
+		"slide_type"
+	],
+	"properties": {
+		"slide_type": {
+			"type": "string",
+			"description": "Determines if a slide is set as a Waypoint or Overview. An overview is meant to describe the map as a whole. It's coordinates and zoom will determine where the map is centered on when initially displaying to the user. Only one slide can be set as the overview. Waypoints are the markers on the map. Each can be paired with a description and an image."
+		},
+		"location": {
+			"type": "object",
+			"additionalProperties": false,
+			"required": [
+				"lat",
+				"lon"
+			],
+			"properties": {
+				"lat": {
+					"type": "number",
+					"description": "Latitude coordinates for the marker"
+				},
+				"lon": {
+					"type": "number",
+					"description": "Longitude coordinates for the marker"
+				}
+			}
+		},
+		"zoom": {
+			"type": "number",
+			"description": "Determines how far the map zooms in on a marker when it is selected."
+		},
+		"icon": {
+			"type": "string",
+			"description": "A font awesome icon that represents the marker on the map."
+		},
+		"content": {
+			"type": "string",
+			"description": "Text that summarizes the slide."
+		},
+		"link": {
+			"type": "string",
+			"description": "A link that can be provided as a \"learn more\" option that will lead to an additional source of information related to the slide."
+		},
+		"link_text": {
+			"type": "string",
+			"description": "The text that will be displayed to the user to click on. I.E. \"Learn More\""
+		},
+		"media": {
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"url": {
+					"type": "string",
+					"description": "A URL for a piece of media that will be displayed with the Slide. These URLs can point to images, videos, audio, etc. All Media types listed <a href='https://storymap.knightlab.com/docs/media-types.html' target='_blank'>here</a> are supported, with the exception of &lt;iframe&gt; and &lt;blockquote&gt;."
+				},
+				"caption": {
+					"type": "string",
+					"description": "A URL for an image to use in the timenav marker for the event. If omitted, storymap will use an icon based on the type of media. Not relevant for title slides, because they do not have a marker."
+				},
+				"credit": {
+					"type": "string",
+					"description": "Optional credit given to for the photo."
+				},
+				"alt": {
+					"type": "string",
+					"description": "A short description of the image (Required for 508 compliance)."
+				},
+				"edanObjectUrl": {
+					"type": "string",
+					"description": "An EDAN url that is linked to the marker's image. Allows the user to follow a direct link to the object's page."
+				},
+				"useEdanLink": {
+					"type": "boolean",
+					"description": "Determines whether or not the user is able to follow the url from edanObjectUrl"
+				}
+			}
+		}
+	}
+}

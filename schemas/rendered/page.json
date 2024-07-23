@@ -1,0 +1,163 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Schema for page level data.. (Slated for Deprecation)",
+  "type": "object",
+  "properties": {
+    "url": {
+      "type": "string"
+    },
+    "menu": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "listTitle": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "url",
+          "title",
+          "listTitle"
+        ]
+      }
+    },
+    "page": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "pageId": {
+          "type": "string"
+        },
+        "content": {
+          "type": "string"
+        },
+        "objects": {
+          "type": "object",
+          "properties": {},
+          "required": []
+        },
+        "settings": {
+          "type": "object",
+          "properties": {
+            "disableObjects": {
+              "type": "number"
+            }
+          }
+        },
+        "listTitle": {
+          "type": "string"
+        },
+        "objectGroupId": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "url",
+        "title",
+        "pageId",
+        "content",
+        "objects",
+        "settings",
+        "listTitle",
+        "objectGroupId"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "feature": {
+      "type": "object",
+      "properties": {
+        "alt": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "thumbnail": {
+          "type": "string"
+        }
+      },
+      "required": [
+
+      ]
+    },
+    "objects": {
+      "type": "object",
+      "properties": {
+        "size": {
+          "type": "number"
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "listName": {
+          "type": "string"
+        },
+        "listType": {
+          "type": "number"
+        }
+      }
+    },
+    "featured": {
+      "type": "number"
+    },
+    "keywords": {
+      "type": "string"
+    },
+    "settings": {
+      "type": "object",
+      "properties": {
+        "show_facets": {
+          "type": "string"
+        },
+        "ux_objects_display": {
+          "type": "string"
+        }
+      },
+      "required": [
+      ]
+    },
+    "groupType": {
+      "type": "string"
+    },
+    "listTitle": {
+      "type": "string"
+    },
+    "published": {
+      "type": "number"
+    },
+    "description": {
+      "type": "string"
+    },
+    "defaultPageId": {
+      "type": "string"
+    },
+    "objectGroupId": {
+      "type": "string"
+    }
+  },
+  "required": [
+
+
+  ]
+}

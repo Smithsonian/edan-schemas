@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Draft Schema for rendered media content",
+  "type": "object",
+  "properties": {
+    "uan": {
+      "type": "string"
+    },
+    "vtt": {
+      "type": "array",
+      "items": {}
+    },
+    "archive": {
+      "type": "string"
+    },
+    "subType": {
+      "type": "string"
+    },
+    "indexFile": {
+      "type": "string"
+    },
+    "resources": {
+      "type": "array",
+      "items": {}
+    },
+    "properties": {
+      "type": "object",
+      "properties": {
+        "video_bit_rate": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "video_bit_rate"
+      ]
+    }
+  },
+  "required": [
+    "uan",
+    "archive",
+    "subType",
+    "indexFile",
+    "resources",
+    "properties"
+  ]
+}

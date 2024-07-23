@@ -1,0 +1,109 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Current rendered schema for web page content crawled by nutch and transformed.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "status": {
+      "type": "number"
+    },
+    "tstamp": {
+      "type": "string"
+    },
+    "content": {
+      "type": "object",
+      "properties": {
+        "image": {
+          "type": "string"
+        },
+        "freetext": {
+          "type": "object",
+          "properties": {},
+          "required": []
+        },
+        "page_url": {
+          "type": "string"
+        },
+        "page_meta": {
+          "type": "object",
+          "properties": {
+            "og:type": {
+              "type": "string"
+            },
+            "og:image": {
+              "type": "string"
+            },
+            "viewport": {
+              "type": "string"
+            },
+            "og:locale": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "og:site_name": {
+              "type": "string"
+            },
+            "twitter:card": {
+              "type": "string"
+            },
+            "twitter:site": {
+              "type": "string"
+            }
+          },
+          "required": [
+          ]
+        },
+        "page_title": {
+          "type": "string"
+        },
+        "collectionID": {
+          "type": "string"
+        },
+        "page_content": {
+          "type": "string"
+        },
+        "collection_name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "page_url",
+        "page_meta",
+        "page_title",
+        "collectionID",
+        "page_content",
+        "collection_name"
+      ]
+    },
+    "_last_time_updated": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "url",
+    "date",
+    "type",
+    "title",
+    "status",
+    "tstamp",
+    "content",
+    "_last_time_updated"
+  ]
+}

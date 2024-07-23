@@ -1,0 +1,203 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Top level archive collection metadata derived from a-space collection ead records",
+    "type": "object",
+    "required": [
+        "online_media",
+        "freetext",
+        "digital_assets_available",
+        "id",
+        "archival_repository",
+        "containedIn",
+        "filelocation",
+        "record_id",
+        "collection_id",
+        "title",
+        "type",
+        "record_link",
+        "fileSignature",
+        "level"
+    ],
+    "additionalProperties": false,
+    "properties": {
+        "online_media": {
+            "type": "object",
+            "required": [
+                "mediaCount",
+                "media"
+            ],
+            "additionalProperties": false,
+            "properties": {
+                "mediaCount": {
+                    "type": "string"
+                },
+                "media": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "required": [
+                            "thumbnail",
+                            "indexedType",
+                            "caption",
+                            "type",
+                            "content"
+                        ],
+                        "additionalProperties": false,
+                        "properties": {
+                            "thumbnail": {
+                                "type": "string"
+                            },
+                            "indexedType": {
+                                "type": "string"
+                            },
+                            "caption": {
+                                "type": "string"
+                            },
+                            "type": {
+                                "type": "string"
+                            },
+                            "content": {
+                                "type": "string"
+                            },
+                            "flag": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "freetext": {
+            "type": "object",
+            "additionalProperties": false,
+            "patternProperties": {
+                "^.*$": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "required": [
+                            "label",
+                            "content"
+                        ],
+                        "additionalProperties": false,
+                        "properties": {
+                            "label": {
+                                "type": "string"
+                            },
+                            "content": {
+                                "type": "string"
+                            },
+                            "indexedContent": {
+                                "type": "string"
+                            },
+                            "flag": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "level": {
+            "type": "string"
+        },
+        "language": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "digital_assets_available": {
+            "type": "string",
+            "enum": [
+                "true",
+                "false"
+            ]
+        },
+        "fileSignature": {
+            "type": "string"
+        },
+        "usage_flag": {
+            "type": "string"
+        },
+        "record_link": {
+            "type": "string"
+        },
+        "title": {
+            "type": "string"
+        },
+        "type": {
+            "const": "ead_collection"
+        },
+        "collection_id": {
+            "type": "string"
+        },
+        "record_id": {
+            "type": "string"
+        },
+        "filelocation": {
+            "type": "string"
+        },
+        "archival_repository": {
+            "type": "string"
+        },
+        "guid": {
+            "type": "string"
+        },
+        "metadata_usage": {
+            "type": "object",
+            "required": [
+                "access"
+            ],
+            "additionalProperties": false,
+            "properties": {
+                "access": {
+                    "type": "string"
+                }
+            }
+        },
+        "containedIn": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": [
+                    "unitid",
+                    "type",
+                    "url",
+                    "unittitle"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                    "unitid": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string"
+                    },
+                    "url": {
+                        "type": "string"
+                    },
+                    "unittitle": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "boost": {
+            "type": "string"
+        },
+        "id": {
+            "type": "string"
+        },
+        "related_bib_record": {
+            "type": "string"
+        }
+    },
+    "$id": "https://edan.si.edu/schema/rendered"
+}

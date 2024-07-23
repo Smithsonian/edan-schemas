@@ -1,0 +1,465 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"type": "object",
+	"title": "The EDAN metadata model which supports description of object, artifact, specimens.",
+	"definitions": {
+		"descriptiveNonRepeating": {
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"title_sort": {
+					"type": "string"
+				},
+				"title": {
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"content": {
+							"type": "string"
+						},
+						"label": {
+							"type": "string"
+						}
+					},
+					"required": [
+						"content",
+						"label"
+					]
+				},
+				"online_media": {
+					"title": "Online Media (DRAFT)",
+					"description": "Object that stores all media within a record.",
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"mediaCount": {
+							"type": "string"
+						},
+						"media": {
+							"type": "array",
+							"items": {
+								"title": "Online Media Element Object (DRAFT)",
+								"description": "",
+								"type": "object",
+								"required": [
+									"content",
+									"type",
+									"thumbnail"
+								],
+								"additionalProperties": false,
+								"properties": {
+									"content": {
+										"type": "string"
+									},
+									"summary": {
+										"type": "string"
+									},
+									"guid": {
+										"type": "string"
+									},
+									"voyagerId": {
+										"type": "string"
+									},
+									"type": {
+										"type": "string"
+									},
+									"thumbnail": {
+										"type": "string"
+									},
+									"idsId": {
+										"type": "string"
+									},
+									"caption": {
+										"type": "string"
+									},
+									"alt": {
+										"type": "string"
+									},
+									"credit": {
+										"type": "string"
+									},
+									"rights": {
+										"type": "string"
+									},
+									"mime_type": {
+										"type": "string"
+									},
+									"usage": {
+										"title": "usage",
+										"type": "object",
+										"additionalProperties": false,
+										"properties": {
+											"access": {
+												"type": "string"
+											},
+											"text": {
+												"type": "string"
+											},
+											"codes": {
+												"type": "string"
+											}
+										}
+									},
+									"usage_flag": {
+										"title": "usage_flag",
+										"type": "string"
+									}
+								}
+							}
+						}
+					}
+				},
+				"data_source": {
+					"type": "string"
+				},
+				"guid": {
+					"type": "string"
+				},
+				"metadata_usage": {
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"access": {
+							"type": "string"
+						},
+						"text": {
+							"type": "string"
+						}
+					}
+				},
+				"record_ID": {
+					"type": "string"
+				},
+				"record_link": {
+					"type": "string"
+				},
+				"unit_code": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"title_sort",
+				"title",
+				"data_source",
+				"record_ID",
+				"unit_code"
+			]
+		},
+		"indexedStructured": {
+			"additionalProperties": false,
+			"properties": {
+				"sortdate": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"topic": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"strat_member": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"strat_group": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"coordinates": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"occupation": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"object_type": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"name": {
+					"type": "array",
+					"items": {
+						"type": ["object","string"],
+						"properties": {
+							"type": {
+								"type": "string"
+							},
+							"content": {
+								"type": "string"
+							}
+						}
+					}
+				},
+				"usage_flag": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"online_media_type": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"language": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"date": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"tax_kingdom": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"geo_age-era": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"strat_formation": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"tax_phylum": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"tax_class": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"tax_family": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"tax_order": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"geo_age-system": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"geo_age-stage": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"geo_age-series": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"common_name": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"tax_sub-family": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"culture": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"online_media_rights": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"geoLocation": {
+					"type": "array",
+					"itmes": {
+						"additionalProperties": false,
+						"patternProperties": {
+							"^L": {
+								"type": "object",
+								"additionalProperties": false,
+								"properties": {
+									"content": {
+										"type": "string"
+									},
+									"type": {
+										"type": "string"
+									}
+								},
+								"required": [
+									"content",
+									"type"
+								]
+							},
+							"Other": {
+								"type": "object",
+								"additionalProperties": false,
+								"properties": {
+									"content": {
+										"type": "string"
+									},
+									"type": {
+										"type": "string"
+									}
+								},
+								"required": [
+									"content",
+									"type"
+								]
+							}
+						}
+					}
+				},
+				"onPhysicalExhibit": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"exhibition": {
+					"anyOf": [
+						{
+							"type": "object",
+							"additionalProperties": false,
+							"properties": {
+								"building": {
+									"type": "string"
+								},
+								"exhibitionTitle": {
+									"type": "string"
+								},
+								"externalLink": {
+									"type": "string"
+								},
+								"room": {
+									"type": "string"
+								}
+							}
+						},
+						{
+							"type": "array",
+							"items": {
+								"type": "object",
+								"additionalProperties": false,
+								"properties": {
+									"building": {
+										"type": "string"
+									},
+									"exhibitionTitle": {
+										"type": "string"
+									},
+									"externalLink": {
+										"type": "string"
+									},
+									"room": {
+										"type": "string"
+									}
+								}
+							}
+						}
+					]
+				},
+				"scientific_name": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"place": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				}
+			}
+		},
+		"descriptiveOptional": {
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"freetext": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				}
+			}
+		}
+	},
+	"required": [
+		"descriptiveNonRepeating"
+	],
+	"additionalProperties": false,
+	"properties": {
+		"descriptiveNonRepeating": {
+			"$ref": "#/definitions/descriptiveNonRepeating"
+		},
+		"indexedStructured": {
+			"$ref": "#/definitions/indexedStructured"
+		},
+		"descriptiveOptional": {
+			"$ref": "#/definitions/descriptiveOptional"
+		},
+		"freetext": {
+			"type": "object",
+			"patternProperties": {
+				"^.*$": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"label": {
+								"type": "string"
+							},
+							"content": {
+								"type": "string"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,42 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "Lists of objects, entities associated with a group"
+	"type": "object",
+	"required": [
+		"size",
+		"listName",
+		"listType",
+		"items"
+	],
+	"properties": {
+		"listType": {
+			"type": "integer",
+			"$id": "https://edan.si.edu/schema/rendered/properties/listType"
+		},
+		"size": {
+			"type": "integer",
+			"$id": "https://edan.si.edu/schema/rendered/properties/size"
+		},
+		"listName": {
+			"type": "string",
+			"$id": "https://edan.si.edu/schema/rendered/properties/listName"
+		},
+		"items": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			},
+			"$id": "https://edan.si.edu/schema/rendered/properties/items"
+		},
+		"description": {
+			"type": "string",
+			"$id": "https://edan.si.edu/schema/rendered/properties/description"
+		},
+		"thumbnail": {
+			"type": "string",
+			"$id": "https://edan.si.edu/schema/rendered/properties/listName"
+		}
+	},
+	"additionalProperties": false,
+	"$id": "https://edan.si.edu/schema/rendered"
+}

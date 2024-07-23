@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://edan.si.edu/schema/content/3d_package",
+  "title": "The wrapper for the Voyager package schemas that supports 3D",
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string"
+    },
+    "usage": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string"
+        },
+        "codes": {
+          "type": "string"
+        },
+        "access": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "text",
+        "codes",
+        "access"
+      ]
+    },
+    "resources": {
+      "type": "array",
+      "items": {}
+    },
+    "thumbnail": {
+      "type": "string"
+    },
+    "voyagerId": {
+      "type": "string"
+    },
+    "ar_enabled": {
+      "type": "boolean"
+    },
+    "3d_document": {
+      "type": "string"
+    },
+    "content.edanmdm": {
+      "type": "object"
+    },
+    "content.edanurl": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "uuid",
+    "usage",
+    "resources",
+    "thumbnail",
+    "voyagerId",
+    "ar_enabled",
+    "3d_document"
+  ]
+}

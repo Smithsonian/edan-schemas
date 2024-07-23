@@ -1,0 +1,414 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"type": "object",
+	"title": "The component level metadata from a-space ead records",
+	"additionalProperties": false,
+	"properties": {
+		"online_media": {
+			"type": "object",
+			"$id": "https://edan.si.edu/schema/rendered/properties/online_media",
+			"additionalProperties": false,
+			"properties": {
+				"mediaCount": {
+					"type": "string",
+					"$id": "https://edan.si.edu/schema/rendered/properties/online_media/mediaCount"
+				},
+				"media": {
+					"type": "array",
+					"$id": "https://edan.si.edu/schema/rendered/properties/online_media/media",
+					"items": {
+						"type": "object",
+						"$id": "https://edan.si.edu/schema/rendered/properties/online_media/media/items",
+						"additionalProperties": false,
+						"properties": {
+							"thumbnail": {
+								"type": "string",
+								"$id": "https://edan.si.edu/schema/rendered/properties/online_media/media/items/thumbnail"
+							},
+							"indexedType": {
+								"type": "string",
+								"$id": "https://edan.si.edu/schema/rendered/properties/online_media/media/items/indexedType"
+							},
+							"caption": {
+								"type": "string",
+								"$id": "https://edan.si.edu/schema/rendered/properties/online_media/media/items/caption"
+							},
+							"content": {
+								"type": "string",
+								"$id": "https://edan.si.edu/schema/rendered/properties/online_media/media/items/content"
+							},
+							"type": {
+								"type": "string",
+								"$id": "https://edan.si.edu/schema/rendered/properties/online_media/media/items/type"
+							},
+							"flag": {
+								"type": "array",
+								"items": {
+									"type": "string"
+								},
+								"$id": "https://edan.si.edu/schema/rendered/properties/online_media/media/items/type"
+							}
+						}
+					}
+				}
+			}
+		},
+		"projectOwner": {
+			"type": "string",
+			"$id": "https://edan.si.edu/schema/rendered/properties/projectOwner"
+		},
+		"level": {
+			"const": "item",
+			"$id": "https://edan.si.edu/schema/rendered/properties/level"
+		},
+		"digital_assets_available": {
+			"type": "string",
+			"enum": [
+				"true",
+				"false"
+			],
+			"$id": "https://edan.si.edu/schema/rendered/properties/digital_assets_available"
+		},
+		"record_link": {
+			"type": "string",
+			"$id": "https://edan.si.edu/schema/rendered/properties/record_link"
+		},
+		"type": {
+			"const": "ead_component",
+			"$id": "https://edan.si.edu/schema/rendered/properties/type"
+		},
+		"title": {
+			"type": "string",
+			"$id": "https://edan.si.edu/schema/rendered/properties/title"
+		},
+		"usage_flag": {
+			"type": "string",
+			"$id": "https://edan.si.edu/schema/rendered/properties/usage_flag"
+		},
+		"collection_id": {
+			"type": "string",
+			"$id": "https://edan.si.edu/schema/rendered/properties/collection_id"
+		},
+		"record_id": {
+			"type": "string",
+			"$id": "https://edan.si.edu/schema/rendered/properties/record_id"
+		},
+		"filelocation": {
+			"type": "string",
+			"$id": "https://edan.si.edu/schema/rendered/properties/filelocation"
+		},
+		"archival_repository": {
+			"type": "string",
+			"$id": "https://edan.si.edu/schema/rendered/properties/archival_repository"
+		},
+		"boost": {
+			"type": "string",
+			"$id": "https://edan.si.edu/schema/rendered/properties/boost"
+		},
+		"id": {
+			"type": "string",
+			"$id": "https://edan.si.edu/schema/rendered/properties/id"
+		},
+		"guid": {
+            "type": "string"
+        },
+        "metadata_usage": {
+            "type": "object",
+            "required": [
+                "access"
+            ],
+            "additionalProperties": false,
+            "properties": {
+                "access": {
+                    "type": "string"
+                }
+            }
+        },
+		"containedIn": {
+			"type": "array",
+			"$id": "https://edan.si.edu/schema/rendered/properties/containedIn",
+			"items": {
+				"type": "object",
+				"$id": "https://edan.si.edu/schema/rendered/properties/containedIn/items",
+				"additionalProperties": false,
+				"properties": {
+					"unittitle": {
+						"type": "string",
+						"$id": "https://edan.si.edu/schema/rendered/properties/containedIn/items/unittitle"
+					},
+					"unitid": {
+						"type": "string",
+						"$id": "https://edan.si.edu/schema/rendered/properties/containedIn/items/unitid"
+					},
+					"url": {
+						"type": "string",
+						"$id": "https://edan.si.edu/schema/rendered/properties/containedIn/items/unitid"
+					},
+					"type": {
+						"type": "string",
+						"$id": "https://edan.si.edu/schema/rendered/properties/containedIn/items/type",
+						"enum": [
+							"Collection",
+							"Series",
+							"Item",
+							"Subseries",
+							"File",
+							"Fonds",
+							"Recordgrp",
+							"Subgrp"
+						]
+					}
+				}
+			}
+		},
+		"freetext": {
+			"type": "object",
+			"$id": "https://edan.si.edu/schema/rendered/properties/freetext",
+			"additionalProperties": false,
+			"patternProperties": {
+				"^.*$": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"additionalProperties": false,
+						"properties": {
+							"label": {
+								"type": "string"
+							},
+							"content": {
+								"type": "string"
+							},
+							"indexedContent": {
+								"type": "string"
+							},
+							"flag": {
+								"type": "array",
+								"items": {
+									"type": "string"
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"required": [
+		"freetext",
+		"containedIn",
+		"id",
+		"boost",
+		"level",
+		"digital_assets_available",
+		"record_link",
+		"type",
+		"title",
+		"collection_id",
+		"record_id",
+		"filelocation",
+		"archival_repository"
+	],
+	{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Top level archive collection metadata derived from a-space",
+    "type": "object",
+    "required": [
+        "online_media",
+        "freetext",
+        "digital_assets_available",
+        "id",
+        "archival_repository",
+        "containedIn",
+        "filelocation",
+        "record_id",
+        "collection_id",
+        "title",
+        "type",
+        "record_link",
+        "fileSignature",
+        "level"
+    ],
+    "additionalProperties": false,
+    "properties": {
+        "online_media": {
+            "type": "object",
+            "required": [
+                "mediaCount",
+                "media"
+            ],
+            "additionalProperties": false,
+            "properties": {
+                "mediaCount": {
+                    "type": "string"
+                },
+                "media": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "required": [
+                            "thumbnail",
+                            "indexedType",
+                            "caption",
+                            "type",
+                            "content"
+                        ],
+                        "additionalProperties": false,
+                        "properties": {
+                            "thumbnail": {
+                                "type": "string"
+                            },
+                            "indexedType": {
+                                "type": "string"
+                            },
+                            "caption": {
+                                "type": "string"
+                            },
+                            "type": {
+                                "type": "string"
+                            },
+                            "content": {
+                                "type": "string"
+                            },
+                            "flag": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "freetext": {
+            "type": "object",
+            "additionalProperties": false,
+            "patternProperties": {
+                "^.*$": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "required": [
+                            "label",
+                            "content"
+                        ],
+                        "additionalProperties": false,
+                        "properties": {
+                            "label": {
+                                "type": "string"
+                            },
+                            "content": {
+                                "type": "string"
+                            },
+                            "indexedContent": {
+                                "type": "string"
+                            },
+                            "flag": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "level": {
+            "type": "string"
+        },
+        "language": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "digital_assets_available": {
+            "type": "string",
+            "enum": [
+                "true",
+                "false"
+            ]
+        },
+        "fileSignature": {
+            "type": "string"
+        },
+        "usage_flag": {
+            "type": "string"
+        },
+        "record_link": {
+            "type": "string"
+        },
+        "title": {
+            "type": "string"
+        },
+        "type": {
+            "const": "ead_collection"
+        },
+        "collection_id": {
+            "type": "string"
+        },
+        "record_id": {
+            "type": "string"
+        },
+        "filelocation": {
+            "type": "string"
+        },
+        "archival_repository": {
+            "type": "string"
+        },
+        "guid": {
+            "type": "string"
+        },
+        "metadata_usage": {
+            "type": "object",
+            "required": [
+                "access"
+            ],
+            "additionalProperties": false,
+            "properties": {
+                "access": {
+                    "type": "string"
+                }
+            }
+        },
+        "containedIn": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": [
+                    "unitid",
+                    "type",
+                    "url",
+                    "unittitle"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                    "unitid": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string"
+                    },
+                    "url": {
+                        "type": "string"
+                    },
+                    "unittitle": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "boost": {
+            "type": "string"
+        },
+        "id": {
+            "type": "string"
+        },
+        "related_bib_record": {
+            "type": "string"
+        }
+    },
+    "$id": "https://edan.si.edu/schema/rendered"
+}
+}

@@ -1,0 +1,109 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "Top level data from transcription.si.edu",
+    "type": "object",
+	"required": [
+		"assetsCompleted",
+		"projectCompleted",
+		"assetsApproved",
+		"assetsInReview",
+		"assetsTranscribed",
+		"projectStatus",
+		"projectDate",
+		"projectParentId",
+		"projectSubmits",
+		"projectDisplayType",
+		"projectDescription",
+		"projectDisplay",
+		"projectOwner",
+		"assetCount",
+		"projectName",
+		"projectUsers",
+		"projectSummary",
+		"projectId"
+	],
+	"properties": {
+		"projectId": {
+			"type": "integer",
+			"$id": "https://edan.si.edu/schema/rendered/properties/projectId"
+		},
+		"projectName": {
+			"type": "string",
+			"$id": "https://edan.si.edu/schema/rendered/properties/projectName"
+		},
+		"projectOwner": {
+			"type": "string",
+			"$id": "https://edan.si.edu/schema/rendered/properties/projectOwner"
+		},
+		"projectMetadata": {
+			"type": "string",
+			"$id": "https://edan.si.edu/schema/rendered/properties/projectMetadata"
+		},
+		"projectImage": {
+			"type": "string",
+			"$id": "https://edan.si.edu/schema/rendered/properties/projectImage"
+		},
+		"projectDate": {
+			"type": "string",
+			"$id": "https://edan.si.edu/schema/rendered/properties/projectDate"
+		},
+		"assetCount": {
+			"type": "integer",
+			"$id": "https://edan.si.edu/schema/rendered/properties/assetCount"
+		},
+		"projectUsers": {
+			"type": "integer",
+			"$id": "https://edan.si.edu/schema/rendered/properties/projectUsers"
+		},
+		"projectSubmits": {
+			"type": "integer",
+			"$id": "https://edan.si.edu/schema/rendered/properties/projectSubmits"
+		},
+		"assetsCompleted": {
+			"type": "integer",
+			"$id": "https://edan.si.edu/schema/rendered/properties/assetsCompleted"
+		},
+		"assetsInReview": {
+			"type": "integer",
+			"$id": "https://edan.si.edu/schema/rendered/properties/assetsInReview"
+		},
+		"assetsTranscribed": {
+			"type": "integer",
+			"$id": "https://edan.si.edu/schema/rendered/properties/assetsTranscribed"
+		},
+		"assetsApproved": {
+			"type": "integer",
+			"$id": "https://edan.si.edu/schema/rendered/properties/assetsApproved"
+		},
+		"projectDisplay": {
+			"type": "integer",
+			"$id": "https://edan.si.edu/schema/rendered/properties/projectDisplay"
+		},
+		"projectDisplayType": {
+			"type": "integer",
+			"$id": "https://edan.si.edu/schema/rendered/properties/projectDisplayType"
+		},
+		"projectStatus": {
+			"type": "integer",
+			"$id": "https://edan.si.edu/schema/rendered/properties/projectStatus"
+		},
+		"projectDescription": {
+			"type": "string",
+			"$id": "https://edan.si.edu/schema/rendered/properties/projectDescription"
+		},
+		"projectSummary": {
+			"type": "string",
+			"$id": "https://edan.si.edu/schema/rendered/properties/projectSummary"
+		},
+		"projectParentId": {
+			"type": "integer",
+			"$id": "https://edan.si.edu/schema/rendered/properties/projectParentId"
+		},
+		"projectCompleted": {
+			"type": "boolean",
+			"$id": "https://edan.si.edu/schema/rendered/properties/projectCompleted"
+		}
+	},
+	"additionalProperties": false,
+	"$id": "https://edan.si.edu/schema/rendered"
+}

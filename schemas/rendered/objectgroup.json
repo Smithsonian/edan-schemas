@@ -1,0 +1,167 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Schema to Support Stories (Objectgroups)",
+  "type": "object",
+  "properties": {
+    "url": {
+      "type": "string"
+    },
+    "menu": {
+      "type": "array",
+      "items": {
+        "type": ["object","string"],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "listTitle": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "url",
+          "title",
+          "listTitle"
+        ]
+      }
+    },
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    },
+    "feature": {
+      "type": "object",
+      "properties": {
+        "alt": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "thumbnail": {
+          "type": "string"
+        }
+      },
+      "required": [
+      ]
+    },
+    "objects": {
+      "type": "object",
+      "properties": {
+        "size": {
+          "type": "number"
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "listName": {
+          "type": "string"
+        },
+        "listType": {
+          "type": "number"
+        }
+      },
+      "required": [
+      ]
+    },
+    "featured": {
+      "type": "number"
+    },
+    "keywords": {
+      "type": "string"
+    },
+    "settings": {
+      "type": "object",
+      "properties": {
+        "show_facets": {
+          "type": ["integer","string"]
+        },
+        "ux_objects_display": {
+          "type": ["integer","string"]
+        }
+      },
+      "required": [
+      ]
+    },
+    "groupType": {
+      "type": ["integer","string"]
+    },
+    "listTitle": {
+      "type": "string"
+    },
+    "published": {
+      "type": "number"
+    },
+    "defaultPage": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "pageId": {
+          "type": "string"
+        },
+        "content": {
+          "type": "string"
+        },
+        "objects": {
+          "type": "object",
+          "properties": {},
+          "required": []
+        },
+        "settings": {
+          "type": "object",
+          "properties": {
+            "disableObjects": {
+              "type": "number"
+            }
+          },
+          "required": [
+          ]
+        },
+        "listTitle": {
+          "type": "string"
+        },
+        "objectGroupId": {
+          "type": "string"
+        }
+      },
+      "required": [
+      ]
+    },
+    "description": {
+      "type": "string"
+    },
+    "defaultPageId": {
+      "type": "string"
+    },
+    "objectGroupId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title",
+    "feature",
+    "featured",
+    "keywords",
+    "settings",
+    "groupType",
+    "published",
+    "description"
+  ]
+}

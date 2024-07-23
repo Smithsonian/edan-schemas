@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Current rendered schema for web page content crawled by nutch and transformed.",
+  "title": "Current content schema for web page content crawled by nutch and transformed.",
   "type": "object",
   "properties": {
     "id": {

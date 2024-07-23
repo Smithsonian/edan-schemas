@@ -11,32 +11,32 @@
 	"properties": {
 		"listType": {
 			"type": "integer",
-			"$id": "https://edan.si.edu/schema/rendered/properties/listType"
+			"$id": "https://edan.si.edu/schema/content/properties/listType"
 		},
 		"size": {
 			"type": "integer",
-			"$id": "https://edan.si.edu/schema/rendered/properties/size"
+			"$id": "https://edan.si.edu/schema/content/properties/size"
 		},
 		"listName": {
 			"type": "string",
-			"$id": "https://edan.si.edu/schema/rendered/properties/listName"
+			"$id": "https://edan.si.edu/schema/content/properties/listName"
 		},
 		"items": {
 			"type": "array",
 			"items": {
 				"type": "string"
 			},
-			"$id": "https://edan.si.edu/schema/rendered/properties/items"
+			"$id": "https://edan.si.edu/schema/content/properties/items"
 		},
 		"description": {
 			"type": "string",
-			"$id": "https://edan.si.edu/schema/rendered/properties/description"
+			"$id": "https://edan.si.edu/schema/content/properties/description"
 		},
 		"thumbnail": {
 			"type": "string",
-			"$id": "https://edan.si.edu/schema/rendered/properties/listName"
+			"$id": "https://edan.si.edu/schema/content/properties/listName"
 		}
 	},
 	"additionalProperties": false,
-	"$id": "https://edan.si.edu/schema/rendered"
+	"$id": "https://edan.si.edu/schema/content"
 }

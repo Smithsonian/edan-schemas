@@ -16,48 +16,48 @@
     "properties": {
         "projectOwner": {
             "type": "string",
-            "$id": "https://edan.si.edu/schema/rendered/properties/projectOwner"
+            "$id": "https://edan.si.edu/schema/content/properties/projectOwner"
         },
         "projectName": {
             "type": "string",
-            "$id": "https://edan.si.edu/schema/rendered/properties/projectName"
+            "$id": "https://edan.si.edu/schema/content/properties/projectName"
         },
         "projectId": {
             "type": "string",
-            "$id": "https://edan.si.edu/schema/rendered/properties/projectId"
+            "$id": "https://edan.si.edu/schema/content/properties/projectId"
         },
         "assetName": {
             "type": "string",
-            "$id": "https://edan.si.edu/schema/rendered/properties/assetName"
+            "$id": "https://edan.si.edu/schema/content/properties/assetName"
         },
         "assetCompleted": {
             "type": "boolean",
-            "$id": "https://edan.si.edu/schema/rendered/properties/assetCompleted"
+            "$id": "https://edan.si.edu/schema/content/properties/assetCompleted"
         },
         "assetDisplay": {
             "type": "integer",
-            "$id": "https://edan.si.edu/schema/rendered/properties/assetDisplay"
+            "$id": "https://edan.si.edu/schema/content/properties/assetDisplay"
         },
         "assetStatus": {
             "type": "integer",
-            "$id": "https://edan.si.edu/schema/rendered/properties/assetStatus"
+            "$id": "https://edan.si.edu/schema/content/properties/assetStatus"
         },
         "projectDisplay": {
             "type": "integer",
-            "$id": "https://edan.si.edu/schema/rendered/properties/projectDisplay"
+            "$id": "https://edan.si.edu/schema/content/properties/projectDisplay"
         },
         "assetImage": {
             "type": "string",
-            "$id": "https://edan.si.edu/schema/rendered/properties/assetImage"
+            "$id": "https://edan.si.edu/schema/content/properties/assetImage"
         },
         "transcriptData": {
             "type": "object",
-            "$id": "https://edan.si.edu/schema/rendered/properties/transcriptData"
+            "$id": "https://edan.si.edu/schema/content/properties/transcriptData"
         },
         "metadata": {
             "type": "string",
-            "$id": "https://edan.si.edu/schema/rendered/properties/metadata"
+            "$id": "https://edan.si.edu/schema/content/properties/metadata"
         }
     },
-	"$id": "https://edan.si.edu/schema/rendered"
+	"$id": "https://edan.si.edu/schema/content"
 }

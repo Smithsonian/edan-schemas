@@ -1,5 +1,7 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "DAMS Metadata Model (DEPRECATED)",
+	"description": "This schema is deprecated. The DAMS metadata model derived from OTMM is no longer in active use.",
 	"type": "object",
 	"required": [
 		"uan",

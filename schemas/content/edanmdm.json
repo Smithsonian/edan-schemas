@@ -33,7 +33,7 @@
 					"additionalProperties": false,
 					"properties": {
 						"mediaCount": {
-							"type": "string"
+							"type": "integer"
 						},
 						"media": {
 							"type": "array",
@@ -48,6 +48,9 @@
 								],
 								"additionalProperties": false,
 								"properties": {
+									"id": {
+										"type": "string"
+									},
 									"content": {
 										"type": "string"
 									},
@@ -83,6 +86,15 @@
 									},
 									"mime_type": {
 										"type": "string"
+									},
+									"altTextAccessibility": {
+										"type": "string"
+									},
+									"extDescrAccessibility": {
+										"type": "string"
+									},
+									"resources": {
+										"type": "array"
 									},
 									"usage": {
 										"title": "usage",

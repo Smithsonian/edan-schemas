@@ -1,6 +1,6 @@
 # EDAN Schemas
 
-EDAN (Enterprise Digital Asset Network) is a suite of services and technologies that centralizes access and distribution of the Smithsonian Institution's (SI) vast holdings of metadata and file content from its collections, archives, and libraries.
+EDAN is a suite of services and technologies that centralizes access and distribution of the Smithsonian Institution's (SI) vast holdings of metadata and file content from its collections, archives, and libraries.
 
 EDAN schemas detail the `content` property of certain EDAN record
 types. They do not describe root-level properties such as id, url, title,

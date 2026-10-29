@@ -17,5 +17,5 @@ Some schemas appear in both directories because the data shape can originate fro
 ## Useful Links
 
 * JSON formatting: <https://jsonlint.com>
-* JSON online validator: <https://json-schema-validator.herokuapp.com>
+* JSON online validator: <https://jsonviewertool.com/json-schema-validator>
 * JSON schema maker: <https://jsonschema.net>
